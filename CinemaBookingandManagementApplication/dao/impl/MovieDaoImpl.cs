@@ -29,6 +29,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
             throw new NotImplementedException();
         }
 
+        public float getRevenue(Movie movie)
+        {
+            throw new NotImplementedException();
+        }
+
         public void insert(Movie movie)
         {
             throw new NotImplementedException();
