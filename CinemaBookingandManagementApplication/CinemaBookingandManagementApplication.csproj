@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="configs\Function.cs" />
     <Compile Include="configs\My_DB.cs" />
+    <Compile Include="configs\Procedure.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
@@ -56,6 +64,60 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AddMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddMovie.Designer.cs">
+      <DependentUpon>Form_AddMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Booking.Designer.cs">
+      <DependentUpon>Form_Booking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChooseChair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChooseChair.Designer.cs">
+      <DependentUpon>Form_ChooseChair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChooseCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChooseCombo.Designer.cs">
+      <DependentUpon>Form_ChooseCombo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Cinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Cinema.Designer.cs">
+      <DependentUpon>Form_Cinema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_detailMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_detailMovie.Designer.cs">
+      <DependentUpon>Form_detailMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_HomeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_HomeManager.Designer.cs">
+      <DependentUpon>Form_HomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ShowMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ShowMovie.Designer.cs">
+      <DependentUpon>Form_ShowMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="models\Actor.cs" />
     <Compile Include="models\Bill.cs" />
@@ -73,6 +135,60 @@
     <Compile Include="models\Ticket.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UserControl_Combo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Combo.Designer.cs">
+      <DependentUpon>UserControl_Combo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Movie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Movie.Designer.cs">
+      <DependentUpon>UserControl_Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_show_schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_show_schedule.Designer.cs">
+      <DependentUpon>UserControl_show_schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_show_schedule_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_show_schedule_information.Designer.cs">
+      <DependentUpon>UserControl_show_schedule_information.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddMovie.resx">
+      <DependentUpon>Form_AddMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Booking.resx">
+      <DependentUpon>Form_Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChooseChair.resx">
+      <DependentUpon>Form_ChooseChair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChooseCombo.resx">
+      <DependentUpon>Form_ChooseCombo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Cinema.resx">
+      <DependentUpon>Form_Cinema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_detailMovie.resx">
+      <DependentUpon>Form_detailMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HomeManager.resx">
+      <DependentUpon>Form_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ShowMovie.resx">
+      <DependentUpon>Form_ShowMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,6 +198,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UserControl_Combo.resx">
+      <DependentUpon>UserControl_Combo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Movie.resx">
+      <DependentUpon>UserControl_Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_show_schedule.resx">
+      <DependentUpon>UserControl_show_schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_show_schedule_information.resx">
+      <DependentUpon>UserControl_show_schedule_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
