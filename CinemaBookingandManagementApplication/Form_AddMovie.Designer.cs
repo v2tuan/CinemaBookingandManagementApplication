@@ -167,7 +167,7 @@
             // pictureBoxMovie
             // 
             this.pictureBoxMovie.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxMovie.Location = new System.Drawing.Point(36, 309);
+            this.pictureBoxMovie.Location = new System.Drawing.Point(32, 240);
             this.pictureBoxMovie.Name = "pictureBoxMovie";
             this.pictureBoxMovie.Size = new System.Drawing.Size(200, 300);
             this.pictureBoxMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
