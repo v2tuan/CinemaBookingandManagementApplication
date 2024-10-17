@@ -12,6 +12,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
 {
     internal class MovieDaoImpl : IMovieDao
     {
+        public bool checkid(string id)
+        {
+           return Function.checkMovieID(id);
+        }
+
         public void delete(int id)
         {
             throw new NotImplementedException();

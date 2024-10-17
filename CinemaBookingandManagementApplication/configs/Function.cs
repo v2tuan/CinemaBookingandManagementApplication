@@ -1,4 +1,5 @@
 ﻿using CinemaBookingandManagementApplication.Dao;
+using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -40,6 +41,46 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
             return movieTypes;
+        }
+
+// ham kiem tra id cua movie
+        public static bool checkMovieID(string movieID)
+        {
+            bool exists =false;
+            try
+            {
+                conn.Open();
+                int result;
+                // Gọi hàm SQL
+                using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_MOVIE(@MOVIEID)", conn))
+                {
+                    command.Parameters.AddWithValue("@MOVIEID", movieID);
+                    result = (Int32)command.ExecuteScalar();
+                    if (result != null && result ==1)
+                    {
+                        exists = true; // Kết quả là kiểu boolean
+                    }
+                    else
+                    {
+                        exists = false; // Không có kết quả hợp lệ
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+
+            
         }
     }
 }
