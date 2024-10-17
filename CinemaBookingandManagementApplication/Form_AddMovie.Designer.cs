@@ -34,26 +34,26 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBoxFood = new System.Windows.Forms.PictureBox();
+            this.DateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBoxMovie = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.richTextBoxInfo = new System.Windows.Forms.RichTextBox();
+            this.textDuration = new Guna.UI2.WinForms.Guna2TextBox();
+            this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxType = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.textBoxFoodName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxMovieName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBoxPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textBoxAgeRestriction = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.buttonAddIngredient = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.panelHeader.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMovie)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,20 +107,20 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 10;
-            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker1);
+            this.guna2Panel1.Controls.Add(this.DateTimePickerRelease);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.pictureBoxFood);
+            this.guna2Panel1.Controls.Add(this.pictureBoxMovie);
             this.guna2Panel1.Controls.Add(this.label7);
-            this.guna2Panel1.Controls.Add(this.textBoxID);
-            this.guna2Panel1.Controls.Add(this.richTextBoxInfo);
+            this.guna2Panel1.Controls.Add(this.textDuration);
+            this.guna2Panel1.Controls.Add(this.richTextBoxDescription);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.comboBoxType);
-            this.guna2Panel1.Controls.Add(this.textBoxFoodName);
+            this.guna2Panel1.Controls.Add(this.textBoxMovieName);
             this.guna2Panel1.Controls.Add(this.label14);
-            this.guna2Panel1.Controls.Add(this.textBoxPrice);
+            this.guna2Panel1.Controls.Add(this.textBoxAgeRestriction);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
@@ -128,15 +128,49 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1004, 675);
             this.guna2Panel1.TabIndex = 34;
             // 
-            // pictureBoxFood
+            // DateTimePickerRelease
             // 
-            this.pictureBoxFood.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxFood.Location = new System.Drawing.Point(36, 309);
-            this.pictureBoxFood.Name = "pictureBoxFood";
-            this.pictureBoxFood.Size = new System.Drawing.Size(200, 300);
-            this.pictureBoxFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFood.TabIndex = 35;
-            this.pictureBoxFood.TabStop = false;
+            this.DateTimePickerRelease.BorderRadius = 5;
+            this.DateTimePickerRelease.Checked = true;
+            this.DateTimePickerRelease.FillColor = System.Drawing.Color.White;
+            this.DateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.DateTimePickerRelease.Location = new System.Drawing.Point(582, 166);
+            this.DateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.DateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.DateTimePickerRelease.Name = "DateTimePickerRelease";
+            this.DateTimePickerRelease.Size = new System.Drawing.Size(378, 44);
+            this.DateTimePickerRelease.TabIndex = 38;
+            this.DateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(578, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(139, 23);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Release date";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(158, 612);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "200 x 300";
+            // 
+            // pictureBoxMovie
+            // 
+            this.pictureBoxMovie.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxMovie.Location = new System.Drawing.Point(36, 309);
+            this.pictureBoxMovie.Name = "pictureBoxMovie";
+            this.pictureBoxMovie.Size = new System.Drawing.Size(200, 300);
+            this.pictureBoxMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxMovie.TabIndex = 35;
+            this.pictureBoxMovie.TabStop = false;
             // 
             // label7
             // 
@@ -148,35 +182,35 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Duration";
             // 
-            // textBoxID
+            // textDuration
             // 
-            this.textBoxID.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxID.BorderRadius = 5;
-            this.textBoxID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxID.DefaultText = "";
-            this.textBoxID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxID.Location = new System.Drawing.Point(36, 166);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.PasswordChar = '\0';
-            this.textBoxID.PlaceholderText = "Input Food ID";
-            this.textBoxID.SelectedText = "";
-            this.textBoxID.Size = new System.Drawing.Size(200, 44);
-            this.textBoxID.TabIndex = 34;
+            this.textDuration.BorderColor = System.Drawing.Color.Gray;
+            this.textDuration.BorderRadius = 5;
+            this.textDuration.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textDuration.DefaultText = "";
+            this.textDuration.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textDuration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textDuration.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textDuration.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textDuration.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textDuration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textDuration.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textDuration.Location = new System.Drawing.Point(36, 166);
+            this.textDuration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textDuration.Name = "textDuration";
+            this.textDuration.PasswordChar = '\0';
+            this.textDuration.PlaceholderText = "Input Duration";
+            this.textDuration.SelectedText = "";
+            this.textDuration.Size = new System.Drawing.Size(200, 44);
+            this.textDuration.TabIndex = 34;
             // 
-            // richTextBoxInfo
+            // richTextBoxDescription
             // 
-            this.richTextBoxInfo.Location = new System.Drawing.Point(279, 309);
-            this.richTextBoxInfo.Name = "richTextBoxInfo";
-            this.richTextBoxInfo.Size = new System.Drawing.Size(681, 300);
-            this.richTextBoxInfo.TabIndex = 30;
-            this.richTextBoxInfo.Text = "";
+            this.richTextBoxDescription.Location = new System.Drawing.Point(279, 309);
+            this.richTextBoxDescription.Name = "richTextBoxDescription";
+            this.richTextBoxDescription.Size = new System.Drawing.Size(681, 300);
+            this.richTextBoxDescription.TabIndex = 30;
+            this.richTextBoxDescription.Text = "";
             // 
             // label3
             // 
@@ -194,9 +228,9 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 273);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 23);
+            this.label2.Size = new System.Drawing.Size(119, 23);
             this.label2.TabIndex = 29;
-            this.label2.Text = "Information";
+            this.label2.Text = "Description";
             // 
             // label4
             // 
@@ -226,27 +260,27 @@
             this.comboBoxType.Size = new System.Drawing.Size(378, 41);
             this.comboBoxType.TabIndex = 28;
             // 
-            // textBoxFoodName
+            // textBoxMovieName
             // 
-            this.textBoxFoodName.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxFoodName.BorderRadius = 5;
-            this.textBoxFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxFoodName.DefaultText = "";
-            this.textBoxFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxFoodName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxFoodName.Location = new System.Drawing.Point(36, 68);
-            this.textBoxFoodName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxFoodName.Name = "textBoxFoodName";
-            this.textBoxFoodName.PasswordChar = '\0';
-            this.textBoxFoodName.PlaceholderText = "Input Food Name";
-            this.textBoxFoodName.SelectedText = "";
-            this.textBoxFoodName.Size = new System.Drawing.Size(491, 44);
-            this.textBoxFoodName.TabIndex = 8;
+            this.textBoxMovieName.BorderColor = System.Drawing.Color.Gray;
+            this.textBoxMovieName.BorderRadius = 5;
+            this.textBoxMovieName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxMovieName.DefaultText = "";
+            this.textBoxMovieName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxMovieName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxMovieName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxMovieName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxMovieName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxMovieName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMovieName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxMovieName.Location = new System.Drawing.Point(36, 68);
+            this.textBoxMovieName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxMovieName.Name = "textBoxMovieName";
+            this.textBoxMovieName.PasswordChar = '\0';
+            this.textBoxMovieName.PlaceholderText = "Input Movie Name";
+            this.textBoxMovieName.SelectedText = "";
+            this.textBoxMovieName.Size = new System.Drawing.Size(491, 44);
+            this.textBoxMovieName.TabIndex = 8;
             // 
             // label14
             // 
@@ -258,27 +292,27 @@
             this.label14.TabIndex = 27;
             this.label14.Text = "Genre";
             // 
-            // textBoxPrice
+            // textBoxAgeRestriction
             // 
-            this.textBoxPrice.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxPrice.BorderRadius = 5;
-            this.textBoxPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxPrice.DefaultText = "";
-            this.textBoxPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPrice.Location = new System.Drawing.Point(279, 166);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.PasswordChar = '\0';
-            this.textBoxPrice.PlaceholderText = "Input Price";
-            this.textBoxPrice.SelectedText = "";
-            this.textBoxPrice.Size = new System.Drawing.Size(248, 44);
-            this.textBoxPrice.TabIndex = 9;
+            this.textBoxAgeRestriction.BorderColor = System.Drawing.Color.Gray;
+            this.textBoxAgeRestriction.BorderRadius = 5;
+            this.textBoxAgeRestriction.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxAgeRestriction.DefaultText = "";
+            this.textBoxAgeRestriction.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxAgeRestriction.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxAgeRestriction.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxAgeRestriction.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxAgeRestriction.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxAgeRestriction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAgeRestriction.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxAgeRestriction.Location = new System.Drawing.Point(279, 166);
+            this.textBoxAgeRestriction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxAgeRestriction.Name = "textBoxAgeRestriction";
+            this.textBoxAgeRestriction.PasswordChar = '\0';
+            this.textBoxAgeRestriction.PlaceholderText = "Input Price";
+            this.textBoxAgeRestriction.SelectedText = "";
+            this.textBoxAgeRestriction.Size = new System.Drawing.Size(248, 44);
+            this.textBoxAgeRestriction.TabIndex = 9;
             // 
             // guna2Panel2
             // 
@@ -333,40 +367,6 @@
             this.buttonAddIngredient.TabIndex = 2;
             this.buttonAddIngredient.Text = "+";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(158, 612);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "200 x 300";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(578, 135);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 23);
-            this.label6.TabIndex = 37;
-            this.label6.Text = "Release date";
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(582, 166);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(378, 44);
-            this.guna2DateTimePicker1.TabIndex = 38;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
-            // 
             // Form_AddMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -384,7 +384,7 @@
             this.panelHeader.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMovie)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -395,24 +395,24 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBoxFood;
+        private System.Windows.Forms.PictureBox pictureBoxMovie;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxID;
-        private System.Windows.Forms.RichTextBox richTextBoxInfo;
+        private Guna.UI2.WinForms.Guna2TextBox textDuration;
+        private System.Windows.Forms.RichTextBox richTextBoxDescription;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxType;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxFoodName;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxMovieName;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox textBoxPrice;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxAgeRestriction;
         private Guna.UI2.WinForms.Guna2Panel panelHeader;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button buttonAdd;
         private Guna.UI2.WinForms.Guna2Button buttonAddIngredient;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePickerRelease;
         private System.Windows.Forms.Label label6;
     }
 }
