@@ -1,4 +1,5 @@
 ﻿using CinemaBookingandManagementApplication.configs;
+using CinemaBookingandManagementApplication.dao.impl;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,9 @@ namespace CinemaBookingandManagementApplication
         public Form_AddMovie()
         {
             InitializeComponent();
+            comboBoxType.DataSource = MovieTypeDaoImpl.getListMovieType();
+            comboBoxType.ValueMember = "mtid";
+            comboBoxType.DisplayMember = "typename";
         }
 
         private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)

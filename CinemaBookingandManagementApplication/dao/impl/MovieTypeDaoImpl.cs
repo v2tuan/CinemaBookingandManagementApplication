@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.dao.impl
 {
-    internal class MovieTypeDaoImpl
+    static class MovieTypeDaoImpl
     {
         public static DataTable getListMovieType()
         {
