@@ -46,15 +46,24 @@ namespace CinemaBookingandManagementApplication.configs
 // ham kiem tra id cua movie
         public static bool checkMovieID(string movieID)
         {
+            bool exists =false;
             try
             {
                 conn.Open();
-
+                int result;
                 // Gọi hàm SQL
                 using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_MOVIE(@MOVIEID)", conn))
                 {
                     command.Parameters.AddWithValue("@MOVIEID", movieID);
-                    result = (binary)command.ExecuteScalar();
+                    result = (Int32)command.ExecuteScalar();
+                    if (result != null && result ==1)
+                    {
+                        exists = true; // Kết quả là kiểu boolean
+                    }
+                    else
+                    {
+                        exists = false; // Không có kết quả hợp lệ
+                    }
                 }
             }
             catch (Exception ex)
@@ -69,7 +78,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Close();
                 }
             }
-            return;
+            return exists;
 
             
         }

@@ -16,5 +16,7 @@ namespace CinemaBookingandManagementApplication.dao
         void delete(int id);
         List<Movie> findName(String keyword);
         float getRevenue(Movie movie);
+
+        bool checkid(string id);
     }
 }

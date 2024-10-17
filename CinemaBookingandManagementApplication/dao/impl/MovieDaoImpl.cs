@@ -1,4 +1,5 @@
-﻿using CinemaBookingandManagementApplication.models;
+﻿using CinemaBookingandManagementApplication.configs;
+using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
 {
     internal class MovieDaoImpl : IMovieDao
     {
+        public bool checkid(string id)
+        {
+           return Function.checkMovieID(id);
+        }
+
         public void delete(int id)
         {
             throw new NotImplementedException();
