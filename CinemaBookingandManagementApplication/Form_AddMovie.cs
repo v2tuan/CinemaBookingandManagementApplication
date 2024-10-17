@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.configs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace CinemaBookingandManagementApplication
         public Form_AddMovie()
         {
             InitializeComponent();
+        }
+
+        private void comboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

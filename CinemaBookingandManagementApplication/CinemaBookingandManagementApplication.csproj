@@ -59,6 +59,7 @@
     <Compile Include="dao\IMovieDao.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
     <Compile Include="dao\impl\MovieDaoImpl.cs" />
+    <Compile Include="dao\impl\MovieTypeDaoImpl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

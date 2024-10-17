@@ -12,7 +12,7 @@ namespace CinemaBookingandManagementApplication.Dao
     {
         public My_DB()
         {
-
+         
         }
 
         private string getConnectionStrFromFile(string filePath)
