@@ -174,6 +174,7 @@
             this.pictureBoxMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMovie.TabIndex = 35;
             this.pictureBoxMovie.TabStop = false;
+            this.pictureBoxMovie.Click += new System.EventHandler(this.pictureBoxMovie_Click);
             // 
             // label7
             // 

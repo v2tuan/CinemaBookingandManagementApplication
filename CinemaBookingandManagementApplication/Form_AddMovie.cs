@@ -31,5 +31,20 @@ namespace CinemaBookingandManagementApplication
         {
 
         }
+
+        private void pictureBoxMovie_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy đường dẫn tệp hình ảnh được chọn
+                string imagePath = openFileDialog.FileName;
+
+                // Cập nhật hình ảnh trong PictureBox
+                pictureBoxMovie.ImageLocation = imagePath;
+            }
+        }
     }
 }

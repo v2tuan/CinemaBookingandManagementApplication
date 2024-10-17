@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.configs
 {
-    internal class Procedure
+    static class Procedure
     {
-        private My_DB myDB = new My_DB();  // Sử dụng lớp My_DB để lấy kết nối
+        private static My_DB myDB = new My_DB();  // Sử dụng lớp My_DB để lấy kết nối
 
-        public void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue,
+        public static void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue,
                     string mtid, DateTime releaseDate, int duration, string descriptions, byte[] images)
         {
             using (SqlConnection conn = myDB.getConnectionFromFile())  // Lấy kết nối từ My_DB
