@@ -1,4 +1,5 @@
-﻿using CinemaBookingandManagementApplication.UserControls;
+﻿using CinemaBookingandManagementApplication.Dao;
+using CinemaBookingandManagementApplication.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,17 +39,12 @@ namespace CinemaBookingandManagementApplication
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            My_DB db = new My_DB();
+            MessageBox.Show(db.getConnectionFromFile().ToString());
+
             Form_ShowMovie form_ShowMovie = new Form_ShowMovie();
             openChildForm(form_ShowMovie);
             form_ShowMovie.buttonBuyClick += (ss, ee) =>
-            {
-                Form_detailMovie frm = new Form_detailMovie();
-                openChildForm(frm);
-            };
-
-            Form_ShowMovie form_ShowMovie2 = new Form_ShowMovie();
-            openChildForm(form_ShowMovie2);
-            form_ShowMovie2.buttonBuyClick += (ss, ee) =>
             {
                 Form_detailMovie frm = new Form_detailMovie();
                 openChildForm(frm);
