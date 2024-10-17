@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CinemaBookingandManagementApplication.configs
 {
-    internal class Function
+    static class Function
     {
         public static SqlConnection conn = new My_DB().getConnectionFromFile();
         public static DataTable getListMovieType()
