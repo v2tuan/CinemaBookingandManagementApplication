@@ -38,10 +38,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBoxMovie = new System.Windows.Forms.PictureBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            //this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBoxFood = new System.Windows.Forms.PictureBox();
+            //this.pictureBoxFood = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textDuration = new Guna.UI2.WinForms.Guna2TextBox();
             this.richTextBoxDescription = new System.Windows.Forms.RichTextBox();
@@ -136,19 +136,19 @@
             // DateTimePickerRelease
             // guna2DateTimePicker1
             // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(517, 133);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(336, 35);
-            this.guna2DateTimePicker1.TabIndex = 38;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
+            //this.guna2DateTimePicker1.BorderRadius = 5;
+            //this.guna2DateTimePicker1.Checked = true;
+            //this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
+            //this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            //this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            //this.guna2DateTimePicker1.Location = new System.Drawing.Point(517, 133);
+            //this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            //this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            //this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            //this.guna2DateTimePicker1.Size = new System.Drawing.Size(336, 35);
+            //this.guna2DateTimePicker1.TabIndex = 38;
+            //this.guna2DateTimePicker1.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
             // label6
             // 
@@ -183,14 +183,14 @@
             this.DateTimePickerRelease.Size = new System.Drawing.Size(378, 44);
             this.DateTimePickerRelease.TabIndex = 38;
             this.DateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
-            this.pictureBoxFood.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxFood.Location = new System.Drawing.Point(32, 247);
-            this.pictureBoxFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxFood.Name = "pictureBoxFood";
-            this.pictureBoxFood.Size = new System.Drawing.Size(178, 240);
-            this.pictureBoxFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxFood.TabIndex = 35;
-            this.pictureBoxFood.TabStop = false;
+            //this.pictureBoxFood.BackColor = System.Drawing.SystemColors.Control;
+            //this.pictureBoxFood.Location = new System.Drawing.Point(32, 247);
+            //this.pictureBoxFood.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.pictureBoxFood.Name = "pictureBoxFood";
+            //this.pictureBoxFood.Size = new System.Drawing.Size(178, 240);
+            //this.pictureBoxFood.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            //this.pictureBoxFood.TabIndex = 35;
+            //this.pictureBoxFood.TabStop = false;
             // 
             // label6
             // 
@@ -252,25 +252,25 @@
             this.textDuration.SelectedText = "";
             this.textDuration.Size = new System.Drawing.Size(200, 44);
             this.textDuration.TabIndex = 34;
-            this.textBoxID.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxID.BorderRadius = 5;
-            this.textBoxID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxID.DefaultText = "";
-            this.textBoxID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxID.Location = new System.Drawing.Point(32, 133);
-            this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.PasswordChar = '\0';
-            this.textBoxID.PlaceholderText = "Input Food ID";
-            this.textBoxID.SelectedText = "";
-            this.textBoxID.Size = new System.Drawing.Size(178, 35);
-            this.textBoxID.TabIndex = 34;
+            //this.textBoxID.BorderColor = System.Drawing.Color.Gray;
+            //this.textBoxID.BorderRadius = 5;
+            //this.textBoxID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            //this.textBoxID.DefaultText = "";
+            //this.textBoxID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            //this.textBoxID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            //this.textBoxID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.textBoxID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxID.Location = new System.Drawing.Point(32, 133);
+            //this.textBoxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.textBoxID.Name = "textBoxID";
+            //this.textBoxID.PasswordChar = '\0';
+            //this.textBoxID.PlaceholderText = "Input Food ID";
+            //this.textBoxID.SelectedText = "";
+            //this.textBoxID.Size = new System.Drawing.Size(178, 35);
+            //this.textBoxID.TabIndex = 34;
             // 
             // richTextBoxDescription
             // 
@@ -279,12 +279,12 @@
             this.richTextBoxDescription.Size = new System.Drawing.Size(681, 300);
             this.richTextBoxDescription.TabIndex = 30;
             this.richTextBoxDescription.Text = "";
-            this.richTextBoxInfo.Location = new System.Drawing.Point(248, 247);
-            this.richTextBoxInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richTextBoxInfo.Name = "richTextBoxInfo";
-            this.richTextBoxInfo.Size = new System.Drawing.Size(606, 241);
-            this.richTextBoxInfo.TabIndex = 30;
-            this.richTextBoxInfo.Text = "";
+            //this.richTextBoxInfo.Location = new System.Drawing.Point(248, 247);
+            //this.richTextBoxInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            //this.richTextBoxInfo.Name = "richTextBoxInfo";
+            //this.richTextBoxInfo.Size = new System.Drawing.Size(606, 241);
+            //this.richTextBoxInfo.TabIndex = 30;
+            //this.richTextBoxInfo.Text = "";
             // 
             // label3
             // 
@@ -358,25 +358,25 @@
             this.textBoxMovieName.SelectedText = "";
             this.textBoxMovieName.Size = new System.Drawing.Size(491, 44);
             this.textBoxMovieName.TabIndex = 8;
-            this.textBoxFoodName.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxFoodName.BorderRadius = 5;
-            this.textBoxFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxFoodName.DefaultText = "";
-            this.textBoxFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxFoodName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxFoodName.Location = new System.Drawing.Point(32, 54);
-            this.textBoxFoodName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxFoodName.Name = "textBoxFoodName";
-            this.textBoxFoodName.PasswordChar = '\0';
-            this.textBoxFoodName.PlaceholderText = "Input Food Name";
-            this.textBoxFoodName.SelectedText = "";
-            this.textBoxFoodName.Size = new System.Drawing.Size(436, 35);
-            this.textBoxFoodName.TabIndex = 8;
+            //this.textBoxFoodName.BorderColor = System.Drawing.Color.Gray;
+            //this.textBoxFoodName.BorderRadius = 5;
+            //this.textBoxFoodName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            //this.textBoxFoodName.DefaultText = "";
+            //this.textBoxFoodName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            //this.textBoxFoodName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            //this.textBoxFoodName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxFoodName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxFoodName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxFoodName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.textBoxFoodName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxFoodName.Location = new System.Drawing.Point(32, 54);
+            //this.textBoxFoodName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.textBoxFoodName.Name = "textBoxFoodName";
+            //this.textBoxFoodName.PasswordChar = '\0';
+            //this.textBoxFoodName.PlaceholderText = "Input Food Name";
+            //this.textBoxFoodName.SelectedText = "";
+            //this.textBoxFoodName.Size = new System.Drawing.Size(436, 35);
+            //this.textBoxFoodName.TabIndex = 8;
             // 
             // label14
             // 
@@ -409,25 +409,25 @@
             this.textBoxAgeRestriction.SelectedText = "";
             this.textBoxAgeRestriction.Size = new System.Drawing.Size(248, 44);
             this.textBoxAgeRestriction.TabIndex = 9;
-            this.textBoxPrice.BorderColor = System.Drawing.Color.Gray;
-            this.textBoxPrice.BorderRadius = 5;
-            this.textBoxPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxPrice.DefaultText = "";
-            this.textBoxPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textBoxPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textBoxPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textBoxPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPrice.Location = new System.Drawing.Point(248, 133);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.PasswordChar = '\0';
-            this.textBoxPrice.PlaceholderText = "Input Price";
-            this.textBoxPrice.SelectedText = "";
-            this.textBoxPrice.Size = new System.Drawing.Size(220, 35);
-            this.textBoxPrice.TabIndex = 9;
+            //this.textBoxPrice.BorderColor = System.Drawing.Color.Gray;
+            //this.textBoxPrice.BorderRadius = 5;
+            //this.textBoxPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            //this.textBoxPrice.DefaultText = "";
+            //this.textBoxPrice.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            //this.textBoxPrice.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            //this.textBoxPrice.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxPrice.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            //this.textBoxPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            //this.textBoxPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            //this.textBoxPrice.Location = new System.Drawing.Point(248, 133);
+            //this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            //this.textBoxPrice.Name = "textBoxPrice";
+            //this.textBoxPrice.PasswordChar = '\0';
+            //this.textBoxPrice.PlaceholderText = "Input Price";
+            //this.textBoxPrice.SelectedText = "";
+            //this.textBoxPrice.Size = new System.Drawing.Size(220, 35);
+            //this.textBoxPrice.TabIndex = 9;
             // 
             // guna2Panel2
             // 
