@@ -18,7 +18,7 @@ namespace CinemaBookingandManagementApplication.configs
         private static My_DB myDB = new My_DB();  // Sử dụng lớp My_DB để lấy kết nối
 
         public static void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue, string mtid,
-                                DateTime releaseDate, int duration, string descriptions, byte[] images)
+                                DateTime releaseDate, int duration, string descriptions, MemoryStream images)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
