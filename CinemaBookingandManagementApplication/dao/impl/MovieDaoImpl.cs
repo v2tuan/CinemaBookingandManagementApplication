@@ -90,5 +90,10 @@ namespace CinemaBookingandManagementApplication.dao.impl
         {
             return Function.checkMovieID(id);
         }
+
+        public System.Data.DataTable GetListMovie()
+        {
+            return Function.GetListMovie();
+        }
     }
 }

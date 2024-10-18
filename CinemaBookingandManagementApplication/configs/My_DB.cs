@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication.Dao
 {
@@ -30,7 +31,7 @@ namespace CinemaBookingandManagementApplication.Dao
             }
             catch (Exception e)
             {
-                Console.WriteLine("An error occurred: " + e.Message);
+                MessageBox.Show("An error occurred: " + e.Message);
             }
 
             return null;

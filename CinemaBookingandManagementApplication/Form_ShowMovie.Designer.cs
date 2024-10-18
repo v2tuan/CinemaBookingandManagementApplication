@@ -36,7 +36,7 @@
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddMovie = new Guna.UI2.WinForms.Guna2Button();
-            this.fpanel_show_movie = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelMovie = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,16 +153,16 @@
             this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddMovie.Click += new System.EventHandler(this.btnAddMovie_Click);
             // 
-            // fpanel_show_movie
+            // flowLayoutPanelMovie
             // 
-            this.fpanel_show_movie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flowLayoutPanelMovie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fpanel_show_movie.AutoScroll = true;
-            this.fpanel_show_movie.Location = new System.Drawing.Point(20, 81);
-            this.fpanel_show_movie.Name = "fpanel_show_movie";
-            this.fpanel_show_movie.Size = new System.Drawing.Size(1651, 734);
-            this.fpanel_show_movie.TabIndex = 6;
+            this.flowLayoutPanelMovie.AutoScroll = true;
+            this.flowLayoutPanelMovie.Location = new System.Drawing.Point(20, 81);
+            this.flowLayoutPanelMovie.Name = "flowLayoutPanelMovie";
+            this.flowLayoutPanelMovie.Size = new System.Drawing.Size(1651, 734);
+            this.flowLayoutPanelMovie.TabIndex = 6;
             // 
             // Form_ShowMovie
             // 
@@ -170,7 +170,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1698, 836);
-            this.Controls.Add(this.fpanel_show_movie);
+            this.Controls.Add(this.flowLayoutPanelMovie);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -190,6 +190,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
         private Guna.UI2.WinForms.Guna2Button btnAddMovie;
-        private System.Windows.Forms.FlowLayoutPanel fpanel_show_movie;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMovie;
     }
 }

@@ -52,10 +52,11 @@ namespace CinemaBookingandManagementApplication.configs
                         // Thêm tham số hình ảnh (image có thể null)
                         if (images != null)
                         {
-                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images;
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
                         }
                         else
                         {
+                            MessageBox.Show("không có ảnh");
                             cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
                         }
 

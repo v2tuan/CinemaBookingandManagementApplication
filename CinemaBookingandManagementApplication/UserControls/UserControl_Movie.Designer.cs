@@ -32,7 +32,7 @@
             this.btn_buy = new Guna.UI2.WinForms.Guna2Button();
             this.pic_cover = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cover)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             this.SuspendLayout();
@@ -88,22 +88,22 @@
             this.pic_movie.TabStop = false;
             this.pic_movie.MouseEnter += new System.EventHandler(this.pic_movie_MouseEnter);
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 314);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 22);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Robot Hoang Dã";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(9, 314);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(158, 22);
+            this.labelName.TabIndex = 4;
+            this.labelName.Text = "Robot Hoang Dã";
             // 
             // UserControl_Movie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelName);
             this.Controls.Add(this.btn_buy);
             this.Controls.Add(this.pic_cover);
             this.Controls.Add(this.pic_movie);
@@ -121,6 +121,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_buy;
         private Guna.UI2.WinForms.Guna2PictureBox pic_cover;
         private Guna.UI2.WinForms.Guna2PictureBox pic_movie;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelName;
     }
 }

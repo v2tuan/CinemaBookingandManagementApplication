@@ -40,7 +40,6 @@ namespace CinemaBookingandManagementApplication
         private void Form_Main_Load(object sender, EventArgs e)
         {
             My_DB db = new My_DB();
-            MessageBox.Show(db.getConnectionFromFile().ToString());
 
             Form_ShowMovie form_ShowMovie = new Form_ShowMovie();
             openChildForm(form_ShowMovie);

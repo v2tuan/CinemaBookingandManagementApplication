@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.models
 {
-    internal class Movie
+    public class Movie
     {
         private string mid;
         private string moviename;

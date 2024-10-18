@@ -1,6 +1,7 @@
 ﻿using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,5 +19,7 @@ namespace CinemaBookingandManagementApplication.dao
         float getRevenue(Movie movie);
 
         bool checkid(string id);
+
+        DataTable GetListMovie();
     }
 }

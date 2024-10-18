@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,15 @@ namespace CinemaBookingandManagementApplication.UserControls
 {
     public partial class UserControl_Movie : UserControl
     {
+        public Movie movie { get; set; } = new Movie();
+
         public event EventHandler buttonClick = null;
         public UserControl_Movie()
         {
             InitializeComponent();
             pic_cover.Visible = false;
             btn_buy.Visible = false;
+
         }
 
         private void pic_movie_MouseEnter(object sender, EventArgs e)
@@ -41,6 +45,12 @@ namespace CinemaBookingandManagementApplication.UserControls
         {
             btn_buy.Visible = true;
             pic_cover.Visible = true;
+        }
+
+        public void restart()
+        {
+            pic_movie.Image = movie.Image;
+            labelName.Text = movie.Moviename;
         }
     }
 }
