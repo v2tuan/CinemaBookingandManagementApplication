@@ -82,5 +82,31 @@ namespace CinemaBookingandManagementApplication.configs
 
             
         }
+        //hàm list cinema
+        public static DataTable GetListMovies()
+        {
+            DataTable movies = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM LIST_MOVIE()", conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies; 
+        }
     }
+}
 }
