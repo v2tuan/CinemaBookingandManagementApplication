@@ -109,14 +109,14 @@ namespace CinemaBookingandManagementApplication.configs
             return cinema;
         }
         //check id cinema
-        public static void checkCinemaID(string cinemaID)
+
+        public static bool checkCinemaID(string cinemaID)
         {
             bool exists = false;
             try
             {
                 conn.Open();
                 int result;
-
                 using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_CINEMA(@CINEMAID)", conn))
                 {
                     command.Parameters.AddWithValue("@CINEMAID", cinemaID);
@@ -126,30 +126,24 @@ namespace CinemaBookingandManagementApplication.configs
                     {
                         exists = true;
                     }
-                }
-
-             
-                if (exists)
-                {
-                    MessageBox.Show("Cinema ID " + cinemaID + " exists.", "Cinema Check", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Cinema ID " + cinemaID + " does not exist.", "Cinema Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    else
+                    {
+                        exists = false;
+                    }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine("An error occurred: " + ex.Message);
             }
             finally
             {
-                // Đảm bảo đóng kết nối
                 if (conn.State == ConnectionState.Open)
                 {
                     conn.Close();
                 }
             }
+            return exists;
         }
     }
 

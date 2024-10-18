@@ -25,10 +25,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -94,10 +92,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -143,10 +139,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -187,7 +181,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
-        /*
+        
         //add new seat
         public static void AddNewSeat(string rid, int states, string snumber, string srow)
         {
@@ -196,10 +190,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -245,10 +237,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -295,10 +285,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -344,10 +332,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -393,10 +379,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -442,10 +426,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -493,10 +475,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -546,10 +526,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -595,10 +573,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -645,10 +621,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -695,10 +669,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -744,10 +716,8 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    foreach (SqlError error in e.Errors)
-                    {
-                        Console.WriteLine("SQL Message: " + error.Message);
-                    }
+                    // Ghi thông báo từ SQL Server ra console
+                    Console.WriteLine("SQL Server Message: " + e.Message);
                 };
                 try
                 {
@@ -786,6 +756,6 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
 
-        */
+        
     }
 }
