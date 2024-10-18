@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CinemaBookingandManagementApplication">
+      <HintPath>obj\Debug\CinemaBookingandManagementApplication.exe</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -57,6 +60,7 @@
     <Compile Include="configs\Procedure.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
+    <Compile Include="dao\impl\CinemaDaoImpl.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
     <Compile Include="dao\impl\MovieDaoImpl.cs" />
     <Compile Include="dao\impl\MovieTypeDaoImpl.cs" />
@@ -108,11 +112,23 @@
     <Compile Include="Form_detailMovie.Designer.cs">
       <DependentUpon>Form_detailMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_EditMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EditMovie.Designer.cs">
+      <DependentUpon>Form_EditMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_HomeManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_HomeManager.Designer.cs">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ListCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ListCinema.Designer.cs">
+      <DependentUpon>Form_ListCinema.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Main.cs">
       <SubType>Form</SubType>
@@ -196,8 +212,14 @@
     <EmbeddedResource Include="Form_detailMovie.resx">
       <DependentUpon>Form_detailMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_EditMovie.resx">
+      <DependentUpon>Form_EditMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_HomeManager.resx">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ListCinema.resx">
+      <DependentUpon>Form_ListCinema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>

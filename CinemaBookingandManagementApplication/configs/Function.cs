@@ -31,7 +31,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
             finally
             {
@@ -53,7 +53,7 @@ namespace CinemaBookingandManagementApplication.configs
                 conn.Open();
                 int result;
                 // Gọi hàm SQL
-                using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_MOVIE(@MOVIEID)", conn))
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CHECK_MOVIE(@MOVIEID)", conn))
                 {
                     command.Parameters.AddWithValue("@MOVIEID", movieID);
                     result = (Int32)command.ExecuteScalar();
@@ -69,7 +69,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
             finally
             {
@@ -80,8 +80,6 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
             return exists;
-
-
         }
         //hàm list cinema
         public static DataTable GetListCinema()

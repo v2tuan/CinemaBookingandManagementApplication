@@ -50,6 +50,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+
             Movie movie = new Movie();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
             movie.Mid = MovieDao.IDNext();

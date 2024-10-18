@@ -88,7 +88,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonCinema_Click(object sender, EventArgs e)
         {
-            Form_Cinema frm = new Form_Cinema();
+            Form_ListCinema frm = new Form_ListCinema();
             openChildForm(frm);
         }
     }
