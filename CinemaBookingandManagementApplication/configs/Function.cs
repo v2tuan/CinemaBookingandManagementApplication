@@ -83,19 +83,19 @@ namespace CinemaBookingandManagementApplication.configs
             
         }
         //hàm list cinema
-        public static DataTable GetListMovies()
+        public static DataTable GetListCinema()
         {
-            DataTable movies = new DataTable();
+            DataTable cinema = new DataTable();
             using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM LIST_MOVIE()", conn))
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM LIST_CINEMA()", conn))
                     {
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            adapter.Fill(movies);
+                            adapter.Fill(cinema);
                         }
                     }
                 }
@@ -105,8 +105,8 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
 
-            return movies; 
+            return cinema; 
         }
     }
-}
+
 }
