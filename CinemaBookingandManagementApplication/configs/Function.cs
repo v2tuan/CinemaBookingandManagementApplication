@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace CinemaBookingandManagementApplication.configs
 {
     static class Function
@@ -43,10 +44,10 @@ namespace CinemaBookingandManagementApplication.configs
             return movieTypes;
         }
 
-// ham kiem tra id cua movie
+        // ham kiem tra id cua movie
         public static bool checkMovieID(string movieID)
         {
-            bool exists =false;
+            bool exists = false;
             try
             {
                 conn.Open();
@@ -56,7 +57,7 @@ namespace CinemaBookingandManagementApplication.configs
                 {
                     command.Parameters.AddWithValue("@MOVIEID", movieID);
                     result = (Int32)command.ExecuteScalar();
-                    if (result != null && result ==1)
+                    if (result != null && result == 1)
                     {
                         exists = true; // Kết quả là kiểu boolean
                     }
@@ -80,7 +81,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
 
-            
+
         }
         //hàm list cinema
         public static DataTable GetListCinema()
@@ -105,10 +106,10 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
 
-            return cinema; 
+            return cinema;
         }
         //check id cinema
-        public static bool checkCinemaID(string cinemaID)
+        public static void checkCinemaID(string cinemaID)
         {
             bool exists = false;
             try
@@ -116,26 +117,30 @@ namespace CinemaBookingandManagementApplication.configs
                 conn.Open();
                 int result;
 
-                // Gọi hàm SQL để kiểm tra cinemaID
-                using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM cinemas WHERE cid = @CINEMAID", conn))
+                using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_CINEMA(@CINEMAID)", conn))
                 {
                     command.Parameters.AddWithValue("@CINEMAID", cinemaID);
                     result = (Int32)command.ExecuteScalar();
 
-                    // Nếu kết quả là 1, tức là cinemaID tồn tại
                     if (result != null && result == 1)
                     {
                         exists = true;
                     }
-                    else
-                    {
-                        exists = false;
-                    }
+                }
+
+             
+                if (exists)
+                {
+                    MessageBox.Show("Cinema ID " + cinemaID + " exists.", "Cinema Check", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Cinema ID " + cinemaID + " does not exist.", "Cinema Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -145,8 +150,6 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Close();
                 }
             }
-
-            return exists;
         }
     }
 
