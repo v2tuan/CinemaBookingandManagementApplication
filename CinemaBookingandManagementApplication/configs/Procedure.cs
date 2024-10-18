@@ -17,38 +17,66 @@ namespace CinemaBookingandManagementApplication.configs
     {
         private static My_DB myDB = new My_DB();  // Sử dụng lớp My_DB để lấy kết nối
 
-        public static void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue,
-                    string mtid, DateTime releaseDate, int duration, string descriptions, MemoryStream images)
+        public static void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue, string mtid,
+                                DateTime releaseDate, int duration, string descriptions, byte[] images)
         {
-            using (SqlConnection conn = myDB.getConnectionFromFile())  // Lấy kết nối từ My_DB
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
             {
-                using (SqlCommand cmd = new SqlCommand("AddNewMovie", conn))
+                try
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-
-                    // Thêm các tham số
-                    cmd.Parameters.AddWithValue("@mid", mid);
-                    cmd.Parameters.AddWithValue("@moviename", moviename);
-                    cmd.Parameters.AddWithValue("@ageRestriction", ageRestriction);
-                    cmd.Parameters.AddWithValue("@revenue", revenue);
-                    cmd.Parameters.AddWithValue("@mtid", mtid);
-                    cmd.Parameters.AddWithValue("@releaseDate", releaseDate); // Thay đổi tên tham số
-                    cmd.Parameters.AddWithValue("@duration", duration); // Thay đổi tên tham số
-                    cmd.Parameters.AddWithValue("@descriptions", descriptions); // Thay đổi tên tham số
-                    cmd.Parameters.AddWithValue("@images", images); // Thay đổi tên tham số
-
-                    // Mở kết nối và thực thi stored procedure
+                    // Mở kết nối
                     conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    if (rowsAffected > 0)
+
+                    // Tạo lệnh để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("AddNewMovie", conn))
                     {
-                        MessageBox.Show("Thêm thành công!");
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@mid", mid);
+                        cmd.Parameters.AddWithValue("@moviename", moviename);
+                        cmd.Parameters.AddWithValue("@ageRestriction", ageRestriction);
+                        cmd.Parameters.AddWithValue("@revenue", revenue);
+                        cmd.Parameters.AddWithValue("@mtid", mtid);
+                        cmd.Parameters.AddWithValue("@releaseDate", releaseDate);
+                        cmd.Parameters.AddWithValue("@duration", duration);
+                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
+
+                        // Thêm tham số hình ảnh (image có thể null)
+                        if (images != null)
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images;
+                        }
+                        else
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
+                        }
+
+                        // Thực thi stored procedure và kiểm tra số hàng bị ảnh hưởng
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Thêm thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Thêm không thành công.");
+                        }
                     }
-                    else
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
                     {
-                        MessageBox.Show("Thêm không thành công.");
+                        conn.Close();
                     }
-                    conn.Close();
                 }
             }
         }
