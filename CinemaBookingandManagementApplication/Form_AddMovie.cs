@@ -1,5 +1,6 @@
 ﻿using CinemaBookingandManagementApplication.configs;
 using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -45,6 +46,22 @@ namespace CinemaBookingandManagementApplication
                 // Cập nhật hình ảnh trong PictureBox
                 pictureBoxMovie.ImageLocation = imagePath;
             }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Movie movie = new Movie();
+            MovieDaoImpl MovieDao = new MovieDaoImpl();
+            movie.Mid = MovieDao.IDNext();
+            movie.Moviename = textBoxMovieName.Text;
+            movie.AgeRestriction = int.Parse(textBoxAgeRestriction.Text);
+            movie.Revenue = 0;
+            movie.Mtid = comboBoxType.SelectedValue.ToString();
+            movie.ReleaseDate = DateTimePickerRelease.Value;
+            movie.Duration = int.Parse(textDuration.Text);
+            movie.Descriptions = richTextBoxDescription.Text;
+            movie.Image = pictureBoxMovie.Image;
+            MovieDao.insert(movie);
         }
     }
 }

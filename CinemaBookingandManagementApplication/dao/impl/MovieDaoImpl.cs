@@ -3,6 +3,7 @@ using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,8 +45,18 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
         public void insert(Movie movie)
         {
-            //Procedure.AddNewMovie(movie.);
-            throw new NotImplementedException();
+            string mid = movie.Mid;
+            string moviename = movie.Moviename;
+            int ageRestriction =  movie.AgeRestriction;
+            decimal revenue = movie.Revenue;
+            string mtid = movie.Mtid;
+            DateTime releaseDate = movie.ReleaseDate;
+            int duration = movie.Duration;
+            string descriptions = movie.Descriptions;
+
+            MemoryStream pic = new MemoryStream();
+            movie.Image.Save(pic, movie.Image.RawFormat);
+            Procedure.AddNewMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, pic);
         }
 
         public void update(Movie category)
@@ -59,38 +70,25 @@ namespace CinemaBookingandManagementApplication.dao.impl
             {
                 int count = 0;
                 count++;
-                string nextID = "D" + count.ToString("D6");
+                string nextID = "M" + count.ToString("D6");
 
-                while (!checkID(nextID))
+                while (checkID(nextID))
                 {
                     count++;
-                    nextID = "D" + count.ToString("D6");
+                    nextID = "M" + count.ToString("D6");
                 }
                 return nextID;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Add DISHES", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Add Movies", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return "";
             }
         }
 
         public bool checkID(string id)
         {
-            //SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM DISHES WHERE Dis_ID = @Id", conn);
-            //cmd.Parameters.AddWithValue("id", id);
-            //conn.Open();
-            //if ((int)cmd.ExecuteScalar() >= 1)
-            //{
-            //    conn.Close();
-            //    return false;
-            //}
-            //else
-            //{
-            //    conn.Close();
-            //    return true;
-            //}
-            return bool.Parse("1");
+            return Function.checkMovieID(id);
         }
     }
 }

@@ -12,14 +12,18 @@ namespace CinemaBookingandManagementApplication.models
         private string mid;
         private string moviename;
         private int ageRestriction;
-        private float revenue;
+        private decimal revenue;
         private string mtid;
         private DateTime releaseDate;
         private int duration;
         private string descriptions;
         private Image image;
 
-        public Movie(string mid, string moviename, int ageRestriction, float revenue, string mtid, DateTime releaseDate, int duration, string descriptions, Image image)
+        public Movie()
+        {
+        }
+
+        public Movie(string mid, string moviename, int ageRestriction, decimal revenue, string mtid, DateTime releaseDate, int duration, string descriptions, Image image)
         {
             this.mid = mid;
             this.moviename = moviename;
@@ -35,7 +39,7 @@ namespace CinemaBookingandManagementApplication.models
         public string Mid { get => mid; set => mid = value; }
         public string Moviename { get => moviename; set => moviename = value; }
         public int AgeRestriction { get => ageRestriction; set => ageRestriction = value; }
-        public float Revenue { get => revenue; set => revenue = value; }
+        public decimal Revenue { get => revenue; set => revenue = value; }
         public string Mtid { get => mtid; set => mtid = value; }
         public DateTime ReleaseDate { get => releaseDate; set => releaseDate = value; }
         public int Duration { get => duration; set => duration = value; }

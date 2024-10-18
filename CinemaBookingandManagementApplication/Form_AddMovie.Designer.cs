@@ -353,6 +353,7 @@
             this.buttonAdd.Size = new System.Drawing.Size(179, 40);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.Text = "Add Movie";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonAddIngredient
             // 

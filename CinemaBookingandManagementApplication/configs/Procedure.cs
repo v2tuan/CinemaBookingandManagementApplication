@@ -6,6 +6,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Diagnostics;
+using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace CinemaBookingandManagementApplication.configs
 {
@@ -14,7 +18,7 @@ namespace CinemaBookingandManagementApplication.configs
         private static My_DB myDB = new My_DB();  // Sử dụng lớp My_DB để lấy kết nối
 
         public static void AddNewMovie(string mid, string moviename, int ageRestriction, decimal revenue,
-                    string mtid, DateTime releaseDate, int duration, string descriptions, byte[] images)
+                    string mtid, DateTime releaseDate, int duration, string descriptions, MemoryStream images)
         {
             using (SqlConnection conn = myDB.getConnectionFromFile())  // Lấy kết nối từ My_DB
             {
@@ -35,7 +39,16 @@ namespace CinemaBookingandManagementApplication.configs
 
                     // Mở kết nối và thực thi stored procedure
                     conn.Open();
-                    cmd.ExecuteNonQuery();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Thêm thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm không thành công.");
+                    }
+                    conn.Close();
                 }
             }
         }
