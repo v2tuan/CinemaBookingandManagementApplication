@@ -107,6 +107,47 @@ namespace CinemaBookingandManagementApplication.configs
 
             return cinema; 
         }
+        //check id cinema
+        public static bool checkCinemaID(string cinemaID)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+
+                // Gọi hàm SQL để kiểm tra cinemaID
+                using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM cinemas WHERE cid = @CINEMAID", conn))
+                {
+                    command.Parameters.AddWithValue("@CINEMAID", cinemaID);
+                    result = (Int32)command.ExecuteScalar();
+
+                    // Nếu kết quả là 1, tức là cinemaID tồn tại
+                    if (result != null && result == 1)
+                    {
+                        exists = true;
+                    }
+                    else
+                    {
+                        exists = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo đóng kết nối
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return exists;
+        }
     }
 
 }
