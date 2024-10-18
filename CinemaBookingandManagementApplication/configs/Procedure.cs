@@ -25,9 +25,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -92,9 +93,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -139,9 +141,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -190,9 +193,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -237,9 +241,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -285,9 +290,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -332,9 +338,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -379,9 +386,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -426,9 +434,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -475,9 +484,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -526,9 +536,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -573,9 +584,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -621,9 +633,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -669,9 +682,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
@@ -716,9 +730,10 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Ghi thông báo từ SQL Server ra console
-                    Console.WriteLine("SQL Server Message: " + e.Message);
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
+
                 try
                 {
                     // Mở kết nối
