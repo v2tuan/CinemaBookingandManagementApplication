@@ -23,6 +23,13 @@ namespace CinemaBookingandManagementApplication.configs
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
             {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    foreach (SqlError error in e.Errors)
+                    {
+                        Console.WriteLine("SQL Message: " + error.Message);
+                    }
+                };
                 try
                 {
                     // Mở kết nối
