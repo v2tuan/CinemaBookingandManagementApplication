@@ -353,10 +353,142 @@ namespace CinemaBookingandManagementApplication.configs
 
             return totalRevenue; // Trả về tổng doanh thu
         }
+        //tổng doanh thu  từ việc bán vé và các sản phẩm như đồ ăn/uống.
+        public static decimal CalculateTotalRevenue()
+        {
+            decimal totalRevenue = 0;
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.CALCULATE_TOTAL_REVENUE()", conn))
+                    {
+                        // Thực thi lệnh và lấy giá trị trả về
+                        totalRevenue = (decimal)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalRevenue; // Trả về tổng doanh thu
+        }
+        //hàm liệt kê doanh thu của từng bộ phim
+        public static DataTable CalculateRevenueByMovie()
+        {
+            DataTable revenueData = new DataTable(); // Khởi tạo DataTable để lưu kết quả
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.CALCULATE_REVENUE_BY_MOVIE()", conn))
+                    {
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(revenueData);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return revenueData; // Trả về DataTable chứa doanh thu theo từng bộ phim
+        }
+        //Tính tổng số vé bán trong một bộ phim cụ thể
+        public static int CountTicketsSoldByMovie(string movieId)
+        {
+            int totalTickets = 0; // Khởi tạo biến để lưu tổng số vé đã bán
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_TICKETS_SOLD_BY_MOVIE(@mid)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@mid", movieId);
+
+                        // Thực thi hàm và lấy giá trị trả về
+                        totalTickets = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalTickets; // Trả về tổng số vé đã bán
+        }
+        //Tính số lượng vé bán trong một ngày cụ thể.
+        public static int CountTicketsSoldByDate(DateTime date)
+        {
+            int totalTickets = 0; // Khởi tạo biến để lưu tổng số vé đã bán
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_TICKETS_SOLD_BY_DATE(@date)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@date", date);
+
+                        // Thực thi hàm và lấy giá trị trả về
+                        totalTickets = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalTickets; // Trả về tổng số vé đã bán
+        }
+        //Kiểm tra trạng thái của một ghế trong phòng chiếu.
+        public static string CheckSeatAvailability(int seatId)
+        {
+            string seatStatus = string.Empty; // Biến để lưu trữ trạng thái ghế
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.CHECK_SEAT_AVAILABILITY(@seatId)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@seatId", seatId);
+
+                        // Thực thi câu lệnh và lấy giá trị trả về
+                        seatStatus = (string)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return seatStatus; // Trả về trạng thái ghế
+        }
 
     }
 
- 
+
 
 
 

@@ -789,9 +789,202 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+        //Update bill
+        public static void UpdateBill(string billId, decimal price, int states, string customerId)
+        {
+            using (SqlConnection conn = myDB.getConnectionFromFile()) // Kết nối cơ sở dữ liệu
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                try
+                {
+                    conn.Open();
+                    // Sử dụng SqlCommand để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("UpdateBill", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@bId", billId);
+                        cmd.Parameters.AddWithValue("@price", price);
+                        cmd.Parameters.AddWithValue("@states", states);
+                        cmd.Parameters.AddWithValue("@cusid", customerId);
+
+                        // Thực thi stored procedure
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cập nhật thông tin hóa đơn thành công.");
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+        //update ticket
+        public static void UpdateTicket(string ticketId, decimal price, DateTime ticketDate, string billId, string showtimeId, int seatId)
+        {
+            using (SqlConnection conn = myDB.getConnectionFromFile()) // Kết nối cơ sở dữ liệu
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                try
+                {
+                    conn.Open();
+                    // Sử dụng SqlCommand để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("UpdateTicket", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@tid", ticketId);
+                        cmd.Parameters.AddWithValue("@price", price);
+                        cmd.Parameters.AddWithValue("@tdate", ticketDate);
+                        cmd.Parameters.AddWithValue("@bId", billId);
+                        cmd.Parameters.AddWithValue("@shid", showtimeId);
+                        cmd.Parameters.AddWithValue("@seatid", seatId);
+
+                        // Thực thi stored procedure
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Cập nhật thông tin vé xem phim thành công.");
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi    
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối     
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+        //update Room
+        public static void UpdateRoom(string rid, string rname, string rtid, string cid)
+        {
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("UpdateRoom", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@rid", rid);
+                        cmd.Parameters.AddWithValue("@rname", rname);
+                        cmd.Parameters.AddWithValue("@rtid", rtid);
+                        cmd.Parameters.AddWithValue("@cid", cid);
+
+                        // Thực thi stored procedure
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Cập nhật phòng chiếu thành công!");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+        //update showtime
+        public static void UpdateShowtime(string shid, string mid, DateTime sdate, TimeSpan stime, TimeSpan etime, int states, string rid)
+        {
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("UpdateShowtime", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@shid", shid);
+                        cmd.Parameters.AddWithValue("@mid", mid);
+                        cmd.Parameters.AddWithValue("@sdate", sdate);
+                        cmd.Parameters.AddWithValue("@stime", stime);
+                        cmd.Parameters.AddWithValue("@etime", etime);
+                        cmd.Parameters.AddWithValue("@states", states);
+                        cmd.Parameters.AddWithValue("@rid", rid);
+
+                        // Thực thi stored procedure
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Cập nhật lịch chiếu thành công!");
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
 
 
-     // hàm thủ tục delete movie
+        // hàm thủ tục delete movie
         public static void DeleteMovie(string movieId)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
