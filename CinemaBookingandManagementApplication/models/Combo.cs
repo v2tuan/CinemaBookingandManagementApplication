@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.models
 {
-    internal class Combo
+    public class Combo
     {
+        
+            public string ComboId { get; set; }
+            public string ComboName { get; set; }
+            public decimal ComboPrice { get; set; }
+            public int Quantity { get; set; }
+     
+
     }
 }

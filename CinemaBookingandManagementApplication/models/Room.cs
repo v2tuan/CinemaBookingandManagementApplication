@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.models
 {
-    internal class Room
+    public class Room
     {
+      
+            public string Rid { get; set; }
+            public string Rname { get; set; }
+            public string Rtid { get; set; }
+            public string Cid { get; set; }
+
+ 
+
     }
 }

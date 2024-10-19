@@ -45,9 +45,10 @@
             this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(38, 15);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(34, 12);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(210, 110);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(187, 88);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -58,9 +59,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(371, 100);
+            this.label4.Location = new System.Drawing.Point(330, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 25);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "19002224";
             // 
@@ -69,9 +70,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(301, 100);
+            this.label3.Location = new System.Drawing.Point(268, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
+            this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Hotline:";
             // 
@@ -80,9 +81,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(301, 63);
+            this.label2.Location = new System.Drawing.Point(268, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(706, 25);
+            this.label2.Size = new System.Drawing.Size(587, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Địa chỉ: Tầng 3, Thiso Mall Sala, 10 Mai Chí Thọ, Phường Thủ Thiêm, Thành phố Thủ" +
     " Đức";
@@ -92,9 +93,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(301, 15);
+            this.label1.Location = new System.Drawing.Point(268, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 38);
+            this.label1.Size = new System.Drawing.Size(139, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Galaxy Sala";
             // 
@@ -116,15 +117,16 @@
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.Location = new System.Drawing.Point(1485, 51);
+            this.guna2CircleButton1.Location = new System.Drawing.Point(1320, 41);
+            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CircleButton1.Name = "guna2CircleButton1";
             this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(50, 50);
+            this.guna2CircleButton1.Size = new System.Drawing.Size(44, 40);
             this.guna2CircleButton1.TabIndex = 9;
             // 
             // UserControl_Cinema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2CircleButton1);
@@ -133,9 +135,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2PictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserControl_Cinema";
-            this.Size = new System.Drawing.Size(1590, 147);
+            this.Size = new System.Drawing.Size(1413, 118);
+            this.Load += new System.EventHandler(this.UserControl_Cinema_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

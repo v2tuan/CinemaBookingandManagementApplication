@@ -16,5 +16,10 @@ namespace CinemaBookingandManagementApplication.UserControls
         {
             InitializeComponent();
         }
+
+        private void UserControl_Cinema_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
