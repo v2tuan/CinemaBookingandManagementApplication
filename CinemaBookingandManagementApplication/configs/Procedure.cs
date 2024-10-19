@@ -548,7 +548,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //add new room
-        public static void CreateNewRoom(string rid, string rname, string rtid, string cid)
+        public static void CreateNewRoom(string rid, string rname, string cid)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -572,7 +572,7 @@ namespace CinemaBookingandManagementApplication.configs
                         // Thêm các tham số cho stored procedure
                         cmd.Parameters.AddWithValue("@rid", rid);
                         cmd.Parameters.AddWithValue("@rname", rname);
-                        cmd.Parameters.AddWithValue("@rtid", rtid);
+                     
                         cmd.Parameters.AddWithValue("@cid", cid);
 
                         // Thực thi stored procedure
@@ -882,7 +882,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //update Room
-        public static void UpdateRoom(string rid, string rname, string rtid, string cid)
+        public static void UpdateRoom(string rid, string rname, string cid)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -906,7 +906,7 @@ namespace CinemaBookingandManagementApplication.configs
                         // Thêm các tham số cho stored procedure
                         cmd.Parameters.AddWithValue("@rid", rid);
                         cmd.Parameters.AddWithValue("@rname", rname);
-                        cmd.Parameters.AddWithValue("@rtid", rtid);
+                    
                         cmd.Parameters.AddWithValue("@cid", cid);
 
                         // Thực thi stored procedure

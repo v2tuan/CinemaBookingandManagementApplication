@@ -485,6 +485,45 @@ namespace CinemaBookingandManagementApplication.configs
 
             return seatStatus; // Trả về trạng thái ghế
         }
+        //hàm check id rroom
+        public static bool checkRoomID(string roomID)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+
+                // Gọi hàm SQL
+                using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_ROOM(@ROOMID)", conn))
+                {
+                    command.Parameters.AddWithValue("@ROOMID", roomID);
+                    result = (int)command.ExecuteScalar(); // Chuyển đổi kết quả thành kiểu int
+
+                    if (result != null && result == 1)
+                    {
+                        exists = true; // Kết quả là kiểu boolean
+                    }
+                    else
+                    {
+                        exists = false; // Không có kết quả hợp lệ
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+        }
 
     }
 
