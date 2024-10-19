@@ -100,7 +100,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
             finally
             {
@@ -162,12 +162,203 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
             return movie;
         }
+
+        // hàm get movie by date
+        public static DataTable GetMoviesByDate(DateTime showDate)
+        {
+            DataTable moviesTable = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GET_MOVIES_BY_DATE", conn))
+                    {
+                        command.CommandType = CommandType.StoredProcedure; // Đặt loại lệnh là stored procedure
+
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@showDate", showDate);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(moviesTable); // Điền dữ liệu vào DataTable
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return moviesTable; // Trả về DataTable chứa danh sách phim
+        }
+
+
+        // hàm tính số ghế đã đăt cho một suất chiếu
+        public static int CountBookedSeats(string showtimeId)
+        {
+            int totalBookedSeats = 0; // Biến để lưu tổng số ghế đã đặt
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT COUNT_BOOKED_SEATS(@shid)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@shid", showtimeId);
+
+                        // Thực thi câu lệnh và lấy giá trị trả về
+                        totalBookedSeats = (int)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalBookedSeats; // Trả về tổng số ghế đã đặt
+        }
+
+
+
+        // hàm lấy ra top suất chiếu có lượt bán cao nhất
+        public static DataTable GetMostPopularShowtimes(int top)
+        {
+            DataTable popularShowtimes = new DataTable(); // Khởi tạo DataTable để lưu kết quả
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.GET_MOST_POPULAR_SHOWTIME(@top)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@top", top);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(popularShowtimes);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return popularShowtimes; // Trả về DataTable chứa danh sách suất chiếu phổ biến
+        }
+
+
+        // hàm trả về top phim có lượt bán vé cao nhất
+        public static DataTable GetMostPopularMovies(int top)
+        {
+            DataTable popularMovies = new DataTable(); // Khởi tạo DataTable để lưu kết quả
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.GET_MOST_POPULAR_MOVIES(@top)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@top", top);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(popularMovies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                   MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return popularMovies; // Trả về DataTable chứa danh sách phim phổ biến
+        }
+
+
+        // tính tổng doanh thu của một phim 
+
+        public static decimal CalculateTotalRevenueByMovie(string movieId)
+        {
+            decimal totalRevenue = 0; // Khởi tạo biến để lưu tổng doanh thu
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.CALCULATE_TOTAL_REVENUE_BY_MOVIE(@mid)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@mid", movieId);
+
+                        // Thực thi hàm và lấy giá trị trả về
+                        totalRevenue = (decimal)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalRevenue; // Trả về tổng doanh thu
+        }
+
+
+        // tính tổng doanh thu theo ngày 
+        public static decimal CalculateDailyRevenue(DateTime date)
+        {
+            decimal totalRevenue = 0; // Khởi tạo biến để lưu tổng doanh thu
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.CALCULATE_DAILY_REVENUE(@date)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        command.Parameters.AddWithValue("@date", date);
+
+                        // Thực thi hàm và lấy giá trị trả về
+                        totalRevenue = (decimal)command.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalRevenue; // Trả về tổng doanh thu
+        }
+
     }
+
+ 
+
+
+
 
 }

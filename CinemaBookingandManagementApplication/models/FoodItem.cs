@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.models
 {
-    internal class FoodItem
+    public class FoodItem
     {
+        public string FoodItemId { get; set; }
+        public string FoodItemName { get; set; }
+        public decimal Price { get; set; }
+        public int Quantity { get; set; }
     }
 }
