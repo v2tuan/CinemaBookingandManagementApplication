@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,24 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_Cinema : Form
     {
+        public Cinema cinema {  get; set; }
         public Form_Cinema()
         {
             InitializeComponent();
+        }
+
+        private void Form_Cinema_Load(object sender, EventArgs e)
+        {
+            PictureBoxCinema.Image = cinema.Image;
+            labelName.Text = cinema.Cname;
+            labelAddress.Text = cinema.Caddress;
+            labelHotline.Text = cinema.Hotline;
+        }
+
+        private void btnAddRoom_Click(object sender, EventArgs e)
+        {
+            Form_AddRoom form_AddRoom = new Form_AddRoom();
+            form_AddRoom.ShowDialog();
         }
     }
 }

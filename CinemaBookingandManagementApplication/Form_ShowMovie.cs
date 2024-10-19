@@ -43,7 +43,7 @@ namespace CinemaBookingandManagementApplication
                 DataTable dt = movieDaoImpl.GetListMovie();
                 //UserControl_Movie movie = null;
                 byte[] pic = null;
-                Form_detailMovie detailMovie = new Form_detailMovie();
+                Form_InformationMovie detailMovie = new Form_InformationMovie();
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)

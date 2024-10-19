@@ -14,7 +14,7 @@ namespace CinemaBookingandManagementApplication.UserControls
     public partial class UserControl_Cinema : UserControl
     {
         public Cinema cinema { get; set; } = new Cinema();
-
+        public event EventHandler buttonClick = null;
         public UserControl_Cinema()
         {
             InitializeComponent();
@@ -24,6 +24,33 @@ namespace CinemaBookingandManagementApplication.UserControls
         {
             PictureBoxCinema.Image = cinema.Image;
             labelName.Text = cinema.Cname;
+            labelAddress.Text = cinema.Caddress;
+            labelHotline.Text = cinema.Hotline;
+        }
+
+        private void UserControl_Cinema_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void UserControl_Cinema_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void UserControl_Cinema_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ShadowPanel1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2ShadowPanel1_DoubleClick(object sender, EventArgs e)
+        {
+            buttonClick?.Invoke(this, e);
         }
     }
 }

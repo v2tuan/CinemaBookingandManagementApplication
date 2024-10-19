@@ -13,5 +13,9 @@ namespace CinemaBookingandManagementApplication.models
         public int States { get; set; }
         public string Snumber { get; set; }
         public string Srow { get; set; }
+
+        public Seat()
+        {
+        }
     }
 }
