@@ -87,7 +87,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
-        public static void CreateNewCinema(string cid, string cname, string caddress, string hotline, string area)
+        public static void CreateNewCinema(string cid, string cname, string caddress, string hotline, string area, MemoryStream images)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -114,7 +114,16 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@caddress", caddress);
                         cmd.Parameters.AddWithValue("@hotline", hotline);
                         cmd.Parameters.AddWithValue("@area", area);
-
+                        // Thêm tham số hình ảnh (image có thể null)
+                        if (images != null)
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
+                        }
+                        else
+                        {
+                            MessageBox.Show("không có ảnh");
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
+                        }
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Cơ sở rạp được tạo thành công!");
@@ -135,7 +144,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
-        public static void UpdateCinema(string cid, string cname, string caddress, string hotline, string area)
+        public static void UpdateCinema(string cid, string cname, string caddress, string hotline, string area, MemoryStream images)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -162,7 +171,16 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@caddress", caddress);
                         cmd.Parameters.AddWithValue("@hotline", hotline);
                         cmd.Parameters.AddWithValue("@area", area);
-
+                        // Thêm tham số hình ảnh (image có thể null)
+                        if (images != null)
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
+                        }
+                        else
+                        {
+                            MessageBox.Show("không có ảnh");
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
+                        }
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
 
