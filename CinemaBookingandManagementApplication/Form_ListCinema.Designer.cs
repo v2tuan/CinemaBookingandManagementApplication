@@ -36,7 +36,7 @@
             this.buttonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddMovie = new Guna.UI2.WinForms.Guna2Button();
-            this.fpanel_show_movie = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelCinema = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl_Cinema1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
             this.userControl_Cinema2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
             this.userControl_Cinema3 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
@@ -46,7 +46,7 @@
             this.userControl_Cinema7 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
             this.userControl_Cinema8 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
             this.guna2ShadowPanel1.SuspendLayout();
-            this.fpanel_show_movie.SuspendLayout();
+            this.flowLayoutPanelCinema.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -161,24 +161,24 @@
             this.btnAddMovie.Text = "Add Cinema";
             this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // fpanel_show_movie
+            // flowLayoutPanelCinema
             // 
-            this.fpanel_show_movie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flowLayoutPanelCinema.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fpanel_show_movie.AutoScroll = true;
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema1);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema2);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema3);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema4);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema5);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema6);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema7);
-            this.fpanel_show_movie.Controls.Add(this.userControl_Cinema8);
-            this.fpanel_show_movie.Location = new System.Drawing.Point(13, 80);
-            this.fpanel_show_movie.Name = "fpanel_show_movie";
-            this.fpanel_show_movie.Size = new System.Drawing.Size(1726, 1125);
-            this.fpanel_show_movie.TabIndex = 8;
+            this.flowLayoutPanelCinema.AutoScroll = true;
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema1);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema2);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema3);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema4);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema5);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema6);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema7);
+            this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema8);
+            this.flowLayoutPanelCinema.Location = new System.Drawing.Point(13, 80);
+            this.flowLayoutPanelCinema.Name = "flowLayoutPanelCinema";
+            this.flowLayoutPanelCinema.Size = new System.Drawing.Size(1726, 1125);
+            this.flowLayoutPanelCinema.TabIndex = 8;
             // 
             // userControl_Cinema1
             // 
@@ -258,13 +258,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1751, 1226);
-            this.Controls.Add(this.fpanel_show_movie);
+            this.Controls.Add(this.flowLayoutPanelCinema);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ListCinema";
             this.Text = "Form_ListCinema";
+            this.Load += new System.EventHandler(this.Form_ListCinema_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
-            this.fpanel_show_movie.ResumeLayout(false);
+            this.flowLayoutPanelCinema.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -277,7 +278,7 @@
         private Guna.UI2.WinForms.Guna2Button buttonEdit;
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
         private Guna.UI2.WinForms.Guna2Button btnAddMovie;
-        private System.Windows.Forms.FlowLayoutPanel fpanel_show_movie;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCinema;
         private UserControls.UserControl_Cinema userControl_Cinema1;
         private UserControls.UserControl_Cinema userControl_Cinema2;
         private UserControls.UserControl_Cinema userControl_Cinema3;

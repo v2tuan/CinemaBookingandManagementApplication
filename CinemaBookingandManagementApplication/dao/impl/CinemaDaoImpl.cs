@@ -2,6 +2,7 @@
 using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
             MemoryStream pic = new MemoryStream();
             cinema.Image.Save(pic, cinema.Image.RawFormat);
-            //Procedure.CreateNewCinema();
+            Procedure.CreateNewCinema(cid, cname, caddress, hotline, area);
         }
 
         public String IDNext()
@@ -51,6 +52,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
         {
             return false;
             //return Function.checkCinemaID(id);
+        }
+
+        public DataTable GetListMovie()
+        {
+            return Function.GetListCinema();
         }
     }
 }

@@ -32,13 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_detailMovie));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelDuration = new System.Windows.Forms.Label();
+            this.labelReleaseDate = new System.Windows.Forms.Label();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelDescriptions = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,12 +54,19 @@
             this.userControl_show_schedule_information3 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule_information();
             this.userControl_show_schedule_information4 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule_information();
             this.userControl_show_schedule_information5 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule_information();
+            this.PanelControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.PanelControl.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -71,7 +78,6 @@
             // pic_movie
             // 
             this.pic_movie.BorderRadius = 10;
-            this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
             this.pic_movie.ImageRotate = 0F;
             this.pic_movie.Location = new System.Drawing.Point(88, 59);
             this.pic_movie.Name = "pic_movie";
@@ -80,15 +86,15 @@
             this.pic_movie.TabIndex = 5;
             this.pic_movie.TabStop = false;
             // 
-            // label1
+            // labelName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(353, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 32);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Robot Hoang Dã";
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(353, 68);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(238, 32);
+            this.labelName.TabIndex = 6;
+            this.labelName.Text = "Robot Hoang Dã";
             // 
             // guna2PictureBox1
             // 
@@ -101,25 +107,25 @@
             this.guna2PictureBox1.TabIndex = 7;
             this.guna2PictureBox1.TabStop = false;
             // 
-            // label2
+            // labelDuration
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(395, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 22);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "120 phút";
+            this.labelDuration.AutoSize = true;
+            this.labelDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDuration.Location = new System.Drawing.Point(395, 118);
+            this.labelDuration.Name = "labelDuration";
+            this.labelDuration.Size = new System.Drawing.Size(80, 22);
+            this.labelDuration.TabIndex = 8;
+            this.labelDuration.Text = "120 phút";
             // 
-            // label3
+            // labelReleaseDate
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(395, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 22);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "11 / 10 / 2024";
+            this.labelReleaseDate.AutoSize = true;
+            this.labelReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReleaseDate.Location = new System.Drawing.Point(395, 165);
+            this.labelReleaseDate.Name = "labelReleaseDate";
+            this.labelReleaseDate.Size = new System.Drawing.Size(120, 22);
+            this.labelReleaseDate.TabIndex = 10;
+            this.labelReleaseDate.Text = "11 / 10 / 2024";
             // 
             // guna2PictureBox2
             // 
@@ -134,20 +140,21 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.labelDescriptions);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Location = new System.Drawing.Point(359, 208);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1199, 215);
             this.panel1.TabIndex = 11;
             // 
-            // label4
+            // labelDescriptions
             // 
-            this.label4.Location = new System.Drawing.Point(20, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(1145, 90);
-            this.label4.TabIndex = 1;
-            this.label4.Text = resources.GetString("label4.Text");
+            this.labelDescriptions.Location = new System.Drawing.Point(21, 67);
+            this.labelDescriptions.Name = "labelDescriptions";
+            this.labelDescriptions.Size = new System.Drawing.Size(1145, 133);
+            this.labelDescriptions.TabIndex = 1;
+            this.labelDescriptions.Text = resources.GetString("labelDescriptions.Text");
             // 
             // guna2Button1
             // 
@@ -340,6 +347,74 @@
             this.userControl_show_schedule_information5.Size = new System.Drawing.Size(1764, 121);
             this.userControl_show_schedule_information5.TabIndex = 4;
             // 
+            // PanelControl
+            // 
+            this.PanelControl.BackColor = System.Drawing.Color.White;
+            this.PanelControl.Controls.Add(this.guna2ControlBox3);
+            this.PanelControl.Controls.Add(this.guna2ControlBox2);
+            this.PanelControl.Controls.Add(this.guna2ControlBox1);
+            this.PanelControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelControl.Location = new System.Drawing.Point(0, 0);
+            this.PanelControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelControl.Name = "PanelControl";
+            this.PanelControl.Size = new System.Drawing.Size(1716, 42);
+            this.PanelControl.TabIndex = 32;
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1536, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox3.TabIndex = 2;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1596, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox2.TabIndex = 1;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1656, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox1.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.AutoScroll = true;
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel2.Controls.Add(this.labelDuration);
+            this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel2.Controls.Add(this.labelName);
+            this.guna2Panel2.Controls.Add(this.pic_movie);
+            this.guna2Panel2.Controls.Add(this.labelReleaseDate);
+            this.guna2Panel2.Controls.Add(this.panel1);
+            this.guna2Panel2.Controls.Add(this.guna2Button2);
+            this.guna2Panel2.Controls.Add(this.guna2Panel1);
+            this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 42);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1716, 1117);
+            this.guna2Panel2.TabIndex = 33;
+            // 
             // Form_detailMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -347,16 +422,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1716, 1159);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2PictureBox2);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pic_movie);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.PanelControl);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_detailMovie";
@@ -370,8 +437,10 @@
             this.guna2Panel1.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
+            this.PanelControl.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -379,14 +448,14 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2PictureBox pic_movie;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelDuration;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelReleaseDate;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelDescriptions;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
@@ -401,5 +470,10 @@
         private UserControls.UserControl_show_schedule_information userControl_show_schedule_information3;
         private UserControls.UserControl_show_schedule_information userControl_show_schedule_information4;
         private UserControls.UserControl_show_schedule_information userControl_show_schedule_information5;
+        private Guna.UI2.WinForms.Guna2Panel PanelControl;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
     }
 }
