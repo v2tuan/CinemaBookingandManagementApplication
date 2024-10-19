@@ -100,7 +100,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
@@ -132,7 +132,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             catch (Exception ex)
             {
-                Console.WriteLine("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
             finally
             {
@@ -162,7 +162,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
