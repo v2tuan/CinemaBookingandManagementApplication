@@ -168,6 +168,60 @@ namespace CinemaBookingandManagementApplication.configs
 
             return movie;
         }
-    }
+        //ham tim kiem phim theo ten phim
+        public static DataTable SearchMovieByName(string movieName)
+        {
+            DataTable resultTable = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    // Sử dụng câu lệnh để gọi hàm SQL
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM SearchMovieByName(@movieName)", conn))
+                    {
+                        command.Parameters.AddWithValue("@movieName", movieName);
 
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return resultTable; // Trả về bảng kết quả
+        }
+        //hàm tìm kiếm rap chieu theo ten rap
+        public static DataTable SearchCinemaByName(string cinemaName)
+        {
+            DataTable resultTable = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    // Sử dụng câu lệnh để gọi hàm SQL
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM SearchCinemaByName(@cinemaName)", conn))
+                    {
+                        command.Parameters.AddWithValue("@cinemaName", cinemaName);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(resultTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return resultTable; // Trả về bảng kết quả
+        }
+    }
+}
 }
