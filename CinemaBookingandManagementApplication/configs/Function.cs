@@ -891,5 +891,45 @@ namespace CinemaBookingandManagementApplication.configs
         }
 
 
+        // func hàm tìm lịch chiếu theo cid, mid, date
+        public static DataTable GetMovieSchedulesByCinema(string cinemaId, string movieId, DateTime showDate)
+        {
+            DataTable schedulesTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_CID_MID_DATE(@CinemaId, @MovieId, @ShowDate)", conn))
+                    {
+                        // Thêm tham số vào lệnh
+                        cmd.Parameters.AddWithValue("@CinemaId", cinemaId);
+                        cmd.Parameters.AddWithValue("@MovieId", movieId);
+                        cmd.Parameters.AddWithValue("@ShowDate", showDate);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(schedulesTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return schedulesTable; // Trả về danh sách lịch chiếu của phim
+        }
+        
+
+
     }
 }
