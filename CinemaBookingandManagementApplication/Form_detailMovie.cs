@@ -26,6 +26,8 @@ namespace CinemaBookingandManagementApplication
             labelDuration.Text = movie.Duration.ToString();
             labelDescriptions.Text = movie.Descriptions.ToString();
             pic_movie.Image = movie.Image;
+
+            DataTable dt = new DataTable();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)

@@ -235,6 +235,7 @@
             this.buttonAdd.Size = new System.Drawing.Size(179, 44);
             this.buttonAdd.TabIndex = 81;
             this.buttonAdd.Text = "Add Room";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 

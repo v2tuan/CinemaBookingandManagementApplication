@@ -30,6 +30,7 @@ namespace CinemaBookingandManagementApplication
         private void btnAddRoom_Click(object sender, EventArgs e)
         {
             Form_AddRoom form_AddRoom = new Form_AddRoom();
+            form_AddRoom.CinemaID = cinema.Cid;
             form_AddRoom.ShowDialog();
         }
     }

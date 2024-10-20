@@ -90,5 +90,11 @@ namespace CinemaBookingandManagementApplication
             Form_ShowCinema frm = new Form_ShowCinema();
             openChildForm(frm);
         }
+
+        private void buttonManagerMovie_Click(object sender, EventArgs e)
+        {
+            Form_ManagerMovie frm = new Form_ManagerMovie();
+            openChildForm(frm);
+        }
     }
 }

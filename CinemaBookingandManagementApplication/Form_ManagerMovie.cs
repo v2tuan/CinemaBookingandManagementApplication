@@ -4,26 +4,23 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI;
 using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication
 {
-    public partial class Form_ShowMovie : Form
+    public partial class Form_ManagerMovie : Form
     {
-        public event EventHandler buttonBuyClick = null;
-        public Form_ShowMovie()
+        public Form_ManagerMovie()
         {
             InitializeComponent();
         }
 
-        private void Form_ShowMovie_Load(object sender, EventArgs e)
+        private void Form_ManagerMovie_Load(object sender, EventArgs e)
         {
             try
             {
@@ -33,12 +30,12 @@ namespace CinemaBookingandManagementApplication
                 DataTable dt = movieDaoImpl.GetListMovie();
                 //UserControl_Movie movie = null;
                 byte[] pic = null;
-                Form_detailMovie detailMovie = new Form_detailMovie();
+                Form_EditMovie editMovie = new Form_EditMovie();
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        UserControl_Movie movie = new UserControl_Movie();
+                        UserControl_EditMovie movie = new UserControl_EditMovie();
                         movie.movie.Mid = dr["mid"].ToString();
                         movie.movie.Moviename = dr["moviename"].ToString();
                         movie.movie.AgeRestriction = int.Parse(dr["ageRestriction"].ToString());
@@ -68,9 +65,8 @@ namespace CinemaBookingandManagementApplication
 
                         movie.buttonClick += (ss, ee) =>
                         {
-                            //buttonBuyClick?.Invoke(this, e);
-                            detailMovie.movie = movie.movie;
-                            detailMovie.ShowDialog();
+                            editMovie.movie = movie.movie;
+                            editMovie.ShowDialog();
                         };
                     }
                 }
@@ -83,6 +79,10 @@ namespace CinemaBookingandManagementApplication
 
         private void btnAddMovie_Click(object sender, EventArgs e)
         {
+            using (Form_AddMovie frm = new Form_AddMovie())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

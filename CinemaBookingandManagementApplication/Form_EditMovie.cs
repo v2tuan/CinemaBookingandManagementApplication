@@ -14,9 +14,13 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_EditMovie : Form
     {
+        public Movie movie;
         public Form_EditMovie()
         {
             InitializeComponent();
+            comboBoxType.DataSource = MovieTypeDaoImpl.getListMovieType();
+            comboBoxType.ValueMember = "mtid";
+            comboBoxType.DisplayMember = "typename";
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -50,6 +54,18 @@ namespace CinemaBookingandManagementApplication
             movie.Descriptions = richTextBoxDescription.Text;
             movie.Image = pictureBoxMovie.Image;
             MovieDao.update(movie);
+        }
+
+        private void Form_EditMovie_Load(object sender, EventArgs e)
+        {
+            textBoxMovieName.Text = movie.Moviename;
+            textBoxAgeRestriction.Text = movie.AgeRestriction.ToString();
+            textBoxRevenue.Text = movie.Revenue.ToString();
+            comboBoxType.SelectedValue = movie.Mtid.ToString();
+            DateTimePickerRelease.Value = movie.ReleaseDate;
+            textDuration.Text = movie.Duration.ToString();
+            richTextBoxDescription.Text = movie.Descriptions;
+            pictureBoxMovie.Image = movie.Image;
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using CinemaBookingandManagementApplication.UserControls;
+﻿using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
+using CinemaBookingandManagementApplication.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,7 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_AddRoom : Form
     {
+        public string CinemaID {  get; set; }
         public Form_AddRoom()
         {
             InitializeComponent();
@@ -30,6 +33,16 @@ namespace CinemaBookingandManagementApplication
                     flowLayoutPanelSeat.Controls.Add(userControl_Seat);
                 }
             }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Room room = new Room();
+            RoomDaoImpl RoomDao = new RoomDaoImpl();
+            room.Rid = RoomDao.IDNext();
+            room.Cid = CinemaID;
+            room.Rname = textBoxCinemaName.Text;
+            RoomDao.insert(room);
         }
     }
 }

@@ -34,7 +34,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonManagerMovie = new Guna.UI2.WinForms.Guna2Button();
             this.buttonCinema = new Guna.UI2.WinForms.Guna2Button();
             this.buttonfigures = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -73,7 +73,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
             this.guna2Panel2.BorderThickness = 10;
-            this.guna2Panel2.Controls.Add(this.guna2Button3);
+            this.guna2Panel2.Controls.Add(this.buttonManagerMovie);
             this.guna2Panel2.Controls.Add(this.buttonCinema);
             this.guna2Panel2.Controls.Add(this.buttonfigures);
             this.guna2Panel2.Controls.Add(this.guna2Panel3);
@@ -88,35 +88,36 @@
             this.guna2Panel2.Size = new System.Drawing.Size(308, 1226);
             this.guna2Panel2.TabIndex = 7;
             // 
-            // guna2Button3
+            // buttonManagerMovie
             // 
-            this.guna2Button3.BorderRadius = 5;
-            this.guna2Button3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.guna2Button3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button3.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
-            this.guna2Button3.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.guna2Button3.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button3.Location = new System.Drawing.Point(0, 219);
-            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(303, 58);
-            this.guna2Button3.TabIndex = 13;
-            this.guna2Button3.Text = "Home";
+            this.buttonManagerMovie.BorderRadius = 5;
+            this.buttonManagerMovie.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.buttonManagerMovie.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.buttonManagerMovie.CheckedState.FillColor = System.Drawing.Color.White;
+            this.buttonManagerMovie.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonManagerMovie.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.buttonManagerMovie.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.buttonManagerMovie.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonManagerMovie.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonManagerMovie.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonManagerMovie.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonManagerMovie.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonManagerMovie.FillColor = System.Drawing.Color.Transparent;
+            this.buttonManagerMovie.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonManagerMovie.ForeColor = System.Drawing.Color.Black;
+            this.buttonManagerMovie.HoverState.FillColor = System.Drawing.Color.White;
+            this.buttonManagerMovie.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonManagerMovie.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.buttonManagerMovie.Image = ((System.Drawing.Image)(resources.GetObject("buttonManagerMovie.Image")));
+            this.buttonManagerMovie.ImageOffset = new System.Drawing.Point(-5, 0);
+            this.buttonManagerMovie.ImageSize = new System.Drawing.Size(25, 25);
+            this.buttonManagerMovie.Location = new System.Drawing.Point(0, 219);
+            this.buttonManagerMovie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonManagerMovie.Name = "buttonManagerMovie";
+            this.buttonManagerMovie.Size = new System.Drawing.Size(303, 58);
+            this.buttonManagerMovie.TabIndex = 13;
+            this.buttonManagerMovie.Text = "Movie";
+            this.buttonManagerMovie.Click += new System.EventHandler(this.buttonManagerMovie_Click);
             // 
             // buttonCinema
             // 
@@ -320,7 +321,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button buttonManagerMovie;
         private Guna.UI2.WinForms.Guna2Button buttonCinema;
         private Guna.UI2.WinForms.Guna2Button buttonfigures;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

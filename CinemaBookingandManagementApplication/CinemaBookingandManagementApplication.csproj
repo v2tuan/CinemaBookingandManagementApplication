@@ -64,6 +64,8 @@
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
     <Compile Include="dao\impl\MovieDaoImpl.cs" />
     <Compile Include="dao\impl\MovieTypeDaoImpl.cs" />
+    <Compile Include="dao\impl\RoomDaoImpl.cs" />
+    <Compile Include="dao\impl\ShowTimeDaoImpl.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +126,29 @@
     <Compile Include="Form_detailMovie.Designer.cs">
       <DependentUpon>Form_detailMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_EditCinema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EditCinema.Designer.cs">
+      <DependentUpon>Form_EditCinema.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_EditMovie.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_EditMovie.Designer.cs">
       <DependentUpon>Form_EditMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EditMovieSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EditMovieSchedule.Designer.cs">
+      <DependentUpon>Form_EditMovieSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_EditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_EditRoom.Designer.cs">
+      <DependentUpon>Form_EditRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_HomeManager.cs">
       <SubType>Form</SubType>
@@ -153,6 +173,12 @@
     </Compile>
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ManagerMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ManagerMovie.Designer.cs">
+      <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_ShowCinema.cs">
       <SubType>Form</SubType>
@@ -187,11 +213,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UserControl_Cinema.cs">
+    <Compile Include="UserControls\UserControl_Cinemas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UserControl_Cinema.Designer.cs">
-      <DependentUpon>UserControl_Cinema.cs</DependentUpon>
+    <Compile Include="UserControls\UserControl_Cinemas.Designer.cs">
+      <DependentUpon>UserControl_Cinemas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_CinemaShowTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_CinemaShowTime.Designer.cs">
+      <DependentUpon>UserControl_CinemaShowTime.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_Combo.cs">
       <SubType>UserControl</SubType>
@@ -199,11 +231,23 @@
     <Compile Include="UserControls\UserControl_Combo.Designer.cs">
       <DependentUpon>UserControl_Combo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_EditMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_EditMovie.Designer.cs">
+      <DependentUpon>UserControl_EditMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Movie.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UserControl_Movie.Designer.cs">
       <DependentUpon>UserControl_Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Room.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_Room.Designer.cs">
+      <DependentUpon>UserControl_Room.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UserControl_Seat.cs">
       <SubType>UserControl</SubType>
@@ -268,6 +312,9 @@
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_ManagerMovie.resx">
+      <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ShowCinema.resx">
       <DependentUpon>Form_ShowCinema.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,14 +326,23 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl_Cinema.resx">
-      <DependentUpon>UserControl_Cinema.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UserControl_Cinemas.resx">
+      <DependentUpon>UserControl_Cinemas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_CinemaShowTime.resx">
+      <DependentUpon>UserControl_CinemaShowTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Combo.resx">
       <DependentUpon>UserControl_Combo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_EditMovie.resx">
+      <DependentUpon>UserControl_EditMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Movie.resx">
       <DependentUpon>UserControl_Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_Room.resx">
+      <DependentUpon>UserControl_Room.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Seat.resx">
       <DependentUpon>UserControl_Seat.cs</DependentUpon>
@@ -318,13 +374,13 @@
     <None Include="Resources\date.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cinema.png" />
+    <None Include="Resources\date1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cinema1.png" />
+    <None Include="Resources\clock1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\room.png" />
+    <None Include="Resources\clapper-open %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

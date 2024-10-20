@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddMovieSchedule));
             this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.comboBoxType = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxMovie = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxCinema = new Guna.UI2.WinForms.Guna2ComboBox();
             this.Cinema = new System.Windows.Forms.Label();
-            this.DateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimePickerRelease = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimePickerShowtime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimePickerFinishTime = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboBoxRoom = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textDuration = new Guna.UI2.WinForms.Guna2TextBox();
+            this.textboxSeatEmpty = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonAdd = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             this.SuspendLayout();
@@ -62,24 +62,25 @@
             this.pic_movie.TabStop = false;
             this.pic_movie.Click += new System.EventHandler(this.pic_movie_Click);
             // 
-            // comboBoxType
+            // comboBoxMovie
             // 
-            this.comboBoxType.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxType.BorderColor = System.Drawing.Color.Gray;
-            this.comboBoxType.BorderRadius = 5;
-            this.comboBoxType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.comboBoxType.ItemHeight = 35;
-            this.comboBoxType.Location = new System.Drawing.Point(43, 364);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(532, 41);
-            this.comboBoxType.TabIndex = 30;
+            this.comboBoxMovie.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxMovie.BorderColor = System.Drawing.Color.Gray;
+            this.comboBoxMovie.BorderRadius = 5;
+            this.comboBoxMovie.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxMovie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMovie.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxMovie.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxMovie.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxMovie.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.comboBoxMovie.ItemHeight = 35;
+            this.comboBoxMovie.Location = new System.Drawing.Point(43, 364);
+            this.comboBoxMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxMovie.Name = "comboBoxMovie";
+            this.comboBoxMovie.Size = new System.Drawing.Size(532, 41);
+            this.comboBoxMovie.TabIndex = 30;
+            this.comboBoxMovie.SelectedIndexChanged += new System.EventHandler(this.comboBoxMovie_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -91,24 +92,25 @@
             this.label14.TabIndex = 29;
             this.label14.Text = "Movie";
             // 
-            // guna2ComboBox1
+            // comboBoxCinema
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.guna2ComboBox1.ItemHeight = 35;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(43, 462);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(532, 41);
-            this.guna2ComboBox1.TabIndex = 32;
+            this.comboBoxCinema.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxCinema.BorderColor = System.Drawing.Color.Gray;
+            this.comboBoxCinema.BorderRadius = 5;
+            this.comboBoxCinema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxCinema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCinema.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCinema.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxCinema.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxCinema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxCinema.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.comboBoxCinema.ItemHeight = 35;
+            this.comboBoxCinema.Location = new System.Drawing.Point(43, 462);
+            this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxCinema.Name = "comboBoxCinema";
+            this.comboBoxCinema.Size = new System.Drawing.Size(532, 41);
+            this.comboBoxCinema.TabIndex = 32;
+            this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
             // Cinema
             // 
@@ -120,21 +122,21 @@
             this.Cinema.TabIndex = 31;
             this.Cinema.Text = "Cinema";
             // 
-            // DateTimePickerRelease
+            // dateTimePickerRelease
             // 
-            this.DateTimePickerRelease.BorderRadius = 5;
-            this.DateTimePickerRelease.Checked = true;
-            this.DateTimePickerRelease.FillColor = System.Drawing.Color.White;
-            this.DateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.DateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePickerRelease.Location = new System.Drawing.Point(43, 669);
-            this.DateTimePickerRelease.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.DateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.DateTimePickerRelease.Name = "DateTimePickerRelease";
-            this.DateTimePickerRelease.Size = new System.Drawing.Size(262, 41);
-            this.DateTimePickerRelease.TabIndex = 40;
-            this.DateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
+            this.dateTimePickerRelease.BorderRadius = 5;
+            this.dateTimePickerRelease.Checked = true;
+            this.dateTimePickerRelease.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerRelease.Location = new System.Drawing.Point(43, 669);
+            this.dateTimePickerRelease.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerRelease.Name = "dateTimePickerRelease";
+            this.dateTimePickerRelease.Size = new System.Drawing.Size(262, 41);
+            this.dateTimePickerRelease.TabIndex = 40;
+            this.dateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
             // label6
             // 
@@ -156,21 +158,22 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Add Movie Schedule";
             // 
-            // guna2DateTimePicker1
+            // dateTimePickerShowtime
             // 
-            this.guna2DateTimePicker1.BorderRadius = 5;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(41, 773);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(263, 41);
-            this.guna2DateTimePicker1.TabIndex = 43;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
+            this.dateTimePickerShowtime.BorderRadius = 5;
+            this.dateTimePickerShowtime.Checked = true;
+            this.dateTimePickerShowtime.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerShowtime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePickerShowtime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerShowtime.Location = new System.Drawing.Point(41, 773);
+            this.dateTimePickerShowtime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerShowtime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerShowtime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerShowtime.Name = "dateTimePickerShowtime";
+            this.dateTimePickerShowtime.ShowUpDown = true;
+            this.dateTimePickerShowtime.Size = new System.Drawing.Size(263, 41);
+            this.dateTimePickerShowtime.TabIndex = 43;
+            this.dateTimePickerShowtime.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
             // label2
             // 
@@ -178,25 +181,26 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(39, 746);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 23);
+            this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 42;
-            this.label2.Text = "Release date";
+            this.label2.Text = "Showtime";
             // 
-            // guna2DateTimePicker2
+            // dateTimePickerFinishTime
             // 
-            this.guna2DateTimePicker2.BorderRadius = 5;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(337, 773);
-            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(238, 41);
-            this.guna2DateTimePicker2.TabIndex = 45;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
+            this.dateTimePickerFinishTime.BorderRadius = 5;
+            this.dateTimePickerFinishTime.Checked = true;
+            this.dateTimePickerFinishTime.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerFinishTime.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePickerFinishTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePickerFinishTime.Location = new System.Drawing.Point(337, 773);
+            this.dateTimePickerFinishTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerFinishTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerFinishTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerFinishTime.Name = "dateTimePickerFinishTime";
+            this.dateTimePickerFinishTime.ShowUpDown = true;
+            this.dateTimePickerFinishTime.Size = new System.Drawing.Size(238, 41);
+            this.dateTimePickerFinishTime.TabIndex = 45;
+            this.dateTimePickerFinishTime.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
             // label3
             // 
@@ -204,28 +208,29 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(333, 746);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 23);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 44;
-            this.label3.Text = "Release date";
+            this.label3.Text = "Finish time";
             // 
-            // guna2ComboBox2
+            // comboBoxRoom
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.guna2ComboBox2.ItemHeight = 35;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(43, 564);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(262, 41);
-            this.guna2ComboBox2.TabIndex = 47;
+            this.comboBoxRoom.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxRoom.BorderColor = System.Drawing.Color.Gray;
+            this.comboBoxRoom.BorderRadius = 5;
+            this.comboBoxRoom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxRoom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRoom.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxRoom.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxRoom.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.comboBoxRoom.ItemHeight = 35;
+            this.comboBoxRoom.Location = new System.Drawing.Point(43, 564);
+            this.comboBoxRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxRoom.Name = "comboBoxRoom";
+            this.comboBoxRoom.Size = new System.Drawing.Size(262, 41);
+            this.comboBoxRoom.TabIndex = 47;
+            this.comboBoxRoom.SelectedIndexChanged += new System.EventHandler(this.comboBoxRoom_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -247,27 +252,27 @@
             this.label7.TabIndex = 48;
             this.label7.Text = "Seat Empty";
             // 
-            // textDuration
+            // textboxSeatEmpty
             // 
-            this.textDuration.BorderColor = System.Drawing.Color.Gray;
-            this.textDuration.BorderRadius = 5;
-            this.textDuration.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textDuration.DefaultText = "";
-            this.textDuration.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.textDuration.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.textDuration.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textDuration.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.textDuration.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textDuration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textDuration.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textDuration.Location = new System.Drawing.Point(337, 564);
-            this.textDuration.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.textDuration.Name = "textDuration";
-            this.textDuration.PasswordChar = '\0';
-            this.textDuration.PlaceholderText = "Input Duration";
-            this.textDuration.SelectedText = "";
-            this.textDuration.Size = new System.Drawing.Size(238, 41);
-            this.textDuration.TabIndex = 49;
+            this.textboxSeatEmpty.BorderColor = System.Drawing.Color.Gray;
+            this.textboxSeatEmpty.BorderRadius = 5;
+            this.textboxSeatEmpty.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textboxSeatEmpty.DefaultText = "";
+            this.textboxSeatEmpty.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textboxSeatEmpty.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textboxSeatEmpty.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxSeatEmpty.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textboxSeatEmpty.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxSeatEmpty.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textboxSeatEmpty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textboxSeatEmpty.Location = new System.Drawing.Point(337, 564);
+            this.textboxSeatEmpty.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textboxSeatEmpty.Name = "textboxSeatEmpty";
+            this.textboxSeatEmpty.PasswordChar = '\0';
+            this.textboxSeatEmpty.PlaceholderText = "Input Duration";
+            this.textboxSeatEmpty.SelectedText = "";
+            this.textboxSeatEmpty.Size = new System.Drawing.Size(238, 41);
+            this.textboxSeatEmpty.TabIndex = 49;
             // 
             // buttonAdd
             // 
@@ -287,7 +292,8 @@
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(529, 59);
             this.buttonAdd.TabIndex = 50;
-            this.buttonAdd.Text = "Add Movie";
+            this.buttonAdd.Text = "Add Movie Schedule";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // Form_AddMovieSchedule
             // 
@@ -297,19 +303,19 @@
             this.ClientSize = new System.Drawing.Size(648, 965);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textDuration);
-            this.Controls.Add(this.guna2ComboBox2);
+            this.Controls.Add(this.textboxSeatEmpty);
+            this.Controls.Add(this.comboBoxRoom);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.guna2DateTimePicker2);
+            this.Controls.Add(this.dateTimePickerFinishTime);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2DateTimePicker1);
+            this.Controls.Add(this.dateTimePickerShowtime);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.DateTimePickerRelease);
+            this.Controls.Add(this.dateTimePickerRelease);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.comboBoxCinema);
             this.Controls.Add(this.Cinema);
-            this.Controls.Add(this.comboBoxType);
+            this.Controls.Add(this.comboBoxMovie);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pic_movie);
             this.Name = "Form_AddMovieSchedule";
@@ -323,21 +329,21 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2PictureBox pic_movie;
-        private Guna.UI2.WinForms.Guna2ComboBox comboBoxType;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxMovie;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxCinema;
         private System.Windows.Forms.Label Cinema;
-        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimePickerRelease;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerRelease;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerShowtime;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerFinishTime;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxRoom;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox textDuration;
+        private Guna.UI2.WinForms.Guna2TextBox textboxSeatEmpty;
         private Guna.UI2.WinForms.Guna2Button buttonAdd;
     }
 }

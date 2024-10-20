@@ -127,7 +127,7 @@
             // 
             // guna2PictureBox1
             // 
-            this.guna2PictureBox1.Image = global::CinemaBookingandManagementApplication.Properties.Resources.date;
+            this.guna2PictureBox1.Image = global::CinemaBookingandManagementApplication.Properties.Resources.date1;
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(249, 102);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
@@ -158,7 +158,7 @@
             // 
             // guna2CirclePictureBox1
             // 
-            this.guna2CirclePictureBox1.Image = global::CinemaBookingandManagementApplication.Properties.Resources.clock;
+            this.guna2CirclePictureBox1.Image = global::CinemaBookingandManagementApplication.Properties.Resources.clock1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(249, 66);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";

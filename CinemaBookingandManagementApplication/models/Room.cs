@@ -11,10 +11,10 @@ namespace CinemaBookingandManagementApplication.models
       
             public string Rid { get; set; }
             public string Rname { get; set; }
-            public string Rtid { get; set; }
             public string Cid { get; set; }
 
- 
-
+        public Room()
+        {
+        }
     }
 }

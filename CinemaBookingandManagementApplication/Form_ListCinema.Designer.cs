@@ -45,14 +45,14 @@
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddMovie = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelCinema = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl_Cinema1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema3 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema4 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema5 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema6 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema7 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
-            this.userControl_Cinema8 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinema();
+            this.userControl_Cinema1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema3 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema4 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema5 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema6 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema7 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.userControl_Cinema8 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
             this.guna2ShadowPanel1.SuspendLayout();
             this.flowLayoutPanelCinema.SuspendLayout();
             this.SuspendLayout();
@@ -344,13 +344,13 @@
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
         private Guna.UI2.WinForms.Guna2Button btnAddMovie;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCinema;
-        private UserControls.UserControl_Cinema userControl_Cinema1;
-        private UserControls.UserControl_Cinema userControl_Cinema2;
-        private UserControls.UserControl_Cinema userControl_Cinema3;
-        private UserControls.UserControl_Cinema userControl_Cinema4;
-        private UserControls.UserControl_Cinema userControl_Cinema5;
-        private UserControls.UserControl_Cinema userControl_Cinema6;
-        private UserControls.UserControl_Cinema userControl_Cinema7;
-        private UserControls.UserControl_Cinema userControl_Cinema8;
+        private UserControls.UserControl_Cinemas userControl_Cinema1;
+        private UserControls.UserControl_Cinemas userControl_Cinema2;
+        private UserControls.UserControl_Cinemas userControl_Cinema3;
+        private UserControls.UserControl_Cinemas userControl_Cinema4;
+        private UserControls.UserControl_Cinemas userControl_Cinema5;
+        private UserControls.UserControl_Cinemas userControl_Cinema6;
+        private UserControls.UserControl_Cinemas userControl_Cinema7;
+        private UserControls.UserControl_Cinemas userControl_Cinema8;
     }
 }

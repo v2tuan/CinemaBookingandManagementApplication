@@ -33,14 +33,14 @@ namespace CinemaBookingandManagementApplication
                 flowLayoutPanelCinema.Controls.Clear();
                 CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
                 MemoryStream picture = new MemoryStream();
-                DataTable dt = cinemaDaoImpl.GetListMovie();
+                DataTable dt = cinemaDaoImpl.GetListCinema();
                 byte[] pic = null;
                 Form_detailMovie detailMovie = new Form_detailMovie();
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        UserControl_Cinema cinemaControl = new UserControl_Cinema();
+                        UserControl_Cinemas cinemaControl = new UserControl_Cinemas();
                         cinemaControl.cinema.Cid = dr["cid"].ToString();
                         cinemaControl.cinema.Cname = dr["cname"].ToString();
                         cinemaControl.cinema.Hotline = dr["hotline"].ToString();
@@ -72,6 +72,13 @@ namespace CinemaBookingandManagementApplication
                             cinema.cinema = cinemaControl.cinema;
                             cinema.ShowDialog();
                         };
+
+                        //edit
+                        cinemaControl.editClick += (ss, ee) =>
+                        {
+                            Form_EditCinema form_EditCinema = new Form_EditCinema();
+                            form_EditCinema.ShowDialog(this);
+                        };
                     }
                 }
             }
@@ -83,7 +90,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAddMovieSchedule_Click(object sender, EventArgs e)
         {
-            Form_AddMovie form_AddMovie = new Form_AddMovie();
+            Form_AddMovieSchedule form_AddMovie = new Form_AddMovieSchedule();
             form_AddMovie.ShowDialog();
         }
     }

@@ -11,11 +11,12 @@ using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication.UserControls
 {
-    public partial class UserControl_Cinema : UserControl
+    public partial class UserControl_Cinemas : UserControl
     {
         public Cinema cinema { get; set; } = new Cinema();
         public event EventHandler buttonClick = null;
-        public UserControl_Cinema()
+        public event EventHandler editClick = null;
+        public UserControl_Cinemas()
         {
             InitializeComponent();
         }
@@ -51,6 +52,11 @@ namespace CinemaBookingandManagementApplication.UserControls
         private void guna2ShadowPanel1_DoubleClick(object sender, EventArgs e)
         {
             buttonClick?.Invoke(this, e);
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            editClick?.Invoke(this, e);
         }
     }
 }

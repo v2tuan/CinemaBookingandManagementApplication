@@ -852,13 +852,5 @@ namespace CinemaBookingandManagementApplication.configs
             return schedulesTable; // Trả về danh sách lịch chiếu
         }
 
-
-
     }
-
-
-
-
-
-
 }
