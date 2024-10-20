@@ -590,7 +590,7 @@ namespace CinemaBookingandManagementApplication.configs
             int totalSeats = 0;
 
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
