@@ -707,6 +707,152 @@ namespace CinemaBookingandManagementApplication.configs
             return exists;
         }
 
+        // hàm lấy tên rạp từ id
+        public static string GetCinemaNameById(string cinemaId)
+        {
+            string cinemaName = string.Empty;
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT dbo.GET_CINEMA_NAME_BY_ID(@CinemaId)", conn))
+                    {
+                        // Thêm tham số cinemaId vào lệnh
+                        cmd.Parameters.AddWithValue("@CinemaId", cinemaId);
+
+                        // Thực thi lệnh và lấy kết quả
+                        cinemaName = (string)cmd.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemaName; // Trả về tên rạp phim
+        }
+
+        // hàm lấy lịch chiếu từ id của movie
+
+
+        public static DataTable GetMovieSchedulesByMovieId(string movieId)
+        {
+            DataTable schedulesTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_MOVIE_ID(@MovieId)", conn))
+                    {
+                        // Thêm tham số movieId vào lệnh
+                        cmd.Parameters.AddWithValue("@MovieId", movieId);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(schedulesTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return schedulesTable; // Trả về danh sách lịch chiếu
+        }
+
+
+        // hàm lấy lịch chiếu dựa vào ngày chiếu
+        public static DataTable GetMovieSchedulesByDate(DateTime showDate)
+        {
+            DataTable schedulesTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_DATE(@ShowDate)", conn))
+                    {
+                        // Thêm tham số showDate vào lệnh
+                        cmd.Parameters.AddWithValue("@ShowDate", showDate);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(schedulesTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return schedulesTable; // Trả về danh sách lịch chiếu
+        }
+
+
+        // hàm lấy lịch chiếu theo cụm rạp
+        public static DataTable GetMovieSchedulesByCinemaId(string cinemaId)
+        {
+            DataTable schedulesTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_CINEMA_ID(@CinemaId)", conn))
+                    {
+                        // Thêm tham số cinemaId vào lệnh
+                        cmd.Parameters.AddWithValue("@CinemaId", cinemaId);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(schedulesTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return schedulesTable; // Trả về danh sách lịch chiếu
+        }
+
+
 
     }
 
