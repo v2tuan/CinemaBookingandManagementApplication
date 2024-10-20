@@ -584,6 +584,38 @@ namespace CinemaBookingandManagementApplication.configs
 
             return rooms;
         }
+        //hàm đếm số ghế trong phòng theo idroom
+        public static int GetTotalSeatsByRoomId(string roomId)
+        {
+            int totalSeats = 0;
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT dbo.GetTotalSeatsByRoomId(@roomId)", conn))
+                    {
+                        // Thêm tham số roomId vào lệnh
+                        cmd.Parameters.AddWithValue("@roomId", roomId);
+
+                        // Thực thi lệnh và lấy kết quả
+                        totalSeats = (int)cmd.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return totalSeats;
+        }
 
     }
 

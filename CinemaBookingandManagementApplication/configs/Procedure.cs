@@ -126,7 +126,7 @@ namespace CinemaBookingandManagementApplication.configs
                         }
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cơ sở rạp được tạo thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -184,8 +184,7 @@ namespace CinemaBookingandManagementApplication.configs
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
 
-                        // Nếu có thông báo từ stored procedure, nó sẽ hiển thị ở đây
-                        MessageBox.Show("Cập nhật thông tin rạp chiếu thành công!");
+                        
                     }
                 }
                 catch (SqlException ex)
@@ -234,7 +233,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Ghế đã được thêm thành công!");
+                  
                     }
                 }
                 catch (SqlException ex)
@@ -283,7 +282,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Khách hàng đã được thêm thành công!");
+                        
                     }
                 }
                 catch (SqlException ex)
@@ -331,7 +330,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Món ăn đã được thêm thành công!");
+                      
                     }
                 }
                 catch (SqlException ex)
@@ -379,7 +378,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Combo đã được tạo thành công!");
+                      
                     }
                 }
                 catch (SqlException ex)
@@ -427,7 +426,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Bill đã được tạo thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -477,7 +476,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Ticket đã được thêm thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -529,7 +528,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Showtime đã được thêm thành công!");
+                        
                     }
                 }
                 catch (SqlException ex)
