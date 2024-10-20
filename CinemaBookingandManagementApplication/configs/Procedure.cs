@@ -577,7 +577,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Phòng chiếu đã được tạo thành công!");
+                        
                     }
                 }
                 catch (SqlException ex)
