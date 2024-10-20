@@ -616,6 +616,97 @@ namespace CinemaBookingandManagementApplication.configs
 
             return totalSeats;
         }
+        //hàm list các ghế chưa đặt theo IDRoom
+        public static DataTable GetAvailableSeatsByRoomId(string roomId)
+        {
+            DataTable availableSeats = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi hàm từ SQL Server
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GetAvailableSeatsByRoomId(@roomId)", conn))
+                    {
+                        // Thêm tham số cho hàm
+                        cmd.Parameters.AddWithValue("@roomId", roomId);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(availableSeats);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+
+            // Trả về DataTable chứa danh sách ghế trống
+            return availableSeats;
+        }
+        //hàm check ID showtime 
+        public static bool CheckIDShowtime(string showtimeId)
+        {
+            bool exists = false;
+            try
+            {
+                // Mở kết nối với cơ sở dữ liệu
+                conn.Open();
+                int result;
+
+                // Tạo lệnh SQL để gọi hàm kiểm tra IDShowtime
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CountIDShowtime(@showtimeId)", conn))
+                {
+                    // Thêm tham số IDShowtime vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@showtimeId", showtimeId);
+
+                    // Thực thi lệnh và lấy kết quả trả về từ hàm SQL
+                    result = (Int32)command.ExecuteScalar();
+
+                    // Kiểm tra kết quả, nếu là 1 thì IDShowtime tồn tại
+                    if (result != null && result == 1)
+                    {
+                        exists = true;
+                    }
+                    else
+                    {
+                        exists = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Hiển thị thông báo lỗi nếu có
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+
+            return exists;
+        }
+
 
     }
 

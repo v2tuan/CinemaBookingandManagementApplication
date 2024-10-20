@@ -495,7 +495,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //add new show time
-        public static void AddShowtime(string shid, string mid, DateTime sdate, TimeSpan stime, TimeSpan etime, int states, int seatEmpty, string rid)
+        public static void AddShowtime(string shid, string mid, DateTime sdate, DateTime stime, DateTime etime, int seatEmpty, string rid)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -520,15 +520,13 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@shid", shid);
                         cmd.Parameters.AddWithValue("@mid", mid);
                         cmd.Parameters.AddWithValue("@sdate", sdate);
-                        cmd.Parameters.AddWithValue("@stime", stime);
-                        cmd.Parameters.AddWithValue("@etime", etime);
-                        cmd.Parameters.AddWithValue("@states", states);
+                        cmd.Parameters.AddWithValue("@stime", stime.TimeOfDay); // Chỉ lấy thời gian từ DateTime
+                        cmd.Parameters.AddWithValue("@etime", etime.TimeOfDay); // Chỉ lấy thời gian từ DateTime
                         cmd.Parameters.AddWithValue("@seatEmpty", seatEmpty);
                         cmd.Parameters.AddWithValue("@rid", rid);
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        
                     }
                 }
                 catch (SqlException ex)
@@ -546,6 +544,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+
         //add new room
         public static void CreateNewRoom(string rid, string rname, string cid)
         {
