@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            CinemaBookingandManagementApplication.models.Cinema cinema1 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinema cinema2 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinema cinema3 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinema cinema4 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinema cinema5 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinema cinema6 = new CinemaBookingandManagementApplication.models.Cinema();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_detailMovie));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.labelName = new System.Windows.Forms.Label();
@@ -39,7 +45,7 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dateTimePickerDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,24 +56,24 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelShow = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl_CinemaShowTime1 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.userControl_CinemaShowTime2 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.userControl_CinemaShowTime3 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.userControl_CinemaShowTime4 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.userControl_CinemaShowTime5 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.userControl_CinemaShowTime6 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.PanelControl.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.flowLayoutPanelShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -168,7 +174,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2DateTimePicker1);
+            this.guna2Panel1.Controls.Add(this.dateTimePickerDate);
             this.guna2Panel1.Controls.Add(this.label7);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Controls.Add(this.label5);
@@ -181,19 +187,19 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1470, 104);
             this.guna2Panel1.TabIndex = 13;
             // 
-            // guna2DateTimePicker1
+            // dateTimePickerDate
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(1106, 31);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(291, 36);
-            this.guna2DateTimePicker1.TabIndex = 6;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
+            this.dateTimePickerDate.Checked = true;
+            this.dateTimePickerDate.FillColor = System.Drawing.Color.White;
+            this.dateTimePickerDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerDate.Location = new System.Drawing.Point(1106, 31);
+            this.dateTimePickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dateTimePickerDate.Name = "dateTimePickerDate";
+            this.dateTimePickerDate.Size = new System.Drawing.Size(291, 36);
+            this.dateTimePickerDate.TabIndex = 6;
+            this.dateTimePickerDate.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
             // 
             // label7
             // 
@@ -309,7 +315,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.AutoScroll = true;
-            this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel2.Controls.Add(this.flowLayoutPanelShow);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox2);
             this.guna2Panel2.Controls.Add(this.labelDuration);
             this.guna2Panel2.Controls.Add(this.guna2PictureBox1);
@@ -324,6 +330,130 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1716, 1117);
             this.guna2Panel2.TabIndex = 33;
+            // 
+            // flowLayoutPanelShow
+            // 
+            this.flowLayoutPanelShow.AutoSize = true;
+            this.flowLayoutPanelShow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime1);
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime2);
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime3);
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime4);
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime5);
+            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime6);
+            this.flowLayoutPanelShow.Location = new System.Drawing.Point(88, 649);
+            this.flowLayoutPanelShow.MaximumSize = new System.Drawing.Size(1441, 0);
+            this.flowLayoutPanelShow.Name = "flowLayoutPanelShow";
+            this.flowLayoutPanelShow.Size = new System.Drawing.Size(1441, 870);
+            this.flowLayoutPanelShow.TabIndex = 14;
+            // 
+            // userControl_CinemaShowTime1
+            // 
+            this.userControl_CinemaShowTime1.AutoSize = true;
+            this.userControl_CinemaShowTime1.BackColor = System.Drawing.Color.White;
+            cinema1.Area = null;
+            cinema1.Caddress = null;
+            cinema1.Cid = null;
+            cinema1.Cname = null;
+            cinema1.Hotline = null;
+            cinema1.Image = null;
+            this.userControl_CinemaShowTime1.cinema = cinema1;
+            this.userControl_CinemaShowTime1.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime1.Location = new System.Drawing.Point(3, 3);
+            this.userControl_CinemaShowTime1.movie = null;
+            this.userControl_CinemaShowTime1.Name = "userControl_CinemaShowTime1";
+            this.userControl_CinemaShowTime1.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime1.TabIndex = 0;
+            // 
+            // userControl_CinemaShowTime2
+            // 
+            this.userControl_CinemaShowTime2.AutoSize = true;
+            this.userControl_CinemaShowTime2.BackColor = System.Drawing.Color.White;
+            cinema2.Area = null;
+            cinema2.Caddress = null;
+            cinema2.Cid = null;
+            cinema2.Cname = null;
+            cinema2.Hotline = null;
+            cinema2.Image = null;
+            this.userControl_CinemaShowTime2.cinema = cinema2;
+            this.userControl_CinemaShowTime2.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(3, 148);
+            this.userControl_CinemaShowTime2.movie = null;
+            this.userControl_CinemaShowTime2.Name = "userControl_CinemaShowTime2";
+            this.userControl_CinemaShowTime2.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime2.TabIndex = 1;
+            // 
+            // userControl_CinemaShowTime3
+            // 
+            this.userControl_CinemaShowTime3.AutoSize = true;
+            this.userControl_CinemaShowTime3.BackColor = System.Drawing.Color.White;
+            cinema3.Area = null;
+            cinema3.Caddress = null;
+            cinema3.Cid = null;
+            cinema3.Cname = null;
+            cinema3.Hotline = null;
+            cinema3.Image = null;
+            this.userControl_CinemaShowTime3.cinema = cinema3;
+            this.userControl_CinemaShowTime3.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime3.Location = new System.Drawing.Point(3, 293);
+            this.userControl_CinemaShowTime3.movie = null;
+            this.userControl_CinemaShowTime3.Name = "userControl_CinemaShowTime3";
+            this.userControl_CinemaShowTime3.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime3.TabIndex = 2;
+            // 
+            // userControl_CinemaShowTime4
+            // 
+            this.userControl_CinemaShowTime4.AutoSize = true;
+            this.userControl_CinemaShowTime4.BackColor = System.Drawing.Color.White;
+            cinema4.Area = null;
+            cinema4.Caddress = null;
+            cinema4.Cid = null;
+            cinema4.Cname = null;
+            cinema4.Hotline = null;
+            cinema4.Image = null;
+            this.userControl_CinemaShowTime4.cinema = cinema4;
+            this.userControl_CinemaShowTime4.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime4.Location = new System.Drawing.Point(3, 438);
+            this.userControl_CinemaShowTime4.movie = null;
+            this.userControl_CinemaShowTime4.Name = "userControl_CinemaShowTime4";
+            this.userControl_CinemaShowTime4.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime4.TabIndex = 3;
+            // 
+            // userControl_CinemaShowTime5
+            // 
+            this.userControl_CinemaShowTime5.AutoSize = true;
+            this.userControl_CinemaShowTime5.BackColor = System.Drawing.Color.White;
+            cinema5.Area = null;
+            cinema5.Caddress = null;
+            cinema5.Cid = null;
+            cinema5.Cname = null;
+            cinema5.Hotline = null;
+            cinema5.Image = null;
+            this.userControl_CinemaShowTime5.cinema = cinema5;
+            this.userControl_CinemaShowTime5.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime5.Location = new System.Drawing.Point(3, 583);
+            this.userControl_CinemaShowTime5.movie = null;
+            this.userControl_CinemaShowTime5.Name = "userControl_CinemaShowTime5";
+            this.userControl_CinemaShowTime5.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime5.TabIndex = 4;
+            // 
+            // userControl_CinemaShowTime6
+            // 
+            this.userControl_CinemaShowTime6.AutoSize = true;
+            this.userControl_CinemaShowTime6.BackColor = System.Drawing.Color.White;
+            cinema6.Area = null;
+            cinema6.Caddress = null;
+            cinema6.Cid = null;
+            cinema6.Cname = null;
+            cinema6.Hotline = null;
+            cinema6.Image = null;
+            this.userControl_CinemaShowTime6.cinema = cinema6;
+            this.userControl_CinemaShowTime6.Date = new System.DateTime(((long)(0)));
+            this.userControl_CinemaShowTime6.Location = new System.Drawing.Point(3, 728);
+            this.userControl_CinemaShowTime6.movie = null;
+            this.userControl_CinemaShowTime6.Name = "userControl_CinemaShowTime6";
+            this.userControl_CinemaShowTime6.Size = new System.Drawing.Size(1435, 139);
+            this.userControl_CinemaShowTime6.TabIndex = 5;
             // 
             // guna2PictureBox2
             // 
@@ -358,76 +488,6 @@
             this.pic_movie.TabIndex = 5;
             this.pic_movie.TabStop = false;
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime1);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime2);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime3);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime4);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime5);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_CinemaShowTime6);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(88, 649);
-            this.flowLayoutPanel1.MaximumSize = new System.Drawing.Size(1441, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1441, 674);
-            this.flowLayoutPanel1.TabIndex = 14;
-            // 
-            // userControl_CinemaShowTime1
-            // 
-            this.userControl_CinemaShowTime1.AutoSize = true;
-            this.userControl_CinemaShowTime1.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime1.Location = new System.Drawing.Point(3, 3);
-            this.userControl_CinemaShowTime1.Name = "userControl_CinemaShowTime1";
-            this.userControl_CinemaShowTime1.Size = new System.Drawing.Size(1435, 108);
-            this.userControl_CinemaShowTime1.TabIndex = 0;
-            // 
-            // userControl_CinemaShowTime2
-            // 
-            this.userControl_CinemaShowTime2.AutoSize = true;
-            this.userControl_CinemaShowTime2.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(3, 117);
-            this.userControl_CinemaShowTime2.Name = "userControl_CinemaShowTime2";
-            this.userControl_CinemaShowTime2.Size = new System.Drawing.Size(1435, 106);
-            this.userControl_CinemaShowTime2.TabIndex = 1;
-            // 
-            // userControl_CinemaShowTime3
-            // 
-            this.userControl_CinemaShowTime3.AutoSize = true;
-            this.userControl_CinemaShowTime3.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime3.Location = new System.Drawing.Point(3, 229);
-            this.userControl_CinemaShowTime3.Name = "userControl_CinemaShowTime3";
-            this.userControl_CinemaShowTime3.Size = new System.Drawing.Size(1435, 106);
-            this.userControl_CinemaShowTime3.TabIndex = 2;
-            // 
-            // userControl_CinemaShowTime4
-            // 
-            this.userControl_CinemaShowTime4.AutoSize = true;
-            this.userControl_CinemaShowTime4.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime4.Location = new System.Drawing.Point(3, 341);
-            this.userControl_CinemaShowTime4.Name = "userControl_CinemaShowTime4";
-            this.userControl_CinemaShowTime4.Size = new System.Drawing.Size(1435, 106);
-            this.userControl_CinemaShowTime4.TabIndex = 3;
-            // 
-            // userControl_CinemaShowTime5
-            // 
-            this.userControl_CinemaShowTime5.AutoSize = true;
-            this.userControl_CinemaShowTime5.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime5.Location = new System.Drawing.Point(3, 453);
-            this.userControl_CinemaShowTime5.Name = "userControl_CinemaShowTime5";
-            this.userControl_CinemaShowTime5.Size = new System.Drawing.Size(1435, 106);
-            this.userControl_CinemaShowTime5.TabIndex = 4;
-            // 
-            // userControl_CinemaShowTime6
-            // 
-            this.userControl_CinemaShowTime6.AutoSize = true;
-            this.userControl_CinemaShowTime6.BackColor = System.Drawing.Color.White;
-            this.userControl_CinemaShowTime6.Location = new System.Drawing.Point(3, 565);
-            this.userControl_CinemaShowTime6.Name = "userControl_CinemaShowTime6";
-            this.userControl_CinemaShowTime6.Size = new System.Drawing.Size(1435, 106);
-            this.userControl_CinemaShowTime6.TabIndex = 5;
-            // 
             // Form_detailMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -448,11 +508,11 @@
             this.PanelControl.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.flowLayoutPanelShow.ResumeLayout(false);
+            this.flowLayoutPanelShow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -474,7 +534,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerDate;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Panel PanelControl;
@@ -482,7 +542,7 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelShow;
         private UserControls.UserControl_CinemaShowTime userControl_CinemaShowTime1;
         private UserControls.UserControl_CinemaShowTime userControl_CinemaShowTime2;
         private UserControls.UserControl_CinemaShowTime userControl_CinemaShowTime3;

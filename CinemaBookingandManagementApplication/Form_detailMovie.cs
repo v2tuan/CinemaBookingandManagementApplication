@@ -1,9 +1,12 @@
-﻿using CinemaBookingandManagementApplication.models;
+﻿using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
+using CinemaBookingandManagementApplication.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +30,20 @@ namespace CinemaBookingandManagementApplication
             labelDescriptions.Text = movie.Descriptions.ToString();
             pic_movie.Image = movie.Image;
 
-            DataTable dt = new DataTable();
+            CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
+            DataTable dt = cinemaDaoImpl.GetCinemasWithMovieSchedules(movie.Mid, dateTimePickerDate.Value);
+            flowLayoutPanelShow.Controls.Clear();
+            if (dt != null)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    UserControl_CinemaShowTime CinemaShowTime = new UserControl_CinemaShowTime();
+                    CinemaShowTime.movie = movie;
+                    CinemaShowTime.CinemaName = dr["cname"].ToString();
+                    CinemaShowTime.CinemaID = dr["cid"].ToString();
+                    flowLayoutPanelShow.Controls.Add(CinemaShowTime);
+                }
+            }
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)

@@ -13,7 +13,9 @@ namespace CinemaBookingandManagementApplication.UserControls
 {
     public partial class UserControl_CinemaShowTime : UserControl
     {
-        public Cinema cinema {  get; set; }
+        public Cinema cinema {  get; set; } = new Cinema();
+        public string CinemaID { get; set; } = string.Empty;
+        public string CinemaName { get; set; } = string.Empty;
         public Movie movie { get; set; }
         public DateTime Date { get; set; }
         public UserControl_CinemaShowTime()
@@ -23,7 +25,7 @@ namespace CinemaBookingandManagementApplication.UserControls
 
         private void UserControl_CinemaShowTime_Load(object sender, EventArgs e)
         {
-            labelCinemaName.Text = cinema.Cname;
+            labelCinemaName.Text = CinemaName;
         }
     }
 }
