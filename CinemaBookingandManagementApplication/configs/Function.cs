@@ -852,6 +852,43 @@ namespace CinemaBookingandManagementApplication.configs
             return schedulesTable; // Trả về danh sách lịch chiếu
         }
 
+        // func lấy rạp có lịch chiếu phim
+
+        public static DataTable GetCinemasWithMovieSchedules(string movieId, DateTime showDate)
+        {
+            DataTable cinemasTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_CINEMAS_WITH_MOVIE_SCHEDULES(@MovieId, @ShowDate)", conn))
+                    {
+                        // Thêm tham số vào lệnh
+                        cmd.Parameters.AddWithValue("@MovieId", movieId);
+                        cmd.Parameters.AddWithValue("@ShowDate", showDate);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(cinemasTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemasTable; // Trả về danh sách rạp có lịch chiếu
+        }
 
 
     }
