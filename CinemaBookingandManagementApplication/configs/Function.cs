@@ -524,7 +524,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
         }
-        //hàm list phong
+        //hàm list phong 
         public static DataTable GetRoomList()
         {
             DataTable rooms = new DataTable();
@@ -550,6 +550,40 @@ namespace CinemaBookingandManagementApplication.configs
             return rooms;
         }
 
+        //hàm list room theo ID cinema
+        public static DataTable GetRoomsByCinemaId(string cinemaId)
+        {
+            DataTable rooms = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi hàm SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GetRoomsByCinemaId(@cinemaId)", conn))
+                    {
+                        cmd.Parameters.AddWithValue("@cinemaId", cinemaId);
+
+                        // Sử dụng SqlDataAdapter để lấy dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(rooms); // Đổ dữ liệu vào DataTable
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return rooms;
+        }
 
     }
 
