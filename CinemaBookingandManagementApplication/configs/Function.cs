@@ -524,6 +524,32 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
         }
+        //hàm list phong
+        public static DataTable GetRoomList()
+        {
+            DataTable rooms = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetRoomList()", conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(rooms);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return rooms;
+        }
+
 
     }
 
