@@ -707,6 +707,61 @@ namespace CinemaBookingandManagementApplication.configs
             return exists;
         }
 
+        //hàm list các area và lọc giá trị trùng
+        public static DataTable GetDistinctAreas()
+        {
+            DataTable areasTable = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetDistinctAreas()", conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(areasTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return areasTable;
+        }
+        //Viết hàm trả về các rạp thông qua Area truyền vào
+        public static DataTable GetCinemasByArea(string area)
+        {
+            DataTable cinemas = new DataTable();
+
+            // Sử dụng kết nối từ file
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCinemasByArea(@area)", conn))
+                    {
+                        command.Parameters.AddWithValue("@area", area);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cinemas);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemas;
+        }
 
     }
 
