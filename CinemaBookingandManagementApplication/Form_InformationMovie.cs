@@ -13,7 +13,7 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_InformationMovie : Form
     {
-        public Movie movie { get; set; }
+        public Movies movie { get; set; }
         public Form_InformationMovie()
         {
             InitializeComponent();

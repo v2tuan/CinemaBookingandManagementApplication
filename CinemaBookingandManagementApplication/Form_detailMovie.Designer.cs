@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CinemaBookingandManagementApplication.models.Cinema cinema1 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema2 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema3 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema4 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema5 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema6 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinemas cinema1 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema2 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema3 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema4 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema5 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema6 = new CinemaBookingandManagementApplication.models.Cinemas();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_detailMovie));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.labelName = new System.Windows.Forms.Label();
@@ -205,6 +205,7 @@
             this.dateTimePickerDate.Size = new System.Drawing.Size(259, 29);
             this.dateTimePickerDate.TabIndex = 6;
             this.dateTimePickerDate.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
+            this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.dateTimePickerDate_ValueChanged);
             // 
             // label7
             // 

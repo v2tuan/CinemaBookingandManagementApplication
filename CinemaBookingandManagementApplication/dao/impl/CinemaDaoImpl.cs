@@ -13,6 +13,10 @@ namespace CinemaBookingandManagementApplication.dao.impl
 {
     internal class CinemaDaoImpl
     {
+        public DataTable GetMovieSchedulesByCinema(string cinemaId, string movieId, DateTime showDate)
+        {
+            return Function.GetMovieSchedulesByCinema(cinemaId, movieId, showDate);
+        }
         public DataTable GetCinemasWithMovieSchedules(string movieId, DateTime showDate)
         {
             return Function.GetCinemasWithMovieSchedules(movieId, showDate);
@@ -23,7 +27,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
             return Function.GetRoomsByCinemaId(cinemaId);
         }
 
-        public void insert(Cinema cinema)
+        public void insert(Cinemas cinema)
         {
             string cid = cinema.Cid;
             string cname = cinema.Cname;

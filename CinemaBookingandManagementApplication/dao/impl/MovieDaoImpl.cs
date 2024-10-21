@@ -23,27 +23,27 @@ namespace CinemaBookingandManagementApplication.dao.impl
             throw new NotImplementedException();
         }
 
-        public List<Movie> findAll()
+        public List<Movies> findAll()
         {
             throw new NotImplementedException();
         }
 
-        public Movie findById(int id)
+        public Movies findById(int id)
         {
             throw new NotImplementedException();
         }
 
-        public List<Movie> findName(string keyword)
+        public List<Movies> findName(string keyword)
         {
             throw new NotImplementedException();
         }
 
-        public float getRevenue(Movie movie)
+        public float getRevenue(Movies movie)
         {
             throw new NotImplementedException();
         }
 
-        public void insert(Movie movie)
+        public void insert(Movies movie)
         {
             string mid = movie.Mid;
             string moviename = movie.Moviename;
@@ -59,7 +59,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
             Procedure.AddNewMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, pic);
         }
 
-        public void update(Movie category)
+        public void update(Movies category)
         {
             throw new NotImplementedException();
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingandManagementApplication.models
 {
-    public class Movie
+    public class Movies
     {
         private string mid;
         private string moviename;
@@ -19,11 +19,11 @@ namespace CinemaBookingandManagementApplication.models
         private string descriptions;
         private Image image;
 
-        public Movie()
+        public Movies()
         {
         }
 
-        public Movie(string mid, string moviename, int ageRestriction, decimal revenue, string mtid, DateTime releaseDate, int duration, string descriptions, Image image)
+        public Movies(string mid, string moviename, int ageRestriction, decimal revenue, string mtid, DateTime releaseDate, int duration, string descriptions, Image image)
         {
             this.mid = mid;
             this.moviename = moviename;

@@ -10,13 +10,13 @@ namespace CinemaBookingandManagementApplication.dao
 {
     internal interface IMovieDao
     {
-        List<Movie> findAll();
-        Movie findById(int id);
-        void insert(Movie movie);
-        void update(Movie category);
+        List<Movies> findAll();
+        Movies findById(int id);
+        void insert(Movies movie);
+        void update(Movies category);
         void delete(int id);
-        List<Movie> findName(String keyword);
-        float getRevenue(Movie movie);
+        List<Movies> findName(String keyword);
+        float getRevenue(Movies movie);
 
         bool checkid(string id);
 

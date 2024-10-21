@@ -13,7 +13,7 @@ namespace CinemaBookingandManagementApplication.UserControls
 {
     public partial class UserControl_Movie : UserControl
     {
-        public Movie movie { get; set; } = new Movie();
+        public Movies movie { get; set; } = new Movies();
 
         public event EventHandler buttonClick = null;
         public UserControl_Movie()
