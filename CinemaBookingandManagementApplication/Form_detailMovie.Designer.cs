@@ -87,9 +87,9 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(353, 68);
+            this.labelName.Location = new System.Drawing.Point(314, 54);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(238, 32);
+            this.labelName.Size = new System.Drawing.Size(205, 29);
             this.labelName.TabIndex = 6;
             this.labelName.Text = "Robot Hoang Dã";
             // 
@@ -97,9 +97,9 @@
             // 
             this.labelDuration.AutoSize = true;
             this.labelDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDuration.Location = new System.Drawing.Point(395, 118);
+            this.labelDuration.Location = new System.Drawing.Point(351, 94);
             this.labelDuration.Name = "labelDuration";
-            this.labelDuration.Size = new System.Drawing.Size(80, 22);
+            this.labelDuration.Size = new System.Drawing.Size(64, 18);
             this.labelDuration.TabIndex = 8;
             this.labelDuration.Text = "120 phút";
             // 
@@ -107,9 +107,9 @@
             // 
             this.labelReleaseDate.AutoSize = true;
             this.labelReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReleaseDate.Location = new System.Drawing.Point(395, 165);
+            this.labelReleaseDate.Location = new System.Drawing.Point(351, 132);
             this.labelReleaseDate.Name = "labelReleaseDate";
-            this.labelReleaseDate.Size = new System.Drawing.Size(120, 22);
+            this.labelReleaseDate.Size = new System.Drawing.Size(96, 18);
             this.labelReleaseDate.TabIndex = 10;
             this.labelReleaseDate.Text = "11 / 10 / 2024";
             // 
@@ -118,17 +118,18 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.labelDescriptions);
             this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Location = new System.Drawing.Point(359, 208);
+            this.panel1.Location = new System.Drawing.Point(319, 166);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1199, 215);
+            this.panel1.Size = new System.Drawing.Size(1066, 172);
             this.panel1.TabIndex = 11;
             // 
             // labelDescriptions
             // 
             this.labelDescriptions.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescriptions.Location = new System.Drawing.Point(3, 69);
+            this.labelDescriptions.Location = new System.Drawing.Point(3, 55);
             this.labelDescriptions.Name = "labelDescriptions";
-            this.labelDescriptions.Size = new System.Drawing.Size(1193, 146);
+            this.labelDescriptions.Size = new System.Drawing.Size(1060, 117);
             this.labelDescriptions.TabIndex = 1;
             this.labelDescriptions.Text = resources.GetString("labelDescriptions.Text");
             // 
@@ -144,9 +145,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Button1.Location = new System.Drawing.Point(3, 2);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(261, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(232, 36);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Nội dung phim";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -166,7 +168,7 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
             this.guna2Button2.Location = new System.Drawing.Point(88, 449);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(261, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(232, 36);
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Lịch chiếu";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -193,11 +195,12 @@
             this.dateTimePickerDate.FillColor = System.Drawing.Color.White;
             this.dateTimePickerDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerDate.Location = new System.Drawing.Point(1106, 31);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(983, 25);
+            this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
-            this.dateTimePickerDate.Size = new System.Drawing.Size(291, 36);
+            this.dateTimePickerDate.Size = new System.Drawing.Size(259, 29);
             this.dateTimePickerDate.TabIndex = 6;
             this.dateTimePickerDate.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
             this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.dateTimePickerDate_ValueChanged);
@@ -206,9 +209,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(939, 31);
+            this.label7.Location = new System.Drawing.Point(835, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 28);
+            this.label7.Size = new System.Drawing.Size(143, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Chọn ngày chiếu:";
             // 
@@ -216,9 +219,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(467, 31);
+            this.label6.Location = new System.Drawing.Point(415, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 28);
+            this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "Chọn rạp:";
             // 
@@ -226,9 +229,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 31);
+            this.label5.Location = new System.Drawing.Point(22, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 28);
+            this.label5.Size = new System.Drawing.Size(93, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Chọn vị trí:";
             // 
@@ -243,9 +246,10 @@
             this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(569, 31);
+            this.guna2ComboBox2.Location = new System.Drawing.Point(506, 25);
+            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(267, 36);
+            this.guna2ComboBox2.Size = new System.Drawing.Size(238, 36);
             this.guna2ComboBox2.TabIndex = 1;
             // 
             // guna2ComboBox1
@@ -259,9 +263,10 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(137, 31);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(122, 25);
+            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(267, 36);
+            this.guna2ComboBox1.Size = new System.Drawing.Size(238, 36);
             this.guna2ComboBox1.TabIndex = 0;
             // 
             // PanelControl
@@ -272,9 +277,9 @@
             this.PanelControl.Controls.Add(this.guna2ControlBox1);
             this.PanelControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelControl.Location = new System.Drawing.Point(0, 0);
-            this.PanelControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelControl.Margin = new System.Windows.Forms.Padding(4);
             this.PanelControl.Name = "PanelControl";
-            this.PanelControl.Size = new System.Drawing.Size(1716, 42);
+            this.PanelControl.Size = new System.Drawing.Size(1525, 34);
             this.PanelControl.TabIndex = 32;
             // 
             // guna2ControlBox3
@@ -283,10 +288,10 @@
             this.guna2ControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1536, 0);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1366, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox3.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -295,10 +300,10 @@
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1596, 0);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1419, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox2.TabIndex = 1;
             // 
             // guna2ControlBox1
@@ -307,10 +312,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1656, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1472, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -327,9 +332,10 @@
             this.guna2Panel2.Controls.Add(this.guna2Button2);
             this.guna2Panel2.Controls.Add(this.panelDate);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 42);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 34);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1716, 1117);
+            this.guna2Panel2.Size = new System.Drawing.Size(1525, 848);
             this.guna2Panel2.TabIndex = 33;
             // 
             // flowLayoutPanelShow
@@ -395,7 +401,8 @@
             this.userControl_CinemaShowTime1.CinemaID = "";
             this.userControl_CinemaShowTime1.CinemaName = "";
             this.userControl_CinemaShowTime1.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime1.Location = new System.Drawing.Point(3, 3);
+            this.userControl_CinemaShowTime1.Location = new System.Drawing.Point(3, 2);
+            this.userControl_CinemaShowTime1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime1.movie = null;
             this.userControl_CinemaShowTime1.Name = "userControl_CinemaShowTime1";
             this.userControl_CinemaShowTime1.Size = new System.Drawing.Size(1459, 139);
@@ -415,7 +422,8 @@
             this.userControl_CinemaShowTime2.CinemaID = "";
             this.userControl_CinemaShowTime2.CinemaName = "";
             this.userControl_CinemaShowTime2.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(3, 148);
+            this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(607, 2);
+            this.userControl_CinemaShowTime2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime2.movie = null;
             this.userControl_CinemaShowTime2.Name = "userControl_CinemaShowTime2";
             this.userControl_CinemaShowTime2.Size = new System.Drawing.Size(1459, 139);
@@ -435,7 +443,8 @@
             this.userControl_CinemaShowTime3.CinemaID = "";
             this.userControl_CinemaShowTime3.CinemaName = "";
             this.userControl_CinemaShowTime3.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime3.Location = new System.Drawing.Point(3, 293);
+            this.userControl_CinemaShowTime3.Location = new System.Drawing.Point(3, 116);
+            this.userControl_CinemaShowTime3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime3.movie = null;
             this.userControl_CinemaShowTime3.Name = "userControl_CinemaShowTime3";
             this.userControl_CinemaShowTime3.Size = new System.Drawing.Size(1459, 139);
@@ -455,7 +464,8 @@
             this.userControl_CinemaShowTime4.CinemaID = "";
             this.userControl_CinemaShowTime4.CinemaName = "";
             this.userControl_CinemaShowTime4.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime4.Location = new System.Drawing.Point(3, 438);
+            this.userControl_CinemaShowTime4.Location = new System.Drawing.Point(607, 116);
+            this.userControl_CinemaShowTime4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime4.movie = null;
             this.userControl_CinemaShowTime4.Name = "userControl_CinemaShowTime4";
             this.userControl_CinemaShowTime4.Size = new System.Drawing.Size(1459, 139);
@@ -475,7 +485,8 @@
             this.userControl_CinemaShowTime5.CinemaID = "";
             this.userControl_CinemaShowTime5.CinemaName = "";
             this.userControl_CinemaShowTime5.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime5.Location = new System.Drawing.Point(3, 583);
+            this.userControl_CinemaShowTime5.Location = new System.Drawing.Point(3, 230);
+            this.userControl_CinemaShowTime5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime5.movie = null;
             this.userControl_CinemaShowTime5.Name = "userControl_CinemaShowTime5";
             this.userControl_CinemaShowTime5.Size = new System.Drawing.Size(1459, 139);
@@ -495,7 +506,8 @@
             this.userControl_CinemaShowTime6.CinemaID = "";
             this.userControl_CinemaShowTime6.CinemaName = "";
             this.userControl_CinemaShowTime6.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime6.Location = new System.Drawing.Point(3, 728);
+            this.userControl_CinemaShowTime6.Location = new System.Drawing.Point(607, 230);
+            this.userControl_CinemaShowTime6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.userControl_CinemaShowTime6.movie = null;
             this.userControl_CinemaShowTime6.Name = "userControl_CinemaShowTime6";
             this.userControl_CinemaShowTime6.Size = new System.Drawing.Size(1459, 139);
@@ -503,15 +515,16 @@
             // 
             // Form_detailMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1716, 1159);
+            this.ClientSize = new System.Drawing.Size(1525, 882);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.PanelControl);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_detailMovie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_detailMovie";

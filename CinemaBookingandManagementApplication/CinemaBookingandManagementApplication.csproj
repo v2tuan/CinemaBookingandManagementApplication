@@ -294,6 +294,9 @@
     <EmbeddedResource Include="Form_detailMovie.resx">
       <DependentUpon>Form_detailMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_EditCinema.resx">
+      <DependentUpon>Form_EditCinema.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_EditMovie.resx">
       <DependentUpon>Form_EditMovie.cs</DependentUpon>
     </EmbeddedResource>

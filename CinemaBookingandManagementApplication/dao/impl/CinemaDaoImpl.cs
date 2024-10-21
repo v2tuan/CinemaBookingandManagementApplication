@@ -71,5 +71,18 @@ namespace CinemaBookingandManagementApplication.dao.impl
         {
             return Function.GetListCinema();
         }
+        public void update(Cinema cinema)
+        {
+            string cid = cinema.Cid;
+            string cname = cinema.Cname;
+            string caddress = cinema.Caddress;
+            string hotline = cinema.Hotline;
+            string area = cinema.Area;
+
+            MemoryStream pic = new MemoryStream();
+            cinema.Image.Save(pic, cinema.Image.RawFormat);
+
+            Procedure.UpdateCinema(cid, cname, caddress, hotline, area, pic);
+        }
     }
 }
