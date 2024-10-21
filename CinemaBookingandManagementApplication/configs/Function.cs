@@ -928,7 +928,42 @@ namespace CinemaBookingandManagementApplication.configs
 
             return schedulesTable; // Trả về danh sách lịch chiếu của phim
         }
-        
+
+        //Hàm list ghế theo id room
+        public static DataTable GetSeatsByRoomId(string roomId)
+        {
+            DataTable seatsTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.GetSeatsByRoomId(@RoomId)", conn))
+                    {
+                        // Thêm tham số vào lệnh
+                        cmd.Parameters.AddWithValue("@RoomId", roomId);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(seatsTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return seatsTable; // Trả về danh sách ghế của phòng
+        }
 
 
     }
