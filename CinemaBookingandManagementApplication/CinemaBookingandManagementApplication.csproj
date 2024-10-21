@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CinemaBookingandManagementApplication">
-      <HintPath>obj\Debug\CinemaBookingandManagementApplication.exe</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -296,6 +293,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_detailMovie.resx">
       <DependentUpon>Form_detailMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_EditCinema.resx">
+      <DependentUpon>Form_EditCinema.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_EditMovie.resx">
       <DependentUpon>Form_EditMovie.cs</DependentUpon>

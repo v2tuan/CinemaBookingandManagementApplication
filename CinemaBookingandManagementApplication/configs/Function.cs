@@ -57,7 +57,7 @@ namespace CinemaBookingandManagementApplication.configs
                 {
                     command.Parameters.AddWithValue("@MOVIEID", movieID);
                     result = (Int32)command.ExecuteScalar();
-                    if (result != null && result == 1)
+                    if (result == 1)
                     {
                         exists = true; // Kết quả là kiểu boolean
                     }
@@ -120,7 +120,7 @@ namespace CinemaBookingandManagementApplication.configs
                     command.Parameters.AddWithValue("@CINEMAID", cinemaID);
                     result = (Int32)command.ExecuteScalar();
 
-                    if (result != null && result == 1)
+                    if (result == 1)
                     {
                         exists = true;
                     }
@@ -500,7 +500,7 @@ namespace CinemaBookingandManagementApplication.configs
                     command.Parameters.AddWithValue("@ROOMID", roomID);
                     result = (int)command.ExecuteScalar(); // Chuyển đổi kết quả thành kiểu int
 
-                    if (result != null && result == 1)
+                    if ( result == 1)
                     {
                         exists = true; // Kết quả là kiểu boolean
                     }
@@ -680,7 +680,7 @@ namespace CinemaBookingandManagementApplication.configs
                     result = (Int32)command.ExecuteScalar();
 
                     // Kiểm tra kết quả, nếu là 1 thì IDShowtime tồn tại
-                    if (result != null && result == 1)
+                    if (  result == 1)
                     {
                         exists = true;
                     }
