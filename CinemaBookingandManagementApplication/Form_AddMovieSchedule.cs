@@ -70,15 +70,15 @@ namespace CinemaBookingandManagementApplication
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             MovieSchedule movieSchedule = new MovieSchedule();
-            movieSchedule.Shid = "";
+            ShowTimeDaoImpl showTimeDao = new ShowTimeDaoImpl();
+            movieSchedule.Shid = showTimeDao.IDNext();
             DataRowView row = (DataRowView)comboBoxMovie.SelectedItem;
             movieSchedule.Mid = row["mid"].ToString();
             movieSchedule.Rid = comboBoxRoom.SelectedValue.ToString();
             movieSchedule.SeatEmpty = int.Parse(textboxSeatEmpty.Text);
             movieSchedule.Sdate = dateTimePickerRelease.Value;
-            movieSchedule.Stime = dateTimePickerShowtime.Value;
-            movieSchedule.Etime = dateTimePickerFinishTime.Value;
-            ShowTimeDaoImpl showTimeDao = new ShowTimeDaoImpl();
+            movieSchedule.Stime = dateTimePickerShowtime.Value.TimeOfDay;
+            movieSchedule.Etime = dateTimePickerFinishTime.Value.TimeOfDay;
             showTimeDao.AddShowtime(movieSchedule);
         }
 

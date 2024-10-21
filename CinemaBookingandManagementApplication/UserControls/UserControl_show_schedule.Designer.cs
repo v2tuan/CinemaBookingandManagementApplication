@@ -33,14 +33,16 @@
             // 
             // btn_time
             // 
+            this.btn_time.BorderColor = System.Drawing.Color.LightGray;
+            this.btn_time.BorderRadius = 10;
+            this.btn_time.BorderThickness = 1;
             this.btn_time.CustomBorderColor = System.Drawing.Color.LightGray;
-            this.btn_time.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.btn_time.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_time.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_time.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btn_time.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_time.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_time.FillColor = System.Drawing.Color.White;
+            this.btn_time.FillColor = System.Drawing.Color.Transparent;
             this.btn_time.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_time.ForeColor = System.Drawing.Color.Black;
             this.btn_time.Location = new System.Drawing.Point(0, 0);
@@ -60,6 +62,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControl_show_schedule";
             this.Size = new System.Drawing.Size(180, 45);
+            this.Load += new System.EventHandler(this.UserControl_show_schedule_Load);
             this.ResumeLayout(false);
 
         }

@@ -33,12 +33,15 @@
             this.userControl_show_schedule1 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule();
             this.userControl_show_schedule2 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule();
             this.userControl_show_schedule3 = new CinemaBookingandManagementApplication.UserControls.UserControl_show_schedule();
+            this.panelBackground = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanelShowTime.SuspendLayout();
+            this.panelBackground.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelCinemaName
             // 
             this.labelCinemaName.AutoSize = true;
+            this.labelCinemaName.BackColor = System.Drawing.Color.Transparent;
             this.labelCinemaName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCinemaName.Location = new System.Drawing.Point(43, 23);
             this.labelCinemaName.Name = "labelCinemaName";
@@ -50,10 +53,11 @@
             // 
             this.flowLayoutPanelShowTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelShowTime.AutoSize = true;
+            this.flowLayoutPanelShowTime.BackColor = System.Drawing.Color.Transparent;
             this.flowLayoutPanelShowTime.Controls.Add(this.userControl_show_schedule1);
             this.flowLayoutPanelShowTime.Controls.Add(this.userControl_show_schedule2);
             this.flowLayoutPanelShowTime.Controls.Add(this.userControl_show_schedule3);
-            this.flowLayoutPanelShowTime.Location = new System.Drawing.Point(48, 103);
+            this.flowLayoutPanelShowTime.Location = new System.Drawing.Point(48, 72);
             this.flowLayoutPanelShowTime.MaximumSize = new System.Drawing.Size(1354, 0);
             this.flowLayoutPanelShowTime.Name = "flowLayoutPanelShowTime";
             this.flowLayoutPanelShowTime.Size = new System.Drawing.Size(1330, 55);
@@ -64,6 +68,7 @@
             this.userControl_show_schedule1.BackColor = System.Drawing.Color.Transparent;
             this.userControl_show_schedule1.Location = new System.Drawing.Point(5, 5);
             this.userControl_show_schedule1.Margin = new System.Windows.Forms.Padding(5);
+            this.userControl_show_schedule1.movieSchedule = null;
             this.userControl_show_schedule1.Name = "userControl_show_schedule1";
             this.userControl_show_schedule1.Size = new System.Drawing.Size(180, 45);
             this.userControl_show_schedule1.TabIndex = 0;
@@ -73,6 +78,7 @@
             this.userControl_show_schedule2.BackColor = System.Drawing.Color.Transparent;
             this.userControl_show_schedule2.Location = new System.Drawing.Point(195, 5);
             this.userControl_show_schedule2.Margin = new System.Windows.Forms.Padding(5);
+            this.userControl_show_schedule2.movieSchedule = null;
             this.userControl_show_schedule2.Name = "userControl_show_schedule2";
             this.userControl_show_schedule2.Size = new System.Drawing.Size(180, 45);
             this.userControl_show_schedule2.TabIndex = 1;
@@ -82,9 +88,23 @@
             this.userControl_show_schedule3.BackColor = System.Drawing.Color.Transparent;
             this.userControl_show_schedule3.Location = new System.Drawing.Point(385, 5);
             this.userControl_show_schedule3.Margin = new System.Windows.Forms.Padding(5);
+            this.userControl_show_schedule3.movieSchedule = null;
             this.userControl_show_schedule3.Name = "userControl_show_schedule3";
             this.userControl_show_schedule3.Size = new System.Drawing.Size(180, 45);
             this.userControl_show_schedule3.TabIndex = 2;
+            // 
+            // panelBackground
+            // 
+            this.panelBackground.AutoSize = true;
+            this.panelBackground.Controls.Add(this.labelCinemaName);
+            this.panelBackground.Controls.Add(this.flowLayoutPanelShowTime);
+            this.panelBackground.CustomBorderColor = System.Drawing.Color.Gainsboro;
+            this.panelBackground.CustomBorderThickness = new System.Windows.Forms.Padding(0, 1, 0, 1);
+            this.panelBackground.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBackground.Location = new System.Drawing.Point(0, 0);
+            this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Size = new System.Drawing.Size(1435, 150);
+            this.panelBackground.TabIndex = 2;
             // 
             // UserControl_CinemaShowTime
             // 
@@ -92,12 +112,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.flowLayoutPanelShowTime);
-            this.Controls.Add(this.labelCinemaName);
+            this.Controls.Add(this.panelBackground);
+            this.Margin = new System.Windows.Forms.Padding(0);
+            this.MinimumSize = new System.Drawing.Size(1435, 150);
             this.Name = "UserControl_CinemaShowTime";
-            this.Size = new System.Drawing.Size(1435, 183);
+            this.Size = new System.Drawing.Size(1435, 150);
             this.Load += new System.EventHandler(this.UserControl_CinemaShowTime_Load);
             this.flowLayoutPanelShowTime.ResumeLayout(false);
+            this.panelBackground.ResumeLayout(false);
+            this.panelBackground.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,5 +133,6 @@
         private UserControl_show_schedule userControl_show_schedule1;
         private UserControl_show_schedule userControl_show_schedule2;
         private UserControl_show_schedule userControl_show_schedule3;
+        private Guna.UI2.WinForms.Guna2Panel panelBackground;
     }
 }

@@ -14,6 +14,8 @@ namespace CinemaBookingandManagementApplication.UserControls
     public partial class UserControl_Seat : UserControl
     {
         Seat seat = new Seat();
+        private bool cheked = true;
+        
         public UserControl_Seat()
         {
             InitializeComponent();
@@ -31,6 +33,7 @@ namespace CinemaBookingandManagementApplication.UserControls
             // 
             // buttonSeat
             // 
+            this.buttonSeat.BorderColor = System.Drawing.Color.LightGray;
             this.buttonSeat.BorderRadius = 10;
             this.buttonSeat.BorderThickness = 1;
             this.buttonSeat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -47,6 +50,7 @@ namespace CinemaBookingandManagementApplication.UserControls
             this.buttonSeat.Size = new System.Drawing.Size(50, 50);
             this.buttonSeat.TabIndex = 80;
             this.buttonSeat.Text = "1";
+            this.buttonSeat.Click += new System.EventHandler(this.buttonSeat_Click);
             // 
             // UserControl_Seat
             // 
@@ -59,6 +63,24 @@ namespace CinemaBookingandManagementApplication.UserControls
             this.Size = new System.Drawing.Size(50, 50);
             this.ResumeLayout(false);
 
+        }
+
+        private void buttonSeat_Click(object sender, EventArgs e)
+        {
+            if (cheked)
+            {
+                buttonSeat.FillColor = Color.FromArgb(245, 128, 32);
+                buttonSeat.ForeColor = Color.White;
+                buttonSeat.BorderThickness = 0;
+                cheked = false;
+            }
+            else
+            {
+                buttonSeat.FillColor = Color.Transparent;
+                buttonSeat.BorderThickness = 1;
+                buttonSeat.ForeColor = Color.Black;
+                cheked = true;
+            }
         }
     }
 }

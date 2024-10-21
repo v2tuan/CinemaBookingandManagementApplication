@@ -11,8 +11,8 @@ namespace CinemaBookingandManagementApplication.models
             public string Shid { get; set; }
             public string Mid { get; set; }
             public DateTime Sdate { get; set; }
-            public DateTime Stime { get; set; }
-            public DateTime Etime { get; set; }
+            public TimeSpan Stime { get; set; }
+            public TimeSpan Etime { get; set; }
             public int SeatEmpty { get; set; }
             public string Rid { get; set; }
       

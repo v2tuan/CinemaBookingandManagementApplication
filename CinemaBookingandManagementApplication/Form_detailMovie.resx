@@ -120,6 +120,9 @@
   <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="labelDescriptions.Text" xml:space="preserve">
+    <value>Cuộc phiêu lưu hoành tráng theo chân hành trình của một robot — đơn vị ROZZUM 7134, gọi tắt là Roz. Roz vô tình dạt vào hoang đảo sau một sự cố và nơi đây trở thành địa điểm sống mới của cô. Tại đây, Roz kết thân và nhận nuôi một chú ngỗng con, đặt tên là Brightbill. Roz và Brightbill dần dần thân thiết với các bạn thú trên đảo, song sau đó phải chống chọi, bảo vệ “nhà mới” trước sự xâm lăng của nhà máy từng sản xuất ra Roz. Phim mới The Wild Robot / Robot Hoang Dã có suất chiếu đặc biệt từ 05 - 06.10.2024 (không áp dụng movie voucher) và khởi chiếu chính thức 11.10.2024 tại các rạp chiếu phim trên toàn quốc. </value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="guna2PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -618,8 +621,5 @@
         Yclni8x8ZfqyQ3qO/H/30fmVkuslbjtltwBSP75HHfXftn+PxP2M+1n3O+R3ye90j0m6vyF/S/7uh9zf
         dmVwn2y4MrmyuQO7Kysf0wOhGxn5/wGZePLMjS6k0AAAAABJRU5ErkJggg==
 </value>
-  </data>
-  <data name="labelDescriptions.Text" xml:space="preserve">
-    <value>Cuộc phiêu lưu hoành tráng theo chân hành trình của một robot — đơn vị ROZZUM 7134, gọi tắt là Roz. Roz vô tình dạt vào hoang đảo sau một sự cố và nơi đây trở thành địa điểm sống mới của cô. Tại đây, Roz kết thân và nhận nuôi một chú ngỗng con, đặt tên là Brightbill. Roz và Brightbill dần dần thân thiết với các bạn thú trên đảo, song sau đó phải chống chọi, bảo vệ “nhà mới” trước sự xâm lăng của nhà máy từng sản xuất ra Roz. Phim mới The Wild Robot / Robot Hoang Dã có suất chiếu đặc biệt từ 05 - 06.10.2024 (không áp dụng movie voucher) và khởi chiếu chính thức 11.10.2024 tại các rạp chiếu phim trên toàn quốc. </value>
   </data>
 </root>

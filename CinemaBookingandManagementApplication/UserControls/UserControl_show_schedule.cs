@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace CinemaBookingandManagementApplication.UserControls
 {
     public partial class UserControl_show_schedule : UserControl
     {
+        public MovieSchedule movieSchedule {  get; set; } = null;
         public event EventHandler buttonClick = null;
         public UserControl_show_schedule()
         {
@@ -21,8 +23,14 @@ namespace CinemaBookingandManagementApplication.UserControls
         private void btn_time_Click(object sender, EventArgs e)
         {
             buttonClick?.Invoke(this, e);
-            Form_Booking frm = new Form_Booking();
-            frm.ShowDialog();
+        }
+
+        private void UserControl_show_schedule_Load(object sender, EventArgs e)
+        {
+            if (movieSchedule != null)
+            {
+                btn_time.Text = $"{movieSchedule.Stime.Hours}:{movieSchedule.Stime.Minutes:D2}";
+            }
         }
     }
 }

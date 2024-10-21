@@ -20,6 +20,7 @@ namespace CinemaBookingandManagementApplication.UserControls
         public string CinemaName { get; set; } = string.Empty;
         public Movies movie { get; set; }
         public DateTime Date { get; set; }
+
         public UserControl_CinemaShowTime()
         {
             InitializeComponent();
@@ -27,21 +28,44 @@ namespace CinemaBookingandManagementApplication.UserControls
 
         private void UserControl_CinemaShowTime_Load(object sender, EventArgs e)
         {
-            //labelCinemaName.Text = CinemaName;
-            //CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
-            ////DataTable dt = cinemaDaoImpl.GetMovieSchedulesByCinema(CinemaID, );
-            //flowLayoutPanelShowTime.Controls.Clear();
-            //if (dt != null)
-            //{
-            //    foreach (DataRow dr in dt.Rows)
-            //    {
-            //        UserControl_CinemaShowTime CinemaShowTime = new UserControl_CinemaShowTime();
-            //        CinemaShowTime.movie = movie;
-            //        CinemaShowTime.CinemaName = dr["cname"].ToString();
-            //        CinemaShowTime.CinemaID = dr["cid"].ToString();
-            //        //flowLayoutPanelShow.Controls.Add(CinemaShowTime);
-            //    }
-            //}
+            if (movie != null)
+            {
+                
+                labelCinemaName.Text = CinemaName;
+                CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
+
+                DataTable dt = cinemaDaoImpl.GetMovieSchedulesByCinema(CinemaID, movie.Mid, Date);
+                flowLayoutPanelShowTime.Controls.Clear();
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        UserControl_show_schedule show_Schedule = new UserControl_show_schedule();
+                        MovieSchedule schedule = new MovieSchedule();
+                        schedule.Shid = dr["shid"].ToString();
+                        schedule.Mid = dr["mid"].ToString();
+                        schedule.Sdate = DateTime.Parse(dr["sdate"].ToString());
+                        schedule.Stime = TimeSpan.Parse(dr["stime"].ToString());
+                        schedule.Etime = TimeSpan.Parse(dr["etime"].ToString());
+                        schedule.SeatEmpty = int.Parse(dr["seatEmpty"].ToString());
+                        schedule.Rid = dr["rid"].ToString();
+
+                        show_Schedule.movieSchedule = schedule;
+
+                        show_Schedule.buttonClick += (ss, ee) =>
+                        {
+                            Form_Booking frm = new Form_Booking();
+                            frm.ShowDialog();
+                        };
+                        flowLayoutPanelShowTime.Controls.Add(show_Schedule);
+                    }
+                }
+            }
+        }
+
+        public void setColor()
+        {
+            panelBackground.FillColor = Color.FromArgb(253, 251, 250);
         }
     }
 }
