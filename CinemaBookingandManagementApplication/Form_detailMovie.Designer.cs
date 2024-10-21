@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            CinemaBookingandManagementApplication.models.Cinema cinema1 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema2 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema3 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema4 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema5 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema6 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinemas cinema1 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema2 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema3 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema4 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema5 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema6 = new CinemaBookingandManagementApplication.models.Cinemas();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_detailMovie));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.labelName = new System.Windows.Forms.Label();
@@ -200,6 +200,7 @@
             this.dateTimePickerDate.Size = new System.Drawing.Size(291, 36);
             this.dateTimePickerDate.TabIndex = 6;
             this.dateTimePickerDate.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
+            this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.dateTimePickerDate_ValueChanged);
             // 
             // label7
             // 
@@ -358,6 +359,8 @@
             cinema1.Hotline = null;
             cinema1.Image = null;
             this.userControl_CinemaShowTime1.cinema = cinema1;
+            this.userControl_CinemaShowTime1.CinemaID = "";
+            this.userControl_CinemaShowTime1.CinemaName = "";
             this.userControl_CinemaShowTime1.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime1.Location = new System.Drawing.Point(3, 3);
             this.userControl_CinemaShowTime1.movie = null;
@@ -376,6 +379,8 @@
             cinema2.Hotline = null;
             cinema2.Image = null;
             this.userControl_CinemaShowTime2.cinema = cinema2;
+            this.userControl_CinemaShowTime2.CinemaID = "";
+            this.userControl_CinemaShowTime2.CinemaName = "";
             this.userControl_CinemaShowTime2.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(3, 148);
             this.userControl_CinemaShowTime2.movie = null;
@@ -394,6 +399,8 @@
             cinema3.Hotline = null;
             cinema3.Image = null;
             this.userControl_CinemaShowTime3.cinema = cinema3;
+            this.userControl_CinemaShowTime3.CinemaID = "";
+            this.userControl_CinemaShowTime3.CinemaName = "";
             this.userControl_CinemaShowTime3.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime3.Location = new System.Drawing.Point(3, 293);
             this.userControl_CinemaShowTime3.movie = null;
@@ -412,6 +419,8 @@
             cinema4.Hotline = null;
             cinema4.Image = null;
             this.userControl_CinemaShowTime4.cinema = cinema4;
+            this.userControl_CinemaShowTime4.CinemaID = "";
+            this.userControl_CinemaShowTime4.CinemaName = "";
             this.userControl_CinemaShowTime4.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime4.Location = new System.Drawing.Point(3, 438);
             this.userControl_CinemaShowTime4.movie = null;
@@ -430,6 +439,8 @@
             cinema5.Hotline = null;
             cinema5.Image = null;
             this.userControl_CinemaShowTime5.cinema = cinema5;
+            this.userControl_CinemaShowTime5.CinemaID = "";
+            this.userControl_CinemaShowTime5.CinemaName = "";
             this.userControl_CinemaShowTime5.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime5.Location = new System.Drawing.Point(3, 583);
             this.userControl_CinemaShowTime5.movie = null;
@@ -448,6 +459,8 @@
             cinema6.Hotline = null;
             cinema6.Image = null;
             this.userControl_CinemaShowTime6.cinema = cinema6;
+            this.userControl_CinemaShowTime6.CinemaID = "";
+            this.userControl_CinemaShowTime6.CinemaName = "";
             this.userControl_CinemaShowTime6.Date = new System.DateTime(((long)(0)));
             this.userControl_CinemaShowTime6.Location = new System.Drawing.Point(3, 728);
             this.userControl_CinemaShowTime6.movie = null;

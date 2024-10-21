@@ -21,7 +21,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Cinema cinema = new Cinema();
+            Cinemas cinema = new Cinemas();
             CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
             cinema.Cid = CinemaDao.IDNext();
             cinema.Cname = textBoxCinemaName.Text;

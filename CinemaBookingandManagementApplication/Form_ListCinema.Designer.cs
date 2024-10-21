@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ListCinema));
-            CinemaBookingandManagementApplication.models.Cinema cinema1 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema2 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema3 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema4 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema5 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema6 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema7 = new CinemaBookingandManagementApplication.models.Cinema();
-            CinemaBookingandManagementApplication.models.Cinema cinema8 = new CinemaBookingandManagementApplication.models.Cinema();
+            CinemaBookingandManagementApplication.models.Cinemas cinema1 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema2 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema3 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema4 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema5 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema6 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema7 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinema8 = new CinemaBookingandManagementApplication.models.Cinemas();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();

@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CinemaBookingandManagementApplication">
-      <HintPath>obj\Debug\CinemaBookingandManagementApplication.exe</HintPath>
-    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -194,12 +191,12 @@
     </Compile>
     <Compile Include="models\Actor.cs" />
     <Compile Include="models\Bill.cs" />
-    <Compile Include="models\Cinema.cs" />
+    <Compile Include="models\Cinemas.cs" />
     <Compile Include="models\Combo.cs" />
     <Compile Include="models\ICustomer.cs" />
     <Compile Include="models\FoodItem.cs" />
     <Compile Include="models\MemberCustomer.cs" />
-    <Compile Include="models\Movie.cs" />
+    <Compile Include="models\Movies.cs" />
     <Compile Include="models\MovieSchedule.cs" />
     <Compile Include="models\MovieType.cs" />
     <Compile Include="models\NonMemberCustomer.cs" />

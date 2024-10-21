@@ -14,7 +14,7 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_EditMovie : Form
     {
-        public Movie movie;
+        public Movies movie;
         public Form_EditMovie()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            Movie movie = new Movie();
+            Movies movie = new Movies();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
             //movie.Mid = MovieDao.IDNext();
             movie.Moviename = textBoxMovieName.Text;
@@ -42,7 +42,7 @@ namespace CinemaBookingandManagementApplication
         private void buttonDelete_Click(object sender, EventArgs e)
         {
 
-            Movie movie = new Movie();
+            Movies movie = new Movies();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
             //movie.Mid = MovieDao.IDNext();
             movie.Moviename = textBoxMovieName.Text;
