@@ -39,6 +39,17 @@ namespace CinemaBookingandManagementApplication
                 }
             }
         }
+        private void pictureBoxCinema_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+                pictureBoxCinema.ImageLocation = imagePath;
+            }
+        }
 
         private void InitializeComponent()
         {
@@ -348,17 +359,21 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonEdit_Click_1(object sender, EventArgs e)
         {
+
             CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
+
             currentCinema.Cname = textBoxCinemaName.Text;
             currentCinema.Caddress = textBoxAddress.Text;
             currentCinema.Hotline = TextBoxHotline.Text;
             currentCinema.Area = textBoxArea.Text;
+
             if (pictureBoxCinema.Image != null)
             {
                 MemoryStream pic = new MemoryStream();
                 pictureBoxCinema.Image.Save(pic, pictureBoxCinema.Image.RawFormat);
                 currentCinema.Image = pictureBoxCinema.Image;
             }
+
             CinemaDao.update(currentCinema);
         }
 
@@ -366,10 +381,12 @@ namespace CinemaBookingandManagementApplication
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 // Lấy đường dẫn tệp hình ảnh được chọn
                 string imagePath = openFileDialog.FileName;
+
                 // Cập nhật hình ảnh trong PictureBox
                 pictureBoxCinema.ImageLocation = imagePath;
             }
