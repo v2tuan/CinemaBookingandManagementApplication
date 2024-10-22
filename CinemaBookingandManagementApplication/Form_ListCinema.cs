@@ -22,59 +22,62 @@ namespace CinemaBookingandManagementApplication
 
         private void Form_ListCinema_Load(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    flowLayoutPanelCinema.Controls.Clear();
-            //    CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
-            //    MemoryStream picture = new MemoryStream();
-            //    DataTable dt = cinemaDaoImpl.GetListMovie();
-            //    //UserControl_Movie movie = null;
-            //    byte[] pic = null;
-            //    Form_detailMovie detailMovie = new Form_detailMovie();
-            //    if (dt != null)
-            //    {
-            //        foreach (DataRow dr in dt.Rows)
-            //        {
-            //            UserControl_Cinema cinemaControl = new UserControl_Cinema();
-            //            cinema.movie.Mid = dr["mid"].ToString();
-            //            cinema.movie.Moviename = dr["moviename"].ToString();
-            //            cinema.movie.AgeRestriction = int.Parse(dr["ageRestriction"].ToString());
-            //            cinema.movie.Revenue = decimal.Parse(dr["revenue"].ToString());
-            //            cinema.movie.Mtid = dr["mtid"].ToString();
-            //            cinema.movie.ReleaseDate = DateTime.Parse(dr["releaseDate"].ToString());
-            //            cinema.movie.Duration = int.Parse(dr["duration"].ToString());
-            //            cinema.movie.Descriptions = dr["descriptions"].ToString();
+            try
+            {
+                flowLayoutPanelCinema.Controls.Clear();
+                CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
+                MemoryStream picture = new MemoryStream();
+                DataTable dt = cinemaDaoImpl.GetListCinema();
 
-            //            if (dr["images"] != DBNull.Value)
-            //            {
-            //                pic = (byte[])dr["images"];
-            //                picture = new MemoryStream(pic);
-            //            }
-            //            else
-            //            {
-            //                picture = new MemoryStream();
-            //                MessageBox.Show("Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat)");
-            //                //Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat);
-            //            }
-            //            Image image_Food = Image.FromStream(picture);
+                byte[] pic = null;
 
-            //            cinemaControl.cinema.Image = image_Food;
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        UserControl_Cinemas cinema = new UserControl_Cinemas(); // Khởi tạo UserControl ở đây
 
-            //            cinemaControl.restart();
-            //            flowLayoutPanelCinema.Controls.Add(cinemaControl);
+                        // Gán giá trị cho cinema từ DataRow
+                        cinema.cinema.Cid = dr["cid"].ToString(); // Lưu cid
+                        cinema.cinema.Cname = dr["cname"].ToString(); // Lưu tên rạp
+                        cinema.cinema.Caddress = dr["caddress"].ToString(); // Lưu địa chỉ
+                        cinema.cinema.Hotline = dr["hotline"].ToString(); // Lưu hotline
+                        cinema.cinema.Area = dr["area"].ToString(); // Lưu khu vực
 
-            //            cinemaControl.buttonClick += (ss, ee) =>
-            //            {
-            //                detailMovie.movie = movie.movie;
-            //                detailMovie.ShowDialog();
-            //            };
-            //        }
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+                        if (dr["images"] != DBNull.Value)
+                        {
+                            pic = (byte[])dr["images"];
+                            picture = new MemoryStream(pic);
+                        }
+                        else
+                        {
+                            // Xử lý khi không có hình ảnh
+                            picture = new MemoryStream();
+                            MessageBox.Show("Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat)");
+                        }
+
+                        // Chuyển đổi MemoryStream thành Image
+                        Image image_Cinema = Image.FromStream(picture);
+                        cinema.cinema.Image = image_Cinema;
+
+                        cinema.restart();
+                        flowLayoutPanelCinema.Controls.Add(cinema);
+
+                        // Sự kiện khi nhấn nút
+                        cinema.buttonClick += (ss, ee) =>
+                        {
+                            // Tạo form editcinema với tham số cinema
+                            Form_EditCinema editcinema = new Form_EditCinema(cinema.cinema); // Truyền đối tượng cinema hiện tại
+                            editcinema.ShowDialog();
+                        };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btnAddMovie_Click(object sender, EventArgs e)
