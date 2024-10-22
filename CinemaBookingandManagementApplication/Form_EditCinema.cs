@@ -15,14 +15,14 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_EditCinema : Form
     {
-        private Cinema currentCinema;
-        public Form_EditCinema(Cinema cinema)
+        private Cinemas currentCinema;
+        public Form_EditCinema(Cinemas cinema)
         {
             InitializeComponent();
             currentCinema = cinema;
             LoadCinemaDetails(cinema);
         }
-        private void LoadCinemaDetails(Cinema cinema)
+        private void LoadCinemaDetails(Cinemas cinema)
         {
             textBoxCinemaName.Text = cinema.Cname;
             textBoxAddress.Text = cinema.Caddress;

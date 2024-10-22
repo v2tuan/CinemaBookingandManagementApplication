@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ListCinema));
-            CinemaBookingandManagementApplication.models.Cinemas cinema1 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema2 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema3 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema4 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema5 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema6 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema7 = new CinemaBookingandManagementApplication.models.Cinemas();
-            CinemaBookingandManagementApplication.models.Cinemas cinema8 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas1 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas2 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas3 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas4 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas5 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas6 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas7 = new CinemaBookingandManagementApplication.models.Cinemas();
+            CinemaBookingandManagementApplication.models.Cinemas cinemas8 = new CinemaBookingandManagementApplication.models.Cinemas();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -78,7 +78,7 @@
             this.guna2ShadowPanel1.Radius = 3;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowPanel1.ShadowDepth = 50;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1751, 65);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1556, 52);
             this.guna2ShadowPanel1.TabIndex = 7;
             // 
             // textBoxSearch
@@ -97,13 +97,13 @@
             this.textBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("textBoxSearch.IconLeft")));
             this.textBoxSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.textBoxSearch.Location = new System.Drawing.Point(377, 11);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textBoxSearch.Location = new System.Drawing.Point(335, 9);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.PasswordChar = '\0';
             this.textBoxSearch.PlaceholderText = "Search";
             this.textBoxSearch.SelectedText = "";
-            this.textBoxSearch.Size = new System.Drawing.Size(425, 40);
+            this.textBoxSearch.Size = new System.Drawing.Size(378, 32);
             this.textBoxSearch.TabIndex = 5;
             // 
             // buttonEdit
@@ -120,10 +120,10 @@
             this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
             this.buttonEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonEdit.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonEdit.Location = new System.Drawing.Point(267, 11);
+            this.buttonEdit.Location = new System.Drawing.Point(237, 9);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(102, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(91, 32);
             this.buttonEdit.TabIndex = 4;
             this.buttonEdit.Text = "Edit";
             this.buttonEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -141,10 +141,10 @@
             this.buttonMenu.ForeColor = System.Drawing.Color.White;
             this.buttonMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonMenu.Image")));
             this.buttonMenu.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonMenu.Location = new System.Drawing.Point(215, 11);
+            this.buttonMenu.Location = new System.Drawing.Point(191, 9);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(40, 40);
+            this.buttonMenu.Size = new System.Drawing.Size(36, 32);
             this.buttonMenu.TabIndex = 1;
             // 
             // btnAddMovie
@@ -161,10 +161,10 @@
             this.btnAddMovie.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMovie.Image")));
             this.btnAddMovie.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddMovie.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddMovie.Location = new System.Drawing.Point(13, 11);
+            this.btnAddMovie.Location = new System.Drawing.Point(12, 9);
             this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(200, 40);
+            this.btnAddMovie.Size = new System.Drawing.Size(178, 32);
             this.btnAddMovie.TabIndex = 0;
             this.btnAddMovie.Text = "Add Cinema";
             this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -184,148 +184,150 @@
             this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema6);
             this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema7);
             this.flowLayoutPanelCinema.Controls.Add(this.userControl_Cinema8);
-            this.flowLayoutPanelCinema.Location = new System.Drawing.Point(13, 80);
+            this.flowLayoutPanelCinema.Location = new System.Drawing.Point(12, 64);
+            this.flowLayoutPanelCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelCinema.Name = "flowLayoutPanelCinema";
-            this.flowLayoutPanelCinema.Size = new System.Drawing.Size(1726, 1125);
+            this.flowLayoutPanelCinema.Size = new System.Drawing.Size(1534, 900);
             this.flowLayoutPanelCinema.TabIndex = 8;
             // 
             // userControl_Cinema1
             // 
             this.userControl_Cinema1.BackColor = System.Drawing.Color.White;
-            cinema1.Area = null;
-            cinema1.Caddress = null;
-            cinema1.Cid = null;
-            cinema1.Cname = null;
-            cinema1.Hotline = null;
-            cinema1.Image = null;
-            this.userControl_Cinema1.cinema = cinema1;
-            this.userControl_Cinema1.Location = new System.Drawing.Point(5, 5);
-            this.userControl_Cinema1.Margin = new System.Windows.Forms.Padding(5);
+            cinemas1.Area = null;
+            cinemas1.Caddress = null;
+            cinemas1.Cid = null;
+            cinemas1.Cname = null;
+            cinemas1.Hotline = null;
+            cinemas1.Image = null;
+            this.userControl_Cinema1.cinema = cinemas1;
+            this.userControl_Cinema1.Location = new System.Drawing.Point(4, 4);
+            this.userControl_Cinema1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema1.Name = "userControl_Cinema1";
-            this.userControl_Cinema1.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema1.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema1.TabIndex = 0;
             // 
             // userControl_Cinema2
             // 
             this.userControl_Cinema2.BackColor = System.Drawing.Color.White;
-            cinema2.Area = null;
-            cinema2.Caddress = null;
-            cinema2.Cid = null;
-            cinema2.Cname = null;
-            cinema2.Hotline = null;
-            cinema2.Image = null;
-            this.userControl_Cinema2.cinema = cinema2;
-            this.userControl_Cinema2.Location = new System.Drawing.Point(5, 162);
-            this.userControl_Cinema2.Margin = new System.Windows.Forms.Padding(5);
+            cinemas2.Area = null;
+            cinemas2.Caddress = null;
+            cinemas2.Cid = null;
+            cinemas2.Cname = null;
+            cinemas2.Hotline = null;
+            cinemas2.Image = null;
+            this.userControl_Cinema2.cinema = cinemas2;
+            this.userControl_Cinema2.Location = new System.Drawing.Point(4, 130);
+            this.userControl_Cinema2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema2.Name = "userControl_Cinema2";
-            this.userControl_Cinema2.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema2.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema2.TabIndex = 1;
             // 
             // userControl_Cinema3
             // 
             this.userControl_Cinema3.BackColor = System.Drawing.Color.White;
-            cinema3.Area = null;
-            cinema3.Caddress = null;
-            cinema3.Cid = null;
-            cinema3.Cname = null;
-            cinema3.Hotline = null;
-            cinema3.Image = null;
-            this.userControl_Cinema3.cinema = cinema3;
-            this.userControl_Cinema3.Location = new System.Drawing.Point(5, 319);
-            this.userControl_Cinema3.Margin = new System.Windows.Forms.Padding(5);
+            cinemas3.Area = null;
+            cinemas3.Caddress = null;
+            cinemas3.Cid = null;
+            cinemas3.Cname = null;
+            cinemas3.Hotline = null;
+            cinemas3.Image = null;
+            this.userControl_Cinema3.cinema = cinemas3;
+            this.userControl_Cinema3.Location = new System.Drawing.Point(4, 256);
+            this.userControl_Cinema3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema3.Name = "userControl_Cinema3";
-            this.userControl_Cinema3.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema3.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema3.TabIndex = 2;
             // 
             // userControl_Cinema4
             // 
             this.userControl_Cinema4.BackColor = System.Drawing.Color.White;
-            cinema4.Area = null;
-            cinema4.Caddress = null;
-            cinema4.Cid = null;
-            cinema4.Cname = null;
-            cinema4.Hotline = null;
-            cinema4.Image = null;
-            this.userControl_Cinema4.cinema = cinema4;
-            this.userControl_Cinema4.Location = new System.Drawing.Point(5, 476);
-            this.userControl_Cinema4.Margin = new System.Windows.Forms.Padding(5);
+            cinemas4.Area = null;
+            cinemas4.Caddress = null;
+            cinemas4.Cid = null;
+            cinemas4.Cname = null;
+            cinemas4.Hotline = null;
+            cinemas4.Image = null;
+            this.userControl_Cinema4.cinema = cinemas4;
+            this.userControl_Cinema4.Location = new System.Drawing.Point(4, 382);
+            this.userControl_Cinema4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema4.Name = "userControl_Cinema4";
-            this.userControl_Cinema4.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema4.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema4.TabIndex = 3;
             // 
             // userControl_Cinema5
             // 
             this.userControl_Cinema5.BackColor = System.Drawing.Color.White;
-            cinema5.Area = null;
-            cinema5.Caddress = null;
-            cinema5.Cid = null;
-            cinema5.Cname = null;
-            cinema5.Hotline = null;
-            cinema5.Image = null;
-            this.userControl_Cinema5.cinema = cinema5;
-            this.userControl_Cinema5.Location = new System.Drawing.Point(5, 633);
-            this.userControl_Cinema5.Margin = new System.Windows.Forms.Padding(5);
+            cinemas5.Area = null;
+            cinemas5.Caddress = null;
+            cinemas5.Cid = null;
+            cinemas5.Cname = null;
+            cinemas5.Hotline = null;
+            cinemas5.Image = null;
+            this.userControl_Cinema5.cinema = cinemas5;
+            this.userControl_Cinema5.Location = new System.Drawing.Point(4, 508);
+            this.userControl_Cinema5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema5.Name = "userControl_Cinema5";
-            this.userControl_Cinema5.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema5.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema5.TabIndex = 4;
             // 
             // userControl_Cinema6
             // 
             this.userControl_Cinema6.BackColor = System.Drawing.Color.White;
-            cinema6.Area = null;
-            cinema6.Caddress = null;
-            cinema6.Cid = null;
-            cinema6.Cname = null;
-            cinema6.Hotline = null;
-            cinema6.Image = null;
-            this.userControl_Cinema6.cinema = cinema6;
-            this.userControl_Cinema6.Location = new System.Drawing.Point(5, 790);
-            this.userControl_Cinema6.Margin = new System.Windows.Forms.Padding(5);
+            cinemas6.Area = null;
+            cinemas6.Caddress = null;
+            cinemas6.Cid = null;
+            cinemas6.Cname = null;
+            cinemas6.Hotline = null;
+            cinemas6.Image = null;
+            this.userControl_Cinema6.cinema = cinemas6;
+            this.userControl_Cinema6.Location = new System.Drawing.Point(4, 634);
+            this.userControl_Cinema6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema6.Name = "userControl_Cinema6";
-            this.userControl_Cinema6.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema6.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema6.TabIndex = 5;
             // 
             // userControl_Cinema7
             // 
             this.userControl_Cinema7.BackColor = System.Drawing.Color.White;
-            cinema7.Area = null;
-            cinema7.Caddress = null;
-            cinema7.Cid = null;
-            cinema7.Cname = null;
-            cinema7.Hotline = null;
-            cinema7.Image = null;
-            this.userControl_Cinema7.cinema = cinema7;
-            this.userControl_Cinema7.Location = new System.Drawing.Point(5, 947);
-            this.userControl_Cinema7.Margin = new System.Windows.Forms.Padding(5);
+            cinemas7.Area = null;
+            cinemas7.Caddress = null;
+            cinemas7.Cid = null;
+            cinemas7.Cname = null;
+            cinemas7.Hotline = null;
+            cinemas7.Image = null;
+            this.userControl_Cinema7.cinema = cinemas7;
+            this.userControl_Cinema7.Location = new System.Drawing.Point(4, 760);
+            this.userControl_Cinema7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema7.Name = "userControl_Cinema7";
-            this.userControl_Cinema7.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema7.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema7.TabIndex = 6;
             // 
             // userControl_Cinema8
             // 
             this.userControl_Cinema8.BackColor = System.Drawing.Color.White;
-            cinema8.Area = null;
-            cinema8.Caddress = null;
-            cinema8.Cid = null;
-            cinema8.Cname = null;
-            cinema8.Hotline = null;
-            cinema8.Image = null;
-            this.userControl_Cinema8.cinema = cinema8;
-            this.userControl_Cinema8.Location = new System.Drawing.Point(5, 1104);
-            this.userControl_Cinema8.Margin = new System.Windows.Forms.Padding(5);
+            cinemas8.Area = null;
+            cinemas8.Caddress = null;
+            cinemas8.Cid = null;
+            cinemas8.Cname = null;
+            cinemas8.Hotline = null;
+            cinemas8.Image = null;
+            this.userControl_Cinema8.cinema = cinemas8;
+            this.userControl_Cinema8.Location = new System.Drawing.Point(4, 886);
+            this.userControl_Cinema8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userControl_Cinema8.Name = "userControl_Cinema8";
-            this.userControl_Cinema8.Size = new System.Drawing.Size(1719, 147);
+            this.userControl_Cinema8.Size = new System.Drawing.Size(1528, 118);
             this.userControl_Cinema8.TabIndex = 7;
             // 
             // Form_ListCinema
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1751, 1226);
+            this.ClientSize = new System.Drawing.Size(1556, 882);
             this.Controls.Add(this.flowLayoutPanelCinema);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_ListCinema";
             this.Text = "Form_ListCinema";
             this.Load += new System.EventHandler(this.Form_ListCinema_Load);

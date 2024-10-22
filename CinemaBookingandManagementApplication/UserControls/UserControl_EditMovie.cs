@@ -50,6 +50,7 @@ namespace CinemaBookingandManagementApplication.UserControls
         {
             pic_movie.Image = movie.Image;
             labelName.Text = movie.Moviename;
+           
         }
     }
 }
