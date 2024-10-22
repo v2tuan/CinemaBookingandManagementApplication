@@ -10,6 +10,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using Guna.UI2.WinForms.Suite;
 
 namespace CinemaBookingandManagementApplication.configs
 {
@@ -349,7 +350,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //add new combo
-        public static void CreateNewCombo(string comboId, string comboName, decimal comboPrice, int quantity)
+        public static void CreateNewCombo(string comboId, string comboName, decimal comboPrice, MemoryStream images, string descriptions)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -374,11 +375,17 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@comboId", comboId);
                         cmd.Parameters.AddWithValue("@comboName", comboName);
                         cmd.Parameters.AddWithValue("@comboPrice", comboPrice);
-                        cmd.Parameters.AddWithValue("@quantity", quantity);
+
+                        // Thêm tham số cho image, nếu không có, thì gán là DBNull.Value
+                        if (images != null)
+                            cmd.Parameters.AddWithValue("@images", images);
+                        else
+                            cmd.Parameters.AddWithValue("@images", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                      
                     }
                 }
                 catch (SqlException ex)
@@ -396,8 +403,9 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+
         //add new bill
-         public static void CreateNewBill(string bId, decimal price, int states, string cusid)
+        public static void CreateNewBill(string bId, decimal price, int states, string cusid)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -624,7 +632,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật chỗ ngồi thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -673,7 +681,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin khách hàng thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -721,7 +729,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin sản phẩm thực phẩm thành công!");
+                       
                     }
                 }
                 catch (SqlException ex)
@@ -740,7 +748,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //update combo
-         public static void UpdateCombo(string comboId, string comboName, decimal comboPrice, int quantity)
+        public static void UpdateCombo(string comboId, string comboName, decimal comboPrice, MemoryStream images, string descriptions)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -765,17 +773,25 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@comboId", comboId);
                         cmd.Parameters.AddWithValue("@comboName", comboName);
                         cmd.Parameters.AddWithValue("@comboPrice", comboPrice);
-                        cmd.Parameters.AddWithValue("@quantity", quantity);
+
+                        // Thêm tham số cho image, nếu không có, thì gán là DBNull.Value
+                        if (images != null)
+                            cmd.Parameters.AddWithValue("@images", images);
+                        else
+                            cmd.Parameters.AddWithValue("@images", DBNull.Value);
+
+                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin combo thành công!");
+                       
                     }
+
                 }
-                catch (SqlException ex)
+                catch (Exception ex)
                 {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
+                    // Xử lý lỗi
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
                 finally
                 {
@@ -787,6 +803,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+
         //Update bill
         public static void UpdateBill(string billId, decimal price, int states, string customerId)
         {

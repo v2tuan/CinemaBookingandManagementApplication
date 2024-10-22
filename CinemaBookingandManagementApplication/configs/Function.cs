@@ -965,6 +965,30 @@ namespace CinemaBookingandManagementApplication.configs
             return seatsTable; // Trả về danh sách ghế của phòng
         }
 
+        //hàm list combo
+        public static DataTable GetComboList()
+        {
+            DataTable combos = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM LIST_COMBO()", conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(combos);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
 
+            return combos;
+        }
     }
 }
