@@ -13,9 +13,11 @@ namespace CinemaBookingandManagementApplication.UserControls
 {
     public partial class UserControl_Seat : UserControl
     {
-        Seat seat = new Seat();
-        private bool cheked = true;
-        
+        public Seat seat { get; set; } = null;
+        public bool cheked = true;
+        public event EventHandler buttonClick = null;
+
+
         public UserControl_Seat()
         {
             InitializeComponent();
@@ -61,12 +63,14 @@ namespace CinemaBookingandManagementApplication.UserControls
             this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "UserControl_Seat";
             this.Size = new System.Drawing.Size(50, 50);
+            this.Load += new System.EventHandler(this.UserControl_Seat_Load);
             this.ResumeLayout(false);
 
         }
 
         private void buttonSeat_Click(object sender, EventArgs e)
         {
+            buttonClick?.Invoke(this, e);
             if (cheked)
             {
                 buttonSeat.FillColor = Color.FromArgb(245, 128, 32);
@@ -81,6 +85,16 @@ namespace CinemaBookingandManagementApplication.UserControls
                 buttonSeat.ForeColor = Color.Black;
                 cheked = true;
             }
+        }
+
+        private void UserControl_Seat_Load(object sender, EventArgs e)
+        {
+            if(seat.States == 0)
+            {
+                buttonSeat.FillColor = Color.LightGray;
+                buttonSeat.BorderThickness = 0;
+            }
+            setNumberSeat(int.Parse(seat.Snumber));
         }
     }
 }

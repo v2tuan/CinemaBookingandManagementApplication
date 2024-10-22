@@ -55,6 +55,10 @@ namespace CinemaBookingandManagementApplication.UserControls
                         show_Schedule.buttonClick += (ss, ee) =>
                         {
                             Form_Booking frm = new Form_Booking();
+                            frm.movie = movie;
+                            frm.CinemaID = CinemaID;
+                            frm.CinemaName = CinemaName;
+                            frm.movieSchedule = schedule;
                             frm.ShowDialog();
                         };
                         flowLayoutPanelShowTime.Controls.Add(show_Schedule);

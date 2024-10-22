@@ -58,6 +58,9 @@
             this.flowLayoutPanelSeat = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.buttonScreening = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -77,7 +80,7 @@
             this.guna2Button132.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(128)))), ((int)(((byte)(32)))));
             this.guna2Button132.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button132.ForeColor = System.Drawing.Color.White;
-            this.guna2Button132.Location = new System.Drawing.Point(373, 1023);
+            this.guna2Button132.Location = new System.Drawing.Point(381, 1023);
             this.guna2Button132.Margin = new System.Windows.Forms.Padding(10);
             this.guna2Button132.Name = "guna2Button132";
             this.guna2Button132.Size = new System.Drawing.Size(45, 45);
@@ -87,7 +90,6 @@
             // 
             this.guna2Button131.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button131.BorderRadius = 10;
-            this.guna2Button131.BorderThickness = 1;
             this.guna2Button131.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button131.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button131.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -108,7 +110,7 @@
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.DarkGray;
-            this.label26.Location = new System.Drawing.Point(238, 1031);
+            this.label26.Location = new System.Drawing.Point(236, 1031);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(112, 28);
             this.label26.TabIndex = 54;
@@ -349,22 +351,54 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(431, 1031);
+            this.label3.Location = new System.Drawing.Point(439, 1031);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 28);
+            this.label3.Size = new System.Drawing.Size(145, 28);
             this.label3.TabIndex = 115;
-            this.label3.Text = "Ghế đã bán";
+            this.label3.Text = "Ghế đang chọn";
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.buttonScreening);
+            this.guna2Panel1.Controls.Add(this.label12);
             this.guna2Panel1.CustomBorderColor = System.Drawing.Color.Silver;
             this.guna2Panel1.Location = new System.Drawing.Point(97, 31);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1136, 75);
+            this.guna2Panel1.Size = new System.Drawing.Size(1136, 79);
             this.guna2Panel1.TabIndex = 116;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(22, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 28);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Suất chiếu: ";
+            // 
+            // buttonScreening
+            // 
+            this.buttonScreening.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonScreening.BorderRadius = 5;
+            this.buttonScreening.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonScreening.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonScreening.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonScreening.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonScreening.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.buttonScreening.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonScreening.ForeColor = System.Drawing.Color.White;
+            this.buttonScreening.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonScreening.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonScreening.Location = new System.Drawing.Point(173, 15);
+            this.buttonScreening.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonScreening.Name = "buttonScreening";
+            this.buttonScreening.Size = new System.Drawing.Size(179, 48);
+            this.buttonScreening.TabIndex = 4;
+            this.buttonScreening.Text = "Add Movie";
             // 
             // Form_ChooseChair
             // 
@@ -404,6 +438,8 @@
             this.Name = "Form_ChooseChair";
             this.Text = "Form_Choose_Chair";
             this.Load += new System.EventHandler(this.Form_ChooseChair_Load);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +476,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelSeat;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2Button buttonScreening;
     }
 }

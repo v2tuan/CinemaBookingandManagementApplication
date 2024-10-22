@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication.UserControls
 {
-    public partial class UserControl_Room : UserControl
+    public partial class UserControl_EditCombo : UserControl
     {
-        public UserControl_Room()
+        public UserControl_EditCombo()
         {
             InitializeComponent();
-        }
-
-        private void UserControl_Room_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

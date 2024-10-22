@@ -13,6 +13,10 @@ namespace CinemaBookingandManagementApplication.dao.impl
 {
     internal class RoomDaoImpl
     {
+        public DataTable GetSeatsByRoomId(string roomId)
+        {
+            return Function.GetSeatsByRoomId(roomId);
+        }
         public int GetTotalSeatsByRoomId(string roomId)
         {
             return Function.GetTotalSeatsByRoomId(roomId);

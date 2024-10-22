@@ -8,18 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CinemaBookingandManagementApplication.UserControls
+namespace CinemaBookingandManagementApplication
 {
-    public partial class UserControl_Room : UserControl
+    public partial class Form_ManagerCombo : Form
     {
-        public UserControl_Room()
+        public Form_ManagerCombo()
         {
             InitializeComponent();
         }
 
-        private void UserControl_Room_Load(object sender, EventArgs e)
+        private void btnAddCombo_Click(object sender, EventArgs e)
         {
-
+            Form_AddCombo frm = new Form_AddCombo();
+            frm.ShowDialog();
         }
     }
 }

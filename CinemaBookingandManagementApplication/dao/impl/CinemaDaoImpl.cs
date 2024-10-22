@@ -71,7 +71,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
         {
             return Function.GetListCinema();
         }
-        public void update(Cinema cinema)
+        public void update(Cinemas cinema)
         {
             string cid = cinema.Cid;
             string cname = cinema.Cname;

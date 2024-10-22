@@ -17,5 +17,10 @@ namespace CinemaBookingandManagementApplication.models
         public Seat()
         {
         }
+
+        public override string ToString()
+        {
+            return $"{Srow.Trim()}{Snumber.Trim()}";
+        }
     }
 }

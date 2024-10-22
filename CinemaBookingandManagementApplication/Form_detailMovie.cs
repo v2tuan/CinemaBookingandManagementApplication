@@ -20,11 +20,11 @@ namespace CinemaBookingandManagementApplication
         public Form_detailMovie()
         {
             InitializeComponent();
-            dateTimePickerDate.Value = DateTime.Now;
         }
 
         private void Form_detailMovie_Load(object sender, EventArgs e)
         {
+            dateTimePickerDate.Value = DateTime.Now;
             labelName.Text = movie.Moviename;
             labelReleaseDate.Text = movie.ReleaseDate.ToShortDateString();
             labelDuration.Text = movie.Duration.ToString();

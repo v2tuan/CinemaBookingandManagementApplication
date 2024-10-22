@@ -33,6 +33,7 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxHotline = new Guna.UI2.WinForms.Guna2TextBox();
+            this.pictureBoxCinema = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxArea = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,11 +46,10 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonAdd = new Guna.UI2.WinForms.Guna2Button();
             this.buttonAddIngredient = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBoxCinema = new System.Windows.Forms.PictureBox();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).BeginInit();
             this.panelHeader.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -110,6 +110,17 @@
             this.TextBoxHotline.Size = new System.Drawing.Size(352, 44);
             this.TextBoxHotline.TabIndex = 37;
             // 
+            // pictureBoxCinema
+            // 
+            this.pictureBoxCinema.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxCinema.Location = new System.Drawing.Point(24, 63);
+            this.pictureBoxCinema.Name = "pictureBoxCinema";
+            this.pictureBoxCinema.Size = new System.Drawing.Size(360, 200);
+            this.pictureBoxCinema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCinema.TabIndex = 35;
+            this.pictureBoxCinema.TabStop = false;
+            this.pictureBoxCinema.Click += new System.EventHandler(this.pictureBoxCinema_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -146,7 +157,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(452, 69);
+            this.label3.Location = new System.Drawing.Point(442, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 6;
@@ -299,17 +310,6 @@
             this.buttonAddIngredient.TabIndex = 2;
             this.buttonAddIngredient.Text = "+";
             // 
-            // pictureBoxCinema
-            // 
-            this.pictureBoxCinema.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxCinema.Location = new System.Drawing.Point(24, 63);
-            this.pictureBoxCinema.Name = "pictureBoxCinema";
-            this.pictureBoxCinema.Size = new System.Drawing.Size(360, 200);
-            this.pictureBoxCinema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCinema.TabIndex = 35;
-            this.pictureBoxCinema.TabStop = false;
-            this.pictureBoxCinema.Click += new System.EventHandler(this.pictureBoxCinema_Click);
-            // 
             // Form_AddCinema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -323,10 +323,10 @@
             this.Text = "Form_AddCinema";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).EndInit();
             this.ResumeLayout(false);
 
         }

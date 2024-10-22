@@ -1,4 +1,5 @@
 ﻿using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
 using CinemaBookingandManagementApplication.UserControls;
 using System;
 using System.Collections.Generic;
@@ -76,8 +77,8 @@ namespace CinemaBookingandManagementApplication
                         //edit
                         cinemaControl.editClick += (ss, ee) =>
                         {
-                            //Form_EditCinema form_EditCinema = new Form_EditCinema();
-                            //form_EditCinema.ShowDialog(this);
+                            Form_EditCinema editCinema = new Form_EditCinema(cinemaControl.cinema);
+                            editCinema.ShowDialog();
                         };
                     }
                 }

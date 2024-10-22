@@ -96,5 +96,11 @@ namespace CinemaBookingandManagementApplication
             Form_ManagerMovie frm = new Form_ManagerMovie();
             openChildForm(frm);
         }
+
+        private void buttonCombo_Click(object sender, EventArgs e)
+        {
+            Form_ManagerCombo frm = new Form_ManagerCombo();
+            openChildForm(frm);
+        }
     }
 }

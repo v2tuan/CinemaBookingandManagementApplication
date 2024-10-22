@@ -15,14 +15,14 @@ namespace CinemaBookingandManagementApplication
 {
     public partial class Form_EditCinema : Form
     {
-        private Cinema currentCinema;
-        public Form_EditCinema(Cinema cinema)
+        private Cinemas currentCinema;
+        public Form_EditCinema(Cinemas cinema)
         {
             InitializeComponent();
             currentCinema = cinema;
             LoadCinemaDetails(cinema);
         }
-        private void LoadCinemaDetails(Cinema cinema)
+        private void LoadCinemaDetails(Cinemas cinema)
         {
             textBoxCinemaName.Text = cinema.Cname;
             textBoxAddress.Text = cinema.Caddress;
@@ -72,7 +72,6 @@ namespace CinemaBookingandManagementApplication
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.buttonAddIngredient = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.buttonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -89,37 +88,17 @@ namespace CinemaBookingandManagementApplication
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.textBoxAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.buttonDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).BeginInit();
             this.panelHeader.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonAddIngredient
-            // 
-            this.buttonAddIngredient.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonAddIngredient.BorderRadius = 5;
-            this.buttonAddIngredient.BorderThickness = 1;
-            this.buttonAddIngredient.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonAddIngredient.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonAddIngredient.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonAddIngredient.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonAddIngredient.FillColor = System.Drawing.Color.Transparent;
-            this.buttonAddIngredient.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddIngredient.ForeColor = System.Drawing.Color.Black;
-            this.buttonAddIngredient.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.buttonAddIngredient.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonAddIngredient.Location = new System.Drawing.Point(884, 9);
-            this.buttonAddIngredient.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.buttonAddIngredient.Name = "buttonAddIngredient";
-            this.buttonAddIngredient.Size = new System.Drawing.Size(55, 32);
-            this.buttonAddIngredient.TabIndex = 2;
-            this.buttonAddIngredient.Text = "+";
-            // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.buttonDelete);
             this.guna2Panel2.Controls.Add(this.buttonEdit);
-            this.guna2Panel2.Controls.Add(this.buttonAddIngredient);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -155,7 +134,7 @@ namespace CinemaBookingandManagementApplication
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(747, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 36;
             this.label2.Text = "Hotline";
             // 
@@ -198,7 +177,7 @@ namespace CinemaBookingandManagementApplication
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(393, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 19);
+            this.label7.Size = new System.Drawing.Size(57, 23);
             this.label7.TabIndex = 33;
             this.label7.Text = "Area";
             // 
@@ -230,7 +209,7 @@ namespace CinemaBookingandManagementApplication
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(402, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 19);
+            this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "Cinema name";
             // 
@@ -242,7 +221,7 @@ namespace CinemaBookingandManagementApplication
             this.label1.Location = new System.Drawing.Point(28, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 23);
+            this.label1.Size = new System.Drawing.Size(153, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Edit Cinema";
             // 
@@ -279,7 +258,7 @@ namespace CinemaBookingandManagementApplication
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(747, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(88, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Address";
             // 
@@ -353,6 +332,28 @@ namespace CinemaBookingandManagementApplication
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonDelete.BorderRadius = 5;
+            this.buttonDelete.BorderThickness = 1;
+            this.buttonDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonDelete.FillColor = System.Drawing.Color.Transparent;
+            this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonDelete.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonDelete.Location = new System.Drawing.Point(805, 9);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(144, 32);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Delete";
             // 
             // Form_EditCinema
             // 

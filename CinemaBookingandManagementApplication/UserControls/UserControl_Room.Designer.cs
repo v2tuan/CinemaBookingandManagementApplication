@@ -77,6 +77,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControl_Room";
             this.Size = new System.Drawing.Size(175, 178);
+            this.Load += new System.EventHandler(this.UserControl_Room_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

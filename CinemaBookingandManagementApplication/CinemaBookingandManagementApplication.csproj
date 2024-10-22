@@ -75,6 +75,12 @@
     <Compile Include="Form_AddCinema.Designer.cs">
       <DependentUpon>Form_AddCinema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_AddCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AddCombo.Designer.cs">
+      <DependentUpon>Form_AddCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,12 @@
     <Compile Include="Form_Main.Designer.cs">
       <DependentUpon>Form_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ManagerCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ManagerCombo.Designer.cs">
+      <DependentUpon>Form_ManagerCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ManagerMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +240,12 @@
     <Compile Include="UserControls\UserControl_Combo.Designer.cs">
       <DependentUpon>UserControl_Combo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_EditCombo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_EditCombo.Designer.cs">
+      <DependentUpon>UserControl_EditCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_EditMovie.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +288,9 @@
     <EmbeddedResource Include="Form_AddCinema.resx">
       <DependentUpon>Form_AddCinema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddCombo.resx">
+      <DependentUpon>Form_AddCombo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddMovie.resx">
       <DependentUpon>Form_AddMovie.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +321,9 @@
     <EmbeddedResource Include="Form_EditMovie.resx">
       <DependentUpon>Form_EditMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_EditMovieSchedule.resx">
+      <DependentUpon>Form_EditMovieSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_HomeManager.resx">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ManagerCombo.resx">
+      <DependentUpon>Form_ManagerCombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ManagerMovie.resx">
       <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
@@ -334,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Combo.resx">
       <DependentUpon>UserControl_Combo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_EditCombo.resx">
+      <DependentUpon>UserControl_EditCombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_EditMovie.resx">
       <DependentUpon>UserControl_EditMovie.cs</DependentUpon>

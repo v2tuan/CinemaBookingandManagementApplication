@@ -6,8 +6,6 @@
         #region Windows Form Designer generated code
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2Button buttonAddIngredient;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button buttonEdit;
         private System.Windows.Forms.Label label2;
@@ -25,5 +23,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxAddress;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.ComponentModel.IContainer components;
+        private Guna.UI2.WinForms.Guna2Button buttonDelete;
     }
 }

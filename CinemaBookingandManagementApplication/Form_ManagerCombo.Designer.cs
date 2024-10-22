@@ -1,6 +1,6 @@
 ﻿namespace CinemaBookingandManagementApplication
 {
-    partial class Form_ManagerMovie
+    partial class Form_ManagerCombo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerMovie));
-            this.flowLayoutPanelMovie = new System.Windows.Forms.FlowLayoutPanel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerCombo));
+            this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl_EditCombo1 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo4 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddMovie = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddCombo = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanelCombo.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // flowLayoutPanelMovie
+            // flowLayoutPanelCombo
             // 
-            this.flowLayoutPanelMovie.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.flowLayoutPanelCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelMovie.AutoScroll = true;
-            this.flowLayoutPanelMovie.Location = new System.Drawing.Point(20, 92);
-            this.flowLayoutPanelMovie.Name = "flowLayoutPanelMovie";
-            this.flowLayoutPanelMovie.Size = new System.Drawing.Size(1651, 734);
-            this.flowLayoutPanelMovie.TabIndex = 8;
+            this.flowLayoutPanelCombo.AutoScroll = true;
+            this.flowLayoutPanelCombo.Controls.Add(this.userControl_EditCombo1);
+            this.flowLayoutPanelCombo.Controls.Add(this.userControl_EditCombo2);
+            this.flowLayoutPanelCombo.Controls.Add(this.userControl_EditCombo3);
+            this.flowLayoutPanelCombo.Controls.Add(this.userControl_EditCombo4);
+            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(20, 97);
+            this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
+            this.flowLayoutPanelCombo.Size = new System.Drawing.Size(1651, 734);
+            this.flowLayoutPanelCombo.TabIndex = 10;
+            // 
+            // userControl_EditCombo1
+            // 
+            this.userControl_EditCombo1.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo1.Location = new System.Drawing.Point(3, 3);
+            this.userControl_EditCombo1.Name = "userControl_EditCombo1";
+            this.userControl_EditCombo1.Size = new System.Drawing.Size(1648, 149);
+            this.userControl_EditCombo1.TabIndex = 0;
+            // 
+            // userControl_EditCombo2
+            // 
+            this.userControl_EditCombo2.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo2.Location = new System.Drawing.Point(3, 158);
+            this.userControl_EditCombo2.Name = "userControl_EditCombo2";
+            this.userControl_EditCombo2.Size = new System.Drawing.Size(1648, 149);
+            this.userControl_EditCombo2.TabIndex = 1;
+            // 
+            // userControl_EditCombo3
+            // 
+            this.userControl_EditCombo3.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo3.Location = new System.Drawing.Point(3, 313);
+            this.userControl_EditCombo3.Name = "userControl_EditCombo3";
+            this.userControl_EditCombo3.Size = new System.Drawing.Size(1648, 149);
+            this.userControl_EditCombo3.TabIndex = 2;
+            // 
+            // userControl_EditCombo4
+            // 
+            this.userControl_EditCombo4.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo4.Location = new System.Drawing.Point(3, 468);
+            this.userControl_EditCombo4.Name = "userControl_EditCombo4";
+            this.userControl_EditCombo4.Size = new System.Drawing.Size(1648, 149);
+            this.userControl_EditCombo4.TabIndex = 3;
             // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
             this.guna2ShadowPanel1.Controls.Add(this.buttonMenu);
-            this.guna2ShadowPanel1.Controls.Add(this.btnAddMovie);
+            this.guna2ShadowPanel1.Controls.Add(this.btnAddCombo);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
             this.guna2ShadowPanel1.Location = new System.Drawing.Point(0, 0);
@@ -63,7 +104,7 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowPanel1.ShadowDepth = 50;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1698, 65);
-            this.guna2ShadowPanel1.TabIndex = 7;
+            this.guna2ShadowPanel1.TabIndex = 9;
             // 
             // textBoxSearch
             // 
@@ -103,57 +144,62 @@
             this.buttonMenu.ForeColor = System.Drawing.Color.White;
             this.buttonMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonMenu.Image")));
             this.buttonMenu.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonMenu.Location = new System.Drawing.Point(628, 13);
+            this.buttonMenu.Location = new System.Drawing.Point(649, 13);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonMenu.Name = "buttonMenu";
             this.buttonMenu.Size = new System.Drawing.Size(40, 40);
             this.buttonMenu.TabIndex = 1;
             // 
-            // btnAddMovie
+            // btnAddCombo
             // 
-            this.btnAddMovie.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btnAddMovie.BorderRadius = 3;
-            this.btnAddMovie.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddMovie.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddMovie.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddMovie.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddMovie.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.btnAddMovie.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddMovie.ForeColor = System.Drawing.Color.White;
-            this.btnAddMovie.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMovie.Image")));
-            this.btnAddMovie.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAddMovie.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddMovie.Location = new System.Drawing.Point(454, 13);
-            this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(172, 40);
-            this.btnAddMovie.TabIndex = 0;
-            this.btnAddMovie.Text = "Add Movie";
-            this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnAddMovie.Click += new System.EventHandler(this.btnAddMovie_Click);
+            this.btnAddCombo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnAddCombo.BorderRadius = 3;
+            this.btnAddCombo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCombo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCombo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCombo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCombo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.btnAddCombo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddCombo.ForeColor = System.Drawing.Color.White;
+            this.btnAddCombo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCombo.Image")));
+            this.btnAddCombo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddCombo.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAddCombo.Location = new System.Drawing.Point(454, 13);
+            this.btnAddCombo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btnAddCombo.Name = "btnAddCombo";
+            this.btnAddCombo.Size = new System.Drawing.Size(193, 40);
+            this.btnAddCombo.TabIndex = 0;
+            this.btnAddCombo.Text = "Add Combo";
+            this.btnAddCombo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnAddCombo.Click += new System.EventHandler(this.btnAddCombo_Click);
             // 
-            // Form_ManagerMovie
+            // Form_ManagerCombo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1698, 836);
-            this.Controls.Add(this.flowLayoutPanelMovie);
+            this.Controls.Add(this.flowLayoutPanelCombo);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form_ManagerMovie";
-            this.Text = "Form_ManagerMovie";
-            this.Load += new System.EventHandler(this.Form_ManagerMovie_Load);
+            this.Name = "Form_ManagerCombo";
+            this.Text = "Form_ManagerCombo";
+            this.flowLayoutPanelCombo.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMovie;
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCombo;
+        private UserControls.UserControl_EditCombo userControl_EditCombo1;
+        private UserControls.UserControl_EditCombo userControl_EditCombo2;
+        private UserControls.UserControl_EditCombo userControl_EditCombo3;
+        private UserControls.UserControl_EditCombo userControl_EditCombo4;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
-        private Guna.UI2.WinForms.Guna2Button btnAddMovie;
+        private Guna.UI2.WinForms.Guna2Button btnAddCombo;
     }
 }
