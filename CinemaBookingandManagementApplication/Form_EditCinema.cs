@@ -39,24 +39,6 @@ namespace CinemaBookingandManagementApplication
                 }
             }
         }
-        private void buttonEdit_Click(object sender, EventArgs e)
-        {
-            CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
-
-            currentCinema.Cname = textBoxCinemaName.Text;
-            currentCinema.Caddress = textBoxAddress.Text;
-            currentCinema.Hotline = TextBoxHotline.Text;
-            currentCinema.Area = textBoxArea.Text;
-
-            if (pictureBoxCinema.Image != null)
-            {
-                MemoryStream pic = new MemoryStream();
-                pictureBoxCinema.Image.Save(pic, pictureBoxCinema.Image.RawFormat);
-                currentCinema.Image = pictureBoxCinema.Image;
-            }
-
-            CinemaDao.update(currentCinema);
-        }
         private void pictureBoxCinema_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -73,6 +55,7 @@ namespace CinemaBookingandManagementApplication
         {
             this.components = new System.ComponentModel.Container();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.buttonDelete = new Guna.UI2.WinForms.Guna2Button();
             this.buttonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TextBoxHotline = new Guna.UI2.WinForms.Guna2TextBox();
@@ -88,7 +71,6 @@ namespace CinemaBookingandManagementApplication
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.textBoxAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.buttonDelete = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).BeginInit();
             this.panelHeader.SuspendLayout();
@@ -107,6 +89,28 @@ namespace CinemaBookingandManagementApplication
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1131, 50);
             this.guna2Panel2.TabIndex = 41;
+            // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonDelete.BorderRadius = 5;
+            this.buttonDelete.BorderThickness = 1;
+            this.buttonDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonDelete.FillColor = System.Drawing.Color.Transparent;
+            this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.buttonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonDelete.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonDelete.Location = new System.Drawing.Point(805, 9);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(144, 32);
+            this.buttonDelete.TabIndex = 4;
+            this.buttonDelete.Text = "Delete";
             // 
             // buttonEdit
             // 
@@ -127,6 +131,7 @@ namespace CinemaBookingandManagementApplication
             this.buttonEdit.Size = new System.Drawing.Size(159, 32);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Edit Cinema";
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click_1);
             // 
             // label2
             // 
@@ -134,7 +139,7 @@ namespace CinemaBookingandManagementApplication
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(747, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 23);
+            this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 36;
             this.label2.Text = "Hotline";
             // 
@@ -170,6 +175,7 @@ namespace CinemaBookingandManagementApplication
             this.pictureBoxCinema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCinema.TabIndex = 35;
             this.pictureBoxCinema.TabStop = false;
+            this.pictureBoxCinema.Click += new System.EventHandler(this.pictureBoxCinema_Click_1);
             // 
             // label7
             // 
@@ -177,7 +183,7 @@ namespace CinemaBookingandManagementApplication
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(393, 134);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 23);
+            this.label7.Size = new System.Drawing.Size(49, 19);
             this.label7.TabIndex = 33;
             this.label7.Text = "Area";
             // 
@@ -209,7 +215,7 @@ namespace CinemaBookingandManagementApplication
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(402, 55);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 23);
+            this.label3.Size = new System.Drawing.Size(127, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Cinema name";
             // 
@@ -221,7 +227,7 @@ namespace CinemaBookingandManagementApplication
             this.label1.Location = new System.Drawing.Point(28, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 28);
+            this.label1.Size = new System.Drawing.Size(128, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Edit Cinema";
             // 
@@ -258,7 +264,7 @@ namespace CinemaBookingandManagementApplication
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(747, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 23);
+            this.label4.Size = new System.Drawing.Size(76, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Address";
             // 
@@ -333,28 +339,6 @@ namespace CinemaBookingandManagementApplication
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // buttonDelete
-            // 
-            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonDelete.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonDelete.BorderRadius = 5;
-            this.buttonDelete.BorderThickness = 1;
-            this.buttonDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonDelete.FillColor = System.Drawing.Color.Transparent;
-            this.buttonDelete.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.buttonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.buttonDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonDelete.Location = new System.Drawing.Point(805, 9);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(144, 32);
-            this.buttonDelete.TabIndex = 4;
-            this.buttonDelete.Text = "Delete";
-            // 
             // Form_EditCinema
             // 
             this.ClientSize = new System.Drawing.Size(1131, 349);
@@ -371,6 +355,41 @@ namespace CinemaBookingandManagementApplication
             this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void buttonEdit_Click_1(object sender, EventArgs e)
+        {
+
+            CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
+
+            currentCinema.Cname = textBoxCinemaName.Text;
+            currentCinema.Caddress = textBoxAddress.Text;
+            currentCinema.Hotline = TextBoxHotline.Text;
+            currentCinema.Area = textBoxArea.Text;
+
+            if (pictureBoxCinema.Image != null)
+            {
+                MemoryStream pic = new MemoryStream();
+                pictureBoxCinema.Image.Save(pic, pictureBoxCinema.Image.RawFormat);
+                currentCinema.Image = pictureBoxCinema.Image;
+            }
+
+            CinemaDao.update(currentCinema);
+        }
+
+        private void pictureBoxCinema_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy đường dẫn tệp hình ảnh được chọn
+                string imagePath = openFileDialog.FileName;
+
+                // Cập nhật hình ảnh trong PictureBox
+                pictureBoxCinema.ImageLocation = imagePath;
+            }
         }
     }
 }
