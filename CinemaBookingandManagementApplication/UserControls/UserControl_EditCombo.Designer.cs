@@ -29,59 +29,59 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_EditCombo));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.pictureBoxCombo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.buttonEdit = new Guna.UI2.WinForms.Guna2CircleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).BeginInit();
             this.SuspendLayout();
             // 
-            // label3
+            // labelPrice
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(256, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 28);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Giá: 109.000 ₫";
+            this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(256, 90);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(138, 28);
+            this.labelPrice.TabIndex = 8;
+            this.labelPrice.Text = "Giá: 109.000 ₫";
             // 
-            // label2
+            // labelDescription
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(256, 55);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "1 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack";
+            this.labelDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.Location = new System.Drawing.Point(256, 55);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(328, 21);
+            this.labelDescription.TabIndex = 7;
+            this.labelDescription.Text = "1 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack";
             // 
-            // label1
+            // labelName
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "iCombo 1 Big Extra STD";
+            this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(256, 17);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(224, 28);
+            this.labelName.TabIndex = 6;
+            this.labelName.Text = "iCombo 1 Big Extra STD";
             // 
-            // guna2PictureBox1
+            // pictureBoxCombo
             // 
-            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(30, 17);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(201, 114);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 5;
-            this.guna2PictureBox1.TabStop = false;
+            this.pictureBoxCombo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBoxCombo.BorderRadius = 10;
+            this.pictureBoxCombo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCombo.Image")));
+            this.pictureBoxCombo.ImageRotate = 0F;
+            this.pictureBoxCombo.Location = new System.Drawing.Point(30, 17);
+            this.pictureBoxCombo.Name = "pictureBoxCombo";
+            this.pictureBoxCombo.Size = new System.Drawing.Size(201, 114);
+            this.pictureBoxCombo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCombo.TabIndex = 5;
+            this.pictureBoxCombo.TabStop = false;
             // 
             // buttonEdit
             // 
@@ -100,6 +100,7 @@
             this.buttonEdit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.buttonEdit.Size = new System.Drawing.Size(50, 50);
             this.buttonEdit.TabIndex = 10;
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
             // 
             // UserControl_EditCombo
             // 
@@ -107,23 +108,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.buttonEdit);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.labelPrice);
+            this.Controls.Add(this.labelDescription);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.pictureBoxCombo);
             this.Name = "UserControl_EditCombo";
             this.Size = new System.Drawing.Size(1208, 149);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.Label labelName;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxCombo;
         private Guna.UI2.WinForms.Guna2CircleButton buttonEdit;
     }
 }

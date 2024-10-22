@@ -1,8 +1,12 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
+using CinemaBookingandManagementApplication.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +25,63 @@ namespace CinemaBookingandManagementApplication
         {
             Form_AddCombo frm = new Form_AddCombo();
             frm.ShowDialog();
+        }
+
+        private void Form_ManagerCombo_Load(object sender, EventArgs e)
+        {
+            //try
+            //{
+                flowLayoutPanelCombo.Controls.Clear();
+                ComboDaoImpl comboDao = new ComboDaoImpl();
+                MemoryStream picture = new MemoryStream();
+                DataTable dt = comboDao.GetComboList();
+                byte[] pic = null;
+                Form_detailMovie detailMovie = new Form_detailMovie();
+                if (dt != null)
+                {
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        Combo combo = new Combo();
+                        combo.ComboId = dr["comboId"].ToString();
+                        combo.ComboName = dr["comboName"].ToString();
+                        combo.ComboPrice = decimal.Parse(dr["comboPrice"].ToString());
+                        combo.Descriptions = dr["descriptions"].ToString();
+
+
+
+                        if (dr["images"] != DBNull.Value)
+                        {
+                            pic = (byte[])dr["images"];
+                            picture = new MemoryStream(pic);
+                        }
+                        else
+                        {
+                            picture = new MemoryStream();
+                            MessageBox.Show("Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat)");
+                            //Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat);
+                        }
+                        Image image_Food = Image.FromStream(picture);
+
+                        combo.Image = image_Food;
+
+                        UserControl_EditCombo control_EditCombo = new UserControl_EditCombo(combo);
+
+                        control_EditCombo.Width = flowLayoutPanelCombo.Width + 40;
+                        flowLayoutPanelCombo.Controls.Add(control_EditCombo);
+
+                        //edit
+                        control_EditCombo.editClick += (ss, ee) =>
+                        {
+                            //Form_EditCinema editCinema = new Form_EditCinema(cinemaControl.cinema);
+                            //editCinema.ShowDialog();
+                        };
+                    }
+                }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }

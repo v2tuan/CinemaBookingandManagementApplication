@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddCombo));
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.labelComboName = new System.Windows.Forms.Label();
@@ -41,22 +40,9 @@
             this.textBoxPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.buttonAdd = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.pictureBoxCombo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gainsboro;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(29, 98);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(274, 156);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // labelPrice
             // 
@@ -117,7 +103,7 @@
             this.textBoxComboName.PasswordChar = '\0';
             this.textBoxComboName.PlaceholderText = "Input Cinema Name";
             this.textBoxComboName.SelectedText = "";
-            this.textBoxComboName.Size = new System.Drawing.Size(620, 44);
+            this.textBoxComboName.Size = new System.Drawing.Size(720, 44);
             this.textBoxComboName.TabIndex = 13;
             this.textBoxComboName.TextChanged += new System.EventHandler(this.textBoxComboName_TextChanged);
             // 
@@ -150,7 +136,7 @@
             this.textBoxDescription.PasswordChar = '\0';
             this.textBoxDescription.PlaceholderText = "Input Cinema Name";
             this.textBoxDescription.SelectedText = "";
-            this.textBoxDescription.Size = new System.Drawing.Size(620, 44);
+            this.textBoxDescription.Size = new System.Drawing.Size(720, 44);
             this.textBoxDescription.TabIndex = 15;
             this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
@@ -183,7 +169,7 @@
             this.textBoxPrice.PasswordChar = '\0';
             this.textBoxPrice.PlaceholderText = "Input Cinema Name";
             this.textBoxPrice.SelectedText = "";
-            this.textBoxPrice.Size = new System.Drawing.Size(620, 44);
+            this.textBoxPrice.Size = new System.Drawing.Size(720, 44);
             this.textBoxPrice.TabIndex = 17;
             this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
@@ -209,20 +195,34 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonAdd.Location = new System.Drawing.Point(29, 667);
+            this.buttonAdd.Location = new System.Drawing.Point(29, 673);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(620, 55);
+            this.buttonAdd.Size = new System.Drawing.Size(720, 55);
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Add Movie";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // pictureBoxCombo
+            // 
+            this.pictureBoxCombo.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBoxCombo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCombo.Image")));
+            this.pictureBoxCombo.Location = new System.Drawing.Point(29, 95);
+            this.pictureBoxCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxCombo.Name = "pictureBoxCombo";
+            this.pictureBoxCombo.Size = new System.Drawing.Size(274, 156);
+            this.pictureBoxCombo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCombo.TabIndex = 36;
+            this.pictureBoxCombo.TabStop = false;
+            this.pictureBoxCombo.Click += new System.EventHandler(this.pictureBoxCombo_Click);
             // 
             // Form_AddCombo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(696, 781);
+            this.ClientSize = new System.Drawing.Size(787, 781);
+            this.Controls.Add(this.pictureBoxCombo);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -234,19 +234,16 @@
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelComboName);
-            this.Controls.Add(this.guna2PictureBox1);
             this.Name = "Form_AddCombo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddCombo";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Label labelComboName;
@@ -258,5 +255,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxPrice;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button buttonAdd;
+        private System.Windows.Forms.PictureBox pictureBoxCombo;
     }
 }

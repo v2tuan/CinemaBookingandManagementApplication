@@ -58,6 +58,7 @@
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
     <Compile Include="dao\impl\CinemaDaoImpl.cs" />
+    <Compile Include="dao\impl\ComboDaoImpl.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
     <Compile Include="dao\impl\MovieDaoImpl.cs" />
     <Compile Include="dao\impl\MovieTypeDaoImpl.cs" />

@@ -184,6 +184,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_ManagerCombo";
             this.Text = "Form_ManagerCombo";
+            this.Load += new System.EventHandler(this.Form_ManagerCombo_Load);
             this.flowLayoutPanelCombo.ResumeLayout(false);
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

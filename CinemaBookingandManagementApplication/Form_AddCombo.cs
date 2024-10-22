@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.dao.impl;
+using CinemaBookingandManagementApplication.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +36,28 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            Combo combo = new Combo();
+            combo.ComboName = textBoxComboName.Text;
+            combo.Descriptions = textBoxDescription.Text;
+            combo.ComboPrice = int.Parse(textBoxPrice.Text);
+            combo.Image = pictureBoxCombo.Image;
+            ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
+            comboDaoImpl.CreateNewCombo(combo);
+        }
 
+        private void pictureBoxCombo_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp|All Files|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy đường dẫn tệp hình ảnh được chọn
+                string imagePath = openFileDialog.FileName;
+
+                // Cập nhật hình ảnh trong PictureBox
+                pictureBoxCombo.ImageLocation = imagePath;
+            }
         }
     }
 }
