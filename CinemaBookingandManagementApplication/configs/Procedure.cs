@@ -350,7 +350,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //add new combo
-        public static void CreateNewCombo(string comboId, string comboName, decimal comboPrice, MemoryStream images, string descriptions)
+        public static void CreateNewCombo(string comboName, decimal comboPrice,  string descriptions, MemoryStream images)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
@@ -372,17 +372,17 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         // Thêm các tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@comboId", comboId);
+                        
                         cmd.Parameters.AddWithValue("@comboName", comboName);
                         cmd.Parameters.AddWithValue("@comboPrice", comboPrice);
-
+                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
                         // Thêm tham số cho image, nếu không có, thì gán là DBNull.Value
                         if (images != null)
                             cmd.Parameters.AddWithValue("@images", images);
                         else
                             cmd.Parameters.AddWithValue("@images", DBNull.Value);
 
-                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
+                      
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
