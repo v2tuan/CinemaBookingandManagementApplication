@@ -959,6 +959,7 @@ namespace CinemaBookingandManagementApplication.configs
         //update showtime
         public static void UpdateShowtime(string shid, string mid, DateTime sdate, TimeSpan stime, TimeSpan etime, int states, string rid)
         {
+
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
             {
@@ -1013,94 +1014,110 @@ namespace CinemaBookingandManagementApplication.configs
         // hàm thủ tục delete movie
         public static void DeleteMovie(string movieId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                    // Hiển thị thông báo từ SQL Server qua MessageBox
-                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                };
-
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("DELETE_MOVIE", conn))
+                    conn.InfoMessage += (sender, e) =>
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        // Hiển thị thông báo từ SQL Server qua MessageBox
+                        MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@MID", movieId);
+                    try
+                    {
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Xóa phim thành công!");
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand("DELETE_MOVIE", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@MID", movieId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Xóa phim thành công!");
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
         // hàm thủ tục
         public static void DeleteRoom(string roomId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                   
+                    // Đăng ký sự kiện để xử lý thông báo từ SQL Server
+                    conn.InfoMessage += (sender, e) =>
+                    {
+
                         MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                  
-                };
 
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
+                    };
 
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_ROOM", conn))
+                    try
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@ROOMID", roomId);
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_ROOM", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@ROOMID", roomId);
 
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
@@ -1108,94 +1125,110 @@ namespace CinemaBookingandManagementApplication.configs
         // hàm xóa seat 
         public static void DeleteSeat(int seatId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                    
+                    // Đăng ký sự kiện để xử lý thông báo từ SQL Server
+                    conn.InfoMessage += (sender, e) =>
+                    {
+
                         MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                };
 
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
+                    };
 
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("EXEC DELETE_SEAT", conn))
+                    try
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@SEATID", seatId);
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand("EXEC DELETE_SEAT", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@SEATID", seatId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
         // delete customer
         public static void DeleteCustomer(string customerId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
-            {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {     
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
+                {
                 // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
-                {
+                    conn.InfoMessage += (sender, e) =>
+                    {
                    
-                        MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 
-                };
+                    };
 
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_CUSTOMER", conn))
+                    try
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@CUSID", customerId);
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_CUSTOMER", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@CUSID", customerId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
@@ -1203,47 +1236,55 @@ namespace CinemaBookingandManagementApplication.configs
         // ham xoa combo
         public static void DeleteCombo(string comboId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                    // Hiển thị thông báo từ SQL Server qua MessageBox
-                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                };
-
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("DELETE_COMBO", conn))
+                    // Đăng ký sự kiện để xử lý thông báo từ SQL Server
+                    conn.InfoMessage += (sender, e) =>
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        // Hiển thị thông báo từ SQL Server qua MessageBox
+                        MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@COMBOID", comboId);
+                    try
+                    {
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
-                  
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand("DELETE_COMBO", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@COMBOID", comboId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
@@ -1252,90 +1293,109 @@ namespace CinemaBookingandManagementApplication.configs
         // ham delete cinema
         public static void DeleteCinema(string cinemaId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                };
-
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("DELETE_CINEMA", conn))
+                    // Đăng ký sự kiện để xử lý thông báo từ SQL Server
+                    conn.InfoMessage += (sender, e) =>
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@CINEMAID", cinemaId);
+                    try
+                    {
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand("DELETE_CINEMA", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@CINEMAID", cinemaId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+                return;
+            
             }
         }
 
         // hàm xóa lịch chiếu
         public static void DeleteShowtime(string showtimeId)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                // Đăng ký sự kiện để xử lý thông báo từ SQL Server
-                conn.InfoMessage += (sender, e) =>
+                // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+                using (SqlConnection conn = myDB.getConnectionFromFile())
                 {
-                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                };
-
-                try
-                {
-                    // Mở kết nối
-                    conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("DELETE_SHOWTIME", conn))
+                    // Đăng ký sự kiện để xử lý thông báo từ SQL Server
+                    conn.InfoMessage += (sender, e) =>
                     {
-                        cmd.CommandType = CommandType.StoredProcedure;
+                        MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    };
 
-                        // Thêm tham số cho stored procedure
-                        cmd.Parameters.AddWithValue("@ShowtimeID", showtimeId);
+                    try
+                    {
+                        // Mở kết nối
+                        conn.Open();
 
-                        // Thực thi stored procedure
-                        cmd.ExecuteNonQuery();
+                        // Tạo lệnh để gọi stored procedure
+                        using (SqlCommand cmd = new SqlCommand("DELETE_SHOWTIME", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+
+                            // Thêm tham số cho stored procedure
+                            cmd.Parameters.AddWithValue("@ShowtimeID", showtimeId);
+
+                            // Thực thi stored procedure
+                            cmd.ExecuteNonQuery();
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Hiển thị thông báo lỗi nếu có
+                        MessageBox.Show("Error occurred: " + ex.Message);
+                    }
+                    finally
+                    {
+                        // Đảm bảo đóng kết nối
+                        if (conn.State == ConnectionState.Open)
+                        {
+                            conn.Close();
+                        }
                     }
                 }
-                catch (SqlException ex)
-                {
-                    // Hiển thị thông báo lỗi nếu có
-                    MessageBox.Show("Error occurred: " + ex.Message);
-                }
-                finally
-                {
-                    // Đảm bảo đóng kết nối
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        conn.Close();
-                    }
-                }
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
             }
         }
 
@@ -1564,7 +1624,14 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Add basic parameters
                         cmd.Parameters.AddWithValue("@bId", bId);
-                        cmd.Parameters.AddWithValue("@cusId", cusId);
+                        if (cusId == null)
+                        {
+                            cmd.Parameters.AddWithValue("@cusId", DBNull.Value);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@cusId", cusId);
+                        }
                         cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
 
                         // Serialize tickets to JSON

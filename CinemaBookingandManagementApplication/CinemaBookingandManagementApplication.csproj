@@ -58,6 +58,7 @@
     <Compile Include="configs\Function.cs" />
     <Compile Include="configs\My_DB.cs" />
     <Compile Include="configs\Procedure.cs" />
+    <Compile Include="configs\Views.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
     <Compile Include="dao\impl\CinemaDaoImpl.cs" />
@@ -102,6 +103,12 @@
     </Compile>
     <Compile Include="Form_AddRoom.Designer.cs">
       <DependentUpon>Form_AddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AgeRestrictionMovie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AgeRestrictionMovie.Designer.cs">
+      <DependentUpon>Form_AgeRestrictionMovie.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Booking.cs">
       <SubType>Form</SubType>
@@ -205,6 +212,12 @@
     <Compile Include="Form_ShowMovie.Designer.cs">
       <DependentUpon>Form_ShowMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TopCombo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TopCombo.Designer.cs">
+      <DependentUpon>Form_TopCombo.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\Actor.cs" />
     <Compile Include="models\Bill.cs" />
     <Compile Include="models\Cinemas.cs" />
@@ -305,6 +318,9 @@
     <EmbeddedResource Include="Form_AddRoom.resx">
       <DependentUpon>Form_AddRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_AgeRestrictionMovie.resx">
+      <DependentUpon>Form_AgeRestrictionMovie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Booking.resx">
       <DependentUpon>Form_Booking.cs</DependentUpon>
     </EmbeddedResource>
@@ -355,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ShowMovie.resx">
       <DependentUpon>Form_ShowMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TopCombo.resx">
+      <DependentUpon>Form_TopCombo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -84,5 +84,11 @@ namespace CinemaBookingandManagementApplication
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Form_TopCombo form_TopCombo = new Form_TopCombo();
+            form_TopCombo.ShowDialog();
+        }
     }
 }
