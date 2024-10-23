@@ -39,7 +39,7 @@ namespace CinemaBookingandManagementApplication
             Combo combo = new Combo();
             combo.ComboName = textBoxComboName.Text;
             combo.Descriptions = textBoxDescription.Text;
-            combo.ComboPrice = int.Parse(textBoxPrice.Text);
+            combo.ComboPrice = decimal.Parse(textBoxPrice.Text);
             combo.Image = pictureBoxCombo.Image;
             ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
             comboDaoImpl.CreateNewCombo(combo);

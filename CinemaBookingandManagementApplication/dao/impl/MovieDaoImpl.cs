@@ -1,5 +1,6 @@
 ﻿using CinemaBookingandManagementApplication.configs;
 using CinemaBookingandManagementApplication.models;
+using Guna.UI2.WinForms.Suite;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -18,9 +19,10 @@ namespace CinemaBookingandManagementApplication.dao.impl
            return Function.checkMovieID(id);
         }
 
-        public void delete(int id)
+        public void delete(Movies movie)
         {
-            throw new NotImplementedException();
+            string mid = movie.Mid;
+            Procedure.DeleteMovie(mid);
         }
 
         public List<Movies> findAll()
@@ -59,9 +61,20 @@ namespace CinemaBookingandManagementApplication.dao.impl
             Procedure.AddNewMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, pic);
         }
 
-        public void update(Movies category)
+        public void update(Movies movie)
         {
-            throw new NotImplementedException();
+            string mid = movie.Mid;
+            string moviename = movie.Moviename;
+            int ageRestriction = movie.AgeRestriction;
+            decimal revenue = movie.Revenue;
+            string mtid = movie.Mtid;
+            DateTime releaseDate = movie.ReleaseDate;
+            int duration = movie.Duration;
+            string descriptions = movie.Descriptions;
+            MemoryStream pic = new MemoryStream();
+            movie.Image.Save(pic, movie.Image.RawFormat);
+            Procedure.UpdateMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, pic);
+
         }
 
         public String IDNext()

@@ -84,5 +84,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
             Procedure.UpdateCinema(cid, cname, caddress, hotline, area, pic);
         }
+        public void delete(Cinemas cinema)
+        {
+            string cid = cinema.Cid;
+            Procedure.DeleteCinema(cid);
+           
+        }
     }
 }

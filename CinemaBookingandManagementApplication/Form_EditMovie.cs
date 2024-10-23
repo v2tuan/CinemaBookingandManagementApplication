@@ -15,8 +15,9 @@ namespace CinemaBookingandManagementApplication
     public partial class Form_EditMovie : Form
     {
         public Movies movie;
-        public Form_EditMovie()
+        public Form_EditMovie(Movies currentmovie)
         {
+            movie = currentmovie;
             InitializeComponent();
             comboBoxType.DataSource = MovieTypeDaoImpl.getListMovieType();
             comboBoxType.ValueMember = "mtid";
@@ -25,7 +26,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            Movies movie = new Movies();
+           // Movies movie = new Movies();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
             //movie.Mid = MovieDao.IDNext();
             movie.Moviename = textBoxMovieName.Text;
@@ -42,18 +43,9 @@ namespace CinemaBookingandManagementApplication
         private void buttonDelete_Click(object sender, EventArgs e)
         {
 
-            Movies movie = new Movies();
+            //Movies movie = new Movies();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
-            //movie.Mid = MovieDao.IDNext();
-            movie.Moviename = textBoxMovieName.Text;
-            movie.AgeRestriction = int.Parse(textBoxAgeRestriction.Text);
-            movie.Revenue = 0;
-            movie.Mtid = comboBoxType.SelectedValue.ToString();
-            movie.ReleaseDate = DateTimePickerRelease.Value;
-            movie.Duration = int.Parse(textDuration.Text);
-            movie.Descriptions = richTextBoxDescription.Text;
-            movie.Image = pictureBoxMovie.Image;
-            MovieDao.update(movie);
+            MovieDao.delete(movie);
         }
 
         private void Form_EditMovie_Load(object sender, EventArgs e)

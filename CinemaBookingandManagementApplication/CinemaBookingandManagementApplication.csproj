@@ -325,6 +325,9 @@
     <EmbeddedResource Include="Form_EditMovieSchedule.resx">
       <DependentUpon>Form_EditMovieSchedule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_EditRoom.resx">
+      <DependentUpon>Form_EditRoom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_HomeManager.resx">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
     </EmbeddedResource>
