@@ -60,6 +60,7 @@
     <Compile Include="configs\Procedure.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
+    <Compile Include="dao\impl\BillDaopImpl.cs" />
     <Compile Include="dao\impl\CinemaDaoImpl.cs" />
     <Compile Include="dao\impl\ComboDaoImpl.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
@@ -428,6 +429,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clapper-open %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nullImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

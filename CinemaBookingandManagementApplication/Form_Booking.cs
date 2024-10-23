@@ -200,7 +200,15 @@ namespace CinemaBookingandManagementApplication
             }
             else if(btn_Continue.Text == "Complete")
             {
+                List<Ticket> listTicket = new List<Ticket>();
+                List<DetailCombo> listDetailCombo = new List<DetailCombo>();
 
+
+                foreach (var seat in listSeats)
+                {
+                    Ticket ticket = new Ticket();
+
+                }
             }
         }
     }
