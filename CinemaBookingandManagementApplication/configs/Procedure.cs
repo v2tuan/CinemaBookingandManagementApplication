@@ -781,11 +781,15 @@ namespace CinemaBookingandManagementApplication.configs
                         cmd.Parameters.AddWithValue("@comboName", comboName);
                         cmd.Parameters.AddWithValue("@comboPrice", comboPrice);
 
-                        // Thêm tham số cho image, nếu không có, thì gán là DBNull.Value
                         if (images != null)
-                            cmd.Parameters.AddWithValue("@images", images);
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
+                        }
                         else
-                            cmd.Parameters.AddWithValue("@images", DBNull.Value);
+                        {
+                            MessageBox.Show("không có ảnh");
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
+                        }
 
                         cmd.Parameters.AddWithValue("@descriptions", descriptions);
 

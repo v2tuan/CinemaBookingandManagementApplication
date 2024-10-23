@@ -32,7 +32,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
             string comboId = combo.ComboId;
             Procedure.DeleteCombo(comboId);
         }
-        /*public void update(Combo combo)
+        public void update(Combo combo)
         {
             string comboId = combo.ComboId;
             string comboName = combo.ComboName;
@@ -41,7 +41,7 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
             MemoryStream pic = new MemoryStream();
             combo.Image.Save(pic, combo.Image.RawFormat);
-            Procedure.UpdateCombo(comboId, comboName, comboPrice, descriptions, pic);
-        }*/
+            Procedure.UpdateCombo(comboId, comboName, comboPrice, pic, descriptions);
+        }
     }
 }
