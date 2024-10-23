@@ -32,22 +32,38 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Cinema));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelHotline = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelAddress = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.PictureBoxCinema = new System.Windows.Forms.PictureBox();
             this.buttonEdit = new Guna.UI2.WinForms.Guna2Button();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddRoom = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PictureBoxCinema = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanelRoom = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl_Room1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room3 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room4 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room5 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room6 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room7 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room8 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room9 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room10 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room11 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room12 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room13 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
+            this.userControl_Room14 = new CinemaBookingandManagementApplication.UserControls.UserControl_Room();
             this.guna2Panel1.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCinema)).BeginInit();
+            this.flowLayoutPanelRoom.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -68,8 +84,18 @@
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 471);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1751, 147);
+            this.guna2Panel1.Size = new System.Drawing.Size(1725, 147);
             this.guna2Panel1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(114, 67);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Địa chỉ: ";
             // 
             // labelHotline
             // 
@@ -131,17 +157,6 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1751, 65);
             this.guna2ShadowPanel1.TabIndex = 6;
             // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel2.Controls.Add(this.guna2Panel1);
-            this.guna2Panel2.Controls.Add(this.PictureBoxCinema);
-            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 65);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1751, 1161);
-            this.guna2Panel2.TabIndex = 7;
-            // 
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -152,16 +167,6 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(60, 65);
             this.guna2ControlBox1.TabIndex = 5;
-            // 
-            // PictureBoxCinema
-            // 
-            this.PictureBoxCinema.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PictureBoxCinema.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxCinema.Image")));
-            this.PictureBoxCinema.Location = new System.Drawing.Point(0, 0);
-            this.PictureBoxCinema.Name = "PictureBoxCinema";
-            this.PictureBoxCinema.Size = new System.Drawing.Size(1751, 471);
-            this.PictureBoxCinema.TabIndex = 0;
-            this.PictureBoxCinema.TabStop = false;
             // 
             // buttonEdit
             // 
@@ -227,15 +232,179 @@
             this.btnAddRoom.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
             // 
-            // label1
+            // guna2Panel2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Địa chỉ: ";
+            this.guna2Panel2.AutoScroll = true;
+            this.guna2Panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel2.Controls.Add(this.flowLayoutPanelRoom);
+            this.guna2Panel2.Controls.Add(this.guna2Panel1);
+            this.guna2Panel2.Controls.Add(this.PictureBoxCinema);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 65);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(1751, 1161);
+            this.guna2Panel2.TabIndex = 7;
+            this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
+            // 
+            // PictureBoxCinema
+            // 
+            this.PictureBoxCinema.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PictureBoxCinema.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxCinema.Image")));
+            this.PictureBoxCinema.Location = new System.Drawing.Point(0, 0);
+            this.PictureBoxCinema.Name = "PictureBoxCinema";
+            this.PictureBoxCinema.Size = new System.Drawing.Size(1725, 471);
+            this.PictureBoxCinema.TabIndex = 0;
+            this.PictureBoxCinema.TabStop = false;
+            // 
+            // flowLayoutPanelRoom
+            // 
+            this.flowLayoutPanelRoom.AutoSize = true;
+            this.flowLayoutPanelRoom.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room1);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room2);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room3);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room4);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room5);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room6);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room7);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room8);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room9);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room10);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room11);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room12);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room13);
+            this.flowLayoutPanelRoom.Controls.Add(this.userControl_Room14);
+            this.flowLayoutPanelRoom.Location = new System.Drawing.Point(151, 651);
+            this.flowLayoutPanelRoom.MaximumSize = new System.Drawing.Size(1460, 0);
+            this.flowLayoutPanelRoom.Name = "flowLayoutPanelRoom";
+            this.flowLayoutPanelRoom.Size = new System.Drawing.Size(1386, 693);
+            this.flowLayoutPanelRoom.TabIndex = 2;
+            // 
+            // userControl_Room1
+            // 
+            this.userControl_Room1.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room1.Location = new System.Drawing.Point(3, 3);
+            this.userControl_Room1.Name = "userControl_Room1";
+            this.userControl_Room1.Room = null;
+            this.userControl_Room1.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room1.TabIndex = 0;
+            // 
+            // userControl_Room2
+            // 
+            this.userControl_Room2.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room2.Location = new System.Drawing.Point(234, 3);
+            this.userControl_Room2.Name = "userControl_Room2";
+            this.userControl_Room2.Room = null;
+            this.userControl_Room2.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room2.TabIndex = 1;
+            // 
+            // userControl_Room3
+            // 
+            this.userControl_Room3.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room3.Location = new System.Drawing.Point(465, 3);
+            this.userControl_Room3.Name = "userControl_Room3";
+            this.userControl_Room3.Room = null;
+            this.userControl_Room3.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room3.TabIndex = 2;
+            // 
+            // userControl_Room4
+            // 
+            this.userControl_Room4.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room4.Location = new System.Drawing.Point(696, 3);
+            this.userControl_Room4.Name = "userControl_Room4";
+            this.userControl_Room4.Room = null;
+            this.userControl_Room4.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room4.TabIndex = 3;
+            // 
+            // userControl_Room5
+            // 
+            this.userControl_Room5.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room5.Location = new System.Drawing.Point(927, 3);
+            this.userControl_Room5.Name = "userControl_Room5";
+            this.userControl_Room5.Room = null;
+            this.userControl_Room5.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room5.TabIndex = 4;
+            // 
+            // userControl_Room6
+            // 
+            this.userControl_Room6.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room6.Location = new System.Drawing.Point(1158, 3);
+            this.userControl_Room6.Name = "userControl_Room6";
+            this.userControl_Room6.Room = null;
+            this.userControl_Room6.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room6.TabIndex = 5;
+            // 
+            // userControl_Room7
+            // 
+            this.userControl_Room7.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room7.Location = new System.Drawing.Point(3, 234);
+            this.userControl_Room7.Name = "userControl_Room7";
+            this.userControl_Room7.Room = null;
+            this.userControl_Room7.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room7.TabIndex = 6;
+            // 
+            // userControl_Room8
+            // 
+            this.userControl_Room8.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room8.Location = new System.Drawing.Point(234, 234);
+            this.userControl_Room8.Name = "userControl_Room8";
+            this.userControl_Room8.Room = null;
+            this.userControl_Room8.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room8.TabIndex = 7;
+            // 
+            // userControl_Room9
+            // 
+            this.userControl_Room9.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room9.Location = new System.Drawing.Point(465, 234);
+            this.userControl_Room9.Name = "userControl_Room9";
+            this.userControl_Room9.Room = null;
+            this.userControl_Room9.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room9.TabIndex = 8;
+            // 
+            // userControl_Room10
+            // 
+            this.userControl_Room10.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room10.Location = new System.Drawing.Point(696, 234);
+            this.userControl_Room10.Name = "userControl_Room10";
+            this.userControl_Room10.Room = null;
+            this.userControl_Room10.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room10.TabIndex = 9;
+            // 
+            // userControl_Room11
+            // 
+            this.userControl_Room11.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room11.Location = new System.Drawing.Point(927, 234);
+            this.userControl_Room11.Name = "userControl_Room11";
+            this.userControl_Room11.Room = null;
+            this.userControl_Room11.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room11.TabIndex = 10;
+            // 
+            // userControl_Room12
+            // 
+            this.userControl_Room12.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room12.Location = new System.Drawing.Point(1158, 234);
+            this.userControl_Room12.Name = "userControl_Room12";
+            this.userControl_Room12.Room = null;
+            this.userControl_Room12.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room12.TabIndex = 11;
+            // 
+            // userControl_Room13
+            // 
+            this.userControl_Room13.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room13.Location = new System.Drawing.Point(3, 465);
+            this.userControl_Room13.Name = "userControl_Room13";
+            this.userControl_Room13.Room = null;
+            this.userControl_Room13.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room13.TabIndex = 12;
+            // 
+            // userControl_Room14
+            // 
+            this.userControl_Room14.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_Room14.Location = new System.Drawing.Point(234, 465);
+            this.userControl_Room14.Name = "userControl_Room14";
+            this.userControl_Room14.Room = null;
+            this.userControl_Room14.Size = new System.Drawing.Size(225, 225);
+            this.userControl_Room14.TabIndex = 13;
             // 
             // Form_Cinema
             // 
@@ -255,7 +424,9 @@
             this.guna2Panel1.PerformLayout();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxCinema)).EndInit();
+            this.flowLayoutPanelRoom.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -276,5 +447,20 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRoom;
+        private UserControls.UserControl_Room userControl_Room1;
+        private UserControls.UserControl_Room userControl_Room2;
+        private UserControls.UserControl_Room userControl_Room3;
+        private UserControls.UserControl_Room userControl_Room4;
+        private UserControls.UserControl_Room userControl_Room5;
+        private UserControls.UserControl_Room userControl_Room6;
+        private UserControls.UserControl_Room userControl_Room7;
+        private UserControls.UserControl_Room userControl_Room8;
+        private UserControls.UserControl_Room userControl_Room9;
+        private UserControls.UserControl_Room userControl_Room10;
+        private UserControls.UserControl_Room userControl_Room11;
+        private UserControls.UserControl_Room userControl_Room12;
+        private UserControls.UserControl_Room userControl_Room13;
+        private UserControls.UserControl_Room userControl_Room14;
     }
 }

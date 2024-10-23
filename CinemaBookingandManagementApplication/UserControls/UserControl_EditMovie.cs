@@ -21,7 +21,7 @@ namespace CinemaBookingandManagementApplication.UserControls
             InitializeComponent();
             //btn_edit.Visible = false;
             //pic_cover.Visible = false;
-         //   btn_edit.Visible = false;
+            //btn_edit.Visible = false;
         }
         private void pic_movie_MouseEnter(object sender, EventArgs e)
         {
@@ -32,7 +32,7 @@ namespace CinemaBookingandManagementApplication.UserControls
         private void pic_movie_MouseLeave(object sender, EventArgs e)
         {
             //pic_cover.Visible = false;
-          //  btn_edit.Visible = false;
+            //btn_edit.Visible = false;
         }
 
         private void btn_edit_Click(object sender, EventArgs e)

@@ -29,8 +29,8 @@ namespace CinemaBookingandManagementApplication
 
         private void Form_ManagerCombo_Load(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 flowLayoutPanelCombo.Controls.Clear();
                 ComboDaoImpl comboDao = new ComboDaoImpl();
                 MemoryStream picture = new MemoryStream();
@@ -66,7 +66,6 @@ namespace CinemaBookingandManagementApplication
 
                         UserControl_EditCombo control_EditCombo = new UserControl_EditCombo(combo);
 
-                        control_EditCombo.Width = flowLayoutPanelCombo.Width + 40;
                         flowLayoutPanelCombo.Controls.Add(control_EditCombo);
 
                         //edit
@@ -77,11 +76,11 @@ namespace CinemaBookingandManagementApplication
                         };
                     }
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
