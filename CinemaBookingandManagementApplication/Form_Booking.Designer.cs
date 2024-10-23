@@ -29,30 +29,32 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Booking));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Booking));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panelOrder = new Guna.UI2.WinForms.Guna2Panel();
             this.labelDate = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
             this.labelMovieName = new System.Windows.Forms.Label();
-            this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Continue = new Guna.UI2.WinForms.Guna2Button();
             this.dataGridViewOrder = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanelControl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button197 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button196 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button195 = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonPayment = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonChooseCombo = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonChooseChair = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button131 = new Guna.UI2.WinForms.Guna2Button();
             this.label26 = new System.Windows.Forms.Label();
             this.guna2Button132 = new Guna.UI2.WinForms.Guna2Button();
@@ -81,19 +83,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.buttonScreening = new Guna.UI2.WinForms.Guna2Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
-            this.btn_Continue = new Guna.UI2.WinForms.Guna2Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelOrder.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
             this.PanelControl.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -156,18 +156,6 @@
             this.labelMovieName.TabIndex = 7;
             this.labelMovieName.Text = "Robot Hoang Dã";
             // 
-            // pic_movie
-            // 
-            this.pic_movie.BorderRadius = 10;
-            this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
-            this.pic_movie.ImageRotate = 0F;
-            this.pic_movie.Location = new System.Drawing.Point(45, 36);
-            this.pic_movie.Name = "pic_movie";
-            this.pic_movie.Size = new System.Drawing.Size(200, 300);
-            this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_movie.TabIndex = 4;
-            this.pic_movie.TabStop = false;
-            // 
             // labelTotal
             // 
             this.labelTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -191,6 +179,29 @@
             this.label2.Size = new System.Drawing.Size(86, 34);
             this.label2.TabIndex = 5;
             this.label2.Text = "Total:";
+            // 
+            // btn_Continue
+            // 
+            this.btn_Continue.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Continue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.btn_Continue.BorderRadius = 5;
+            this.btn_Continue.BorderThickness = 1;
+            this.btn_Continue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Continue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Continue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Continue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Continue.FillColor = System.Drawing.Color.Transparent;
+            this.btn_Continue.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Continue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.btn_Continue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btn_Continue.ImageSize = new System.Drawing.Size(30, 30);
+            this.btn_Continue.Location = new System.Drawing.Point(61, 1017);
+            this.btn_Continue.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_Continue.Name = "btn_Continue";
+            this.btn_Continue.Size = new System.Drawing.Size(490, 65);
+            this.btn_Continue.TabIndex = 4;
+            this.btn_Continue.Text = "Continue";
+            this.btn_Continue.Click += new System.EventHandler(this.btn_Continue_Click);
             // 
             // dataGridViewOrder
             // 
@@ -275,6 +286,23 @@
             this.dataGridViewOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
             this.dataGridViewOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 113.6364F;
+            this.Column1.HeaderText = "ITEM";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.FillWeight = 86.36364F;
+            this.Column2.HeaderText = "QTY";
+            this.Column2.MinimumWidth = 8;
+            this.Column2.Name = "Column2";
+            // 
             // PanelControl
             // 
             this.PanelControl.BackColor = System.Drawing.Color.White;
@@ -326,66 +354,69 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.guna2Button197);
-            this.guna2Panel1.Controls.Add(this.guna2Button196);
-            this.guna2Panel1.Controls.Add(this.guna2Button195);
+            this.guna2Panel1.Controls.Add(this.buttonPayment);
+            this.guna2Panel1.Controls.Add(this.buttonChooseCombo);
+            this.guna2Panel1.Controls.Add(this.buttonChooseChair);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 42);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1937, 75);
             this.guna2Panel1.TabIndex = 32;
             // 
-            // guna2Button197
+            // buttonPayment
             // 
-            this.guna2Button197.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Button197.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.guna2Button197.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button197.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button197.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button197.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button197.FillColor = System.Drawing.Color.White;
-            this.guna2Button197.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button197.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button197.Location = new System.Drawing.Point(825, 15);
-            this.guna2Button197.Name = "guna2Button197";
-            this.guna2Button197.Size = new System.Drawing.Size(300, 45);
-            this.guna2Button197.TabIndex = 2;
-            this.guna2Button197.Text = "Thanh toán";
+            this.buttonPayment.CustomBorderColor = System.Drawing.Color.Gray;
+            this.buttonPayment.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.buttonPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonPayment.FillColor = System.Drawing.Color.White;
+            this.buttonPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPayment.ForeColor = System.Drawing.Color.Gray;
+            this.buttonPayment.Location = new System.Drawing.Point(825, 15);
+            this.buttonPayment.Name = "buttonPayment";
+            this.buttonPayment.Size = new System.Drawing.Size(300, 45);
+            this.buttonPayment.TabIndex = 2;
+            this.buttonPayment.Text = "Thanh toán";
             // 
-            // guna2Button196
+            // buttonChooseCombo
             // 
-            this.guna2Button196.CustomBorderColor = System.Drawing.Color.Gray;
-            this.guna2Button196.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.guna2Button196.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button196.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button196.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button196.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button196.FillColor = System.Drawing.Color.White;
-            this.guna2Button196.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button196.ForeColor = System.Drawing.Color.Gray;
-            this.guna2Button196.Location = new System.Drawing.Point(533, 15);
-            this.guna2Button196.Name = "guna2Button196";
-            this.guna2Button196.Size = new System.Drawing.Size(300, 45);
-            this.guna2Button196.TabIndex = 1;
-            this.guna2Button196.Text = "Chọn thức ăn";
+            this.buttonChooseCombo.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.buttonChooseCombo.CheckedState.FillColor = System.Drawing.Color.White;
+            this.buttonChooseCombo.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.buttonChooseCombo.CustomBorderColor = System.Drawing.Color.Gray;
+            this.buttonChooseCombo.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.buttonChooseCombo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChooseCombo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChooseCombo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonChooseCombo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonChooseCombo.FillColor = System.Drawing.Color.White;
+            this.buttonChooseCombo.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChooseCombo.ForeColor = System.Drawing.Color.Gray;
+            this.buttonChooseCombo.Location = new System.Drawing.Point(533, 15);
+            this.buttonChooseCombo.Name = "buttonChooseCombo";
+            this.buttonChooseCombo.Size = new System.Drawing.Size(300, 45);
+            this.buttonChooseCombo.TabIndex = 1;
+            this.buttonChooseCombo.Text = "Chọn thức ăn";
             // 
-            // guna2Button195
+            // buttonChooseChair
             // 
-            this.guna2Button195.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.guna2Button195.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.guna2Button195.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
-            this.guna2Button195.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button195.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button195.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button195.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button195.FillColor = System.Drawing.Color.White;
-            this.guna2Button195.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button195.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
-            this.guna2Button195.Location = new System.Drawing.Point(240, 15);
-            this.guna2Button195.Name = "guna2Button195";
-            this.guna2Button195.Size = new System.Drawing.Size(300, 45);
-            this.guna2Button195.TabIndex = 0;
-            this.guna2Button195.Text = "Chọn ghế";
+            this.buttonChooseChair.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.buttonChooseChair.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.buttonChooseChair.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 2);
+            this.buttonChooseChair.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChooseChair.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChooseChair.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonChooseChair.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonChooseChair.FillColor = System.Drawing.Color.White;
+            this.buttonChooseChair.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonChooseChair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
+            this.buttonChooseChair.Location = new System.Drawing.Point(240, 15);
+            this.buttonChooseChair.Name = "buttonChooseChair";
+            this.buttonChooseChair.Size = new System.Drawing.Size(300, 45);
+            this.buttonChooseChair.TabIndex = 0;
+            this.buttonChooseChair.Text = "Chọn ghế";
             // 
             // guna2Button131
             // 
@@ -688,16 +719,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1136, 79);
             this.guna2Panel2.TabIndex = 144;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(22, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 28);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Suất chiếu: ";
-            // 
             // buttonScreening
             // 
             this.buttonScreening.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -717,6 +738,16 @@
             this.buttonScreening.Size = new System.Drawing.Size(179, 48);
             this.buttonScreening.TabIndex = 4;
             this.buttonScreening.Text = "Add Movie";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(22, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 28);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Suất chiếu: ";
             // 
             // panelChildForm
             // 
@@ -754,45 +785,17 @@
             this.panelChildForm.Size = new System.Drawing.Size(1338, 1106);
             this.panelChildForm.TabIndex = 33;
             // 
-            // btn_Continue
+            // pic_movie
             // 
-            this.btn_Continue.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btn_Continue.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.btn_Continue.BorderRadius = 5;
-            this.btn_Continue.BorderThickness = 1;
-            this.btn_Continue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Continue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Continue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Continue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Continue.FillColor = System.Drawing.Color.Transparent;
-            this.btn_Continue.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Continue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.btn_Continue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btn_Continue.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_Continue.Location = new System.Drawing.Point(61, 1017);
-            this.btn_Continue.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btn_Continue.Name = "btn_Continue";
-            this.btn_Continue.Size = new System.Drawing.Size(490, 65);
-            this.btn_Continue.TabIndex = 4;
-            this.btn_Continue.Text = "Continue";
-            this.btn_Continue.Click += new System.EventHandler(this.btn_Continue_Click);
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 113.6364F;
-            this.Column1.HeaderText = "ITEM";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.FillWeight = 86.36364F;
-            this.Column2.HeaderText = "QTY";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
+            this.pic_movie.BorderRadius = 10;
+            this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
+            this.pic_movie.ImageRotate = 0F;
+            this.pic_movie.Location = new System.Drawing.Point(45, 36);
+            this.pic_movie.Name = "pic_movie";
+            this.pic_movie.Size = new System.Drawing.Size(200, 300);
+            this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_movie.TabIndex = 4;
+            this.pic_movie.TabStop = false;
             // 
             // Form_Booking
             // 
@@ -811,7 +814,6 @@
             this.Load += new System.EventHandler(this.Form_Booking_Load);
             this.panelOrder.ResumeLayout(false);
             this.panelOrder.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
             this.PanelControl.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
@@ -819,6 +821,7 @@
             this.guna2Panel2.PerformLayout();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -839,9 +842,9 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button195;
-        private Guna.UI2.WinForms.Guna2Button guna2Button197;
-        private Guna.UI2.WinForms.Guna2Button guna2Button196;
+        private Guna.UI2.WinForms.Guna2Button buttonChooseChair;
+        private Guna.UI2.WinForms.Guna2Button buttonPayment;
+        private Guna.UI2.WinForms.Guna2Button buttonChooseCombo;
         private Guna.UI2.WinForms.Guna2Panel panelChildForm;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button buttonScreening;
