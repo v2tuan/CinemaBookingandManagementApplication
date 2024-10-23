@@ -93,5 +93,10 @@ namespace CinemaBookingandManagementApplication
             Form_AddMovieSchedule form_AddMovie = new Form_AddMovieSchedule();
             form_AddMovie.ShowDialog();
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            Form_ShowCinema_Load(sender, e);
+        }
     }
 }

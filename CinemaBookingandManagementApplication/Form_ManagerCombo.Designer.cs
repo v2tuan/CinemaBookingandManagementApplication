@@ -30,15 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerCombo));
             this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddCombo = new Guna.UI2.WinForms.Guna2Button();
             this.userControl_EditCombo1 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.userControl_EditCombo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.userControl_EditCombo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.userControl_EditCombo4 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddCombo = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelCombo.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,49 +60,10 @@
             this.flowLayoutPanelCombo.Size = new System.Drawing.Size(1468, 587);
             this.flowLayoutPanelCombo.TabIndex = 10;
             // 
-            // userControl_EditCombo1
-            // 
-            this.userControl_EditCombo1.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo1.combo = null;
-            this.userControl_EditCombo1.Location = new System.Drawing.Point(3, 2);
-            this.userControl_EditCombo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo1.Name = "userControl_EditCombo1";
-            this.userControl_EditCombo1.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo1.TabIndex = 0;
-            // 
-            // userControl_EditCombo2
-            // 
-            this.userControl_EditCombo2.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo2.combo = null;
-            this.userControl_EditCombo2.Location = new System.Drawing.Point(3, 125);
-            this.userControl_EditCombo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo2.Name = "userControl_EditCombo2";
-            this.userControl_EditCombo2.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo2.TabIndex = 1;
-            // 
-            // userControl_EditCombo3
-            // 
-            this.userControl_EditCombo3.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo3.combo = null;
-            this.userControl_EditCombo3.Location = new System.Drawing.Point(3, 248);
-            this.userControl_EditCombo3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo3.Name = "userControl_EditCombo3";
-            this.userControl_EditCombo3.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo3.TabIndex = 2;
-            // 
-            // userControl_EditCombo4
-            // 
-            this.userControl_EditCombo4.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo4.combo = null;
-            this.userControl_EditCombo4.Location = new System.Drawing.Point(3, 371);
-            this.userControl_EditCombo4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo4.Name = "userControl_EditCombo4";
-            this.userControl_EditCombo4.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo4.TabIndex = 3;
-            // 
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
             this.guna2ShadowPanel1.Controls.Add(this.buttonMenu);
@@ -116,6 +78,29 @@
             this.guna2ShadowPanel1.ShadowDepth = 50;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1509, 52);
             this.guna2ShadowPanel1.TabIndex = 9;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.guna2Button1.BorderRadius = 3;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(1015, 11);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(172, 32);
+            this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Text = "Best Seller";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // textBoxSearch
             // 
@@ -184,28 +169,66 @@
             this.btnAddCombo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddCombo.Click += new System.EventHandler(this.btnAddCombo_Click);
             // 
-            // guna2Button1
+            // userControl_EditCombo1
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.guna2Button1.BorderRadius = 3;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(1015, 11);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(172, 32);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Best Seller";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.userControl_EditCombo1.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo1.combo = null;
+            this.userControl_EditCombo1.Location = new System.Drawing.Point(3, 2);
+            this.userControl_EditCombo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo1.Name = "userControl_EditCombo1";
+            this.userControl_EditCombo1.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo1.TabIndex = 0;
+            // 
+            // userControl_EditCombo2
+            // 
+            this.userControl_EditCombo2.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo2.combo = null;
+            this.userControl_EditCombo2.Location = new System.Drawing.Point(3, 125);
+            this.userControl_EditCombo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo2.Name = "userControl_EditCombo2";
+            this.userControl_EditCombo2.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo2.TabIndex = 1;
+            // 
+            // userControl_EditCombo3
+            // 
+            this.userControl_EditCombo3.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo3.combo = null;
+            this.userControl_EditCombo3.Location = new System.Drawing.Point(3, 248);
+            this.userControl_EditCombo3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo3.Name = "userControl_EditCombo3";
+            this.userControl_EditCombo3.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo3.TabIndex = 2;
+            // 
+            // userControl_EditCombo4
+            // 
+            this.userControl_EditCombo4.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo4.combo = null;
+            this.userControl_EditCombo4.Location = new System.Drawing.Point(3, 371);
+            this.userControl_EditCombo4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo4.Name = "userControl_EditCombo4";
+            this.userControl_EditCombo4.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo4.TabIndex = 3;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonRefresh.BorderRadius = 5;
+            this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonRefresh.Location = new System.Drawing.Point(741, 10);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
+            this.buttonRefresh.TabIndex = 5;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // Form_ManagerCombo
             // 
@@ -238,5 +261,6 @@
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
         private Guna.UI2.WinForms.Guna2Button btnAddCombo;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button buttonRefresh;
     }
 }

@@ -89,5 +89,10 @@ namespace CinemaBookingandManagementApplication
             Form_TopCombo form_TopCombo = new Form_TopCombo();
             form_TopCombo.ShowDialog();
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            Form_ManagerCombo_Load(sender, e);
+        }
     }
 }

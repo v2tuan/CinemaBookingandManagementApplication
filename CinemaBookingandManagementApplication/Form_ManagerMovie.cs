@@ -89,5 +89,10 @@ namespace CinemaBookingandManagementApplication
             Form_AgeRestrictionMovie form_AgeRestrictionMovie = new Form_AgeRestrictionMovie();
             form_AgeRestrictionMovie.ShowDialog();
         }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            Form_ManagerMovie_Load(sender, e);
+        }
     }
 }

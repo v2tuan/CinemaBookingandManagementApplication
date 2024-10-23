@@ -24,8 +24,8 @@ namespace CinemaBookingandManagementApplication
         }
         public void LoadComboDetail(Combo combo)
         {
-            textBoxComboName.Text = combo.ComboName;
-            textBoxDescription.Text = combo.Descriptions;
+            textBoxComboName.Text = combo.ComboName.Trim();
+            textBoxDescription.Text = combo.Descriptions.Trim();
             textBoxPrice.Text = combo.ComboPrice.ToString();
             if (combo.Image != null)
             {
@@ -57,8 +57,8 @@ namespace CinemaBookingandManagementApplication
         {
            
             ComboDaoImpl ComboDao = new ComboDaoImpl();
-            currentcombo.ComboName = textBoxComboName.Text;
-            currentcombo.Descriptions = textBoxDescription.Text;
+            currentcombo.ComboName = textBoxComboName.Text.Trim();
+            currentcombo.Descriptions = textBoxDescription.Text.Trim();
             currentcombo.ComboPrice = decimal.Parse(textBoxPrice.Text);
             if (pictureBoxCombo.Image != null)
             {
@@ -84,7 +84,7 @@ namespace CinemaBookingandManagementApplication
 
         private void textBoxComboName_TextChanged(object sender, EventArgs e)
         {
-            labelComboName.Text = textBoxComboName.Text;
+            labelComboName.Text = textBoxComboName.Text.Trim();
         }
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)

@@ -841,7 +841,6 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin hóa đơn thành công.");
                         
                     }
                 }
@@ -888,7 +887,6 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Cập nhật thông tin vé xem phim thành công.");
                         
                     }
                 }
@@ -937,8 +935,6 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("Cập nhật phòng chiếu thành công!");
                     }
                 }
                 catch (SqlException ex)
@@ -990,8 +986,6 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-
-                        MessageBox.Show("Cập nhật lịch chiếu thành công!");
                     }
                 }
                 catch (SqlException ex)
@@ -1041,7 +1035,6 @@ namespace CinemaBookingandManagementApplication.configs
 
                             // Thực thi stored procedure
                             cmd.ExecuteNonQuery();
-                            MessageBox.Show("Xóa phim thành công!");
                         }
                     }
                     catch (SqlException ex)

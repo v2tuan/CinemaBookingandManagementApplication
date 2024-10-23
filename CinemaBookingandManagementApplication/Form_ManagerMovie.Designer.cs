@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerMovie));
             this.flowLayoutPanelMovie = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddMovie = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
             this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
             this.guna2ShadowPanel1.Controls.Add(this.buttonMenu);
@@ -67,6 +69,29 @@
             this.guna2ShadowPanel1.ShadowDepth = 50;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1509, 52);
             this.guna2ShadowPanel1.TabIndex = 7;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.guna2Button1.BorderRadius = 3;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(1080, 10);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(153, 32);
+            this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Text = "Age Movie";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // textBoxSearch
             // 
@@ -135,28 +160,26 @@
             this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddMovie.Click += new System.EventHandler(this.btnAddMovie_Click);
             // 
-            // guna2Button1
+            // buttonRefresh
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.guna2Button1.BorderRadius = 3;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(956, 11);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(153, 32);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Age Movie";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonRefresh.BorderRadius = 5;
+            this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonRefresh.Location = new System.Drawing.Point(765, 11);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
+            this.buttonRefresh.TabIndex = 4;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // Form_ManagerMovie
             // 
@@ -183,5 +206,6 @@
         private Guna.UI2.WinForms.Guna2Button buttonMenu;
         private Guna.UI2.WinForms.Guna2Button btnAddMovie;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button buttonRefresh;
     }
 }

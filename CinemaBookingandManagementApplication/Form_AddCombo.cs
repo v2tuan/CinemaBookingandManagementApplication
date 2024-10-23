@@ -21,12 +21,12 @@ namespace CinemaBookingandManagementApplication
 
         private void textBoxComboName_TextChanged(object sender, EventArgs e)
         {
-            labelComboName.Text = textBoxComboName.Text;
+            labelComboName.Text = textBoxComboName.Text.Trim();
         }
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)
         {
-            labelDescription.Text = textBoxDescription.Text;
+            labelDescription.Text = textBoxDescription.Text.Trim() ;
         }
 
         private void textBoxPrice_TextChanged(object sender, EventArgs e)
@@ -37,8 +37,8 @@ namespace CinemaBookingandManagementApplication
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Combo combo = new Combo();
-            combo.ComboName = textBoxComboName.Text;
-            combo.Descriptions = textBoxDescription.Text;
+            combo.ComboName = textBoxComboName.Text.Trim();
+            combo.Descriptions = textBoxDescription.Text.Trim();
             combo.ComboPrice = decimal.Parse(textBoxPrice.Text);
             combo.Image = pictureBoxCombo.Image;
             ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
