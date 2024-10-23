@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,39 +13,30 @@ using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication
 {
-    public partial class Form_AddCombo : Form
+    public partial class Form_EditCombo : Form
     {
-        public Form_AddCombo()
+        private Combo currentcombo;
+        public Form_EditCombo(Combo combo)
         {
             InitializeComponent();
+            currentcombo = combo;
+            LoadComboDetail(combo);
         }
-
-        private void textBoxComboName_TextChanged(object sender, EventArgs e)
+        public void LoadComboDetail(Combo combo)
         {
-            labelComboName.Text = textBoxComboName.Text;
-        }
+            textBoxComboName.Text = combo.ComboName;
+            textBoxDescription.Text = combo.Descriptions;
+            textBoxPrice.Text = combo.ComboPrice.ToString();
+            if (combo.Image != null)
+            {
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    combo.Image.Save(ms, combo.Image.RawFormat);
+                    pictureBoxCombo.Image = Image.FromStream(ms);
+                }
+            }
 
-        private void textBoxDescription_TextChanged(object sender, EventArgs e)
-        {
-            labelDescription.Text = textBoxDescription.Text;
         }
-
-        private void textBoxPrice_TextChanged(object sender, EventArgs e)
-        {
-            labelPrice.Text = "Giá: " +  textBoxPrice.Text + " ₫";
-        }
-
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            Combo combo = new Combo();
-            combo.ComboName = textBoxComboName.Text;
-            combo.Descriptions = textBoxDescription.Text;
-            combo.ComboPrice = decimal.Parse(textBoxPrice.Text);
-            combo.Image = pictureBoxCombo.Image;
-            ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
-            comboDaoImpl.CreateNewCombo(combo);
-        }
-
         private void pictureBoxCombo_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -58,6 +50,16 @@ namespace CinemaBookingandManagementApplication
                 // Cập nhật hình ảnh trong PictureBox
                 pictureBoxCombo.ImageLocation = imagePath;
             }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

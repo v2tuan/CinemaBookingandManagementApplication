@@ -16,6 +16,8 @@ namespace CinemaBookingandManagementApplication.UserControls
         public Cinemas cinema { get; set; } = new Cinemas();
         public event EventHandler buttonClick = null;
         public event EventHandler editClick = null;
+        //chỗ này test thử
+        public string CinemaId { get; set; }
         public UserControl_Cinemas()
         {
             InitializeComponent();
@@ -56,7 +58,8 @@ namespace CinemaBookingandManagementApplication.UserControls
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            editClick?.Invoke(this, e);
+            //editClick?.Invoke(this, e);
+            editClick?.Invoke(this, new EventArgs());
         }
     }
 }

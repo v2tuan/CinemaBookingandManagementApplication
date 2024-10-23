@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Guna.UI2.WinForms.Suite;
+using CinemaBookingandManagementApplication.models;
+using Newtonsoft.Json;
 
 namespace CinemaBookingandManagementApplication.configs
 {
@@ -1022,7 +1024,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_MOVIE", conn))
+                    using (SqlCommand cmd = new SqlCommand("DELETE_MOVIE", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1222,7 +1224,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Xóa combo thành công!");
+                  
                     }
                 }
                 catch (SqlException ex)
@@ -1261,7 +1263,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_CINEMA", conn))
+                    using (SqlCommand cmd = new SqlCommand("DELETE_CINEMA", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1306,7 +1308,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("EXEC DELETE_SHOWTIME", conn))
+                    using (SqlCommand cmd = new SqlCommand("DELETE_SHOWTIME", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1346,7 +1348,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand("EXEC UPDATE_MOVIE_REVENUE", conn))
+                    using (SqlCommand cmd = new SqlCommand(" UPDATE_MOVIE_REVENUE", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1468,7 +1470,109 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
 
+        public static void UpdateMovie(string mid, string moviename, int ageRestriction, decimal revenue, string mtid,
+                               DateTime releaseDate, int duration, string descriptions, MemoryStream images)
+        {
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
 
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
 
+                    // Tạo lệnh để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("UpdateMovie", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure
+                        cmd.Parameters.AddWithValue("@mid", mid);
+                        cmd.Parameters.AddWithValue("@moviename", moviename);
+                        cmd.Parameters.AddWithValue("@ageRestriction", ageRestriction);
+                        cmd.Parameters.AddWithValue("@revenue", revenue);
+                        cmd.Parameters.AddWithValue("@mtid", mtid);
+                        cmd.Parameters.AddWithValue("@releaseDate", releaseDate);
+                        cmd.Parameters.AddWithValue("@duration", duration);
+                        cmd.Parameters.AddWithValue("@descriptions", descriptions);
+
+                        // Thêm tham số hình ảnh (image có thể null)
+                        if (images != null)
+                        {
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
+                        }
+                        else
+                        {
+                            MessageBox.Show("không có ảnh");
+                            cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
+                        }
+
+                        // Thực thi stored procedure và kiểm tra số hàng bị ảnh hưởng
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Cập nhật thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cập nhật không thành công.");
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+        //hàm hoàn thành bill
+        public static void CompleteBill(string bId, string cusId, List<Ticket> tickets, List<Combo> combos, decimal totalPrice)
+        {
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.Open();
+
+                using (SqlCommand cmd = new SqlCommand("CompleteBill", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Add basic parameters
+                    cmd.Parameters.AddWithValue("@bId", bId);
+                    cmd.Parameters.AddWithValue("@cusId", cusId);
+                    cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
+
+                    // Serialize tickets and combos to JSON
+                    string ticketJson = JsonConvert.SerializeObject(tickets);
+                    string comboJson = JsonConvert.SerializeObject(combos);
+
+                    // Add JSON parameters
+                    cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+                    cmd.Parameters.AddWithValue("@comboJson", comboJson);
+
+                    // Execute stored procedure
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
+
+
+
+
+}
 }

@@ -50,11 +50,13 @@
             this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
             this.pic_movie.ImageRotate = 0F;
             this.pic_movie.Location = new System.Drawing.Point(0, 0);
+            this.pic_movie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_movie.Name = "pic_movie";
-            this.pic_movie.Size = new System.Drawing.Size(200, 300);
+            this.pic_movie.Size = new System.Drawing.Size(178, 240);
             this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_movie.TabIndex = 7;
             this.pic_movie.TabStop = false;
+            this.pic_movie.Click += new System.EventHandler(this.pic_movie_Click);
             this.pic_movie.MouseEnter += new System.EventHandler(this.pic_movie_MouseEnter);
             this.pic_movie.MouseLeave += new System.EventHandler(this.pic_movie_MouseLeave);
             // 
@@ -62,9 +64,9 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(9, 317);
+            this.labelName.Location = new System.Drawing.Point(8, 254);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(158, 22);
+            this.labelName.Size = new System.Drawing.Size(134, 18);
             this.labelName.TabIndex = 8;
             this.labelName.Text = "Robot Hoang Dã";
             // 
@@ -82,9 +84,10 @@
             this.btn_edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_edit.Image")));
             this.btn_edit.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btn_edit.ImageSize = new System.Drawing.Size(30, 30);
-            this.btn_edit.Location = new System.Drawing.Point(76, 0);
+            this.btn_edit.Location = new System.Drawing.Point(68, 0);
+            this.btn_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_edit.Name = "btn_edit";
-            this.btn_edit.Size = new System.Drawing.Size(124, 45);
+            this.btn_edit.Size = new System.Drawing.Size(110, 36);
             this.btn_edit.TabIndex = 5;
             this.btn_edit.Text = "Edit";
             this.btn_edit.TextOffset = new System.Drawing.Point(0, -1);
@@ -93,14 +96,15 @@
             // 
             // UserControl_EditMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.btn_edit);
             this.Controls.Add(this.pic_movie);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserControl_EditMovie";
-            this.Size = new System.Drawing.Size(200, 352);
+            this.Size = new System.Drawing.Size(178, 282);
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
