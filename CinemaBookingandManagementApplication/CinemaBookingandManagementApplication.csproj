@@ -215,6 +215,7 @@
     <Compile Include="models\Bill.cs" />
     <Compile Include="models\Cinemas.cs" />
     <Compile Include="models\Combo.cs" />
+    <Compile Include="models\DetailCombo.cs" />
     <Compile Include="models\ICustomer.cs" />
     <Compile Include="models\FoodItem.cs" />
     <Compile Include="models\MemberCustomer.cs" />
