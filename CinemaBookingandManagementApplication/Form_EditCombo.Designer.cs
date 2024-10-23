@@ -106,6 +106,7 @@
             this.textBoxPrice.SelectedText = "";
             this.textBoxPrice.Size = new System.Drawing.Size(640, 35);
             this.textBoxPrice.TabIndex = 45;
+            this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
             // label5
             // 
@@ -138,6 +139,7 @@
             this.textBoxDescription.SelectedText = "";
             this.textBoxDescription.Size = new System.Drawing.Size(640, 35);
             this.textBoxDescription.TabIndex = 43;
+            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // label4
             // 
@@ -170,6 +172,7 @@
             this.textBoxComboName.SelectedText = "";
             this.textBoxComboName.Size = new System.Drawing.Size(640, 35);
             this.textBoxComboName.TabIndex = 41;
+            this.textBoxComboName.TextChanged += new System.EventHandler(this.textBoxComboName_TextChanged);
             // 
             // labelPrice
             // 
@@ -200,6 +203,7 @@
             this.labelComboName.Size = new System.Drawing.Size(131, 25);
             this.labelComboName.TabIndex = 37;
             this.labelComboName.Text = "Combo Name";
+            this.labelComboName.Click += new System.EventHandler(this.labelComboName_Click);
             // 
             // pictureBoxCombo
             // 

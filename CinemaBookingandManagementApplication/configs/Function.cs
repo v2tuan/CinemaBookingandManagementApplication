@@ -990,5 +990,42 @@ namespace CinemaBookingandManagementApplication.configs
 
             return combos;
         }
+        //Hàm check ID của bill
+        public static bool checkBillID(string billID)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+                // Gọi hàm SQL
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CHECK_Bill(@BILLID)", conn))
+                {
+                    command.Parameters.AddWithValue("@BILLID", billID);
+                    result = (Int32)command.ExecuteScalar();
+                    if (result == 1)
+                    {
+                        exists = true; // Kết quả là kiểu boolean
+                    }
+                    else
+                    {
+                        exists = false; // Không có kết quả hợp lệ
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+        }
     }
 }

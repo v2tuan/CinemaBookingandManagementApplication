@@ -37,6 +37,7 @@ namespace CinemaBookingandManagementApplication
             }
 
         }
+        
         private void pictureBoxCombo_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -54,12 +55,46 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+           
+            ComboDaoImpl ComboDao = new ComboDaoImpl();
+            currentcombo.ComboName = textBoxComboName.Text;
+            currentcombo.Descriptions = textBoxDescription.Text;
+            currentcombo.ComboPrice = decimal.Parse(textBoxPrice.Text);
+            if (pictureBoxCombo.Image != null)
+            {
+                MemoryStream pic = new MemoryStream();
+                pictureBoxCombo.Image.Save(pic, pictureBoxCombo.Image.RawFormat);
+                currentcombo.Image = pictureBoxCombo.Image;
+            }
+            ComboDao.update(currentcombo);
 
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+           
+            ComboDaoImpl ComboDao = new ComboDaoImpl();
+            ComboDao.delete(currentcombo);
+        }
 
+        private void labelComboName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxComboName_TextChanged(object sender, EventArgs e)
+        {
+            labelComboName.Text = textBoxComboName.Text;
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+            labelDescription.Text = textBoxDescription.Text;
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+            labelPrice.Text = "Giá: " + textBoxPrice.Text + " ₫";
         }
     }
 }
