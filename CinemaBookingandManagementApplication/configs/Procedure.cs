@@ -11,6 +11,8 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using Guna.UI2.WinForms.Suite;
+using CinemaBookingandManagementApplication.models;
+using Newtonsoft.Json;
 
 namespace CinemaBookingandManagementApplication.configs
 {
@@ -1222,7 +1224,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
-                        MessageBox.Show("Xóa combo thành công!");
+                  
                     }
                 }
                 catch (SqlException ex)
@@ -1538,9 +1540,39 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+        //hàm hoàn thành bill
+        public static void CompleteBill(string bId, string cusId, List<Ticket> tickets, List<Combo> combos, decimal totalPrice)
+        {
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.Open();
 
+                using (SqlCommand cmd = new SqlCommand("CompleteBill", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    // Add basic parameters
+                    cmd.Parameters.AddWithValue("@bId", bId);
+                    cmd.Parameters.AddWithValue("@cusId", cusId);
+                    cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
 
+                    // Serialize tickets and combos to JSON
+                    string ticketJson = JsonConvert.SerializeObject(tickets);
+                    string comboJson = JsonConvert.SerializeObject(combos);
 
+                    // Add JSON parameters
+                    cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+                    cmd.Parameters.AddWithValue("@comboJson", comboJson);
+
+                    // Execute stored procedure
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
+
+
+
+
+}
 }
