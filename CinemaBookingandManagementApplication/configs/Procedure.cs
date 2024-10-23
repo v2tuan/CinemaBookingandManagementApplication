@@ -1545,31 +1545,52 @@ namespace CinemaBookingandManagementApplication.configs
         {
             using (SqlConnection conn = myDB.getConnectionFromFile())
             {
-                conn.Open();
-
-                using (SqlCommand cmd = new SqlCommand("CompleteBill", conn))
+                conn.InfoMessage += (sender, e) =>
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                try
+                {
+                    conn.Open();
 
-                    // Add basic parameters
-                    cmd.Parameters.AddWithValue("@bId", bId);
-                    cmd.Parameters.AddWithValue("@cusId", cusId);
-                    cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
+                    using (SqlCommand cmd = new SqlCommand("CompleteBill", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
 
-                    // Serialize tickets to JSON
-                    string ticketJson = JsonConvert.SerializeObject(tickets);
+                        // Add basic parameters
+                        cmd.Parameters.AddWithValue("@bId", bId);
+                        cmd.Parameters.AddWithValue("@cusId", cusId);
+                        cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
 
-                    // Add ticket JSON parameter
-                    cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+                        // Serialize tickets to JSON
+                        string ticketJson = JsonConvert.SerializeObject(tickets);
 
-                    // Tạo chuỗi JSON cho DetailCombo
-                    string comboJson = JsonConvert.SerializeObject(combos);
+                        // Add ticket JSON parameter
+                        cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
 
-                    // Add combo JSON parameter
-                    cmd.Parameters.AddWithValue("@comboJson", comboJson);
+                        // Tạo chuỗi JSON cho DetailCombo
+                        string comboJson = JsonConvert.SerializeObject(combos);
 
-                    // Execute stored procedure
-                    cmd.ExecuteNonQuery();
+                        // Add combo JSON parameter
+                        cmd.Parameters.AddWithValue("@comboJson", comboJson);
+
+                        // Execute stored procedure
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
                 }
             }
         }
