@@ -9,7 +9,7 @@ namespace CinemaBookingandManagementApplication.models
     public class DetailCombo
     {
         public int BId { get; set; }
-        public int ComboId { get; set; }
+        public string ComboId { get; set; }
         public int Quantity { get; set; }
     }
 }

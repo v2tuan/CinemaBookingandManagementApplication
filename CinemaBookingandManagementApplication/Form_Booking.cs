@@ -75,6 +75,7 @@ namespace CinemaBookingandManagementApplication
                             {
                                 QtySeat += 1;
                                 listSeats.Add(userControl_Seat.seat);
+
                             }
                             else
                             {
@@ -93,6 +94,7 @@ namespace CinemaBookingandManagementApplication
                             {
                                 dataGridViewOrder.Rows.Add(new object[] { Order, string.Format("{0:#,##0} ₫", (QtySeat * 75000).ToString()) });
                             }
+                            caculateTotal();
                         };
                     }
                 }
@@ -150,7 +152,7 @@ namespace CinemaBookingandManagementApplication
                             if (item.Cells[0].Value.ToString() == Order)
                             {
                                 item.Cells[0].Value = (count + 1).ToString() + "x " + chosecombo.ComboName.Trim();
-                                item.Cells[1].Value = string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString());
+                                item.Cells[1].Value = string.Format("{0:#,##0} ₫", ((count+ 1) * chosecombo.ComboPrice).ToString());
                             }
                         }
                         listChooseCombo[chosecombo]++;
@@ -162,7 +164,7 @@ namespace CinemaBookingandManagementApplication
                         Order = count.ToString() + "x " + chosecombo.ComboName.Trim();
                         dataGridViewOrder.Rows.Add(new object[] { Order, string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString()) });
                     }
-                    
+                    caculateTotal();
 
                 };
                 form_ChooseCombo.minusClick += (ss, ee, chosecombo) =>
@@ -179,12 +181,13 @@ namespace CinemaBookingandManagementApplication
                                 if (item.Cells[0].Value.ToString() == Order)
                                 {
                                     item.Cells[0].Value = (count - 1).ToString() + "x " + chosecombo.ComboName.Trim();
-                                    item.Cells[1].Value = string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString());
+                                    item.Cells[1].Value = string.Format("{0:#,##0} ₫", ((count - 1) * chosecombo.ComboPrice).ToString());
                                 }
                             }
                         }
                         listChooseCombo[chosecombo]--;
                     }
+                    caculateTotal();
                 };
             }
             else if(listSeats.Count == 0)
@@ -193,7 +196,7 @@ namespace CinemaBookingandManagementApplication
             }
             else if(buttonChooseCombo.Checked && !buttonPayment.Checked)
             {
-                buttonChooseCombo.Checked = true;
+                buttonPayment.Checked = true;
                 Form_Pay Pay_Form = new Form_Pay();
                 openChildForm(Pay_Form);
                 btn_Continue.Text = "Complete";
@@ -207,9 +210,38 @@ namespace CinemaBookingandManagementApplication
                 foreach (var seat in listSeats)
                 {
                     Ticket ticket = new Ticket();
-
+                    ticket.Price = decimal.Parse("75000");
+                    ticket.Tdate = DateTime.Now;
+                    ticket.Shid = movieSchedule.Shid;
+                    ticket.SeatId = seat.SeatId;
+                    listTicket.Add(ticket);
                 }
+
+                foreach (var keyValue in listChooseCombo)
+                {
+                    DetailCombo detailCombo = new DetailCombo();
+                    detailCombo.ComboId = keyValue.Key.ComboId;
+                    detailCombo.Quantity = keyValue.Value;
+                    listDetailCombo.Add(detailCombo);
+                }
+
+                BillDaopImpl billDaopImpl = new BillDaopImpl();
+                string bId = billDaopImpl.IDNext();
+                string cusId = null;
+                decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
+                billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
             }
+        }
+
+        public void caculateTotal()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow item in dataGridViewOrder.Rows)
+            {
+                total += decimal.Parse(item.Cells[1].Value.ToString().Replace(",", "").Replace(" ₫", ""));
+            }
+
+            labelTotal.Text = string.Format("{0:#,##0} ₫", total);
         }
     }
 }
