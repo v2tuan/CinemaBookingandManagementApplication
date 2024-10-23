@@ -29,59 +29,59 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_Combo));
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBoxCombo = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
             this.txt_quantity = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2PictureBox1
+            // pictureBoxCombo
             // 
-            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(24, 16);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(201, 114);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
+            this.pictureBoxCombo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pictureBoxCombo.BorderRadius = 10;
+            this.pictureBoxCombo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCombo.Image")));
+            this.pictureBoxCombo.ImageRotate = 0F;
+            this.pictureBoxCombo.Location = new System.Drawing.Point(24, 16);
+            this.pictureBoxCombo.Name = "pictureBoxCombo";
+            this.pictureBoxCombo.Size = new System.Drawing.Size(201, 114);
+            this.pictureBoxCombo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxCombo.TabIndex = 0;
+            this.pictureBoxCombo.TabStop = false;
             // 
-            // label1
+            // labelName
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(250, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "iCombo 1 Big Extra STD";
+            this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(250, 16);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(224, 28);
+            this.labelName.TabIndex = 1;
+            this.labelName.Text = "iCombo 1 Big Extra STD";
             // 
-            // label2
+            // labelDescription
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(250, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(328, 21);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "1 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack";
+            this.labelDescription.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDescription.Location = new System.Drawing.Point(250, 54);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(328, 21);
+            this.labelDescription.TabIndex = 2;
+            this.labelDescription.Text = "1 Ly nước ngọt size L + 01 Hộp bắp + 1 Snack";
             // 
-            // label3
+            // labelPrice
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(250, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 28);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Giá: 109.000 ₫";
+            this.labelPrice.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(250, 89);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(138, 28);
+            this.labelPrice.TabIndex = 3;
+            this.labelPrice.Text = "Giá: 109.000 ₫";
             // 
             // txt_quantity
             // 
@@ -99,7 +99,7 @@
             this.txt_quantity.IconLeftSize = new System.Drawing.Size(30, 30);
             this.txt_quantity.IconRight = ((System.Drawing.Image)(resources.GetObject("txt_quantity.IconRight")));
             this.txt_quantity.IconRightSize = new System.Drawing.Size(30, 30);
-            this.txt_quantity.Location = new System.Drawing.Point(1043, 89);
+            this.txt_quantity.Location = new System.Drawing.Point(1093, 89);
             this.txt_quantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_quantity.Name = "txt_quantity";
             this.txt_quantity.PasswordChar = '\0';
@@ -109,6 +109,7 @@
             this.txt_quantity.Size = new System.Drawing.Size(130, 41);
             this.txt_quantity.TabIndex = 4;
             this.txt_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_quantity.IconLeftClick += new System.EventHandler(this.txt_quantity_IconLeftClick);
             this.txt_quantity.IconRightClick += new System.EventHandler(this.txt_quantity_IconRightClick);
             // 
             // UserControl_Combo
@@ -117,14 +118,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.txt_quantity);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.labelPrice);
+            this.Controls.Add(this.labelDescription);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.pictureBoxCombo);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "UserControl_Combo";
-            this.Size = new System.Drawing.Size(1208, 149);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(1258, 149);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,10 +133,10 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxCombo;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelDescription;
+        private System.Windows.Forms.Label labelPrice;
         private Guna.UI2.WinForms.Guna2TextBox txt_quantity;
     }
 }

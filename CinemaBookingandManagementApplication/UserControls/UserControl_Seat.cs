@@ -89,12 +89,15 @@ namespace CinemaBookingandManagementApplication.UserControls
 
         private void UserControl_Seat_Load(object sender, EventArgs e)
         {
-            if(seat.States == 0)
+            if (seat != null)
             {
-                buttonSeat.FillColor = Color.LightGray;
-                buttonSeat.BorderThickness = 0;
+                if (seat.States == 0)
+                {
+                    buttonSeat.FillColor = Color.LightGray;
+                    buttonSeat.BorderThickness = 0;
+                }
+                setNumberSeat(int.Parse(seat.Snumber));
             }
-            setNumberSeat(int.Parse(seat.Snumber));
         }
     }
 }

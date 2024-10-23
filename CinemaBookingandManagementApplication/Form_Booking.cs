@@ -2,12 +2,14 @@
 using CinemaBookingandManagementApplication.models;
 using CinemaBookingandManagementApplication.UserControls;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,6 +27,10 @@ namespace CinemaBookingandManagementApplication
         String Order = "";
         int QtySeat = 0;
         List<Seat> listSeats = new List<Seat>();
+        ArrayList listCombo = new ArrayList();
+        // Khởi tạo một Dictionary
+        Dictionary<Combo, int> listChooseCombo = new Dictionary<Combo, int>();
+
 
         Form activeForm = null;
         public Form_Booking()
@@ -40,11 +46,6 @@ namespace CinemaBookingandManagementApplication
         private void Form_Booking_Load(object sender, EventArgs e)
         {
             pic_movie.Image = movie.Image;
-
-            //Form_ChooseChair form_ChooseChair = new Form_ChooseChair();
-            //form_ChooseChair.movieSchedule = movieSchedule;
-            //form_ChooseChair.setSeat();
-            //openChildForm(form_ChooseChair);
 
             buttonScreening.Text = $"{movieSchedule.Stime.Hours}:{movieSchedule.Stime.Minutes:D2}";
             try
@@ -90,10 +91,7 @@ namespace CinemaBookingandManagementApplication
                             }
                             if (QtySeat != 0)
                             {
-                                dataGridViewOrder.Rows.Add(new object[] {
-                                Order,
-                                string.Format("{0:#,##0} ₫", (QtySeat * 75000).ToString())
-                              });
+                                dataGridViewOrder.Rows.Add(new object[] { Order, string.Format("{0:#,##0} ₫", (QtySeat * 75000).ToString()) });
                             }
                         };
                     }
@@ -129,7 +127,69 @@ namespace CinemaBookingandManagementApplication
 
         private void btn_Continue_Click(object sender, EventArgs e)
         {
-            openChildForm(new Form_ChooseCombo());
+            string Order = "";
+
+            if (listSeats.Count > 0)
+            {
+                Form_ChooseCombo form_ChooseCombo = new Form_ChooseCombo();
+                openChildForm(form_ChooseCombo);
+
+                form_ChooseCombo.addClick += (ss, ee, chosecombo) =>
+                {
+                    int count = 0;
+                    if (listChooseCombo.ContainsKey(chosecombo))
+                    {
+                        count = listChooseCombo[chosecombo];
+                        Order = (count).ToString() + "x " + chosecombo.ComboName.Trim();
+                        foreach (DataGridViewRow item in dataGridViewOrder.Rows)
+                        {
+
+                            // Thêm ràng buộc tên Combo không được giống nhau//
+                            ///////////////////////////////////////////////////
+                            if (item.Cells[0].Value.ToString() == Order)
+                            {
+                                item.Cells[0].Value = (count + 1).ToString() + "x " + chosecombo.ComboName.Trim();
+                                item.Cells[1].Value = string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString());
+                            }
+                        }
+                        listChooseCombo[chosecombo]++;
+                    }
+                    else
+                    {
+                        listChooseCombo.Add(chosecombo, 1);
+                        count = listChooseCombo[chosecombo];
+                        Order = count.ToString() + "x " + chosecombo.ComboName.Trim();
+                        dataGridViewOrder.Rows.Add(new object[] { Order, string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString()) });
+                    }
+                    
+
+                };
+                form_ChooseCombo.minusClick += (ss, ee, chosecombo) =>
+                {
+                    if (listChooseCombo.ContainsKey(chosecombo))
+                    {
+                        int count = listChooseCombo[chosecombo];
+
+                        if (count > 0)
+                        {
+                            Order = (count).ToString() + "x " + chosecombo.ComboName.Trim();
+                            foreach (DataGridViewRow item in dataGridViewOrder.Rows)
+                            {
+                                if (item.Cells[0].Value.ToString() == Order)
+                                {
+                                    item.Cells[0].Value = (count - 1).ToString() + "x " + chosecombo.ComboName.Trim();
+                                    item.Cells[1].Value = string.Format("{0:#,##0} ₫", (count * chosecombo.ComboPrice).ToString());
+                                }
+                            }
+                        }
+                        listChooseCombo[chosecombo]--;
+                    }
+                };
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn ghế");
+            }
         }
     }
 }
