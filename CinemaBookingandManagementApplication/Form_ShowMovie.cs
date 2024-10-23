@@ -30,7 +30,7 @@ namespace CinemaBookingandManagementApplication
                 flowLayoutPanelMovie.Controls.Clear();
                 MovieDaoImpl movieDaoImpl = new MovieDaoImpl();
                 MemoryStream picture = new MemoryStream();
-                DataTable dt = movieDaoImpl.GetListMovie;
+                DataTable dt = movieDaoImpl.GetListMovie();
                 //UserControl_Movie movie = null;
                 byte[] pic = null;
                 Form_detailMovie detailMovie = new Form_detailMovie();
