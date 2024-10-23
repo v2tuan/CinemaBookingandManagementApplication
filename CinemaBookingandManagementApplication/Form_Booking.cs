@@ -129,8 +129,9 @@ namespace CinemaBookingandManagementApplication
         {
             string Order = "";
 
-            if (listSeats.Count > 0)
+            if (listSeats.Count > 0 && !buttonChooseCombo.Checked)
             {
+                buttonChooseCombo.Checked = true;
                 Form_ChooseCombo form_ChooseCombo = new Form_ChooseCombo();
                 openChildForm(form_ChooseCombo);
 
@@ -186,9 +187,28 @@ namespace CinemaBookingandManagementApplication
                     }
                 };
             }
-            else
+            else if(listSeats.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn ghế");
+            }
+            else if(buttonChooseCombo.Checked && !buttonPayment.Checked)
+            {
+                buttonChooseCombo.Checked = true;
+                Form_Pay Pay_Form = new Form_Pay();
+                openChildForm(Pay_Form);
+                btn_Continue.Text = "Complete";
+            }
+            else if(btn_Continue.Text == "Complete")
+            {
+                List<Ticket> listTicket = new List<Ticket>();
+                List<DetailCombo> listDetailCombo = new List<DetailCombo>();
+
+
+                foreach (var seat in listSeats)
+                {
+                    Ticket ticket = new Ticket();
+
+                }
             }
         }
     }

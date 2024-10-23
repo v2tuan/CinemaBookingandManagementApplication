@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ShowCinema));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.flowLayoutPanelCinema = new System.Windows.Forms.FlowLayoutPanel();
             this.buttonAddMovieSchedule = new Guna.UI2.WinForms.Guna2Button();
             this.buttonDelete = new Guna.UI2.WinForms.Guna2Button();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.buttonAddCinema = new Guna.UI2.WinForms.Guna2Button();
+            this.flowLayoutPanelCinema = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,17 +57,6 @@
             this.guna2ShadowPanel1.ShadowDepth = 50;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1676, 65);
             this.guna2ShadowPanel1.TabIndex = 1;
-            // 
-            // flowLayoutPanelCinema
-            // 
-            this.flowLayoutPanelCinema.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanelCinema.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanelCinema.Location = new System.Drawing.Point(20, 99);
-            this.flowLayoutPanelCinema.Name = "flowLayoutPanelCinema";
-            this.flowLayoutPanelCinema.Size = new System.Drawing.Size(1631, 648);
-            this.flowLayoutPanelCinema.TabIndex = 2;
             // 
             // buttonAddMovieSchedule
             // 
@@ -176,6 +165,18 @@
             this.buttonAddCinema.Text = "Add Cinema";
             this.buttonAddCinema.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.buttonAddCinema.Click += new System.EventHandler(this.buttonAddCinema_Click);
+            // 
+            // flowLayoutPanelCinema
+            // 
+            this.flowLayoutPanelCinema.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelCinema.AutoScroll = true;
+            this.flowLayoutPanelCinema.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanelCinema.Location = new System.Drawing.Point(20, 99);
+            this.flowLayoutPanelCinema.Name = "flowLayoutPanelCinema";
+            this.flowLayoutPanelCinema.Size = new System.Drawing.Size(1631, 648);
+            this.flowLayoutPanelCinema.TabIndex = 2;
             // 
             // Form_ShowCinema
             // 

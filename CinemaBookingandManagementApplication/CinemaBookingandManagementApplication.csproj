@@ -61,6 +61,7 @@
     <Compile Include="configs\Views.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
+    <Compile Include="dao\impl\BillDaopImpl.cs" />
     <Compile Include="dao\impl\CinemaDaoImpl.cs" />
     <Compile Include="dao\impl\ComboDaoImpl.cs" />
     <Compile Include="dao\impl\FoodItemDaoImpl.cs" />
@@ -199,6 +200,12 @@
     </Compile>
     <Compile Include="Form_ManagerMovie.Designer.cs">
       <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pay.Designer.cs">
+      <DependentUpon>Form_Pay.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_ShowCinema.cs">
       <SubType>Form</SubType>
@@ -366,6 +373,9 @@
     <EmbeddedResource Include="Form_ManagerMovie.resx">
       <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pay.resx">
+      <DependentUpon>Form_Pay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_ShowCinema.resx">
       <DependentUpon>Form_ShowCinema.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,6 +448,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\clapper-open %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nullImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
