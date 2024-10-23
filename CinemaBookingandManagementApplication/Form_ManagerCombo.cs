@@ -72,7 +72,9 @@ namespace CinemaBookingandManagementApplication
                         control_EditCombo.editClick += (ss, ee) =>
                         {
                             //Form_EditCombo form_EditCombo = new Form_EditCombo();
-
+                            
+                            Form_EditCombo form_EditCombo = new Form_EditCombo(combo);
+                            form_EditCombo.ShowDialog();
                         };
                     }
                 }

@@ -59,7 +59,9 @@ namespace CinemaBookingandManagementApplication
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-
+           
+            ComboDaoImpl ComboDao = new ComboDaoImpl();
+            ComboDao.delete(currentcombo);
         }
     }
 }

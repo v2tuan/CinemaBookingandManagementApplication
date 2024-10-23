@@ -1215,7 +1215,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi stored procedure
-                    using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_COMBO", conn))
+                    using (SqlCommand cmd = new SqlCommand("DELETE_COMBO", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
