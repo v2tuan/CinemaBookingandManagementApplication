@@ -63,7 +63,7 @@ namespace CinemaBookingandManagementApplication
                         cinemaControl.cinema.Image = image_Food;
 
                         cinemaControl.restart();
-                        cinemaControl.Width = flowLayoutPanelCinema.Width + 40;
+                        
                         flowLayoutPanelCinema.Controls.Add(cinemaControl);
 
                         cinemaControl.buttonClick += (ss, ee) =>

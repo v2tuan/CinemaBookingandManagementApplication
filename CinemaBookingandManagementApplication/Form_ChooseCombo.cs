@@ -73,7 +73,6 @@ namespace CinemaBookingandManagementApplication
                             addClick?.Invoke(this, e, combo);
                         };
 
-                        control_EditCombo.Width = flowLayoutPanelCombo.Width;
                         flowLayoutPanelCombo.Controls.Add(control_EditCombo);
                     }
                 }

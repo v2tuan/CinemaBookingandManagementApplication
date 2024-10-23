@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl_Combo1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Combo();
             this.userControl_Combo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Combo();
-            this.userControl_Combo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_Combo();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanelCombo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 29);
+            this.label1.Location = new System.Drawing.Point(25, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 28);
             this.label1.TabIndex = 0;
@@ -56,17 +48,17 @@
             // 
             // flowLayoutPanelCombo
             // 
-            this.flowLayoutPanelCombo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanelCombo.AutoScroll = true;
             this.flowLayoutPanelCombo.AutoSize = true;
+            this.flowLayoutPanelCombo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanelCombo.Controls.Add(this.userControl_Combo1);
             this.flowLayoutPanelCombo.Controls.Add(this.userControl_Combo2);
-            this.flowLayoutPanelCombo.Controls.Add(this.userControl_Combo3);
-            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(38, 73);
+            this.flowLayoutPanelCombo.Location = new System.Drawing.Point(30, 72);
+            this.flowLayoutPanelCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanelCombo.MaximumSize = new System.Drawing.Size(1268, 0);
             this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
-            this.flowLayoutPanelCombo.Size = new System.Drawing.Size(1271, 781);
-            this.flowLayoutPanelCombo.TabIndex = 1;
+            this.flowLayoutPanelCombo.Size = new System.Drawing.Size(1268, 318);
+            this.flowLayoutPanelCombo.TabIndex = 11;
             // 
             // userControl_Combo1
             // 
@@ -88,22 +80,22 @@
             this.userControl_Combo2.Size = new System.Drawing.Size(1258, 149);
             this.userControl_Combo2.TabIndex = 1;
             // 
-            // userControl_Combo3
+            // guna2Panel1
             // 
-            this.userControl_Combo3.BackColor = System.Drawing.Color.White;
-            this.userControl_Combo3.combo = null;
-            this.userControl_Combo3.Location = new System.Drawing.Point(5, 323);
-            this.userControl_Combo3.Margin = new System.Windows.Forms.Padding(5);
-            this.userControl_Combo3.Name = "userControl_Combo3";
-            this.userControl_Combo3.Size = new System.Drawing.Size(1258, 149);
-            this.userControl_Combo3.TabIndex = 2;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 1025);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1338, 81);
+            this.guna2Panel1.TabIndex = 12;
             // 
             // Form_ChooseCombo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1338, 1106);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.flowLayoutPanelCombo);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -117,12 +109,10 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCombo;
         private UserControls.UserControl_Combo userControl_Combo1;
         private UserControls.UserControl_Combo userControl_Combo2;
-        private UserControls.UserControl_Combo userControl_Combo3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
