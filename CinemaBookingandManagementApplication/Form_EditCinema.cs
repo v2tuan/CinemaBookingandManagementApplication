@@ -111,6 +111,7 @@ namespace CinemaBookingandManagementApplication
             this.buttonDelete.Size = new System.Drawing.Size(144, 32);
             this.buttonDelete.TabIndex = 4;
             this.buttonDelete.Text = "Delete";
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonEdit
             // 
@@ -390,6 +391,12 @@ namespace CinemaBookingandManagementApplication
                 // Cập nhật hình ảnh trong PictureBox
                 pictureBoxCinema.ImageLocation = imagePath;
             }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
+            CinemaDao.delete(currentCinema);
         }
     }
 }

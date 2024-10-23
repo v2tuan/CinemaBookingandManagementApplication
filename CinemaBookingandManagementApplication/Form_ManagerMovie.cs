@@ -23,14 +23,14 @@ namespace CinemaBookingandManagementApplication
         private void Form_ManagerMovie_Load(object sender, EventArgs e)
         {
             try
-            {
-                flowLayoutPanelMovie.Controls.Clear();
+            {    flowLayoutPanelMovie.Controls.Clear();
                 MovieDaoImpl movieDaoImpl = new MovieDaoImpl();
+            
                 MemoryStream picture = new MemoryStream();
                 DataTable dt = movieDaoImpl.GetListMovie();
                 //UserControl_Movie movie = null;
                 byte[] pic = null;
-                Form_EditMovie editMovie = new Form_EditMovie();
+                // Form_EditMovie editMovie = new Form_EditMovie();
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
@@ -65,7 +65,7 @@ namespace CinemaBookingandManagementApplication
 
                         movie.buttonClick += (ss, ee) =>
                         {
-                            editMovie.movie = movie.movie;
+                            Form_EditMovie editMovie = new Form_EditMovie(movie.movie);
                             editMovie.ShowDialog();
                         };
                     }
