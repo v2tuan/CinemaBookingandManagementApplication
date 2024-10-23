@@ -1541,7 +1541,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
         }
         //hàm hoàn thành bill
-        public static void CompleteBill(string bId, string cusId, List<Ticket> tickets, List<Combo> combos, decimal totalPrice)
+        public static void CompleteBill(string bId, string cusId, List<Ticket> tickets, List<DetailCombo> combos, decimal totalPrice)
         {
             using (SqlConnection conn = myDB.getConnectionFromFile())
             {
@@ -1556,12 +1556,16 @@ namespace CinemaBookingandManagementApplication.configs
                     cmd.Parameters.AddWithValue("@cusId", cusId);
                     cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
 
-                    // Serialize tickets and combos to JSON
+                    // Serialize tickets to JSON
                     string ticketJson = JsonConvert.SerializeObject(tickets);
+
+                    // Add ticket JSON parameter
+                    cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+
+                    // Tạo chuỗi JSON cho DetailCombo
                     string comboJson = JsonConvert.SerializeObject(combos);
 
-                    // Add JSON parameters
-                    cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+                    // Add combo JSON parameter
                     cmd.Parameters.AddWithValue("@comboJson", comboJson);
 
                     // Execute stored procedure
@@ -1569,10 +1573,10 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+
     }
 
 
 
 
-}
 }
