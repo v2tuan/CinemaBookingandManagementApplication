@@ -47,7 +47,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
+           // this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
             this.guna2ShadowPanel1.Controls.Add(this.buttonAddMovieSchedule);
             this.guna2ShadowPanel1.Controls.Add(this.buttonDelete);
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
@@ -221,24 +221,24 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonRefresh.BorderRadius = 5;
-            this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonRefresh.Location = new System.Drawing.Point(1035, 10);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
-            this.buttonRefresh.TabIndex = 6;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+           // this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+           // this.buttonRefresh.BorderRadius = 5;
+            //this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+          //  this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+           // this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+           // this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+          //  this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+          //  this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           // this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+          //  this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+          //  this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
+          //  this.buttonRefresh.Location = new System.Drawing.Point(1035, 10);
+          //  this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+          //  this.buttonRefresh.Name = "buttonRefresh";
+          //  this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
+          //  this.buttonRefresh.TabIndex = 6;
+          //  this.buttonRefresh.Text = "Refresh";
+          //  this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // Form_ShowCinema
             // 
