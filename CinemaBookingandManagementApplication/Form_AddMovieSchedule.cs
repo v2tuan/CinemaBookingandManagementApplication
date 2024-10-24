@@ -53,9 +53,20 @@ namespace CinemaBookingandManagementApplication
         {
             byte[] pic = null;
             DataRowView row = (DataRowView)comboBoxMovie.SelectedItem;
-            pic = (byte[])row["images"];
-            MemoryStream picture = new MemoryStream(pic);
-            pic_movie.Image = Image.FromStream(picture);
+            MemoryStream picture = new MemoryStream();
+            if (row["images"] != DBNull.Value)
+            {
+                pic = (byte[])row["images"];
+                picture = new MemoryStream(pic);
+            }
+            else
+            {
+                picture = new MemoryStream();
+                Properties.Resources.nullImage.Save(picture, Properties.Resources.nullImage.RawFormat);
+            }
+
+            pic_movie.Image = Image.FromStream(picture); 
+ 
         }
 
         private void comboBoxCinema_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,7 +75,7 @@ namespace CinemaBookingandManagementApplication
             comboBoxRoom.DataSource = roomDao.GetRoomsByCinemaId(comboBoxCinema.SelectedValue.ToString());
             comboBoxRoom.ValueMember = "rid";
             comboBoxRoom.DisplayMember = "rname";
-            textboxSeatEmpty.Text = roomDao.GetTotalSeatsByRoomId(comboBoxRoom.SelectionStart.ToString()).ToString();
+           // textboxSeatEmpty.Text = roomDao.GetTotalSeatsByRoomId(comboBoxRoom.SelectionStart.ToString()).ToString();
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)

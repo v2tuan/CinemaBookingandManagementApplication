@@ -63,20 +63,21 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonAdd.Location = new System.Drawing.Point(60, 887);
+            this.buttonAdd.Location = new System.Drawing.Point(53, 710);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(529, 59);
+            this.buttonAdd.Size = new System.Drawing.Size(470, 47);
             this.buttonAdd.TabIndex = 67;
             this.buttonAdd.Text = "Add Movie Schedule";
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(350, 538);
+            this.label7.Location = new System.Drawing.Point(311, 430);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 23);
+            this.label7.Size = new System.Drawing.Size(99, 19);
             this.label7.TabIndex = 65;
             this.label7.Text = "Seat Empty";
             // 
@@ -93,13 +94,13 @@
             this.textboxSeatEmpty.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textboxSeatEmpty.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxSeatEmpty.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textboxSeatEmpty.Location = new System.Drawing.Point(354, 567);
-            this.textboxSeatEmpty.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textboxSeatEmpty.Location = new System.Drawing.Point(315, 454);
+            this.textboxSeatEmpty.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textboxSeatEmpty.Name = "textboxSeatEmpty";
             this.textboxSeatEmpty.PasswordChar = '\0';
             this.textboxSeatEmpty.PlaceholderText = "Input Duration";
             this.textboxSeatEmpty.SelectedText = "";
-            this.textboxSeatEmpty.Size = new System.Drawing.Size(238, 41);
+            this.textboxSeatEmpty.Size = new System.Drawing.Size(212, 33);
             this.textboxSeatEmpty.TabIndex = 66;
             // 
             // comboBoxRoom
@@ -115,19 +116,19 @@
             this.comboBoxRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxRoom.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
             this.comboBoxRoom.ItemHeight = 35;
-            this.comboBoxRoom.Location = new System.Drawing.Point(60, 567);
+            this.comboBoxRoom.Location = new System.Drawing.Point(53, 454);
             this.comboBoxRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxRoom.Name = "comboBoxRoom";
-            this.comboBoxRoom.Size = new System.Drawing.Size(262, 41);
+            this.comboBoxRoom.Size = new System.Drawing.Size(233, 41);
             this.comboBoxRoom.TabIndex = 64;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(59, 538);
+            this.label4.Location = new System.Drawing.Point(52, 430);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 23);
+            this.label4.Size = new System.Drawing.Size(57, 19);
             this.label4.TabIndex = 63;
             this.label4.Text = "Room";
             // 
@@ -138,13 +139,12 @@
             this.dateTimePickerFinishTime.FillColor = System.Drawing.Color.White;
             this.dateTimePickerFinishTime.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerFinishTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerFinishTime.Location = new System.Drawing.Point(354, 776);
-            this.dateTimePickerFinishTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerFinishTime.Location = new System.Drawing.Point(315, 621);
             this.dateTimePickerFinishTime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerFinishTime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerFinishTime.Name = "dateTimePickerFinishTime";
             this.dateTimePickerFinishTime.ShowUpDown = true;
-            this.dateTimePickerFinishTime.Size = new System.Drawing.Size(238, 41);
+            this.dateTimePickerFinishTime.Size = new System.Drawing.Size(212, 33);
             this.dateTimePickerFinishTime.TabIndex = 62;
             this.dateTimePickerFinishTime.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
@@ -152,9 +152,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(350, 749);
+            this.label3.Location = new System.Drawing.Point(311, 599);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 23);
+            this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 61;
             this.label3.Text = "Finish time";
             // 
@@ -165,13 +165,12 @@
             this.dateTimePickerShowtime.FillColor = System.Drawing.Color.White;
             this.dateTimePickerShowtime.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerShowtime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePickerShowtime.Location = new System.Drawing.Point(58, 776);
-            this.dateTimePickerShowtime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerShowtime.Location = new System.Drawing.Point(52, 621);
             this.dateTimePickerShowtime.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerShowtime.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerShowtime.Name = "dateTimePickerShowtime";
             this.dateTimePickerShowtime.ShowUpDown = true;
-            this.dateTimePickerShowtime.Size = new System.Drawing.Size(263, 41);
+            this.dateTimePickerShowtime.Size = new System.Drawing.Size(234, 33);
             this.dateTimePickerShowtime.TabIndex = 60;
             this.dateTimePickerShowtime.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
@@ -179,9 +178,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 749);
+            this.label2.Location = new System.Drawing.Point(50, 599);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 23);
+            this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 59;
             this.label2.Text = "Showtime";
             // 
@@ -189,9 +188,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(56, 27);
+            this.label1.Location = new System.Drawing.Point(50, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(254, 28);
+            this.label1.Size = new System.Drawing.Size(214, 23);
             this.label1.TabIndex = 58;
             this.label1.Text = "Add Movie Schedule";
             // 
@@ -202,12 +201,11 @@
             this.dateTimePickerRelease.FillColor = System.Drawing.Color.White;
             this.dateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerRelease.Location = new System.Drawing.Point(60, 672);
-            this.dateTimePickerRelease.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateTimePickerRelease.Location = new System.Drawing.Point(53, 538);
             this.dateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerRelease.Name = "dateTimePickerRelease";
-            this.dateTimePickerRelease.Size = new System.Drawing.Size(262, 41);
+            this.dateTimePickerRelease.Size = new System.Drawing.Size(233, 33);
             this.dateTimePickerRelease.TabIndex = 57;
             this.dateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
@@ -215,9 +213,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(59, 634);
+            this.label6.Location = new System.Drawing.Point(52, 507);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 23);
+            this.label6.Size = new System.Drawing.Size(117, 19);
             this.label6.TabIndex = 56;
             this.label6.Text = "Release date";
             // 
@@ -234,19 +232,19 @@
             this.comboBoxCinema.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxCinema.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
             this.comboBoxCinema.ItemHeight = 35;
-            this.comboBoxCinema.Location = new System.Drawing.Point(60, 465);
+            this.comboBoxCinema.Location = new System.Drawing.Point(53, 372);
             this.comboBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxCinema.Name = "comboBoxCinema";
-            this.comboBoxCinema.Size = new System.Drawing.Size(532, 41);
+            this.comboBoxCinema.Size = new System.Drawing.Size(473, 41);
             this.comboBoxCinema.TabIndex = 55;
             // 
             // Cinema
             // 
             this.Cinema.AutoSize = true;
             this.Cinema.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cinema.Location = new System.Drawing.Point(59, 431);
+            this.Cinema.Location = new System.Drawing.Point(52, 345);
             this.Cinema.Name = "Cinema";
-            this.Cinema.Size = new System.Drawing.Size(88, 23);
+            this.Cinema.Size = new System.Drawing.Size(74, 19);
             this.Cinema.TabIndex = 54;
             this.Cinema.Text = "Cinema";
             // 
@@ -263,19 +261,19 @@
             this.comboBoxMovie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxMovie.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
             this.comboBoxMovie.ItemHeight = 35;
-            this.comboBoxMovie.Location = new System.Drawing.Point(60, 367);
+            this.comboBoxMovie.Location = new System.Drawing.Point(53, 294);
             this.comboBoxMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxMovie.Name = "comboBoxMovie";
-            this.comboBoxMovie.Size = new System.Drawing.Size(532, 41);
+            this.comboBoxMovie.Size = new System.Drawing.Size(473, 41);
             this.comboBoxMovie.TabIndex = 53;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(56, 333);
+            this.label14.Location = new System.Drawing.Point(50, 266);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 23);
+            this.label14.Size = new System.Drawing.Size(60, 19);
             this.label14.TabIndex = 52;
             this.label14.Text = "Movie";
             // 
@@ -284,9 +282,10 @@
             this.pic_movie.BorderRadius = 10;
             this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
             this.pic_movie.ImageRotate = 0F;
-            this.pic_movie.Location = new System.Drawing.Point(244, 89);
+            this.pic_movie.Location = new System.Drawing.Point(217, 71);
+            this.pic_movie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_movie.Name = "pic_movie";
-            this.pic_movie.Size = new System.Drawing.Size(150, 225);
+            this.pic_movie.Size = new System.Drawing.Size(133, 180);
             this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_movie.TabIndex = 51;
             this.pic_movie.TabStop = false;
@@ -306,19 +305,19 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonDelete.Location = new System.Drawing.Point(60, 979);
+            this.buttonDelete.Location = new System.Drawing.Point(53, 783);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(529, 59);
+            this.buttonDelete.Size = new System.Drawing.Size(470, 47);
             this.buttonDelete.TabIndex = 68;
             this.buttonDelete.Text = "Delete";
             // 
             // Form_EditMovieSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(648, 1080);
+            this.ClientSize = new System.Drawing.Size(576, 844);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label7);
@@ -337,6 +336,7 @@
             this.Controls.Add(this.comboBoxMovie);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pic_movie);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_EditMovieSchedule";
             this.Text = "Form_EditMovieSchedule";
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();

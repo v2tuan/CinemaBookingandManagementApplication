@@ -16,5 +16,10 @@ namespace CinemaBookingandManagementApplication
         {
             InitializeComponent();
         }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

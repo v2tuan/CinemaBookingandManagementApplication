@@ -53,5 +53,18 @@ namespace CinemaBookingandManagementApplication
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            RoomDaoImpl roomDaoImpl = new RoomDaoImpl();
+            room.Rname = textBoxCinemaName.Text;
+            roomDaoImpl.update(room);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            RoomDaoImpl roomDaoImpl = new RoomDaoImpl();
+            roomDaoImpl.delete(room);
+        }
     }
 }

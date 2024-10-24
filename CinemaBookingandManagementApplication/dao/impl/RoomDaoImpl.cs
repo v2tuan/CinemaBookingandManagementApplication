@@ -32,6 +32,18 @@ namespace CinemaBookingandManagementApplication.dao.impl
             string name = room.Rname;
             Procedure.CreateNewRoom(rid, name, cid);
         }
+        public void update(Room room)
+        {
+            string rid = room.Rid;
+            string cid = room.Cid;
+            string name = room.Rname;
+            Procedure.UpdateRoom(rid, name, cid);
+        }
+        public void delete(Room room)
+        {
+            string rid = room.Rid;
+            Procedure.DeleteRoom(rid);
+        }
         public String IDNext()
         {
             try
