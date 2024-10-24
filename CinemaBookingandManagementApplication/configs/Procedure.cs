@@ -65,14 +65,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure và kiểm tra số hàng bị ảnh hưởng
                         int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Thêm thành công!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Thêm không thành công.");
-                        }
+                       
                     }
                 }
                 catch (SqlException ex)
