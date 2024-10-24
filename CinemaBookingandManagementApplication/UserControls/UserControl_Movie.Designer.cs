@@ -83,7 +83,7 @@
             this.pic_movie.Location = new System.Drawing.Point(0, 0);
             this.pic_movie.Name = "pic_movie";
             this.pic_movie.Size = new System.Drawing.Size(200, 300);
-            this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_movie.TabIndex = 3;
             this.pic_movie.TabStop = false;
             this.pic_movie.MouseEnter += new System.EventHandler(this.pic_movie_MouseEnter);
