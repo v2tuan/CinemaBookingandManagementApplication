@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_detailMovie));
-            CinemaBookingandManagementApplication.models.Cinemas cinemas1 = new CinemaBookingandManagementApplication.models.Cinemas();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.labelName = new System.Windows.Forms.Label();
             this.labelDuration = new System.Windows.Forms.Label();
@@ -51,17 +50,15 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanelShow = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.userControl_CinemaShowTime2 = new CinemaBookingandManagementApplication.UserControls.UserControl_CinemaShowTime();
             this.panel1.SuspendLayout();
             this.panelDate.SuspendLayout();
             this.PanelControl.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanelShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
@@ -332,16 +329,23 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1639, 971);
             this.guna2Panel2.TabIndex = 33;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 912);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1639, 59);
+            this.panel3.TabIndex = 16;
+            // 
             // flowLayoutPanelShow
             // 
             this.flowLayoutPanelShow.AutoSize = true;
             this.flowLayoutPanelShow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelShow.Controls.Add(this.userControl_CinemaShowTime2);
             this.flowLayoutPanelShow.Location = new System.Drawing.Point(99, 661);
             this.flowLayoutPanelShow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanelShow.MaximumSize = new System.Drawing.Size(1654, 1838);
             this.flowLayoutPanelShow.Name = "flowLayoutPanelShow";
-            this.flowLayoutPanelShow.Size = new System.Drawing.Size(1435, 150);
+            this.flowLayoutPanelShow.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanelShow.TabIndex = 14;
             // 
             // guna2PictureBox2
@@ -382,37 +386,6 @@
             this.pic_movie.TabIndex = 5;
             this.pic_movie.TabStop = false;
             // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 912);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1639, 59);
-            this.panel3.TabIndex = 16;
-            // 
-            // userControl_CinemaShowTime2
-            // 
-            this.userControl_CinemaShowTime2.AutoSize = true;
-            this.userControl_CinemaShowTime2.BackColor = System.Drawing.Color.White;
-            cinemas1.Area = null;
-            cinemas1.Caddress = null;
-            cinemas1.Cid = null;
-            cinemas1.Cname = null;
-            cinemas1.Hotline = null;
-            cinemas1.Image = null;
-            this.userControl_CinemaShowTime2.cinema = cinemas1;
-            this.userControl_CinemaShowTime2.CinemaID = "";
-            this.userControl_CinemaShowTime2.CinemaName = "";
-            this.userControl_CinemaShowTime2.Date = new System.DateTime(((long)(0)));
-            this.userControl_CinemaShowTime2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.userControl_CinemaShowTime2.Location = new System.Drawing.Point(0, 0);
-            this.userControl_CinemaShowTime2.Margin = new System.Windows.Forms.Padding(0);
-            this.userControl_CinemaShowTime2.MinimumSize = new System.Drawing.Size(1435, 150);
-            this.userControl_CinemaShowTime2.movie = null;
-            this.userControl_CinemaShowTime2.Name = "userControl_CinemaShowTime2";
-            this.userControl_CinemaShowTime2.Size = new System.Drawing.Size(1435, 150);
-            this.userControl_CinemaShowTime2.TabIndex = 16;
-            // 
             // Form_detailMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -435,8 +408,6 @@
             this.PanelControl.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.flowLayoutPanelShow.ResumeLayout(false);
-            this.flowLayoutPanelShow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
@@ -470,7 +441,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelShow;
-        private UserControls.UserControl_CinemaShowTime userControl_CinemaShowTime2;
         private System.Windows.Forms.Panel panel3;
     }
 }

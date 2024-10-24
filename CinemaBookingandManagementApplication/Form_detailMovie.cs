@@ -31,18 +31,43 @@ namespace CinemaBookingandManagementApplication
             labelDescriptions.Text = movie.Descriptions.ToString();
             pic_movie.Image = movie.Image;
 
-            CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
-            DataTable dt = cinemaDaoImpl.GetCinemasWithMovieSchedules(movie.Mid, dateTimePickerDate.Value);
-            flowLayoutPanelShow.Controls.Clear();
-            if (dt != null)
+            //CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
+            //DataTable dt = cinemaDaoImpl.GetCinemasWithMovieSchedules(movie.Mid, dateTimePickerDate.Value);
+            //flowLayoutPanelShow.Controls.Clear();
+            //if (dt != null)
+            //{
+            //    foreach (DataRow dr in dt.Rows)
+            //    {
+            //        UserControl_CinemaShowTime CinemaShowTime = new UserControl_CinemaShowTime();
+            //        CinemaShowTime.movie = movie;
+            //        CinemaShowTime.CinemaName = dr["cname"].ToString();
+            //        CinemaShowTime.CinemaID = dr["cid"].ToString();
+            //        flowLayoutPanelShow.Controls.Add(CinemaShowTime);
+            //    }
+            //}
+            if (movie != null)
             {
-                foreach (DataRow dr in dt.Rows)
+                CinemaDaoImpl cinemaDaoImpl = new CinemaDaoImpl();
+                DataTable dt = cinemaDaoImpl.GetCinemasWithMovieSchedules(movie.Mid, dateTimePickerDate.Value);
+                flowLayoutPanelShow.Controls.Clear();
+                int i = 0;
+                if (dt != null)
                 {
-                    UserControl_CinemaShowTime CinemaShowTime = new UserControl_CinemaShowTime();
-                    CinemaShowTime.movie = movie;
-                    CinemaShowTime.CinemaName = dr["cname"].ToString();
-                    CinemaShowTime.CinemaID = dr["cid"].ToString();
-                    flowLayoutPanelShow.Controls.Add(CinemaShowTime);
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        UserControl_CinemaShowTime CinemaShowTime = new UserControl_CinemaShowTime();
+                        CinemaShowTime.movie = movie;
+                        CinemaShowTime.CinemaName = dr["cname"].ToString();
+                        CinemaShowTime.CinemaID = dr["cid"].ToString();
+                        CinemaShowTime.Date = dateTimePickerDate.Value;
+                        CinemaShowTime.Width = panelDate.Width;
+                        if (i % 2 != 0)
+                        {
+                            CinemaShowTime.setColor();
+                        }
+                        flowLayoutPanelShow.Controls.Add(CinemaShowTime);
+                        i++;
+                    }
                 }
             }
         }
