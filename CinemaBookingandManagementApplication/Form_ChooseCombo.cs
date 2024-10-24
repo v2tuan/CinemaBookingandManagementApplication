@@ -55,8 +55,7 @@ namespace CinemaBookingandManagementApplication
                         else
                         {
                             picture = new MemoryStream();
-                            MessageBox.Show("Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat)");
-                            //Properties.Resources.Image_Error.Save(picture, Properties.Resources.Image_Error.RawFormat);
+                            Properties.Resources.nullImage.Save(picture, Properties.Resources.nullImage.RawFormat);
                         }
                         Image image_Food = Image.FromStream(picture);
 
@@ -74,7 +73,6 @@ namespace CinemaBookingandManagementApplication
                             addClick?.Invoke(this, e, combo);
                         };
 
-                        control_EditCombo.Width = flowLayoutPanelCombo.Width;
                         flowLayoutPanelCombo.Controls.Add(control_EditCombo);
                     }
                 }

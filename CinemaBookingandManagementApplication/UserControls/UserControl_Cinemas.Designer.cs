@@ -48,7 +48,7 @@
             this.labelHotline.AutoSize = true;
             this.labelHotline.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHotline.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.labelHotline.Location = new System.Drawing.Point(417, 125);
+            this.labelHotline.Location = new System.Drawing.Point(434, 125);
             this.labelHotline.Name = "labelHotline";
             this.labelHotline.Size = new System.Drawing.Size(92, 25);
             this.labelHotline.TabIndex = 7;
@@ -59,7 +59,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(341, 125);
+            this.label3.Location = new System.Drawing.Point(358, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 25);
             this.label3.TabIndex = 6;
@@ -70,7 +70,7 @@
             this.labelAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelAddress.AutoSize = true;
             this.labelAddress.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.Location = new System.Drawing.Point(339, 79);
+            this.labelAddress.Location = new System.Drawing.Point(356, 79);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(706, 25);
             this.labelAddress.TabIndex = 5;
@@ -82,7 +82,7 @@
             this.labelName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(339, 19);
+            this.labelName.Location = new System.Drawing.Point(356, 19);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(162, 38);
             this.labelName.TabIndex = 4;
@@ -110,8 +110,8 @@
             this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             this.guna2ShadowPanel1.Radius = 5;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowShift = 3;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1497, 184);
+            this.guna2ShadowPanel1.ShadowShift = 0;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1648, 184);
             this.guna2ShadowPanel1.TabIndex = 10;
             this.guna2ShadowPanel1.Click += new System.EventHandler(this.guna2ShadowPanel1_Click);
             this.guna2ShadowPanel1.DoubleClick += new System.EventHandler(this.guna2ShadowPanel1_DoubleClick);
@@ -127,7 +127,7 @@
             this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
             this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
-            this.buttonEdit.Location = new System.Drawing.Point(1382, 63);
+            this.buttonEdit.Location = new System.Drawing.Point(1533, 63);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -143,7 +143,7 @@
             this.PictureBoxCinema.Location = new System.Drawing.Point(43, 19);
             this.PictureBoxCinema.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PictureBoxCinema.Name = "PictureBoxCinema";
-            this.PictureBoxCinema.Size = new System.Drawing.Size(236, 138);
+            this.PictureBoxCinema.Size = new System.Drawing.Size(262, 131);
             this.PictureBoxCinema.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxCinema.TabIndex = 0;
             this.PictureBoxCinema.TabStop = false;
@@ -154,9 +154,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2ShadowPanel1);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "UserControl_Cinemas";
-            this.Size = new System.Drawing.Size(1497, 184);
+            this.Size = new System.Drawing.Size(1648, 184);
             this.Load += new System.EventHandler(this.UserControl_Cinema_Load);
             this.Click += new System.EventHandler(this.UserControl_Cinema_Click);
             this.DoubleClick += new System.EventHandler(this.UserControl_Cinema_DoubleClick);
