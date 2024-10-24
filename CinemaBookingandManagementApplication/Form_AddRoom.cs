@@ -42,6 +42,7 @@ namespace CinemaBookingandManagementApplication
             room.Rid = RoomDao.IDNext();
             room.Cid = CinemaID;
             room.Rname = textBoxCinemaName.Text;
+
             RoomDao.insert(room);
         }
     }

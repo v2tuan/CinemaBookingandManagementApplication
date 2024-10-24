@@ -842,6 +842,7 @@ namespace CinemaBookingandManagementApplication.configs
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
                         
+                        
                     }
                 }
                 catch (Exception ex)
@@ -887,6 +888,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure
                         cmd.ExecuteNonQuery();
+                      
                         
                     }
                 }
@@ -1061,7 +1063,7 @@ namespace CinemaBookingandManagementApplication.configs
         // hàm thủ tục
         public static void DeleteRoom(string roomId)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa phòng này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
@@ -1081,7 +1083,7 @@ namespace CinemaBookingandManagementApplication.configs
                         conn.Open();
 
                         // Tạo lệnh để gọi stored procedure
-                        using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_ROOM", conn))
+                        using (SqlCommand cmd = new SqlCommand("DELETE_ROOM", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1118,7 +1120,7 @@ namespace CinemaBookingandManagementApplication.configs
         // hàm xóa seat 
         public static void DeleteSeat(int seatId)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa ghế này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
@@ -1138,7 +1140,7 @@ namespace CinemaBookingandManagementApplication.configs
                         conn.Open();
 
                         // Tạo lệnh để gọi stored procedure
-                        using (SqlCommand cmd = new SqlCommand("EXEC DELETE_SEAT", conn))
+                        using (SqlCommand cmd = new SqlCommand(" DELETE_SEAT", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1173,7 +1175,7 @@ namespace CinemaBookingandManagementApplication.configs
         // delete customer
         public static void DeleteCustomer(string customerId)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa khách hàng này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {     
                 // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
@@ -1193,7 +1195,7 @@ namespace CinemaBookingandManagementApplication.configs
                         conn.Open();
 
                         // Tạo lệnh để gọi stored procedure
-                        using (SqlCommand cmd = new SqlCommand(" EXEC DELETE_CUSTOMER", conn))
+                        using (SqlCommand cmd = new SqlCommand(" DELETE_CUSTOMER", conn))
                         {
                             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1286,7 +1288,7 @@ namespace CinemaBookingandManagementApplication.configs
         // ham delete cinema
         public static void DeleteCinema(string cinemaId)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa Cinema này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
@@ -1342,7 +1344,7 @@ namespace CinemaBookingandManagementApplication.configs
         public static void DeleteShowtime(string showtimeId)
         {
 
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa combo này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa Lịch chiếu này không?", "Xác Nhận Xóa", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
@@ -1572,14 +1574,7 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Thực thi stored procedure và kiểm tra số hàng bị ảnh hưởng
                         int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Cập nhật thành công!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Cập nhật không thành công.");
-                        }
+                        
                     }
                 }
                 catch (SqlException ex)

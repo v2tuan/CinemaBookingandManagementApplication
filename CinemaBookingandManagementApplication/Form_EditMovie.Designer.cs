@@ -87,10 +87,10 @@
             this.guna2Panel1.Controls.Add(this.textBoxAgeRestriction);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 50);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 40);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1167, 676);
+            this.guna2Panel1.Size = new System.Drawing.Size(1037, 540);
             this.guna2Panel1.TabIndex = 37;
             // 
             // textBoxRevenue
@@ -106,22 +106,22 @@
             this.textBoxRevenue.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxRevenue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRevenue.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxRevenue.Location = new System.Drawing.Point(897, 85);
-            this.textBoxRevenue.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textBoxRevenue.Location = new System.Drawing.Point(797, 68);
+            this.textBoxRevenue.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxRevenue.Name = "textBoxRevenue";
             this.textBoxRevenue.PasswordChar = '\0';
             this.textBoxRevenue.PlaceholderText = "";
             this.textBoxRevenue.SelectedText = "";
-            this.textBoxRevenue.Size = new System.Drawing.Size(229, 41);
+            this.textBoxRevenue.Size = new System.Drawing.Size(204, 33);
             this.textBoxRevenue.TabIndex = 40;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(893, 38);
+            this.label8.Location = new System.Drawing.Point(794, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 23);
+            this.label8.Size = new System.Drawing.Size(82, 19);
             this.label8.TabIndex = 39;
             this.label8.Text = "Revenue";
             // 
@@ -132,12 +132,11 @@
             this.DateTimePickerRelease.FillColor = System.Drawing.Color.White;
             this.DateTimePickerRelease.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DateTimePickerRelease.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.DateTimePickerRelease.Location = new System.Drawing.Point(655, 208);
-            this.DateTimePickerRelease.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DateTimePickerRelease.Location = new System.Drawing.Point(582, 166);
             this.DateTimePickerRelease.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateTimePickerRelease.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateTimePickerRelease.Name = "DateTimePickerRelease";
-            this.DateTimePickerRelease.Size = new System.Drawing.Size(471, 41);
+            this.DateTimePickerRelease.Size = new System.Drawing.Size(419, 33);
             this.DateTimePickerRelease.TabIndex = 38;
             this.DateTimePickerRelease.Value = new System.DateTime(2024, 10, 17, 9, 15, 17, 185);
             // 
@@ -145,39 +144,39 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(650, 169);
+            this.label6.Location = new System.Drawing.Point(578, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(139, 23);
+            this.label6.Size = new System.Drawing.Size(117, 19);
             this.label6.TabIndex = 37;
             this.label6.Text = "Release date";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(178, 765);
+            this.label5.Location = new System.Drawing.Point(158, 612);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 20);
+            this.label5.Size = new System.Drawing.Size(61, 16);
             this.label5.TabIndex = 36;
             this.label5.Text = "200 x 300";
             // 
             // pictureBoxMovie
             // 
             this.pictureBoxMovie.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxMovie.Location = new System.Drawing.Point(40, 346);
-            this.pictureBoxMovie.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxMovie.Location = new System.Drawing.Point(36, 277);
             this.pictureBoxMovie.Name = "pictureBoxMovie";
-            this.pictureBoxMovie.Size = new System.Drawing.Size(200, 300);
+            this.pictureBoxMovie.Size = new System.Drawing.Size(178, 240);
             this.pictureBoxMovie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxMovie.TabIndex = 35;
             this.pictureBoxMovie.TabStop = false;
+            this.pictureBoxMovie.Click += new System.EventHandler(this.pictureBoxMovie_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(36, 179);
+            this.label7.Location = new System.Drawing.Point(32, 143);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 23);
+            this.label7.Size = new System.Drawing.Size(76, 19);
             this.label7.TabIndex = 33;
             this.label7.Text = "Duration";
             // 
@@ -194,21 +193,20 @@
             this.textDuration.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textDuration.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textDuration.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textDuration.Location = new System.Drawing.Point(40, 208);
-            this.textDuration.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textDuration.Location = new System.Drawing.Point(36, 166);
+            this.textDuration.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textDuration.Name = "textDuration";
             this.textDuration.PasswordChar = '\0';
             this.textDuration.PlaceholderText = "Input Duration";
             this.textDuration.SelectedText = "";
-            this.textDuration.Size = new System.Drawing.Size(225, 41);
+            this.textDuration.Size = new System.Drawing.Size(200, 33);
             this.textDuration.TabIndex = 34;
             // 
             // richTextBoxDescription
             // 
-            this.richTextBoxDescription.Location = new System.Drawing.Point(314, 346);
-            this.richTextBoxDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.richTextBoxDescription.Location = new System.Drawing.Point(279, 277);
             this.richTextBoxDescription.Name = "richTextBoxDescription";
-            this.richTextBoxDescription.Size = new System.Drawing.Size(812, 300);
+            this.richTextBoxDescription.Size = new System.Drawing.Size(722, 241);
             this.richTextBoxDescription.TabIndex = 30;
             this.richTextBoxDescription.Text = "";
             // 
@@ -216,9 +214,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(32, 38);
+            this.label3.Location = new System.Drawing.Point(28, 30);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 23);
+            this.label3.Size = new System.Drawing.Size(113, 19);
             this.label3.TabIndex = 6;
             this.label3.Text = "Movie name";
             // 
@@ -226,9 +224,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(310, 298);
+            this.label2.Location = new System.Drawing.Point(276, 238);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 23);
+            this.label2.Size = new System.Drawing.Size(100, 19);
             this.label2.TabIndex = 29;
             this.label2.Text = "Description";
             // 
@@ -236,9 +234,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(310, 169);
+            this.label4.Location = new System.Drawing.Point(276, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 23);
+            this.label4.Size = new System.Drawing.Size(126, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Age restriction";
             // 
@@ -255,10 +253,10 @@
             this.comboBoxType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
             this.comboBoxType.ItemHeight = 35;
-            this.comboBoxType.Location = new System.Drawing.Point(654, 85);
+            this.comboBoxType.Location = new System.Drawing.Point(581, 68);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(212, 41);
+            this.comboBoxType.Size = new System.Drawing.Size(189, 41);
             this.comboBoxType.TabIndex = 28;
             // 
             // textBoxMovieName
@@ -274,22 +272,22 @@
             this.textBoxMovieName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxMovieName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMovieName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxMovieName.Location = new System.Drawing.Point(40, 85);
-            this.textBoxMovieName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textBoxMovieName.Location = new System.Drawing.Point(36, 68);
+            this.textBoxMovieName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxMovieName.Name = "textBoxMovieName";
             this.textBoxMovieName.PasswordChar = '\0';
             this.textBoxMovieName.PlaceholderText = "Input Movie Name";
             this.textBoxMovieName.SelectedText = "";
-            this.textBoxMovieName.Size = new System.Drawing.Size(552, 41);
+            this.textBoxMovieName.Size = new System.Drawing.Size(491, 33);
             this.textBoxMovieName.TabIndex = 8;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(649, 38);
+            this.label14.Location = new System.Drawing.Point(577, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 23);
+            this.label14.Size = new System.Drawing.Size(60, 19);
             this.label14.TabIndex = 27;
             this.label14.Text = "Genre";
             // 
@@ -306,13 +304,13 @@
             this.textBoxAgeRestriction.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxAgeRestriction.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAgeRestriction.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxAgeRestriction.Location = new System.Drawing.Point(314, 208);
-            this.textBoxAgeRestriction.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.textBoxAgeRestriction.Location = new System.Drawing.Point(279, 166);
+            this.textBoxAgeRestriction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBoxAgeRestriction.Name = "textBoxAgeRestriction";
             this.textBoxAgeRestriction.PasswordChar = '\0';
             this.textBoxAgeRestriction.PlaceholderText = "Input Price";
             this.textBoxAgeRestriction.SelectedText = "";
-            this.textBoxAgeRestriction.Size = new System.Drawing.Size(279, 41);
+            this.textBoxAgeRestriction.Size = new System.Drawing.Size(248, 33);
             this.textBoxAgeRestriction.TabIndex = 9;
             // 
             // panelHeader
@@ -328,7 +326,7 @@
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
             this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1167, 50);
+            this.panelHeader.Size = new System.Drawing.Size(1037, 40);
             this.panelHeader.TabIndex = 36;
             // 
             // label1
@@ -336,10 +334,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(32, 12);
+            this.label1.Location = new System.Drawing.Point(28, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 28);
+            this.label1.Size = new System.Drawing.Size(110, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Edit Movie";
             // 
@@ -348,10 +346,10 @@
             this.guna2ControlBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1107, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(984, 0);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 50);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(53, 40);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -361,10 +359,10 @@
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.guna2Panel2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 726);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 580);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1167, 62);
+            this.guna2Panel2.Size = new System.Drawing.Size(1037, 50);
             this.guna2Panel2.TabIndex = 38;
             // 
             // buttonEdit
@@ -380,10 +378,10 @@
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
             this.buttonEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonEdit.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonEdit.Location = new System.Drawing.Point(947, 11);
+            this.buttonEdit.Location = new System.Drawing.Point(842, 9);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(179, 40);
+            this.buttonEdit.Size = new System.Drawing.Size(159, 32);
             this.buttonEdit.TabIndex = 3;
             this.buttonEdit.Text = "Edit Movie";
             this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
@@ -403,23 +401,24 @@
             this.buttonDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.buttonDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonDelete.Location = new System.Drawing.Point(783, 11);
+            this.buttonDelete.Location = new System.Drawing.Point(696, 9);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(144, 40);
+            this.buttonDelete.Size = new System.Drawing.Size(128, 32);
             this.buttonDelete.TabIndex = 2;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // Form_EditMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 788);
+            this.ClientSize = new System.Drawing.Size(1037, 630);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.guna2Panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_EditMovie";
             this.Text = "Form_EditMovie";
             this.Load += new System.EventHandler(this.Form_EditMovie_Load);
