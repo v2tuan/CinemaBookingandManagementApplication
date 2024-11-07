@@ -39,7 +39,7 @@
             // 
             // btn_buy
             // 
-            this.btn_buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            this.btn_buy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(70)))), ((int)(((byte)(47)))));
             this.btn_buy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_buy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btn_buy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

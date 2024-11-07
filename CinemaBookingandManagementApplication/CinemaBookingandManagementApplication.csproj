@@ -283,6 +283,12 @@
     <Compile Include="UserControls\UserControl_Movie.Designer.cs">
       <DependentUpon>UserControl_Movie.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl_MovieType2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl_MovieType2.Designer.cs">
+      <DependentUpon>UserControl_MovieType2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UserControl_Room.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Movie.resx">
       <DependentUpon>UserControl_Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl_MovieType2.resx">
+      <DependentUpon>UserControl_MovieType2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UserControl_Room.resx">
       <DependentUpon>UserControl_Room.cs</DependentUpon>
