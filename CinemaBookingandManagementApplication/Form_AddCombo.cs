@@ -1,4 +1,5 @@
-﻿using CinemaBookingandManagementApplication.dao.impl;
+﻿using CinemaBookingandManagementApplication.configs;
+using CinemaBookingandManagementApplication.dao.impl;
 using CinemaBookingandManagementApplication.models;
 using System;
 using System.Collections.Generic;
@@ -36,13 +37,19 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Combo combo = new Combo();
-            combo.ComboName = textBoxComboName.Text.Trim();
-            combo.Descriptions = textBoxDescription.Text.Trim();
-            combo.ComboPrice = decimal.Parse(textBoxPrice.Text);
-            combo.Image = pictureBoxCombo.Image;
-            ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
-            comboDaoImpl.CreateNewCombo(combo);
+            if (Function.IsNumber(textBoxPrice.Text))
+            {
+                Combo combo = new Combo();
+                combo.ComboName = textBoxComboName.Text.Trim();
+                combo.Descriptions = textBoxDescription.Text.Trim();
+                combo.ComboPrice = decimal.Parse(textBoxPrice.Text);
+                combo.Image = pictureBoxCombo.Image;
+                ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
+                comboDaoImpl.CreateNewCombo(combo);
+            }
+            else
+                MessageBox.Show("Yêu Cầu Nhập Đúng Dữ liệu");
+           
         }
 
         private void pictureBoxCombo_Click(object sender, EventArgs e)

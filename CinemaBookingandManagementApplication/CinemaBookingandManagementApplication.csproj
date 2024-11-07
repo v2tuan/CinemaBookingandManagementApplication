@@ -225,6 +225,12 @@
     <Compile Include="Form_TopCombo.Designer.cs">
       <DependentUpon>Form_TopCombo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="models\Actor.cs" />
     <Compile Include="models\Bill.cs" />
     <Compile Include="models\Cinemas.cs" />
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InformationMovie.resx">
       <DependentUpon>Form_InformationMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Main.resx">
       <DependentUpon>Form_Main.cs</DependentUpon>

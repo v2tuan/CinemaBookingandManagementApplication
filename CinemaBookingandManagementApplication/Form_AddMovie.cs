@@ -50,19 +50,26 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-
-            Movies movie = new Movies();
-            MovieDaoImpl MovieDao = new MovieDaoImpl();
-            movie.Mid = MovieDao.IDNext();
-            movie.Moviename = textBoxMovieName.Text;
-            movie.AgeRestriction = int.Parse(textBoxAgeRestriction.Text);
-            movie.Revenue = 0;
-            movie.Mtid = comboBoxType.SelectedValue.ToString();
-            movie.ReleaseDate = DateTimePickerRelease.Value;
-            movie.Duration = int.Parse(textDuration.Text);
-            movie.Descriptions = richTextBoxDescription.Text;
-            movie.Image = pictureBoxMovie.Image;
-            MovieDao.insert(movie);
+            if (Function.IsNumber(textBoxAgeRestriction.Text) || Function.IsNumber(textDuration.Text))
+            {
+                Movies movie = new Movies();
+                MovieDaoImpl MovieDao = new MovieDaoImpl();
+                movie.Mid = MovieDao.IDNext();
+                movie.Moviename = textBoxMovieName.Text;
+                movie.AgeRestriction = int.Parse(textBoxAgeRestriction.Text);
+                movie.Revenue = 0;
+                movie.Mtid = comboBoxType.SelectedValue.ToString();
+                movie.ReleaseDate = DateTimePickerRelease.Value;
+                movie.Duration = int.Parse(textDuration.Text);
+                movie.Descriptions = richTextBoxDescription.Text;
+                movie.Image = pictureBoxMovie.Image;
+                MovieDao.insert(movie);
+            }
+            else
+            {
+                MessageBox.Show("Yêu cầu nhập đúng dữ liệu !");
+            }
+            
         }
     }
 }
