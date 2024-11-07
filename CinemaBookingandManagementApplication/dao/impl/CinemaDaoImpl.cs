@@ -29,15 +29,21 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
         public void insert(Cinemas cinema)
         {
-            string cid = cinema.Cid;
-            string cname = cinema.Cname;
-            string caddress = cinema.Caddress;
-            string hotline = cinema.Hotline;
-            string area = cinema.Area;
-
-            MemoryStream pic = new MemoryStream();
-            cinema.Image.Save(pic, cinema.Image.RawFormat);
-            Procedure.CreateNewCinema(cid, cname, caddress, hotline, area, pic);
+            try
+            {
+                string cid = cinema.Cid;
+                string cname = cinema.Cname;
+                string caddress = cinema.Caddress;
+                string hotline = cinema.Hotline;
+                string area = cinema.Area;
+                MemoryStream pic = new MemoryStream();
+                cinema.Image.Save(pic, cinema.Image.RawFormat);
+                Procedure.CreateNewCinema(cid, cname, caddress, hotline, area, pic);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         public String IDNext()
