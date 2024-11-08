@@ -85,54 +85,44 @@ namespace CinemaBookingandManagementApplication.configs
         }
         public static void CreateNewCinema(string cid, string cname, string caddress, string hotline, string area, MemoryStream images)
         {
-            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
             using (SqlConnection conn = myDB.getConnectionFromFile())
             {
                 conn.InfoMessage += (sender, e) =>
                 {
-                    // Hiển thị thông báo từ SQL Server qua MessageBox
                     MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 };
 
                 try
                 {
-                    // Mở kết nối
                     conn.Open();
-
-                    // Tạo lệnh để gọi stored procedure
                     using (SqlCommand cmd = new SqlCommand("CreateNewCinema", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-
-                        // Thêm các tham số cho stored procedure
                         cmd.Parameters.AddWithValue("@cid", cid);
                         cmd.Parameters.AddWithValue("@cname", cname);
                         cmd.Parameters.AddWithValue("@caddress", caddress);
                         cmd.Parameters.AddWithValue("@hotline", hotline);
                         cmd.Parameters.AddWithValue("@area", area);
-                        // Thêm tham số hình ảnh (image có thể null)
+
+                        // Kiểm tra hình ảnh, nếu null thì truyền DBNull.Value
                         if (images != null)
                         {
                             cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = images.ToArray();
                         }
                         else
                         {
-                            MessageBox.Show("không có ảnh");
                             cmd.Parameters.Add("@images", SqlDbType.VarBinary).Value = DBNull.Value;
                         }
-                        // Thực thi stored procedure
+
                         cmd.ExecuteNonQuery();
-                       
                     }
                 }
                 catch (SqlException ex)
                 {
-                    // Hiển thị thông báo lỗi nếu có
                     MessageBox.Show("Error occurred: " + ex.Message);
                 }
                 finally
                 {
-                    // Đảm bảo đóng kết nối
                     if (conn.State == ConnectionState.Open)
                     {
                         conn.Close();
@@ -140,6 +130,8 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+
+
         public static void UpdateCinema(string cid, string cname, string caddress, string hotline, string area, MemoryStream images)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
