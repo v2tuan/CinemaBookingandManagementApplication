@@ -1026,5 +1026,22 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
         }
+
+
+        // hàm check nhập liệu là só
+
+        public static  bool IsNumber(string input)
+        {
+            // Kiểm tra nếu input có thể chuyển đổi thành số
+            return int.TryParse(input, out _);
+        }
+
+        // hàm check nhập liệu là chữ
+        public static bool IsAllLetters(string input)
+        {
+            // Kiểm tra chuỗi không trống và tất cả ký tự là chữ
+            return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
+        }
+
     }
 }

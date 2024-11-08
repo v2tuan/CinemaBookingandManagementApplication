@@ -91,7 +91,7 @@ namespace CinemaBookingandManagementApplication.UserControls
         {
             if (seat != null)
             {
-                if (seat.States == 0)
+                if (seat.States == 2)
                 {
                     buttonSeat.FillColor = Color.LightGray;
                     buttonSeat.BorderThickness = 0;
