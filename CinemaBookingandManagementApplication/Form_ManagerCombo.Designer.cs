@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerCombo));
             this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.buttonRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
@@ -39,7 +40,6 @@
             this.userControl_EditCombo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.userControl_EditCombo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.userControl_EditCombo4 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
-            this.buttonRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelCombo.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,27 @@
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(1509, 52);
             this.guna2ShadowPanel1.TabIndex = 9;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.buttonRefresh.BorderRadius = 5;
+            this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
+            this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
+            this.buttonRefresh.Location = new System.Drawing.Point(621, 10);
+            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
+            this.buttonRefresh.TabIndex = 5;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // guna2Button1
             // 
             this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -93,7 +114,7 @@
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(1015, 11);
+            this.guna2Button1.Location = new System.Drawing.Point(788, 11);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(172, 32);
@@ -208,27 +229,6 @@
             this.userControl_EditCombo4.Name = "userControl_EditCombo4";
             this.userControl_EditCombo4.Size = new System.Drawing.Size(1465, 119);
             this.userControl_EditCombo4.TabIndex = 3;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.buttonRefresh.BorderRadius = 5;
-            this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonRefresh.Location = new System.Drawing.Point(741, 10);
-            this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
-            this.buttonRefresh.TabIndex = 5;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // Form_ManagerCombo
             // 

@@ -47,7 +47,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
+            //this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
             this.guna2ShadowPanel1.Controls.Add(this.buttonAddMovieSchedule);
             this.guna2ShadowPanel1.Controls.Add(this.buttonDelete);
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
@@ -221,7 +221,7 @@
             // 
             // buttonRefresh
             // 
-            this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            /*this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.buttonRefresh.BorderRadius = 5;
             this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -238,7 +238,7 @@
             this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
             this.buttonRefresh.TabIndex = 6;
             this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);*/
             // 
             // Form_ShowCinema
             // 

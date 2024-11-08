@@ -107,7 +107,6 @@ namespace CinemaBookingandManagementApplication.configs
             return cinema;
         }
         //check id cinema
-
         public static bool checkCinemaID(string cinemaID)
         {
             bool exists = false;
