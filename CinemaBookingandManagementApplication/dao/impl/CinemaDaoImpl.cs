@@ -37,14 +37,22 @@ namespace CinemaBookingandManagementApplication.dao.impl
                 string hotline = cinema.Hotline;
                 string area = cinema.Area;
                 MemoryStream pic = new MemoryStream();
-                cinema.Image.Save(pic, cinema.Image.RawFormat);
-                Procedure.CreateNewCinema(cid, cname, caddress, hotline, area, pic);
+
+                // Kiểm tra nếu Image khác null thì lưu vào MemoryStream
+                if (cinema.Image != null)
+                {
+                    cinema.Image.Save(pic, cinema.Image.RawFormat);
+                }
+
+                // Gọi stored procedure, truyền DBNull.Value nếu không có ảnh
+                Procedure.CreateNewCinema(cid, cname, caddress, hotline, area, cinema.Image != null ? pic : null);
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
         }
+
 
         public String IDNext()
         {
