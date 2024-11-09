@@ -25,7 +25,7 @@ namespace CinemaBookingandManagementApplication
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //  Application.Run(new Form_Main());
-            Application.Run(new Form_Login());
+            Application.Run(new Form_Register());
             //Application.Run(new Form_ManagerMovie());
 
         }

@@ -477,6 +477,7 @@
             this.Controls.Add(this.PanelControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Register";
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
