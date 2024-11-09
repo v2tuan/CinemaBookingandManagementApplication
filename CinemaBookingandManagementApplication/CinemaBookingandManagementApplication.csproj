@@ -58,6 +58,7 @@
     <Compile Include="configs\Function.cs" />
     <Compile Include="configs\My_DB.cs" />
     <Compile Include="configs\Procedure.cs" />
+    <Compile Include="configs\User_Static.cs" />
     <Compile Include="configs\Views.cs" />
     <Compile Include="dao\IFoodItemDao.cs" />
     <Compile Include="dao\IMovieDao.cs" />
