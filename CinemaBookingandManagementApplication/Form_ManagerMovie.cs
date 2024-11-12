@@ -94,5 +94,11 @@ namespace CinemaBookingandManagementApplication
         {
             Form_ManagerMovie_Load(sender, e);
         }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FormHuy a = new FormHuy();
+            a.ShowDialog();
+        }
     }
 }

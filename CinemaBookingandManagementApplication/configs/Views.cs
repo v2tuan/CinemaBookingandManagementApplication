@@ -71,6 +71,37 @@ namespace CinemaBookingandManagementApplication.configs
 
             return dataTable;
         }
+        // view của Huy
+        public static DataTable GetMovieRevenueView()
+        {
+            DataTable dataTable = new DataTable();
+            string query = "SELECT * FROM MovieRevenueView"; // Truy vấn view MovieRevenueView
+
+            try
+            {
+                conn.Open(); // Mở kết nối
+
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(dataTable); // Điền dữ liệu vào DataTable
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message); // Xử lý lỗi nếu có
+            }
+            finally
+            {
+                conn.Close(); // Đảm bảo đóng kết nối
+            }
+
+            return dataTable; // Trả về DataTable chứa dữ liệu
+        }
+
+
     }
 
 }

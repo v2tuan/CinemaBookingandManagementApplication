@@ -1640,6 +1640,62 @@ namespace CinemaBookingandManagementApplication.configs
                 }
             }
         }
+        //chức nang mới của Huy
+        public static DataTable GenerateTop5MoviesReport()
+        {
+            // Tạo DataTable để lưu kết quả trả về từ stored procedure
+            DataTable dataTable = new DataTable();
+
+            // Sử dụng kết nối từ file
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                // Thêm sự kiện thông báo từ SQL Server
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi stored procedure GenerateTop5MoviesReport
+                    using (SqlCommand cmd = new SqlCommand("GenerateTop5MoviesReport", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số vào nếu có (nếu stored procedure yêu cầu tham số, hiện tại không có)
+                        // cmd.Parameters.AddWithValue("@paramName", value); // nếu cần
+
+                        // Sử dụng SqlDataAdapter để lấy dữ liệu trả về từ stored procedure
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            // Điền dữ liệu vào DataTable
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+
+            // Trả về DataTable chứa kết quả
+            return dataTable;
+        }
+
 
     }
 
