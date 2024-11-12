@@ -108,5 +108,14 @@ namespace CinemaBookingandManagementApplication.dao.impl
         {
             return Function.GetListMovie();
         }
+        public System.Data.DataTable GetListMovieByCIDandTime(string cid, DateTime time )
+        {
+            return Function.GetMovieByCinemaAndTime(cid,time);
+        }
+        public System.Data.DataTable GetListMovieByTime( DateTime time)
+        {
+            return Function.GetMovieSchedulesByDate(time);
+        }
+
     }
 }

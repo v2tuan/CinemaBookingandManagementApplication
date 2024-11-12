@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace CinemaBookingandManagementApplication.configs
 {
     static class Function
@@ -739,6 +740,38 @@ namespace CinemaBookingandManagementApplication.configs
             return cinemaName; // Trả về tên rạp phim
         }
 
+        public static string GetCinemaAreaById(string cinemaId)
+        {
+            string cinemaArea = string.Empty;
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT dbo.GET_CINEMA_AREA_BY_ID(@CinemaId)", conn))
+                    {
+                        // Thêm tham số cinemaId vào lệnh
+                        cmd.Parameters.AddWithValue("@CinemaId", cinemaId);
+
+                        // Thực thi lệnh và lấy kết quả
+                        cinemaArea = (string)cmd.ExecuteScalar();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemaArea; // Trả về tên rạp phim
+        }
+
         // hàm lấy lịch chiếu từ id của movie
 
 
@@ -792,7 +825,7 @@ namespace CinemaBookingandManagementApplication.configs
                     conn.Open();
 
                     // Tạo lệnh để gọi function SQL
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_DATE(@ShowDate)", conn))
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIES_BY_DATE(@ShowDate)", conn))
                     {
                         // Thêm tham số showDate vào lệnh
                         cmd.Parameters.AddWithValue("@ShowDate", showDate);
@@ -928,6 +961,42 @@ namespace CinemaBookingandManagementApplication.configs
             return schedulesTable; // Trả về danh sách lịch chiếu của phim
         }
 
+        public static DataTable GetMovieByCinemaAndTime(string cinemaId, DateTime showDate)
+        {
+            DataTable schedulesTable = new DataTable();
+
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi function SQL
+                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM GET_MOVIE_SCHEDULES_BY_CID_DATE(@CinemaId, @ShowDate)", conn))
+                    {
+                        // Thêm tham số vào lệnh
+                        cmd.Parameters.AddWithValue("@CinemaId", cinemaId);
+                        cmd.Parameters.AddWithValue("@ShowDate", showDate);
+
+                        // Thực thi lệnh và lấy kết quả vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(schedulesTable);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return schedulesTable; // Trả về danh sách lịch chiếu của phim
+        }
+
         //Hàm list ghế theo id room
         public static DataTable GetSeatsByRoomId(string roomId)
         {
@@ -1043,5 +1112,274 @@ namespace CinemaBookingandManagementApplication.configs
             return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
         }
 
+        public static bool CheckUsernameExists(string username)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+
+                // Gọi hàm SQL CheckUsernameExists
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckUsernameExists(@username)", conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    // command.Parameters.AddWithValue("@password", password);
+                    result = (int)command.ExecuteScalar();
+
+                    if (result == 1)
+                    {
+                        exists = true; // Username tồn tại
+                    }
+                    else
+                    {
+                        exists = false; // Username không tồn tại
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+        }
+
+        public static bool CheckLogin(string username,string pass)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+
+                // Gọi hàm SQL CheckUsernameExists
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckLogin(@username,@pass)", conn))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@pass", pass);
+                    // command.Parameters.AddWithValue("@password", password);
+                    result = (int)command.ExecuteScalar();
+
+                    if (result == 1)
+                    {
+                        exists = true; // Username tồn tại
+                    }
+                    else
+                    {
+                        exists = false; // Username không tồn tại
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+        }
+        public static bool CreateLoginUser(string roleName, string loginName, string password)
+        {
+            bool isSuccess = false;
+
+            try
+            {
+                // Mở kết nối
+                conn.Open();
+
+                // Tạo SqlCommand để gọi stored procedure
+                using (SqlCommand cmd = new SqlCommand("USP_CREATE_LOGIN_USER", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Thêm tham số vào stored procedure
+                    cmd.Parameters.AddWithValue("@Role_Name", roleName);
+                    cmd.Parameters.AddWithValue("@Login_Name", loginName);
+                    cmd.Parameters.AddWithValue("@Password_Login", password);
+
+                    // Thực thi stored procedure
+                    cmd.ExecuteNonQuery();
+                    isSuccess = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tạo login và user: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo đóng kết nối
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return isSuccess;
+        }
+
+        // func login 
+        public static bool Login(string username, string password)
+        {
+            // Chuỗi kết nối với các thông tin đăng nhập từ người dùng
+            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;Integrated Security=True;TrustServerCertificate=True;User Id={username};Password={password};TrustServerCertificate=true;";
+
+            bool isLoggedIn = false;
+
+            // Tạo kết nối với chuỗi kết nối trên
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    conn.Open();
+                    isLoggedIn = true;
+  
+                }
+                catch (SqlException ex)
+                {   
+                    MessageBox.Show("Lỗi đăng nhập ngay  login : " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return isLoggedIn;
+        }
+
+
+        // get is admin 
+        public static bool GetIsAdminByUsername(string username)
+        {
+            bool isAdmin = false;
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.GetIsAdminByUsername(@username)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        isAdmin = Convert.ToBoolean(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return isAdmin;
+        }
+
+
+        // get cid từ user name
+        public static string GetCidByUsername(string username)
+        {
+            string cid = string.Empty;
+            try
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("SELECT dbo.GetCidByUsername(@username);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@username", username);
+                    object result = cmd.ExecuteScalar();
+                    if (result != DBNull.Value && result != null)
+                    {
+                        cid = result.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return cid;
+        }
+        public static DataTable getListArea()
+        {
+            DataTable area = new DataTable();
+            try
+            {
+                conn.Open();
+
+                // Gọi hàm SQL
+                using (SqlCommand command = new SqlCommand("SELECT * FROM LIST_AREA()", conn))
+                {
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(area);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return area;
+        }
+        public static DataTable getListCinemaByArea(string area)
+        {
+            DataTable cinema = new DataTable();
+            try
+            {
+                conn.Open();
+
+                // Gọi hàm SQL
+                using (SqlCommand command = new SqlCommand("SELECT * FROM GetCinemasByArea(@area)", conn))
+                {
+                    command.Parameters.AddWithValue("@area", area);
+                    using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                    {
+                        adapter.Fill(cinema);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return cinema;
+        }
     }
 }

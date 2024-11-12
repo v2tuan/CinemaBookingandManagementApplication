@@ -1695,6 +1695,58 @@ namespace CinemaBookingandManagementApplication.configs
         }
 
 
+
+        // proc them acount
+        public static void InsertUserAndCinema(User user)
+        {
+            // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+
+                try
+                {
+                    // Mở kết nối
+                    conn.Open();
+
+                    // Tạo lệnh để gọi stored procedure
+                    using (SqlCommand cmd = new SqlCommand("InsertUserAndCinema", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Thêm các tham số cho stored procedure từ model user
+                        cmd.Parameters.AddWithValue("@username", user.username);
+                        cmd.Parameters.AddWithValue("@fname", user.firstname);
+                        cmd.Parameters.AddWithValue("@lname", user.lastname);
+                        cmd.Parameters.AddWithValue("@isadmin", user.isAdmin);
+                        cmd.Parameters.AddWithValue("@pass", user.password);
+                        cmd.Parameters.AddWithValue("@cid", user.cid);
+
+                        // Thực thi stored procedure
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
+
     }
 
 

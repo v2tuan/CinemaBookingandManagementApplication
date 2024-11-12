@@ -1,4 +1,5 @@
 ﻿using CinemaBookingandManagementApplication.Dao;
+using CinemaBookingandManagementApplication.models;
 using CinemaBookingandManagementApplication.UserControls;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,13 @@ namespace CinemaBookingandManagementApplication
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
+            if(Constant.role !="admin")
+            {
+                buttonfigures.Visible = false;
+                buttonCinema.Visible = false;
+                buttonCombo.Visible = false;
+                buttonManagerMovie.Visible = false;
+            }
             My_DB db = new My_DB();
 
             Form_ShowMovie form_ShowMovie = new Form_ShowMovie();
@@ -101,6 +109,11 @@ namespace CinemaBookingandManagementApplication
         {
             Form_ManagerCombo frm = new Form_ManagerCombo();
             openChildForm(frm);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

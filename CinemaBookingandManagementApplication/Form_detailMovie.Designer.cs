@@ -43,8 +43,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cinemaCombox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.AreaCombobox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.PanelControl = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -75,9 +75,9 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(393, 18);
+            this.labelName.Location = new System.Drawing.Point(349, 14);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(238, 32);
+            this.labelName.Size = new System.Drawing.Size(205, 29);
             this.labelName.TabIndex = 6;
             this.labelName.Text = "Robot Hoang Dã";
             // 
@@ -85,9 +85,9 @@
             // 
             this.labelDuration.AutoSize = true;
             this.labelDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDuration.Location = new System.Drawing.Point(452, 65);
+            this.labelDuration.Location = new System.Drawing.Point(402, 52);
             this.labelDuration.Name = "labelDuration";
-            this.labelDuration.Size = new System.Drawing.Size(80, 22);
+            this.labelDuration.Size = new System.Drawing.Size(64, 18);
             this.labelDuration.TabIndex = 8;
             this.labelDuration.Text = "120 phút";
             // 
@@ -95,9 +95,9 @@
             // 
             this.labelReleaseDate.AutoSize = true;
             this.labelReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReleaseDate.Location = new System.Drawing.Point(452, 107);
+            this.labelReleaseDate.Location = new System.Drawing.Point(402, 86);
             this.labelReleaseDate.Name = "labelReleaseDate";
-            this.labelReleaseDate.Size = new System.Drawing.Size(120, 22);
+            this.labelReleaseDate.Size = new System.Drawing.Size(96, 18);
             this.labelReleaseDate.TabIndex = 10;
             this.labelReleaseDate.Text = "11 / 10 / 2024";
             // 
@@ -106,18 +106,18 @@
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.labelDescriptions);
             this.panel1.Controls.Add(this.guna2Button1);
-            this.panel1.Location = new System.Drawing.Point(399, 178);
+            this.panel1.Location = new System.Drawing.Point(355, 142);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1135, 215);
+            this.panel1.Size = new System.Drawing.Size(1009, 172);
             this.panel1.TabIndex = 11;
             // 
             // labelDescriptions
             // 
             this.labelDescriptions.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescriptions.Location = new System.Drawing.Point(3, 69);
+            this.labelDescriptions.Location = new System.Drawing.Point(3, 55);
             this.labelDescriptions.Name = "labelDescriptions";
-            this.labelDescriptions.Size = new System.Drawing.Size(1132, 146);
+            this.labelDescriptions.Size = new System.Drawing.Size(1006, 117);
             this.labelDescriptions.TabIndex = 1;
             this.labelDescriptions.Text = resources.GetString("labelDescriptions.Text");
             // 
@@ -136,7 +136,7 @@
             this.guna2Button1.Location = new System.Drawing.Point(3, 2);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(261, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(232, 36);
             this.guna2Button1.TabIndex = 0;
             this.guna2Button1.Text = "Nội dung phim";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -154,10 +154,9 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Transparent;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button2.Location = new System.Drawing.Point(99, 445);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2Button2.Location = new System.Drawing.Point(88, 356);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(261, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(232, 36);
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Lịch chiếu";
             this.guna2Button2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -169,14 +168,13 @@
             this.panelDate.Controls.Add(this.label7);
             this.panelDate.Controls.Add(this.label6);
             this.panelDate.Controls.Add(this.label5);
-            this.panelDate.Controls.Add(this.guna2ComboBox2);
-            this.panelDate.Controls.Add(this.guna2ComboBox1);
+            this.panelDate.Controls.Add(this.cinemaCombox);
+            this.panelDate.Controls.Add(this.AreaCombobox);
             this.panelDate.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(78)))), ((int)(((byte)(162)))));
             this.panelDate.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.panelDate.Location = new System.Drawing.Point(99, 498);
-            this.panelDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelDate.Location = new System.Drawing.Point(88, 398);
             this.panelDate.Name = "panelDate";
-            this.panelDate.Size = new System.Drawing.Size(1435, 130);
+            this.panelDate.Size = new System.Drawing.Size(1276, 104);
             this.panelDate.TabIndex = 13;
             // 
             // dateTimePickerDate
@@ -185,12 +183,12 @@
             this.dateTimePickerDate.FillColor = System.Drawing.Color.White;
             this.dateTimePickerDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dateTimePickerDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dateTimePickerDate.Location = new System.Drawing.Point(1115, 47);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(991, 38);
             this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dateTimePickerDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
-            this.dateTimePickerDate.Size = new System.Drawing.Size(291, 36);
+            this.dateTimePickerDate.Size = new System.Drawing.Size(259, 29);
             this.dateTimePickerDate.TabIndex = 6;
             this.dateTimePickerDate.Value = new System.DateTime(2024, 10, 15, 0, 50, 20, 592);
             this.dateTimePickerDate.ValueChanged += new System.EventHandler(this.dateTimePickerDate_ValueChanged);
@@ -199,9 +197,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(948, 47);
+            this.label7.Location = new System.Drawing.Point(843, 38);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(161, 28);
+            this.label7.Size = new System.Drawing.Size(143, 23);
             this.label7.TabIndex = 5;
             this.label7.Text = "Chọn ngày chiếu:";
             // 
@@ -209,9 +207,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(491, 47);
+            this.label6.Location = new System.Drawing.Point(436, 38);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(96, 28);
+            this.label6.Size = new System.Drawing.Size(85, 23);
             this.label6.TabIndex = 4;
             this.label6.Text = "Chọn rạp:";
             // 
@@ -219,45 +217,47 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 47);
+            this.label5.Location = new System.Drawing.Point(23, 38);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 28);
+            this.label5.Size = new System.Drawing.Size(93, 23);
             this.label5.TabIndex = 3;
             this.label5.Text = "Chọn vị trí:";
             // 
-            // guna2ComboBox2
+            // cinemaCombox
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.BorderRadius = 5;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Location = new System.Drawing.Point(593, 47);
-            this.guna2ComboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(267, 36);
-            this.guna2ComboBox2.TabIndex = 1;
+            this.cinemaCombox.BackColor = System.Drawing.Color.Transparent;
+            this.cinemaCombox.BorderRadius = 5;
+            this.cinemaCombox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cinemaCombox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cinemaCombox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cinemaCombox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cinemaCombox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cinemaCombox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cinemaCombox.ItemHeight = 30;
+            this.cinemaCombox.Location = new System.Drawing.Point(527, 38);
+            this.cinemaCombox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cinemaCombox.Name = "cinemaCombox";
+            this.cinemaCombox.Size = new System.Drawing.Size(238, 36);
+            this.cinemaCombox.TabIndex = 1;
+            this.cinemaCombox.SelectedIndexChanged += new System.EventHandler(this.cinemaCombox_SelectedIndexChanged);
             // 
-            // guna2ComboBox1
+            // AreaCombobox
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(138, 47);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(267, 36);
-            this.guna2ComboBox1.TabIndex = 0;
+            this.AreaCombobox.BackColor = System.Drawing.Color.Transparent;
+            this.AreaCombobox.BorderRadius = 5;
+            this.AreaCombobox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AreaCombobox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AreaCombobox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AreaCombobox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.AreaCombobox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.AreaCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.AreaCombobox.ItemHeight = 30;
+            this.AreaCombobox.Location = new System.Drawing.Point(123, 38);
+            this.AreaCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AreaCombobox.Name = "AreaCombobox";
+            this.AreaCombobox.Size = new System.Drawing.Size(238, 36);
+            this.AreaCombobox.TabIndex = 0;
+            this.AreaCombobox.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // PanelControl
             // 
@@ -267,9 +267,9 @@
             this.PanelControl.Controls.Add(this.guna2ControlBox1);
             this.PanelControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelControl.Location = new System.Drawing.Point(0, 0);
-            this.PanelControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PanelControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelControl.Name = "PanelControl";
-            this.PanelControl.Size = new System.Drawing.Size(1639, 42);
+            this.PanelControl.Size = new System.Drawing.Size(1457, 34);
             this.PanelControl.TabIndex = 32;
             // 
             // guna2ControlBox3
@@ -278,10 +278,10 @@
             this.guna2ControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1459, 0);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1298, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox3.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -290,10 +290,10 @@
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1519, 0);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1351, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox2.TabIndex = 1;
             // 
             // guna2ControlBox1
@@ -302,10 +302,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1579, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1404, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 42);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(53, 34);
             this.guna2ControlBox1.TabIndex = 0;
             // 
             // guna2Panel2
@@ -323,27 +323,27 @@
             this.guna2Panel2.Controls.Add(this.guna2Button2);
             this.guna2Panel2.Controls.Add(this.panelDate);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 42);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 34);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(1639, 971);
+            this.guna2Panel2.Size = new System.Drawing.Size(1457, 776);
             this.guna2Panel2.TabIndex = 33;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 912);
+            this.panel3.Location = new System.Drawing.Point(0, 729);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1639, 59);
+            this.panel3.Size = new System.Drawing.Size(1457, 47);
             this.panel3.TabIndex = 16;
             // 
             // flowLayoutPanelShow
             // 
             this.flowLayoutPanelShow.AutoSize = true;
             this.flowLayoutPanelShow.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowLayoutPanelShow.Location = new System.Drawing.Point(99, 661);
-            this.flowLayoutPanelShow.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.flowLayoutPanelShow.MaximumSize = new System.Drawing.Size(1654, 1838);
+            this.flowLayoutPanelShow.Location = new System.Drawing.Point(88, 529);
+            this.flowLayoutPanelShow.MaximumSize = new System.Drawing.Size(1470, 1470);
             this.flowLayoutPanelShow.Name = "flowLayoutPanelShow";
             this.flowLayoutPanelShow.Size = new System.Drawing.Size(0, 0);
             this.flowLayoutPanelShow.TabIndex = 14;
@@ -352,10 +352,9 @@
             // 
             this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(399, 100);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(355, 80);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(34, 38);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox2.TabIndex = 9;
             this.guna2PictureBox2.TabStop = false;
@@ -364,10 +363,9 @@
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(399, 54);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(355, 43);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(34, 38);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 7;
             this.guna2PictureBox1.TabStop = false;
@@ -378,21 +376,20 @@
             this.pic_movie.BorderRadius = 10;
             this.pic_movie.FillColor = System.Drawing.Color.LightGray;
             this.pic_movie.ImageRotate = 0F;
-            this.pic_movie.Location = new System.Drawing.Point(99, 18);
-            this.pic_movie.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pic_movie.Location = new System.Drawing.Point(88, 14);
             this.pic_movie.Name = "pic_movie";
-            this.pic_movie.Size = new System.Drawing.Size(250, 375);
+            this.pic_movie.Size = new System.Drawing.Size(222, 300);
             this.pic_movie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_movie.TabIndex = 5;
             this.pic_movie.TabStop = false;
             // 
             // Form_detailMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1639, 1013);
+            this.ClientSize = new System.Drawing.Size(1457, 810);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.PanelControl);
             this.DoubleBuffered = true;
@@ -428,8 +425,8 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label labelDescriptions;
         private Guna.UI2.WinForms.Guna2Panel panelDate;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cinemaCombox;
+        private Guna.UI2.WinForms.Guna2ComboBox AreaCombobox;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerDate;

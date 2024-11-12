@@ -248,6 +248,7 @@
     <Compile Include="models\Bill.cs" />
     <Compile Include="models\Cinemas.cs" />
     <Compile Include="models\Combo.cs" />
+    <Compile Include="models\Constant.cs" />
     <Compile Include="models\DetailCombo.cs" />
     <Compile Include="models\ICustomer.cs" />
     <Compile Include="models\FoodItem.cs" />
@@ -259,6 +260,7 @@
     <Compile Include="models\Room.cs" />
     <Compile Include="models\Seat.cs" />
     <Compile Include="models\Ticket.cs" />
+    <Compile Include="models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
