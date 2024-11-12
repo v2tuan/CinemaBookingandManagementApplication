@@ -1111,6 +1111,93 @@ namespace CinemaBookingandManagementApplication.configs
             // Kiểm tra chuỗi không trống và tất cả ký tự là chữ
             return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
         }
+        //hàm in ra danh sách doanh thu theo từng phim dựa vào ID Cinema
+        public static DataTable GetMoviesSortedByRevenue(string cinemaId)
+        {
+            DataTable movies = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetMoviesSortedByRevenue(@CinemaId)", conn))
+                    {
+                        // Thêm tham số @CinemaId cho câu lệnh SQL
+                        command.Parameters.AddWithValue("@CinemaId", cinemaId);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
+        //hàm lấy danh sách bill theo id cinema
+        public static DataTable GetBillsByCinemaId(string cinemaId)
+        {
+            DataTable bills = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetBillsByCinemaId(@CinemaId)", conn))
+                    {
+                        // Thêm tham số @CinemaId cho câu lệnh SQL
+                        command.Parameters.AddWithValue("@CinemaId", cinemaId);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(bills);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return bills;
+        }
+        //hàm lấy doanh thu, số lượng nhân viên, số lượng movie, số lượng phòng theo id Cinema
+        public static DataTable GetCinemaStatistics(string cinemaId)
+        {
+            DataTable cinemaStats = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetCinemaStatistics(@cid)", conn))
+                    {
+                        // Thêm tham số @cid cho câu lệnh SQL
+                        command.Parameters.AddWithValue("@cid", cinemaId);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cinemaStats);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemaStats;
+        }
 
         public static bool CheckUsernameExists(string username)
         {

@@ -1621,6 +1621,8 @@ namespace CinemaBookingandManagementApplication.configs
 
                         // Execute stored procedure
                         cmd.ExecuteNonQuery();
+
+                       
                     }
                 }
                 catch (SqlException ex)

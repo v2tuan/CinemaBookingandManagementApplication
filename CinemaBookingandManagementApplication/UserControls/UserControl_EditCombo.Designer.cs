@@ -94,7 +94,7 @@
             this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
             this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
-            this.buttonEdit.Location = new System.Drawing.Point(1543, 46);
+            this.buttonEdit.Location = new System.Drawing.Point(1408, 46);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -113,7 +113,7 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.pictureBoxCombo);
             this.Name = "UserControl_EditCombo";
-            this.Size = new System.Drawing.Size(1648, 149);
+            this.Size = new System.Drawing.Size(1513, 149);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCombo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

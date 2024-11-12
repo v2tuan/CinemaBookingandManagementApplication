@@ -33,8 +33,10 @@
             this.labelName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pic_movie
@@ -42,7 +44,7 @@
             this.pic_movie.BorderRadius = 10;
             this.pic_movie.Image = ((System.Drawing.Image)(resources.GetObject("pic_movie.Image")));
             this.pic_movie.ImageRotate = 0F;
-            this.pic_movie.Location = new System.Drawing.Point(0, 0);
+            this.pic_movie.Location = new System.Drawing.Point(0, -1);
             this.pic_movie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_movie.Name = "pic_movie";
             this.pic_movie.Size = new System.Drawing.Size(100, 150);
@@ -73,30 +75,43 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(146, 87);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(146, 66);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(112, 60);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(140, 81);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 11;
             this.guna2PictureBox1.TabStop = false;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.labelName);
+            this.guna2Panel1.Controls.Add(this.pic_movie);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(820, 150);
+            this.guna2Panel1.TabIndex = 12;
             // 
             // UserControl_MovieType2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2PictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelName);
-            this.Controls.Add(this.pic_movie);
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControl_MovieType2";
-            this.Size = new System.Drawing.Size(824, 150);
+            this.Size = new System.Drawing.Size(820, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -106,5 +121,6 @@
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }
