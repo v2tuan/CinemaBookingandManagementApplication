@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.dao.impl;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,11 @@ namespace CinemaBookingandManagementApplication
         public Form_HomeManager()
         {
             InitializeComponent();
+            // Lấy danh sách cinema
+            CinemaDaoImpl cinemaDao = new CinemaDaoImpl();
+            comboBoxCinema.DataSource = cinemaDao.GetListCinema();
+            comboBoxCinema.ValueMember = "cid";
+            comboBoxCinema.DisplayMember = "cname";
         }
     }
 }

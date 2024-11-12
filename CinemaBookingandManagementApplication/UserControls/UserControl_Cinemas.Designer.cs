@@ -111,7 +111,7 @@
             this.guna2ShadowPanel1.Radius = 5;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowShift = 0;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1648, 184);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1565, 184);
             this.guna2ShadowPanel1.TabIndex = 10;
             this.guna2ShadowPanel1.Click += new System.EventHandler(this.guna2ShadowPanel1_Click);
             this.guna2ShadowPanel1.DoubleClick += new System.EventHandler(this.guna2ShadowPanel1_DoubleClick);
@@ -127,7 +127,7 @@
             this.buttonEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonEdit.ForeColor = System.Drawing.Color.White;
             this.buttonEdit.Image = ((System.Drawing.Image)(resources.GetObject("buttonEdit.Image")));
-            this.buttonEdit.Location = new System.Drawing.Point(1533, 63);
+            this.buttonEdit.Location = new System.Drawing.Point(1459, 63);
             this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -156,7 +156,7 @@
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "UserControl_Cinemas";
-            this.Size = new System.Drawing.Size(1648, 184);
+            this.Size = new System.Drawing.Size(1565, 184);
             this.Load += new System.EventHandler(this.UserControl_Cinema_Load);
             this.Click += new System.EventHandler(this.UserControl_Cinema_Click);
             this.DoubleClick += new System.EventHandler(this.UserControl_Cinema_DoubleClick);

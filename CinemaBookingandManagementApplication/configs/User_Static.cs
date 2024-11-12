@@ -8,5 +8,6 @@ namespace CinemaBookingandManagementApplication.configs
 {
     static class User_Static
     {
+        public static int Role { get; set; } = 1;
     }
 }
