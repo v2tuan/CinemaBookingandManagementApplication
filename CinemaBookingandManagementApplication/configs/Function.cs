@@ -1164,6 +1164,109 @@ namespace CinemaBookingandManagementApplication.configs
 
             return movies;
         }
+        //hàm search movie theo movie name
+        public static DataTable SearchMoviesByName(string movieName)
+        {
+            DataTable movies = new DataTable();
+
+            // Assuming My_DB().getConnectionFromFile() gives a valid SQL connection.
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchMoviesByName function
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.SearchMoviesByName(@movieName)", conn))
+                    {
+                        // Add the movie name parameter to the command
+                        command.Parameters.AddWithValue("@movieName", movieName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that occur during database access
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
+        //hàm search combo theo combo name
+        public static DataTable SearchComboByName(string comboName)
+        {
+            DataTable combos = new DataTable();
+
+            // Assuming My_DB().getConnectionFromFile() gives a valid SQL connection.
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchComboByName function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchComboByName(@comboName)", conn))
+                    {
+                        // Add the combo name parameter to the command
+                        command.Parameters.AddWithValue("@comboName", comboName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(combos);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that occur during database access
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return combos;
+        }
+        //hàm search cinema theo cinema name
+        public static DataTable SearchCinemaByName(string cinemaName)
+        {
+            DataTable cinemas = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchCinemaByName function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchCinemaByName(@cinemaName)", conn))
+                    {
+                        // Add the cinema name parameter to the command
+                        command.Parameters.AddWithValue("@cinemaName", cinemaName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cinemas);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Display an error message if an exception occurs
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemas;
+        }
 
     }
 }
