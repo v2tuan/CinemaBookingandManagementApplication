@@ -1691,6 +1691,77 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
         }
+        
+        //hàm dự đoán doanh thu tháng tiếp theo 
+        public static decimal GetDuDoanDoanhThuThangTiepTheo(string maRap, int namHienTai, int thangHienTai)
+        {
+            decimal doanhThuTrungBinh = 0;
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.DuDoanDoanhThuThangTiepTheo(@maRap, @namHienTai, @thangHienTai)", conn))
+                    {
+                        // Thêm các tham số đầu vào cho hàm SQL
+                        command.Parameters.AddWithValue("@maRap", maRap);
+                        command.Parameters.AddWithValue("@namHienTai", namHienTai);
+                        command.Parameters.AddWithValue("@thangHienTai", thangHienTai);
+
+                        // Thực thi câu lệnh và lấy kết quả
+                        object result = command.ExecuteScalar();
+
+                        // Kiểm tra kết quả trả về
+                        if (result != null && result != DBNull.Value)
+                        {
+                            doanhThuTrungBinh = Convert.ToDecimal(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return doanhThuTrungBinh;
+        }
+        //hàm doanh thu theo tháng dựa vào cinema id
+        public static decimal TinhDoanhThuBaoGomComboVaVe(string maRap, int nam, int thang)
+        {
+            decimal doanhThuThang = 0;
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+                    using (SqlCommand command = new SqlCommand("SELECT dbo.TinhDoanhThuBaoGomComboVaVe(@maRap, @nam, @thang)", conn))
+                    {
+                        // Thêm các tham số đầu vào cho hàm SQL
+                        command.Parameters.AddWithValue("@maRap", maRap);
+                        command.Parameters.AddWithValue("@nam", nam);
+                        command.Parameters.AddWithValue("@thang", thang);
+
+                        // Thực thi câu lệnh và lấy kết quả
+                        object result = command.ExecuteScalar();
+
+                        // Kiểm tra kết quả trả về
+                        if (result != null && result != DBNull.Value)
+                        {
+                            doanhThuThang = Convert.ToDecimal(result);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return doanhThuThang;
+        }
 
     }
 }
