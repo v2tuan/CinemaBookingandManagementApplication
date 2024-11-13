@@ -28,14 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_HomeManager));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanelMovie = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl_MovieType21 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
+            this.userControl_MovieType22 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
+            this.userControl_MovieType23 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
+            this.userControl_MovieType24 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelRevenueToday = new System.Windows.Forms.Label();
@@ -44,11 +48,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2Panel11 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelDishes = new System.Windows.Forms.Label();
+            this.labelMovies = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.labelLate = new System.Windows.Forms.Label();
+            this.labelRoom = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -62,22 +66,18 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelEmployees = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.labelTables = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.comboBoxCinema = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.userControl_MovieType21 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
-            this.userControl_MovieType22 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
-            this.userControl_MovieType23 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
-            this.userControl_MovieType24 = new CinemaBookingandManagementApplication.UserControls.UserControl_MovieType2();
-            this.label15 = new System.Windows.Forms.Label();
-            this.labelTables = new System.Windows.Forms.Label();
-            this.guna2PictureBox6 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanelMovie.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,9 +91,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
             this.guna2Panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -128,7 +128,7 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.Controls.Add(this.flowLayoutPanel1);
+            this.guna2Panel3.Controls.Add(this.flowLayoutPanelMovie);
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel3.Location = new System.Drawing.Point(859, 3);
@@ -136,17 +136,49 @@
             this.guna2Panel3.Size = new System.Drawing.Size(850, 833);
             this.guna2Panel3.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // flowLayoutPanelMovie
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.userControl_MovieType21);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_MovieType22);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_MovieType23);
-            this.flowLayoutPanel1.Controls.Add(this.userControl_MovieType24);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(14, 51);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(829, 776);
-            this.flowLayoutPanel1.TabIndex = 11;
+            this.flowLayoutPanelMovie.AutoScroll = true;
+            this.flowLayoutPanelMovie.Controls.Add(this.userControl_MovieType21);
+            this.flowLayoutPanelMovie.Controls.Add(this.userControl_MovieType22);
+            this.flowLayoutPanelMovie.Controls.Add(this.userControl_MovieType23);
+            this.flowLayoutPanelMovie.Controls.Add(this.userControl_MovieType24);
+            this.flowLayoutPanelMovie.Location = new System.Drawing.Point(14, 51);
+            this.flowLayoutPanelMovie.Name = "flowLayoutPanelMovie";
+            this.flowLayoutPanelMovie.Size = new System.Drawing.Size(829, 776);
+            this.flowLayoutPanelMovie.TabIndex = 11;
+            // 
+            // userControl_MovieType21
+            // 
+            this.userControl_MovieType21.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_MovieType21.Location = new System.Drawing.Point(3, 3);
+            this.userControl_MovieType21.Name = "userControl_MovieType21";
+            this.userControl_MovieType21.Size = new System.Drawing.Size(824, 150);
+            this.userControl_MovieType21.TabIndex = 0;
+            // 
+            // userControl_MovieType22
+            // 
+            this.userControl_MovieType22.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_MovieType22.Location = new System.Drawing.Point(3, 159);
+            this.userControl_MovieType22.Name = "userControl_MovieType22";
+            this.userControl_MovieType22.Size = new System.Drawing.Size(824, 150);
+            this.userControl_MovieType22.TabIndex = 1;
+            // 
+            // userControl_MovieType23
+            // 
+            this.userControl_MovieType23.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_MovieType23.Location = new System.Drawing.Point(3, 315);
+            this.userControl_MovieType23.Name = "userControl_MovieType23";
+            this.userControl_MovieType23.Size = new System.Drawing.Size(824, 150);
+            this.userControl_MovieType23.TabIndex = 2;
+            // 
+            // userControl_MovieType24
+            // 
+            this.userControl_MovieType24.BackColor = System.Drawing.Color.Transparent;
+            this.userControl_MovieType24.Location = new System.Drawing.Point(3, 471);
+            this.userControl_MovieType24.Name = "userControl_MovieType24";
+            this.userControl_MovieType24.Size = new System.Drawing.Size(824, 150);
+            this.userControl_MovieType24.TabIndex = 3;
             // 
             // label3
             // 
@@ -184,29 +216,29 @@
             // 
             this.dataGridViewInvoice.AllowUserToAddRows = false;
             this.dataGridViewInvoice.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridViewInvoice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dataGridViewInvoice.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewInvoice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewInvoice.ColumnHeadersHeight = 4;
             this.dataGridViewInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewInvoice.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewInvoice.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewInvoice.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridViewInvoice.Location = new System.Drawing.Point(7, 51);
             this.dataGridViewInvoice.Name = "dataGridViewInvoice";
@@ -282,7 +314,7 @@
             this.guna2Panel11.BorderRadius = 10;
             this.guna2Panel11.BorderThickness = 1;
             this.guna2Panel11.Controls.Add(this.guna2PictureBox4);
-            this.guna2Panel11.Controls.Add(this.labelDishes);
+            this.guna2Panel11.Controls.Add(this.labelMovies);
             this.guna2Panel11.Controls.Add(this.label11);
             this.guna2Panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel11.FillColor = System.Drawing.Color.White;
@@ -304,18 +336,18 @@
             this.guna2PictureBox4.TabIndex = 5;
             this.guna2PictureBox4.TabStop = false;
             // 
-            // labelDishes
+            // labelMovies
             // 
-            this.labelDishes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelMovies.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelDishes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDishes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.labelDishes.Location = new System.Drawing.Point(3, 169);
-            this.labelDishes.Name = "labelDishes";
-            this.labelDishes.Size = new System.Drawing.Size(316, 38);
-            this.labelDishes.TabIndex = 4;
-            this.labelDishes.Text = "50";
-            this.labelDishes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMovies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.labelMovies.Location = new System.Drawing.Point(3, 169);
+            this.labelMovies.Name = "labelMovies";
+            this.labelMovies.Size = new System.Drawing.Size(316, 38);
+            this.labelMovies.TabIndex = 4;
+            this.labelMovies.Text = "50";
+            this.labelMovies.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -336,7 +368,7 @@
             this.guna2Panel10.BorderRadius = 10;
             this.guna2Panel10.BorderThickness = 1;
             this.guna2Panel10.Controls.Add(this.guna2PictureBox5);
-            this.guna2Panel10.Controls.Add(this.labelLate);
+            this.guna2Panel10.Controls.Add(this.labelRoom);
             this.guna2Panel10.Controls.Add(this.label13);
             this.guna2Panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel10.FillColor = System.Drawing.Color.White;
@@ -358,18 +390,18 @@
             this.guna2PictureBox5.TabIndex = 5;
             this.guna2PictureBox5.TabStop = false;
             // 
-            // labelLate
+            // labelRoom
             // 
-            this.labelLate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelRoom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelLate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.labelLate.Location = new System.Drawing.Point(3, 169);
-            this.labelLate.Name = "labelLate";
-            this.labelLate.Size = new System.Drawing.Size(318, 38);
-            this.labelLate.TabIndex = 4;
-            this.labelLate.Text = "2";
-            this.labelLate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRoom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.labelRoom.Location = new System.Drawing.Point(3, 169);
+            this.labelRoom.Name = "labelRoom";
+            this.labelRoom.Size = new System.Drawing.Size(318, 38);
+            this.labelRoom.TabIndex = 4;
+            this.labelRoom.Text = "2";
+            this.labelRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -380,7 +412,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(318, 26);
             this.label13.TabIndex = 3;
-            this.label13.Text = "Late";
+            this.label13.Text = "Room";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Panel9
@@ -545,6 +577,60 @@
             this.label7.Text = "Employees";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Panel4.BorderRadius = 10;
+            this.guna2Panel4.BorderThickness = 1;
+            this.guna2Panel4.Controls.Add(this.guna2PictureBox6);
+            this.guna2Panel4.Controls.Add(this.labelTables);
+            this.guna2Panel4.Controls.Add(this.label15);
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(10, 251);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(322, 1);
+            this.guna2Panel4.TabIndex = 11;
+            // 
+            // guna2PictureBox6
+            // 
+            this.guna2PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
+            this.guna2PictureBox6.ImageRotate = 0F;
+            this.guna2PictureBox6.Location = new System.Drawing.Point(121, -88);
+            this.guna2PictureBox6.Name = "guna2PictureBox6";
+            this.guna2PictureBox6.Size = new System.Drawing.Size(80, 80);
+            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox6.TabIndex = 5;
+            this.guna2PictureBox6.TabStop = false;
+            // 
+            // labelTables
+            // 
+            this.labelTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTables.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
+            this.labelTables.Location = new System.Drawing.Point(5, -51);
+            this.labelTables.Name = "labelTables";
+            this.labelTables.Size = new System.Drawing.Size(312, 38);
+            this.labelTables.TabIndex = 4;
+            this.labelTables.Text = "20";
+            this.labelTables.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(5, -91);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(312, 26);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Room";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -589,6 +675,7 @@
             this.comboBoxCinema.Name = "comboBoxCinema";
             this.comboBoxCinema.Size = new System.Drawing.Size(378, 41);
             this.comboBoxCinema.TabIndex = 30;
+            this.comboBoxCinema.SelectedIndexChanged += new System.EventHandler(this.comboBoxCinema_SelectedIndexChanged);
             // 
             // label14
             // 
@@ -599,92 +686,6 @@
             this.label14.Size = new System.Drawing.Size(145, 23);
             this.label14.TabIndex = 29;
             this.label14.Text = "Movie theater";
-            // 
-            // userControl_MovieType21
-            // 
-            this.userControl_MovieType21.BackColor = System.Drawing.Color.Transparent;
-            this.userControl_MovieType21.Location = new System.Drawing.Point(3, 3);
-            this.userControl_MovieType21.Name = "userControl_MovieType21";
-            this.userControl_MovieType21.Size = new System.Drawing.Size(824, 150);
-            this.userControl_MovieType21.TabIndex = 0;
-            // 
-            // userControl_MovieType22
-            // 
-            this.userControl_MovieType22.BackColor = System.Drawing.Color.Transparent;
-            this.userControl_MovieType22.Location = new System.Drawing.Point(3, 159);
-            this.userControl_MovieType22.Name = "userControl_MovieType22";
-            this.userControl_MovieType22.Size = new System.Drawing.Size(824, 150);
-            this.userControl_MovieType22.TabIndex = 1;
-            // 
-            // userControl_MovieType23
-            // 
-            this.userControl_MovieType23.BackColor = System.Drawing.Color.Transparent;
-            this.userControl_MovieType23.Location = new System.Drawing.Point(3, 315);
-            this.userControl_MovieType23.Name = "userControl_MovieType23";
-            this.userControl_MovieType23.Size = new System.Drawing.Size(824, 150);
-            this.userControl_MovieType23.TabIndex = 2;
-            // 
-            // userControl_MovieType24
-            // 
-            this.userControl_MovieType24.BackColor = System.Drawing.Color.Transparent;
-            this.userControl_MovieType24.Location = new System.Drawing.Point(3, 471);
-            this.userControl_MovieType24.Name = "userControl_MovieType24";
-            this.userControl_MovieType24.Size = new System.Drawing.Size(824, 150);
-            this.userControl_MovieType24.TabIndex = 3;
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, -91);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(312, 26);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Room";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelTables
-            // 
-            this.labelTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTables.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTables.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.labelTables.Location = new System.Drawing.Point(5, -51);
-            this.labelTables.Name = "labelTables";
-            this.labelTables.Size = new System.Drawing.Size(312, 38);
-            this.labelTables.TabIndex = 4;
-            this.labelTables.Text = "20";
-            this.labelTables.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2PictureBox6
-            // 
-            this.guna2PictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
-            this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(121, -88);
-            this.guna2PictureBox6.Name = "guna2PictureBox6";
-            this.guna2PictureBox6.Size = new System.Drawing.Size(80, 80);
-            this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox6.TabIndex = 5;
-            this.guna2PictureBox6.TabStop = false;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel4.BorderRadius = 10;
-            this.guna2Panel4.BorderThickness = 1;
-            this.guna2Panel4.Controls.Add(this.guna2PictureBox6);
-            this.guna2Panel4.Controls.Add(this.labelTables);
-            this.guna2Panel4.Controls.Add(this.label15);
-            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel4.FillColor = System.Drawing.Color.White;
-            this.guna2Panel4.Location = new System.Drawing.Point(10, 251);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(10);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(322, 1);
-            this.guna2Panel4.TabIndex = 11;
             // 
             // Form_HomeManager
             // 
@@ -702,7 +703,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanelMovie.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInvoice)).EndInit();
@@ -717,10 +718,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox6)).EndInit();
-            this.guna2Panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -737,11 +738,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel11;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private System.Windows.Forms.Label labelDishes;
+        private System.Windows.Forms.Label labelMovies;
         private System.Windows.Forms.Label label11;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
-        private System.Windows.Forms.Label labelLate;
+        private System.Windows.Forms.Label labelRoom;
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
@@ -759,7 +760,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxCinema;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelMovie;
         private UserControls.UserControl_MovieType2 userControl_MovieType21;
         private UserControls.UserControl_MovieType2 userControl_MovieType22;
         private UserControls.UserControl_MovieType2 userControl_MovieType23;

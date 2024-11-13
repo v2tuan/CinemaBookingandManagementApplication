@@ -1042,7 +1042,9 @@ namespace CinemaBookingandManagementApplication.configs
             // Kiểm tra chuỗi không trống và tất cả ký tự là chữ
             return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
         }
-        //hàm in ra danh sách doanh thu theo từng phim dựa vào ID Cinema
+
+
+        //hàm sắp xếp Phim theo doang thu trên từng Rạp
         public static DataTable GetMoviesSortedByRevenue(string cinemaId)
         {
             DataTable movies = new DataTable();
