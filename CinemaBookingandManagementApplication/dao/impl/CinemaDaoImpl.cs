@@ -104,5 +104,20 @@ namespace CinemaBookingandManagementApplication.dao.impl
             Procedure.DeleteCinema(cid);
            
         }
+
+        public DataTable GetCinemaStatistics(string cinemaId)
+        {
+            return Function.GetCinemaStatistics(cinemaId);
+        }
+
+        public DataTable GetBillsByCinemaId(string cinemaId)
+        {
+            return Function.GetBillsByCinemaId(cinemaId);
+        }
+
+        public DataTable GetMoviesSortedByRevenue(string cinemaId)
+        {
+            return Function.GetMoviesSortedByRevenue(cinemaId);
+        }
     }
 }

@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl_MovieType2));
             this.pic_movie = new Guna.UI2.WinForms.Guna2PictureBox();
             this.labelName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelReleaseDate = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).BeginInit();
@@ -62,16 +62,16 @@
             this.labelName.TabIndex = 9;
             this.labelName.Text = "Robot Hoang Dã";
             // 
-            // label1
+            // labelReleaseDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(142, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Robot Hoang Dã";
+            this.labelReleaseDate.AutoSize = true;
+            this.labelReleaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReleaseDate.ForeColor = System.Drawing.Color.DarkGray;
+            this.labelReleaseDate.Location = new System.Drawing.Point(142, 43);
+            this.labelReleaseDate.Name = "labelReleaseDate";
+            this.labelReleaseDate.Size = new System.Drawing.Size(144, 20);
+            this.labelReleaseDate.TabIndex = 10;
+            this.labelReleaseDate.Text = "Robot Hoang Dã";
             // 
             // guna2PictureBox1
             // 
@@ -87,16 +87,18 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
             this.guna2Panel1.BorderRadius = 10;
+            this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.labelReleaseDate);
             this.guna2Panel1.Controls.Add(this.labelName);
             this.guna2Panel1.Controls.Add(this.pic_movie);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 1);
+            this.guna2Panel1.FillColor = System.Drawing.Color.White;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(820, 150);
+            this.guna2Panel1.Size = new System.Drawing.Size(736, 150);
             this.guna2Panel1.TabIndex = 12;
             // 
             // UserControl_MovieType2
@@ -106,7 +108,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UserControl_MovieType2";
-            this.Size = new System.Drawing.Size(820, 150);
+            this.Size = new System.Drawing.Size(736, 150);
             ((System.ComponentModel.ISupportInitialize)(this.pic_movie)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
@@ -119,7 +121,7 @@
 
         private Guna.UI2.WinForms.Guna2PictureBox pic_movie;
         private System.Windows.Forms.Label labelName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelReleaseDate;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
