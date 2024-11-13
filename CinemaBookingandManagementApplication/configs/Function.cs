@@ -1131,6 +1131,41 @@ namespace CinemaBookingandManagementApplication.configs
 
             return cinemaStats;
         }
+        //hàm search movie theo movie name va cinema name
+        public static DataTable SearchMoviesWithCinema(string movieName, string cinemaName)
+        {
+            DataTable movies = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Tạo câu lệnh SQL để gọi hàm table-valued
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchMoviesWithCinema(@movieName, @cinemaName)", conn))
+                    {
+                        // Thêm các tham số cho câu lệnh SQL
+                        command.Parameters.AddWithValue("@movieName", movieName);
+                        command.Parameters.AddWithValue("@cinemaName", cinemaName);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
 
     }
 }
