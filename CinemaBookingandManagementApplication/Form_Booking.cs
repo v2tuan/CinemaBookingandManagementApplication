@@ -82,7 +82,7 @@ namespace CinemaBookingandManagementApplication
                                 QtySeat -= 1;
                                 listSeats.Remove(userControl_Seat.seat);
                             }
-                            
+
                             Order = QtySeat.ToString() + "x Ghế đơn Ghế:\n" + string.Join(", ", listSeats);
 
                             int rowIndex = 0;
@@ -152,7 +152,7 @@ namespace CinemaBookingandManagementApplication
                             if (item.Cells[0].Value.ToString() == Order)
                             {
                                 item.Cells[0].Value = (count + 1).ToString() + "x " + chosecombo.ComboName.Trim();
-                                item.Cells[1].Value = string.Format("{0:#,##0} ₫", ((count+ 1) * chosecombo.ComboPrice).ToString());
+                                item.Cells[1].Value = string.Format("{0:#,##0} ₫", ((count + 1) * chosecombo.ComboPrice).ToString());
                             }
                         }
                         listChooseCombo[chosecombo]++;
@@ -190,19 +190,20 @@ namespace CinemaBookingandManagementApplication
                     caculateTotal();
                 };
             }
-            else if(listSeats.Count == 0)
+            else if (listSeats.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn ghế");
             }
-            else if(buttonChooseCombo.Checked && !buttonPayment.Checked)
+            else if (buttonChooseCombo.Checked && !buttonPayment.Checked)
             {
                 buttonPayment.Checked = true;
                 Form_Pay Pay_Form = new Form_Pay();
                 openChildForm(Pay_Form);
                 btn_Continue.Text = "Complete";
             }
-            else if(btn_Continue.Text == "Complete")
+            else if (btn_Continue.Text == "Complete")
             {
+
                 List<Ticket> listTicket = new List<Ticket>();
                 List<DetailCombo> listDetailCombo = new List<DetailCombo>();
 
@@ -225,11 +226,19 @@ namespace CinemaBookingandManagementApplication
                     listDetailCombo.Add(detailCombo);
                 }
 
-                BillDaopImpl billDaopImpl = new BillDaopImpl();
-                string bId = billDaopImpl.IDNext();
-                string cusId = null;
                 decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
-                billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
+
+                Form_InformationCustomer form_InformationCustomer = new Form_InformationCustomer();
+                form_InformationCustomer.listTicket = listTicket;
+                form_InformationCustomer.listDetailCombo = listDetailCombo;
+                form_InformationCustomer.totalPrice = totalPrice;
+                form_InformationCustomer.ShowDialog();
+
+                //BillDaopImpl billDaopImpl = new BillDaopImpl();
+                //string bId = billDaopImpl.IDNext();
+                //string cusId = null;
+                //decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
+                //billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
             }
         }
 

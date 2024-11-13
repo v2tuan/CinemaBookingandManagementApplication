@@ -16,6 +16,11 @@ namespace CinemaBookingandManagementApplication.dao.impl
             Procedure.CompleteBill(bId, cusId, tickets, combos, totalPrice);
         }
 
+        public void CompleteBillAndSendMail(string bId, string cusId, List<Ticket> tickets, List<DetailCombo> combos, decimal totalPrice, string customerName, string email)
+        {
+            Procedure.CompleteBillAndSendMail(bId, cusId, tickets, combos, totalPrice, customerName, email);
+        }
+
         public String IDNext()
         {
             try
