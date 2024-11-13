@@ -360,22 +360,29 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonEdit_Click_1(object sender, EventArgs e)
         {
-
-            CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
-
-            currentCinema.Cname = textBoxCinemaName.Text;
-            currentCinema.Caddress = textBoxAddress.Text;
-            currentCinema.Hotline = TextBoxHotline.Text;
-            currentCinema.Area = textBoxArea.Text;
-
-            if (pictureBoxCinema.Image != null)
+            try
             {
-                MemoryStream pic = new MemoryStream();
-                pictureBoxCinema.Image.Save(pic, pictureBoxCinema.Image.RawFormat);
-                currentCinema.Image = pictureBoxCinema.Image;
-            }
+                CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
 
-            CinemaDao.update(currentCinema);
+                currentCinema.Cname = textBoxCinemaName.Text;
+                currentCinema.Caddress = textBoxAddress.Text;
+                currentCinema.Hotline = TextBoxHotline.Text;
+                currentCinema.Area = textBoxArea.Text;
+
+                if (pictureBoxCinema.Image != null)
+                {
+                    MemoryStream pic = new MemoryStream();
+                    pictureBoxCinema.Image.Save(pic, pictureBoxCinema.Image.RawFormat);
+                    currentCinema.Image = pictureBoxCinema.Image;
+                }
+
+                CinemaDao.update(currentCinema);
+            }
+            catch (Exception ex)
+            {
+                // Nếu có lỗi xảy ra trong quá trình lưu ảnh, thông báo lỗi
+                MessageBox.Show("vui lòng thay đổi ảnh : " + ex.Message);
+            }
         }
 
         private void pictureBoxCinema_Click_1(object sender, EventArgs e)

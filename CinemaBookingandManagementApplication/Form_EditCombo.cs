@@ -56,23 +56,41 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (Function.IsNumber(textBoxPrice.Text))
+            try
             {
-                ComboDaoImpl ComboDao = new ComboDaoImpl();
-                currentcombo.ComboName = textBoxComboName.Text.Trim();
-                currentcombo.Descriptions = textBoxDescription.Text.Trim();
-                currentcombo.ComboPrice = decimal.Parse(textBoxPrice.Text);
-                if (pictureBoxCombo.Image != null)
+                if (Function.IsNumber(textBoxPrice.Text))
                 {
+                    ComboDaoImpl ComboDao = new ComboDaoImpl();
+                    currentcombo.ComboName = textBoxComboName.Text.Trim();
+                    currentcombo.Descriptions = textBoxDescription.Text.Trim();
+                    currentcombo.ComboPrice = decimal.Parse(textBoxPrice.Text);
+
+                    // Kiểm tra nếu ảnh không được chọn, thông báo cho người dùng
+                    if (pictureBoxCombo.Image == null)
+                    {
+                        MessageBox.Show("Vui lòng chọn ảnh.");
+                        return; // Dừng thực thi hàm nếu không có ảnh
+                    }
+
+                    // Nếu có ảnh, lưu ảnh vào bộ nhớ
                     MemoryStream pic = new MemoryStream();
                     pictureBoxCombo.Image.Save(pic, pictureBoxCombo.Image.RawFormat);
                     currentcombo.Image = pictureBoxCombo.Image;
+
+                    // Cập nhật combo
+                    ComboDao.update(currentcombo);
                 }
-                ComboDao.update(currentcombo);
+                else
+                {
+                    MessageBox.Show("Yêu Cầu Nhập Đúng Dữ liệu");
+                }
             }
-            else
-                MessageBox.Show("Yêu Cầu Nhập Đúng Dữ liệu");
-          
+            catch (Exception ex)
+            {
+                // Nếu có lỗi xảy ra trong quá trình lưu ảnh, thông báo lỗi
+                MessageBox.Show("vui lòng chọn ảnh để thay đổi: " + ex.Message);
+            }
+
 
         }
 
