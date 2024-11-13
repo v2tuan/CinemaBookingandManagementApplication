@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CinemaBookingandManagementApplication.dao.impl
 {
@@ -19,13 +20,23 @@ namespace CinemaBookingandManagementApplication.dao.impl
         }
         public void CreateNewCombo(Combo combo)
         {
-            string comboName = combo.ComboName;
-            decimal comboPrice = combo.ComboPrice;
-            string descriptions = combo.Descriptions;
+            try
+            {
+                string comboName = combo.ComboName;
+                decimal comboPrice = combo.ComboPrice;
+                string descriptions = combo.Descriptions;
 
-            MemoryStream pic = new MemoryStream();
-            combo.Image.Save(pic, combo.Image.RawFormat);
-            Procedure.CreateNewCombo(comboName, comboPrice, descriptions, pic);
+                MemoryStream pic = new MemoryStream();
+                if (combo.Image != null)
+                {
+                    combo.Image.Save(pic, combo.Image.RawFormat);
+                }
+                Procedure.CreateNewCombo(comboName, comboPrice, descriptions, combo.Image != null ? pic : null);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
         public void delete(Combo combo)
         {

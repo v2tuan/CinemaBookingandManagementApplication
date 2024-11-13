@@ -1112,7 +1112,9 @@ namespace CinemaBookingandManagementApplication.configs
             // Kiểm tra chuỗi không trống và tất cả ký tự là chữ
             return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
         }
-        //hàm in ra danh sách doanh thu theo từng phim dựa vào ID Cinema
+
+
+        //hàm sắp xếp Phim theo doang thu trên từng Rạp
         public static DataTable GetMoviesSortedByRevenue(string cinemaId)
         {
             DataTable movies = new DataTable();
@@ -1145,17 +1147,21 @@ namespace CinemaBookingandManagementApplication.configs
         public static DataTable GetBillsByCinemaId(string cinemaId)
         {
             DataTable bills = new DataTable();
+
             using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetBillsByCinemaId(@CinemaId)", conn))
-                    {
-                        // Thêm tham số @CinemaId cho câu lệnh SQL
-                        command.Parameters.AddWithValue("@CinemaId", cinemaId);
 
-                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                    // SQL command to call the GetBillsByCinemaId function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.GetBillsByCinemaId(@cinemaId)", conn))
+                    {
+                        // Add the cinema ID parameter to the command
+                        command.Parameters.AddWithValue("@cinemaId", cinemaId);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
                             adapter.Fill(bills);
@@ -1164,12 +1170,14 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
+                    // Display error message if an exception occurs
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
             return bills;
         }
+
         //hàm lấy doanh thu, số lượng nhân viên, số lượng movie, số lượng phòng theo id Cinema
         public static DataTable GetCinemaStatistics(string cinemaId)
         {
@@ -1198,6 +1206,178 @@ namespace CinemaBookingandManagementApplication.configs
             }
 
             return cinemaStats;
+        }
+        //hàm search movie theo movie name va cinema name
+        public static DataTable SearchMoviesWithCinema(string movieName, string cinemaName)
+        {
+            DataTable movies = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Tạo câu lệnh SQL để gọi hàm table-valued
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchMoviesWithCinema(@movieName, @cinemaName)", conn))
+                    {
+                        // Thêm các tham số cho câu lệnh SQL
+                        command.Parameters.AddWithValue("@movieName", movieName);
+                        command.Parameters.AddWithValue("@cinemaName", cinemaName);
+
+                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
+        //hàm search movie theo movie name
+        public static DataTable SearchMoviesByName(string movieName)
+        {
+            DataTable movies = new DataTable();
+
+            // Assuming My_DB().getConnectionFromFile() gives a valid SQL connection.
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchMoviesByName function
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.SearchMoviesByName(@movieName)", conn))
+                    {
+                        // Add the movie name parameter to the command
+                        command.Parameters.AddWithValue("@movieName", movieName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that occur during database access
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
+        //hàm search combo theo combo name
+        public static DataTable SearchComboByName(string comboName)
+        {
+            DataTable combos = new DataTable();
+
+            // Assuming My_DB().getConnectionFromFile() gives a valid SQL connection.
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchComboByName function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchComboByName(@comboName)", conn))
+                    {
+                        // Add the combo name parameter to the command
+                        command.Parameters.AddWithValue("@comboName", comboName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(combos);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any errors that occur during database access
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return combos;
+        }
+        //hàm search cinema theo cinema name
+        public static DataTable SearchCinemaByName(string cinemaName)
+        {
+            DataTable cinemas = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // Create a SQL command to call the SearchCinemaByName function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.SearchCinemaByName(@cinemaName)", conn))
+                    {
+                        // Add the cinema name parameter to the command
+                        command.Parameters.AddWithValue("@cinemaName", cinemaName);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(cinemas);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Display an error message if an exception occurs
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return cinemas;
+        }
+        //hàm sắp xếp doanh thu phim theo cinema id
+        public static DataTable GetMoviesByRevenueDesc(string cinemaId)
+        {
+            DataTable movies = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // SQL command to call the GetMoviesByRevenueDesc function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.GetMoviesByRevenueDesc(@cinemaId)", conn))
+                    {
+                        // Add the cinema ID parameter to the command
+                        command.Parameters.AddWithValue("@cinemaId", cinemaId);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Display error message if an exception occurs
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
         }
 
         public static bool CheckUsernameExists(string username)

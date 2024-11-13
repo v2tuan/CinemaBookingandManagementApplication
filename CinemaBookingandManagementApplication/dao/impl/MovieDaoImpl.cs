@@ -47,18 +47,28 @@ namespace CinemaBookingandManagementApplication.dao.impl
 
         public void insert(Movies movie)
         {
-            string mid = movie.Mid;
-            string moviename = movie.Moviename;
-            int ageRestriction =  movie.AgeRestriction;
-            decimal revenue = movie.Revenue;
-            string mtid = movie.Mtid;
-            DateTime releaseDate = movie.ReleaseDate;
-            int duration = movie.Duration;
-            string descriptions = movie.Descriptions;
+            try
+            {
+                string mid = movie.Mid;
+                string moviename = movie.Moviename;
+                int ageRestriction = movie.AgeRestriction;
+                decimal revenue = movie.Revenue;
+                string mtid = movie.Mtid;
+                DateTime releaseDate = movie.ReleaseDate;
+                int duration = movie.Duration;
+                string descriptions = movie.Descriptions;
 
-            MemoryStream pic = new MemoryStream();
-            movie.Image.Save(pic, movie.Image.RawFormat);
-            Procedure.AddNewMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, pic);
+                MemoryStream pic = new MemoryStream();
+                if (movie.Image != null)
+                {
+                    movie.Image.Save(pic, movie.Image.RawFormat);
+                }
+                Procedure.AddNewMovie(mid, moviename, ageRestriction, revenue, mtid, releaseDate, duration, descriptions, movie.Image != null ? pic : null);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
         public void update(Movies movie)
