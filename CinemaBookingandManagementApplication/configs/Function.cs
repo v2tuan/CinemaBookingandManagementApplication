@@ -1269,6 +1269,40 @@ namespace CinemaBookingandManagementApplication.configs
 
             return cinemas;
         }
+        //hàm sắp xếp doanh thu phim theo cinema id
+        public static DataTable GetMoviesByRevenueDesc(string cinemaId)
+        {
+            DataTable movies = new DataTable();
+
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            {
+                try
+                {
+                    conn.Open();
+
+                    // SQL command to call the GetMoviesByRevenueDesc function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.GetMoviesByRevenueDesc(@cinemaId)", conn))
+                    {
+                        // Add the cinema ID parameter to the command
+                        command.Parameters.AddWithValue("@cinemaId", cinemaId);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(movies);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Display error message if an exception occurs
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+
+            return movies;
+        }
 
     }
 }
