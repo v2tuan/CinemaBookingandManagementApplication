@@ -1077,17 +1077,21 @@ namespace CinemaBookingandManagementApplication.configs
         public static DataTable GetBillsByCinemaId(string cinemaId)
         {
             DataTable bills = new DataTable();
+
             using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
                     conn.Open();
-                    using (SqlCommand command = new SqlCommand("SELECT * FROM GetBillsByCinemaId(@CinemaId)", conn))
-                    {
-                        // Thêm tham số @CinemaId cho câu lệnh SQL
-                        command.Parameters.AddWithValue("@CinemaId", cinemaId);
 
-                        // Sử dụng SqlDataAdapter để điền dữ liệu vào DataTable
+                    // SQL command to call the GetBillsByCinemaId function
+                    using (SqlCommand command = new SqlCommand(
+                        "SELECT * FROM dbo.GetBillsByCinemaId(@cinemaId)", conn))
+                    {
+                        // Add the cinema ID parameter to the command
+                        command.Parameters.AddWithValue("@cinemaId", cinemaId);
+
+                        // Use SqlDataAdapter to execute the command and fill the DataTable
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
                             adapter.Fill(bills);
@@ -1096,12 +1100,14 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
+                    // Display error message if an exception occurs
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
             return bills;
         }
+
         //hàm lấy doanh thu, số lượng nhân viên, số lượng movie, số lượng phòng theo id Cinema
         public static DataTable GetCinemaStatistics(string cinemaId)
         {
