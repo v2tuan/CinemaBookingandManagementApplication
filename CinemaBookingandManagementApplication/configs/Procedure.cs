@@ -1697,6 +1697,77 @@ namespace CinemaBookingandManagementApplication.configs
         }
 
 
+        //hàm hoàn thành bill và gửi mail
+        public static void CompleteBillAndSendMail(string bId, string cusId, List<Ticket> tickets, List<DetailCombo> combos, decimal totalPrice, string customerName, string email)
+        {
+            using (SqlConnection conn = myDB.getConnectionFromFile())
+            {
+                conn.InfoMessage += (sender, e) =>
+                {
+                    // Hiển thị thông báo từ SQL Server qua MessageBox
+                    MessageBox.Show("SQL Server Message: " + e.Message, "Thông báo từ SQL Server", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                try
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand("[CompleteBillAndSendMail]", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Add basic parameters
+                        cmd.Parameters.AddWithValue("@bId", bId);
+                        if (cusId == null)
+                        {
+                            cmd.Parameters.AddWithValue("@cusId", DBNull.Value);
+                        }
+                        else
+                        {
+                            cmd.Parameters.AddWithValue("@cusId", cusId);
+                        }
+                        cmd.Parameters.AddWithValue("@totalPrice", totalPrice);
+
+                        // Serialize tickets to JSON
+                        string ticketJson = JsonConvert.SerializeObject(tickets);
+
+                        // Add ticket JSON parameter
+                        cmd.Parameters.AddWithValue("@ticketJson", ticketJson);
+
+                        // Tạo chuỗi JSON cho DetailCombo
+                        string comboJson = JsonConvert.SerializeObject(combos);
+
+                        // Add combo JSON parameter
+                        cmd.Parameters.AddWithValue("@comboJson", comboJson);
+
+                        // Add combo JSON parameter
+                        cmd.Parameters.AddWithValue("@CustomerName", customerName);
+
+                        // Add combo JSON parameter
+                        cmd.Parameters.AddWithValue("@Email", email);
+
+                        // Execute stored procedure
+                        cmd.ExecuteNonQuery();
+
+
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    // Hiển thị thông báo lỗi nếu có
+                    MessageBox.Show("Error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    // Đảm bảo đóng kết nối
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        conn.Close();
+                    }
+                }
+            }
+        }
+
+
     }
 
 

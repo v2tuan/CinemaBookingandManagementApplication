@@ -184,6 +184,12 @@
     <Compile Include="Form_HomeManager.Designer.cs">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_InformationCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_InformationCustomer.Designer.cs">
+      <DependentUpon>Form_InformationCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_InformationMovie.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -388,6 +394,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_HomeManager.resx">
       <DependentUpon>Form_HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_InformationCustomer.resx">
+      <DependentUpon>Form_InformationCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_InformationMovie.resx">
       <DependentUpon>Form_InformationMovie.cs</DependentUpon>
