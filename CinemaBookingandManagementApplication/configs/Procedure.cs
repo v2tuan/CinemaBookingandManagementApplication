@@ -1742,6 +1742,7 @@ namespace CinemaBookingandManagementApplication.configs
         }
 
 
+        //hàm hoàn thành bill và gửi mail
         public static void CompleteBillAndSendMail(string bId, string cusId, List<Ticket> tickets, List<DetailCombo> combos, decimal totalPrice, string customerName, string email)
         {
             using (SqlConnection conn = myDB.getConnectionFromFile())
