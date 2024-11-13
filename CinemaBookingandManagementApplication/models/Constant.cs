@@ -10,5 +10,7 @@ namespace CinemaBookingandManagementApplication.models
     {
         public static string role;
         public static string idcinema;
+        public static string uname;
+        public static string pass;
     }
 }

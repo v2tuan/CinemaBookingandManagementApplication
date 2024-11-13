@@ -42,6 +42,8 @@ namespace CinemaBookingandManagementApplication
             User user = new User();
             user.username = usernametxt.Text.Trim();
             user.password =passwordtxt.Text.Trim();
+            Constant.uname = usernametxt.Text.Trim();
+            Constant.pass = passwordtxt.Text.Trim();
             bool login = Function.CheckLogin (user.username,user.password);
             if (login == false)
             {
@@ -50,10 +52,11 @@ namespace CinemaBookingandManagementApplication
             }
             if (Function.Login(user.username, user.password))
             {
+               
                 bool isAdmin = Function.GetIsAdminByUsername(user.username);
                 if (isAdmin)
                 {
-                       Constant.role = "admin";
+                    Constant.role = "admin";
                     MessageBox.Show("Đăng nhập thành công với quyền Admin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     
                 }
@@ -77,6 +80,7 @@ namespace CinemaBookingandManagementApplication
                 main.ShowDialog();
                 this.Show();
             }
+            return;
 
         }
         bool verify()

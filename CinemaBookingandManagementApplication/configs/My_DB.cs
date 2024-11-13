@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaBookingandManagementApplication.models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CinemaBookingandManagementApplication.Dao
 {
@@ -15,7 +17,7 @@ namespace CinemaBookingandManagementApplication.Dao
         {
          
         }
-
+        
         private string getConnectionStrFromFile(string filePath)
         {
             try
@@ -37,16 +39,15 @@ namespace CinemaBookingandManagementApplication.Dao
             return null;
         }
 
-        public SqlConnection getConnectionFromFile(string file_path = "")
+        public SqlConnection getConnection()
         {
-            if (file_path.Length > 0)
-            {
-                return new SqlConnection(getConnectionStrFromFile(file_path));
-            }
-            else
-            {
-                return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt"));
-            }
+            return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt"));
+             
+        }
+        public SqlConnection getConnectionFromFile()
+        {
+            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={Constant.uname};Password={Constant.pass};";
+            return new SqlConnection(connectionString);
         }
     }
 }

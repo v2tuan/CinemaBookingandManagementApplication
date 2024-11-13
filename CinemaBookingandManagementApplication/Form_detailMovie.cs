@@ -87,9 +87,13 @@ namespace CinemaBookingandManagementApplication
                 dateTimePickerDate.Value = ShowDate;
                 string name = Function.GetCinemaNameById(CinemaId);
                 string aname = Function.GetCinemaAreaById(CinemaId);
-                cinemaCombox.Items.Add(name);
+                cinemaCombox.DataSource = null;
+                cinemaCombox.Items.Clear();     // Xóa tất cả các mục trong Items
+                cinemaCombox.Items.Add(name);   // Thêm giá trị name tạm thời vào ComboBox
                 cinemaCombox.SelectedIndex = 0;
                 cinemaCombox.Enabled = false;
+                AreaCombobox.DataSource = null;
+                AreaCombobox.Items.Clear();
                 AreaCombobox.Items.Add(aname);
                 AreaCombobox.SelectedIndex = 0;
                 AreaCombobox.Enabled = false;
@@ -116,7 +120,6 @@ namespace CinemaBookingandManagementApplication
                             schedule.Etime = TimeSpan.Parse(dr["etime"].ToString());
                             schedule.SeatEmpty = int.Parse(dr["seatEmpty"].ToString());
                             schedule.Rid = dr["rid"].ToString();
-
                             show_Schedule.movieSchedule = schedule;
 
                             show_Schedule.buttonClick += (ss, ee) =>
@@ -189,9 +192,7 @@ namespace CinemaBookingandManagementApplication
                         schedule.Etime = TimeSpan.Parse(dr["etime"].ToString());
                         schedule.SeatEmpty = int.Parse(dr["seatEmpty"].ToString());
                         schedule.Rid = dr["rid"].ToString();
-
                         show_Schedule.movieSchedule = schedule;
-
                         show_Schedule.buttonClick += (ss, ee) =>
                         {
                             Form_Booking frm = new Form_Booking();

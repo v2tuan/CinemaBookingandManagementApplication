@@ -1,4 +1,5 @@
-﻿using CinemaBookingandManagementApplication.dao.impl;
+﻿using CinemaBookingandManagementApplication.configs;
+using CinemaBookingandManagementApplication.dao.impl;
 using CinemaBookingandManagementApplication.models;
 using CinemaBookingandManagementApplication.UserControls;
 using System;
@@ -13,6 +14,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.AxHost;
 
 namespace CinemaBookingandManagementApplication
 {
@@ -50,13 +52,16 @@ namespace CinemaBookingandManagementApplication
             buttonScreening.Text = $"{movieSchedule.Stime.Hours}:{movieSchedule.Stime.Minutes:D2}";
             try
             {
+                
                 flowLayoutPanelSeat.Controls.Clear();
                 RoomDaoImpl roomDaoImpl = new RoomDaoImpl();
                 DataTable dt = roomDaoImpl.GetSeatsByRoomId(movieSchedule.Rid);
+                string shid = movieSchedule.Shid;
                 if (dt != null)
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
+
                         UserControl_Seat userControl_Seat = new UserControl_Seat();
                         Seat seat = new Seat();
                         seat.SeatId = int.Parse(dr["seatid"].ToString());
@@ -65,7 +70,13 @@ namespace CinemaBookingandManagementApplication
                         seat.Snumber = dr["snumber"].ToString();
                         seat.Srow = dr["srow"].ToString();
                         userControl_Seat.seat = seat;
-                        //userControl_Seat.setNumberSeat(int.Parse(seat.Snumber));
+
+                        // sửa phần seat: Nhân Sâm chưa sửa xong còn lỗi 
+                       if (Function.checkDuplicateSeatAndShid(seat.SeatId, shid))
+                        {
+                           seat.States = 2;
+                        }
+                        userControl_Seat.setNumberSeat(int.Parse(seat.Snumber));
 
                         flowLayoutPanelSeat.Controls.Add(userControl_Seat);
 
@@ -230,6 +241,7 @@ namespace CinemaBookingandManagementApplication
                 string cusId = null;
                 decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
                 billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
+              //  this.Close();
             }
         }
 

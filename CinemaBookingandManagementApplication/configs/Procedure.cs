@@ -1702,7 +1702,7 @@ namespace CinemaBookingandManagementApplication.configs
         public static void InsertUserAndCinema(User user)
         {
             // Sử dụng kết nối từ file thay vì chuỗi kết nối trực tiếp
-            using (SqlConnection conn = myDB.getConnectionFromFile())
+            using (SqlConnection conn = myDB.getConnection())
             {
                 conn.InfoMessage += (sender, e) =>
                 {

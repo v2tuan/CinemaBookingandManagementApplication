@@ -48,9 +48,9 @@
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(321, 214);
+            this.labelPrice.Location = new System.Drawing.Point(285, 171);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(76, 30);
+            this.labelPrice.Size = new System.Drawing.Size(67, 25);
             this.labelPrice.TabIndex = 11;
             this.labelPrice.Text = "Giá:  ₫";
             // 
@@ -58,9 +58,9 @@
             // 
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescription.Location = new System.Drawing.Point(321, 145);
+            this.labelDescription.Location = new System.Drawing.Point(285, 116);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(89, 21);
+            this.labelDescription.Size = new System.Drawing.Size(78, 19);
             this.labelDescription.TabIndex = 10;
             this.labelDescription.Text = "Description";
             // 
@@ -68,9 +68,9 @@
             // 
             this.labelComboName.AutoSize = true;
             this.labelComboName.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelComboName.Location = new System.Drawing.Point(321, 107);
+            this.labelComboName.Location = new System.Drawing.Point(285, 86);
             this.labelComboName.Name = "labelComboName";
-            this.labelComboName.Size = new System.Drawing.Size(150, 30);
+            this.labelComboName.Size = new System.Drawing.Size(131, 25);
             this.labelComboName.TabIndex = 9;
             this.labelComboName.Text = "Combo Name";
             // 
@@ -78,11 +78,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 299);
+            this.label4.Location = new System.Drawing.Point(22, 239);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 23);
+            this.label4.Size = new System.Drawing.Size(124, 19);
             this.label4.TabIndex = 12;
-            this.label4.Text = "Cinema name";
+            this.label4.Text = "Combo name";
             // 
             // textBoxComboName
             // 
@@ -97,13 +97,13 @@
             this.textBoxComboName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxComboName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxComboName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxComboName.Location = new System.Drawing.Point(29, 327);
-            this.textBoxComboName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxComboName.Location = new System.Drawing.Point(26, 262);
+            this.textBoxComboName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxComboName.Name = "textBoxComboName";
             this.textBoxComboName.PasswordChar = '\0';
             this.textBoxComboName.PlaceholderText = "Input Cinema Name";
             this.textBoxComboName.SelectedText = "";
-            this.textBoxComboName.Size = new System.Drawing.Size(720, 44);
+            this.textBoxComboName.Size = new System.Drawing.Size(640, 35);
             this.textBoxComboName.TabIndex = 13;
             this.textBoxComboName.TextChanged += new System.EventHandler(this.textBoxComboName_TextChanged);
             // 
@@ -111,9 +111,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(25, 401);
+            this.label5.Location = new System.Drawing.Point(22, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 23);
+            this.label5.Size = new System.Drawing.Size(100, 19);
             this.label5.TabIndex = 14;
             this.label5.Text = "Description";
             // 
@@ -130,13 +130,13 @@
             this.textBoxDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxDescription.Location = new System.Drawing.Point(29, 432);
-            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxDescription.Location = new System.Drawing.Point(26, 346);
+            this.textBoxDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDescription.Name = "textBoxDescription";
             this.textBoxDescription.PasswordChar = '\0';
             this.textBoxDescription.PlaceholderText = "Input Cinema Name";
             this.textBoxDescription.SelectedText = "";
-            this.textBoxDescription.Size = new System.Drawing.Size(720, 44);
+            this.textBoxDescription.Size = new System.Drawing.Size(640, 35);
             this.textBoxDescription.TabIndex = 15;
             this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
@@ -144,9 +144,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 507);
+            this.label6.Location = new System.Drawing.Point(22, 406);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 23);
+            this.label6.Size = new System.Drawing.Size(50, 19);
             this.label6.TabIndex = 16;
             this.label6.Text = "Price";
             // 
@@ -163,13 +163,13 @@
             this.textBoxPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxPrice.Location = new System.Drawing.Point(29, 538);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxPrice.Location = new System.Drawing.Point(26, 430);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.PasswordChar = '\0';
             this.textBoxPrice.PlaceholderText = "Input Cinema Name";
             this.textBoxPrice.SelectedText = "";
-            this.textBoxPrice.Size = new System.Drawing.Size(720, 44);
+            this.textBoxPrice.Size = new System.Drawing.Size(640, 35);
             this.textBoxPrice.TabIndex = 17;
             this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
@@ -177,9 +177,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 25);
+            this.label7.Location = new System.Drawing.Point(20, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(173, 38);
+            this.label7.Size = new System.Drawing.Size(150, 32);
             this.label7.TabIndex = 18;
             this.label7.Text = "Add Combo";
             // 
@@ -195,10 +195,10 @@
             this.buttonAdd.ForeColor = System.Drawing.Color.White;
             this.buttonAdd.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonAdd.Location = new System.Drawing.Point(29, 673);
+            this.buttonAdd.Location = new System.Drawing.Point(26, 538);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(720, 55);
+            this.buttonAdd.Size = new System.Drawing.Size(640, 44);
             this.buttonAdd.TabIndex = 19;
             this.buttonAdd.Text = "Add Movie";
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
@@ -207,10 +207,9 @@
             // 
             this.pictureBoxCombo.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBoxCombo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCombo.Image")));
-            this.pictureBoxCombo.Location = new System.Drawing.Point(29, 95);
-            this.pictureBoxCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBoxCombo.Location = new System.Drawing.Point(26, 76);
             this.pictureBoxCombo.Name = "pictureBoxCombo";
-            this.pictureBoxCombo.Size = new System.Drawing.Size(274, 156);
+            this.pictureBoxCombo.Size = new System.Drawing.Size(244, 125);
             this.pictureBoxCombo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCombo.TabIndex = 36;
             this.pictureBoxCombo.TabStop = false;
@@ -218,10 +217,10 @@
             // 
             // Form_AddCombo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(787, 781);
+            this.ClientSize = new System.Drawing.Size(700, 625);
             this.Controls.Add(this.pictureBoxCombo);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.label7);
@@ -234,6 +233,7 @@
             this.Controls.Add(this.labelPrice);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelComboName);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form_AddCombo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_AddCombo";

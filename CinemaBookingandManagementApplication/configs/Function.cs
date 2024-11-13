@@ -13,6 +13,7 @@ namespace CinemaBookingandManagementApplication.configs
 {
     static class Function
     {
+        public static SqlConnection conn2 = new My_DB().getConnection();
         public static SqlConnection conn = new My_DB().getConnectionFromFile();
         public static DataTable getListMovieType()
         {
@@ -86,7 +87,7 @@ namespace CinemaBookingandManagementApplication.configs
         public static DataTable GetListCinema()
         {
             DataTable cinema = new DataTable();
-            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            using (SqlConnection conn = new My_DB().getConnection())
             {
                 try
                 {
@@ -1204,11 +1205,11 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
-                conn.Open();
+                conn2.Open();
                 int result;
 
                 // Gọi hàm SQL CheckUsernameExists
-                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckUsernameExists(@username)", conn))
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckUsernameExists(@username)", conn2))
                 {
                     command.Parameters.AddWithValue("@username", username);
                     // command.Parameters.AddWithValue("@password", password);
@@ -1231,9 +1232,9 @@ namespace CinemaBookingandManagementApplication.configs
             finally
             {
                 // Đảm bảo kết nối được đóng lại
-                if (conn.State == ConnectionState.Open)
+                if (conn2.State == ConnectionState.Open)
                 {
-                    conn.Close();
+                    conn2.Close();
                 }
             }
             return exists;
@@ -1244,11 +1245,11 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
-                conn.Open();
+                conn2.Open();
                 int result;
 
                 // Gọi hàm SQL CheckUsernameExists
-                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckLogin(@username,@pass)", conn))
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckLogin(@username,@pass)", conn2))
                 {
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@pass", pass);
@@ -1272,9 +1273,9 @@ namespace CinemaBookingandManagementApplication.configs
             finally
             {
                 // Đảm bảo kết nối được đóng lại
-                if (conn.State == ConnectionState.Open)
+                if (conn2.State == ConnectionState.Open)
                 {
-                    conn.Close();
+                    conn2.Close();
                 }
             }
             return exists;
@@ -1286,10 +1287,10 @@ namespace CinemaBookingandManagementApplication.configs
             try
             {
                 // Mở kết nối
-                conn.Open();
+                conn2.Open();
 
                 // Tạo SqlCommand để gọi stored procedure
-                using (SqlCommand cmd = new SqlCommand("USP_CREATE_LOGIN_USER", conn))
+                using (SqlCommand cmd = new SqlCommand("USP_CREATE_LOGIN_USER", conn2))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
@@ -1310,9 +1311,9 @@ namespace CinemaBookingandManagementApplication.configs
             finally
             {
                 // Đảm bảo đóng kết nối
-                if (conn.State == ConnectionState.Open)
+                if (conn2.State == ConnectionState.Open)
                 {
-                    conn.Close();
+                    conn2.Close();
                 }
             }
             return isSuccess;
@@ -1322,22 +1323,23 @@ namespace CinemaBookingandManagementApplication.configs
         public static bool Login(string username, string password)
         {
             // Chuỗi kết nối với các thông tin đăng nhập từ người dùng
-            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;Integrated Security=True;TrustServerCertificate=True;User Id={username};Password={password};TrustServerCertificate=true;";
+            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={username};Password={password};";
 
             bool isLoggedIn = false;
 
             // Tạo kết nối với chuỗi kết nối trên
-            using (SqlConnection conn = new SqlConnection(connectionString))
+             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
                     isLoggedIn = true;
-  
+                    
                 }
                 catch (SqlException ex)
                 {   
-                    MessageBox.Show("Lỗi đăng nhập ngay  login : " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi đăng nhập : " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    isLoggedIn = false;
                 }
             }
 
@@ -1364,7 +1366,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("An error occurred : " + ex.Message);
             }
             finally
             {
@@ -1468,5 +1470,47 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return cinema;
         }
+
+
+        // chưa fix còn lỗi 
+        public static bool checkDuplicateSeatAndShid(int seatid, string shid)
+        {
+            bool exists = false;
+            try
+            {
+                conn.Open();
+                int result;
+                using (SqlCommand command = new SqlCommand("SELECT dbo.CheckDuplicateSeatAndShid(@SEATID, @SHID)", conn))
+                {
+                    command.Parameters.AddWithValue("@SEATID", seatid);
+                    command.Parameters.AddWithValue("@SHID", shid);
+                    result = (int)command.ExecuteScalar();
+                    //result = 1;
+                    if (result == 1)
+                    {
+                        exists = true; 
+                    }
+                    else
+                    {
+                        exists = false; 
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi nếu có
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            finally
+            {
+                // Đảm bảo kết nối được đóng lại
+                if (conn.State == ConnectionState.Open)
+                {
+                    conn.Close();
+                }
+            }
+            return exists;
+        }
+
     }
 }
