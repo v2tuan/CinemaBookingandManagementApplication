@@ -1502,8 +1502,9 @@ namespace CinemaBookingandManagementApplication.configs
         // func login 
         public static bool Login(string username, string password)
         {
+            My_DB my_DB = new My_DB();
             // Chuỗi kết nối với các thông tin đăng nhập từ người dùng
-            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={username};Password={password};";
+            string connectionString = my_DB.getConnectionStrFromFile("ConnectionStr.txt") + "User Id =" + username + "; Password =" + password + ";";
 
             bool isLoggedIn = false;
 

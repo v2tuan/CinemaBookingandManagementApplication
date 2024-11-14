@@ -18,7 +18,7 @@ namespace CinemaBookingandManagementApplication.Dao
          
         }
         
-        private string getConnectionStrFromFile(string filePath)
+        public string getConnectionStrFromFile(string filePath)
         {
             try
             {
