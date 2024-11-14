@@ -1697,7 +1697,8 @@ namespace CinemaBookingandManagementApplication.configs
         {
             decimal doanhThuTrungBinh = 0;
 
-            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            //using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            using (SqlConnection conn = new My_DB().getConnection())
             {
                 try
                 {
@@ -1732,7 +1733,8 @@ namespace CinemaBookingandManagementApplication.configs
         {
             decimal doanhThuThang = 0;
 
-            using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            // using (SqlConnection conn = new My_DB().getConnectionFromFile())
+            using (SqlConnection conn = new My_DB().getConnection())
             {
                 try
                 {
@@ -1762,6 +1764,34 @@ namespace CinemaBookingandManagementApplication.configs
 
             return doanhThuThang;
         }
+        public static DataTable GetBusinessReportOfYear(int year)
+        {
+            DataTable report = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnection()) // Kết nối đến cơ sở dữ liệu
+            {
+                try
+                {
+                    conn.Open();
+                    // Gọi hàm GetBusinessReportOfYear với tham số năm
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM dbo.GetBusinessReportOfYear(@Year)", conn))
+                    {
+                        // Thêm tham số vào câu lệnh SQL
+                        command.Parameters.AddWithValue("@Year", year);
 
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            // Điền dữ liệu vào DataTable
+                            adapter.Fill(report);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return report; // Trả về bảng kết quả
+        }
     }
 }

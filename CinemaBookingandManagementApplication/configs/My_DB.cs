@@ -41,13 +41,13 @@ namespace CinemaBookingandManagementApplication.Dao
 
         public SqlConnection getConnection()
         {
-            return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt"));
+            return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt")+ "Integrated Security=True;");
              
         }
         public SqlConnection getConnectionFromFile()
         {
-            string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={Constant.uname};Password={Constant.pass};";
-            return new SqlConnection(connectionString);
+            //string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={Constant.uname};Password={Constant.pass};";
+            return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt") + "User Id =" + Constant.uname + "; Password =" + Constant.pass + ";"); 
         }
     }
 }

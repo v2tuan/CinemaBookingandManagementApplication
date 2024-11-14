@@ -48,11 +48,13 @@ namespace CinemaBookingandManagementApplication
             if (login == false)
             {
                 MessageBox.Show("Tên Đăng Nhập Hoặc mật khẩu không đúng !.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Constant.uname = null;
+                Constant.pass = null;
                 return;
             }
-            if (Function.Login(user.username, user.password))
+            if (Function.Login(user.username, user.password) )
             {
-               
+                
                 bool isAdmin = Function.GetIsAdminByUsername(user.username);
                 if (isAdmin)
                 {

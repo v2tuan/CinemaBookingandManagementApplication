@@ -237,19 +237,19 @@ namespace CinemaBookingandManagementApplication
                     listDetailCombo.Add(detailCombo);
                 }
 
+               // decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
+
+             //   Form_InformationCustomer form_InformationCustomer = new Form_InformationCustomer();
+                //form_InformationCustomer.listTicket = listTicket;
+               // form_InformationCustomer.listDetailCombo = listDetailCombo;
+               // form_InformationCustomer.totalPrice = totalPrice;
+              //  form_InformationCustomer.ShowDialog();
+
+                BillDaopImpl billDaopImpl = new BillDaopImpl();
+                string bId = billDaopImpl.IDNext();
+                string cusId = null;
                 decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
-
-                Form_InformationCustomer form_InformationCustomer = new Form_InformationCustomer();
-                form_InformationCustomer.listTicket = listTicket;
-                form_InformationCustomer.listDetailCombo = listDetailCombo;
-                form_InformationCustomer.totalPrice = totalPrice;
-                form_InformationCustomer.ShowDialog();
-
-                //BillDaopImpl billDaopImpl = new BillDaopImpl();
-                //string bId = billDaopImpl.IDNext();
-                //string cusId = null;
-                //decimal totalPrice = decimal.Parse(labelTotal.Text.Replace(",", "").Replace(" ₫", ""));
-                //billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
+                billDaopImpl.CompleteBill(bId, cusId, listTicket, listDetailCombo, totalPrice);
             }
         }
 

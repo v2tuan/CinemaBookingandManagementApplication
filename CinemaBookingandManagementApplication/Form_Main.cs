@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -126,6 +127,18 @@ namespace CinemaBookingandManagementApplication
         private void buttonLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+            //Constant.idcinema = null;
+           // Constant.uname = null;
+           /// Constant.pass = null;
+          //  Constant.role = null;
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+          // Constant.idcinema = null;
+          //  Constant.uname = null;
+          ///  Constant.pass = null;
+           // Constant.role = null;
         }
     }
 }

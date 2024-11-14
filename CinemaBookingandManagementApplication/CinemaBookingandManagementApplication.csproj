@@ -125,6 +125,12 @@
     <Compile Include="Form_AgeRestrictionMovie.Designer.cs">
       <DependentUpon>Form_AgeRestrictionMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_BaoCaoNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_BaoCaoNam.Designer.cs">
+      <DependentUpon>Form_BaoCaoNam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Booking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,12 @@
     </Compile>
     <Compile Include="Form_ManagerMovie.Designer.cs">
       <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MovieShowList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MovieShowList.Designer.cs">
+      <DependentUpon>Form_MovieShowList.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Pay.cs">
       <SubType>Form</SubType>
@@ -374,6 +386,9 @@
     <EmbeddedResource Include="Form_AgeRestrictionMovie.resx">
       <DependentUpon>Form_AgeRestrictionMovie.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_BaoCaoNam.resx">
+      <DependentUpon>Form_BaoCaoNam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Booking.resx">
       <DependentUpon>Form_Booking.cs</DependentUpon>
     </EmbeddedResource>
@@ -424,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ManagerMovie.resx">
       <DependentUpon>Form_ManagerMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MovieShowList.resx">
+      <DependentUpon>Form_MovieShowList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Pay.resx">
       <DependentUpon>Form_Pay.cs</DependentUpon>
