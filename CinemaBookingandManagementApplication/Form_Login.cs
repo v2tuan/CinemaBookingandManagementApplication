@@ -45,10 +45,9 @@ namespace CinemaBookingandManagementApplication
             user.password =passwordtxt.Text.Trim();
             Constant.uname = usernametxt.Text.Trim();
             Constant.pass = passwordtxt.Text.Trim();
-            bool login = Function.CheckLogin (user.username,user.password);
-            if (login == false)
+            if (Function.CheckLogin(user.username, user.password) == false)
             {
-                MessageBox.Show("Tên Đăng Nhập Hoặc mật khẩu không đúng !.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên Đăng Nhập Hoặc mật khẩu không đúng!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Constant.uname = null;
                 Constant.pass = null;
                 return;

@@ -46,7 +46,7 @@ namespace CinemaBookingandManagementApplication
             {
                 buttonfigures.Visible = false;
                 buttonCinema.Visible = false;
-              //  buttonCombo.Visible = false;
+                buttonCombo.Visible = false;
                 buttonManagerMovie.Visible = false;
             }
             My_DB db = new My_DB();

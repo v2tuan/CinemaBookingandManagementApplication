@@ -89,5 +89,17 @@ namespace CinemaBookingandManagementApplication
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            ChartForm chartForm = new ChartForm();
+            chartForm.ShowDialog();
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            Form_BaoCaoNam form_BaoCaoNam = new Form_BaoCaoNam();
+            form_BaoCaoNam.ShowDialog();
+        }
     }
 }

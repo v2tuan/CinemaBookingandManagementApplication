@@ -1449,6 +1449,7 @@ namespace CinemaBookingandManagementApplication.configs
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
+                return exists;
             }
             finally
             {
