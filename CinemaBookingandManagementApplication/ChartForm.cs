@@ -21,35 +21,7 @@ namespace CinemaBookingandManagementApplication
 
         private void ChartForm_Load(object sender, EventArgs e)
         {
-            // Lấy dữ liệu doanh thu (Giả sử bạn đã có các phương thức này)
-            decimal doanhThuThangTruoc2 = Function.TinhDoanhThuBaoGomComboVaVe("Cineplex", 2023, 9); // Tháng trước 2
-            decimal doanhThuThangTruoc = Function.TinhDoanhThuBaoGomComboVaVe("Cineplex", 2023, 10); // Tháng trước
-            decimal doanhThuThangHienTai = Function.TinhDoanhThuBaoGomComboVaVe("Cineplex", 2023, 11); // Tháng hiện tại
-            decimal doanhThuThangDuDoan = Function.GetDuDoanDoanhThuThangTiepTheo("Cineplex", 2023, 12); // Tháng dự đoán
-
-            // Xóa các series cũ nếu có
-            chart1.Series.Clear();
-
-            // Tạo Series mới cho biểu đồ
-            var series = new Series("Doanh Thu")
-            {
-                ChartType = SeriesChartType.Column, // Chọn loại biểu đồ là Cột
-                BorderWidth = 1,
-                IsValueShownAsLabel = true // Hiển thị giá trị trên mỗi cột
-            };
-
-            // Thêm dữ liệu vào các cột của biểu đồ
-            series.Points.AddXY("Tháng trước 2", doanhThuThangTruoc2); // Cột 1
-            series.Points.AddXY("Tháng trước", doanhThuThangTruoc); // Cột 2
-            series.Points.AddXY("Tháng hiện tại", doanhThuThangHienTai); // Cột 3
-            series.Points.AddXY("Tháng dự đoán", doanhThuThangDuDoan); // Cột 4
-
-            // Thêm series vào biểu đồ
-            chart1.Series.Add(series);
-
-            // Cấu hình các tùy chọn cho biểu đồ
-            chart1.ChartAreas[0].AxisX.Title = "Các tháng";
-            chart1.ChartAreas[0].AxisY.Title = "Doanh thu (VND)";
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
