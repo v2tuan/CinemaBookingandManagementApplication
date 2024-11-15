@@ -40,22 +40,22 @@ namespace CinemaBookingandManagementApplication
                 MessageBox.Show("Tài Khoản mật khẩu không được để trống !.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            User user = new User();
-            user.username = usernametxt.Text.Trim();
-            user.password =passwordtxt.Text.Trim();
+            //User user = new User();
+            //user.username = usernametxt.Text.Trim();
+           // user.password =passwordtxt.Text.Trim();
             Constant.uname = usernametxt.Text.Trim();
             Constant.pass = passwordtxt.Text.Trim();
-            if (Function.CheckLogin(user.username, user.password) == false)
+            if (Function.CheckLogin(Constant.uname, Constant.pass) == false)
             {
                 MessageBox.Show("Tên Đăng Nhập Hoặc mật khẩu không đúng!.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Constant.uname = null;
                 Constant.pass = null;
                 return;
             }
-            if (Function.Login(user.username, user.password) )
+            if (Function.Login(Constant.uname, Constant.pass))
             {
                 
-                bool isAdmin = Function.GetIsAdminByUsername(user.username);
+                bool isAdmin = Function.GetIsAdminByUsername(Constant.uname);
                 if (isAdmin)
                 {
                     Constant.role = "admin";
@@ -65,7 +65,7 @@ namespace CinemaBookingandManagementApplication
                 else
                 {
                     Constant.role = "user";
-                    string cid = Function.GetCidByUsername(user.username);
+                    string cid = Function.GetCidByUsername(Constant.uname);
 
                     if (!string.IsNullOrEmpty(cid))
                     {
@@ -80,7 +80,7 @@ namespace CinemaBookingandManagementApplication
                 this.Hide();
                 Form_Main main = new Form_Main();
                 main.ShowDialog();
-                this.Show();
+                this.Show();               
             }
             return;
 

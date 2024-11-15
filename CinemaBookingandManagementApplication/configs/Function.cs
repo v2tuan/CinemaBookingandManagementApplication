@@ -1,25 +1,22 @@
 ﻿using CinemaBookingandManagementApplication.Dao;
 using CinemaBookingandManagementApplication.models;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace CinemaBookingandManagementApplication.configs
 {
     static class Function
     {
         public static SqlConnection conn2 = new My_DB().getConnection();
-        public static SqlConnection conn = new My_DB().getConnectionFromFile();
+        public static SqlConnection conn; // = new My_DB().getConnectionFromFile();
         public static DataTable getListMovieType()
         {
             DataTable movieTypes = new DataTable();
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
 
                 // Gọi hàm SQL
@@ -52,6 +49,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 int result;
                 // Gọi hàm SQL
@@ -114,6 +112,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 int result;
                 using (SqlCommand command = new SqlCommand("SELECT dbo.COUNT_CINEMA(@CINEMAID)", conn))
@@ -289,7 +288,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                   MessageBox.Show("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
 
@@ -492,6 +491,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 int result;
 
@@ -501,7 +501,7 @@ namespace CinemaBookingandManagementApplication.configs
                     command.Parameters.AddWithValue("@ROOMID", roomID);
                     result = (int)command.ExecuteScalar(); // Chuyển đổi kết quả thành kiểu int
 
-                    if ( result == 1)
+                    if (result == 1)
                     {
                         exists = true; // Kết quả là kiểu boolean
                     }
@@ -533,6 +533,7 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 try
                 {
+
                     conn.Open();
                     using (SqlCommand command = new SqlCommand("SELECT * FROM GetRoomList()", conn))
                     {
@@ -667,6 +668,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 // Mở kết nối với cơ sở dữ liệu
                 conn.Open();
                 int result;
@@ -681,7 +683,7 @@ namespace CinemaBookingandManagementApplication.configs
                     result = (Int32)command.ExecuteScalar();
 
                     // Kiểm tra kết quả, nếu là 1 thì IDShowtime tồn tại
-                    if (  result == 1)
+                    if (result == 1)
                     {
                         exists = true;
                     }
@@ -718,6 +720,7 @@ namespace CinemaBookingandManagementApplication.configs
             {
                 try
                 {
+
                     // Mở kết nối
                     conn.Open();
 
@@ -1065,6 +1068,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 int result;
                 // Gọi hàm SQL
@@ -1100,7 +1104,7 @@ namespace CinemaBookingandManagementApplication.configs
 
         // hàm check nhập liệu là só
 
-        public static  bool IsNumber(string input)
+        public static bool IsNumber(string input)
         {
             // Kiểm tra nếu input có thể chuyển đổi thành số
             return int.TryParse(input, out _);
@@ -1420,7 +1424,7 @@ namespace CinemaBookingandManagementApplication.configs
             return exists;
         }
 
-        public static bool CheckLogin(string username,string pass)
+        public static bool CheckLogin(string username, string pass)
         {
             bool exists = false;
             try
@@ -1510,16 +1514,16 @@ namespace CinemaBookingandManagementApplication.configs
             bool isLoggedIn = false;
 
             // Tạo kết nối với chuỗi kết nối trên
-             using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 try
                 {
                     conn.Open();
                     isLoggedIn = true;
-                    
+
                 }
                 catch (SqlException ex)
-                {   
+                {
                     MessageBox.Show("Lỗi đăng nhập : " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     isLoggedIn = false;
                 }
@@ -1533,18 +1537,24 @@ namespace CinemaBookingandManagementApplication.configs
         public static bool GetIsAdminByUsername(string username)
         {
             bool isAdmin = false;
+            string uname = Constant.uname;
+            string pass = Constant.pass;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
+                // using (SqlConnection con = new My_DB().getConnectionFromFile()) {
                 using (SqlCommand cmd = new SqlCommand("SELECT dbo.GetIsAdminByUsername(@username)", conn))
                 {
                     cmd.Parameters.AddWithValue("@username", username);
+
                     object result = cmd.ExecuteScalar();
                     if (result != DBNull.Value && result != null)
                     {
                         isAdmin = Convert.ToBoolean(result);
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -1567,6 +1577,7 @@ namespace CinemaBookingandManagementApplication.configs
             string cid = string.Empty;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand("SELECT dbo.GetCidByUsername(@username);", conn))
                 {
@@ -1596,6 +1607,7 @@ namespace CinemaBookingandManagementApplication.configs
             DataTable area = new DataTable();
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
 
                 // Gọi hàm SQL
@@ -1626,6 +1638,7 @@ namespace CinemaBookingandManagementApplication.configs
             DataTable cinema = new DataTable();
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
 
                 // Gọi hàm SQL
@@ -1660,6 +1673,7 @@ namespace CinemaBookingandManagementApplication.configs
             bool exists = false;
             try
             {
+                conn = new My_DB().getConnectionFromFile();
                 conn.Open();
                 int result;
                 using (SqlCommand command = new SqlCommand("SELECT dbo.CheckDuplicateSeatAndShid(@SEATID, @SHID)", conn))
@@ -1670,11 +1684,11 @@ namespace CinemaBookingandManagementApplication.configs
                     //result = 1;
                     if (result == 1)
                     {
-                        exists = true; 
+                        exists = true;
                     }
                     else
                     {
-                        exists = false; 
+                        exists = false;
                     }
                 }
             }
@@ -1693,7 +1707,7 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return exists;
         }
-        
+
         //hàm dự đoán doanh thu tháng tiếp theo 
         public static decimal GetDuDoanDoanhThuThangTiepTheo(string maRap, int namHienTai, int thangHienTai)
         {

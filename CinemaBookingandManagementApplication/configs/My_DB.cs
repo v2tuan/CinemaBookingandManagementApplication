@@ -46,6 +46,8 @@ namespace CinemaBookingandManagementApplication.Dao
         }
         public SqlConnection getConnectionFromFile()
         {
+            string uname = Constant.uname;
+            string pass = Constant.pass;
             //string connectionString = $"Data Source=LAPTOP-O6UI28NM;Initial Catalog=rapchieuphim6;TrustServerCertificate=True;User Id={Constant.uname};Password={Constant.pass};";
             return new SqlConnection(getConnectionStrFromFile("ConnectionStr.txt") + "User Id =" + Constant.uname + "; Password =" + Constant.pass + ";"); 
         }

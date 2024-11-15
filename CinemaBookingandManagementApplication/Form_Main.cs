@@ -126,7 +126,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+         
             //Constant.idcinema = null;
            // Constant.uname = null;
            /// Constant.pass = null;
@@ -135,10 +135,11 @@ namespace CinemaBookingandManagementApplication
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-          // Constant.idcinema = null;
-          //  Constant.uname = null;
-          ///  Constant.pass = null;
-           // Constant.role = null;
+            
+            // Constant.idcinema = null;
+            //  Constant.uname = null;
+            ///  Constant.pass = null;
+            // Constant.role = null;
         }
     }
 }
