@@ -64,6 +64,8 @@ namespace CinemaBookingandManagementApplication
                 movie.Descriptions = richTextBoxDescription.Text;
                 movie.Image = pictureBoxMovie.Image;
                 MovieDao.insert(movie);
+                this.DialogResult = DialogResult.OK; // Báo hiệu thêm thành công
+                this.Close();
             }
             else
             {

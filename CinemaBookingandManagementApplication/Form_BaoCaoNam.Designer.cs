@@ -63,13 +63,13 @@
             this.baocaodata.DefaultCellStyle = dataGridViewCellStyle3;
             this.baocaodata.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.baocaodata.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.baocaodata.Location = new System.Drawing.Point(0, 109);
+            this.baocaodata.Location = new System.Drawing.Point(0, 93);
             this.baocaodata.Name = "baocaodata";
             this.baocaodata.ReadOnly = true;
             this.baocaodata.RowHeadersVisible = false;
             this.baocaodata.RowHeadersWidth = 51;
             this.baocaodata.RowTemplate.Height = 24;
-            this.baocaodata.Size = new System.Drawing.Size(1203, 544);
+            this.baocaodata.Size = new System.Drawing.Size(1203, 560);
             this.baocaodata.TabIndex = 0;
             this.baocaodata.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.baocaodata.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -95,12 +95,13 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Snow;
             this.guna2Panel1.Controls.Add(this.comboBoxType);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1203, 112);
+            this.guna2Panel1.Size = new System.Drawing.Size(1203, 87);
             this.guna2Panel1.TabIndex = 1;
             // 
             // comboBoxType

@@ -79,6 +79,8 @@ namespace CinemaBookingandManagementApplication
 
                     // Cập nhật combo
                     ComboDao.update(currentcombo);
+                    this.DialogResult = DialogResult.OK; // Thành công
+                    this.Close();
                 }
                 else
                 {
@@ -99,6 +101,8 @@ namespace CinemaBookingandManagementApplication
            
             ComboDaoImpl ComboDao = new ComboDaoImpl();
             ComboDao.delete(currentcombo);
+            this.DialogResult = DialogResult.OK; // Thành công
+            this.Close();
         }
 
         private void labelComboName_Click(object sender, EventArgs e)

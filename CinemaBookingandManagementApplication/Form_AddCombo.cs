@@ -46,6 +46,8 @@ namespace CinemaBookingandManagementApplication
                 combo.Image = pictureBoxCombo.Image;
                 ComboDaoImpl comboDaoImpl = new ComboDaoImpl();
                 comboDaoImpl.CreateNewCombo(combo);
+                this.DialogResult = DialogResult.OK; // Thành công
+                this.Close();
             }
             else
                 MessageBox.Show("Yêu Cầu Nhập Đúng Dữ liệu");

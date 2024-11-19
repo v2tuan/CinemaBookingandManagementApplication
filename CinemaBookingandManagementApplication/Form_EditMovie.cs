@@ -41,6 +41,8 @@ namespace CinemaBookingandManagementApplication
                 movie.Descriptions = richTextBoxDescription.Text;
                 movie.Image = pictureBoxMovie.Image;
                 MovieDao.update(movie);
+                this.DialogResult = DialogResult.OK; // Báo hiệu thêm thành công
+                this.Close();
             }
             else
             {
@@ -55,6 +57,8 @@ namespace CinemaBookingandManagementApplication
             //Movies movie = new Movies();
             MovieDaoImpl MovieDao = new MovieDaoImpl();
             MovieDao.delete(movie);
+            this.DialogResult = DialogResult.OK; // Báo hiệu thêm thành công
+            this.Close();
         }
 
         private void Form_EditMovie_Load(object sender, EventArgs e)

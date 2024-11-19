@@ -1714,7 +1714,7 @@ namespace CinemaBookingandManagementApplication.configs
             decimal doanhThuTrungBinh = 0;
 
             //using (SqlConnection conn = new My_DB().getConnectionFromFile())
-            using (SqlConnection conn = new My_DB().getConnection())
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
@@ -1750,7 +1750,7 @@ namespace CinemaBookingandManagementApplication.configs
             decimal doanhThuThang = 0;
 
             // using (SqlConnection conn = new My_DB().getConnectionFromFile())
-            using (SqlConnection conn = new My_DB().getConnection())
+            using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
@@ -1783,7 +1783,7 @@ namespace CinemaBookingandManagementApplication.configs
         public static DataTable GetBusinessReportOfYear(int year)
         {
             DataTable report = new DataTable();
-            using (SqlConnection conn = new My_DB().getConnection()) // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
             {
                 try
                 {
@@ -1809,5 +1809,92 @@ namespace CinemaBookingandManagementApplication.configs
             }
             return report; // Trả về bảng kết quả
         }
+        public static DataTable GetMovieScheduleDetails()
+        {
+            DataTable schedule = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
+            {
+                try
+                {
+                    conn.Open();
+                    // Gọi thủ tục GetMovieScheduleDetails
+                    using (SqlCommand command = new SqlCommand("EXEC GetMovieScheduleDetails", conn))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            // Điền dữ liệu vào DataTable
+                            adapter.Fill(schedule);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return schedule; // Trả về bảng kết quả
+        }
+        public static DataTable GetMovieScheduleDetailsByCinemaAndDate(string cid, DateTime sdate)
+        {
+            DataTable schedule = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
+            {
+                try
+                {
+                    conn.Open();
+                    // Gọi thủ tục GetMovieScheduleDetailsByCinemaAndDate với tham số @cid và @sdate
+                    using (SqlCommand command = new SqlCommand("EXEC GetMovieScheduleDetailsByCinemaAndDate @cid, @sdate", conn))
+                    {
+                        // Thêm tham số vào câu lệnh SQL
+                        command.Parameters.AddWithValue("@cid", cid);
+                        command.Parameters.AddWithValue("@sdate", sdate);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            // Điền dữ liệu vào DataTable
+                            adapter.Fill(schedule);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return schedule; // Trả về bảng kết quả
+        }
+
+        public static DataTable GetMovieScheduleDetailsByCinema(string cid)
+        {
+            DataTable schedule = new DataTable();
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
+            {
+                try
+                {
+                    conn.Open();
+                    // Gọi thủ tục GetMovieScheduleDetailsByCinemaAndDate với tham số @cid và @sdate
+                    using (SqlCommand command = new SqlCommand("EXEC GetMovieScheduleDetailsByCinema @cid", conn))
+                    {
+                        // Thêm tham số vào câu lệnh SQL
+                        command.Parameters.AddWithValue("@cid", cid);
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            // Điền dữ liệu vào DataTable
+                            adapter.Fill(schedule);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Hiển thị lỗi nếu có
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            return schedule; // Trả về bảng kết quả
+        }
+
     }
 }

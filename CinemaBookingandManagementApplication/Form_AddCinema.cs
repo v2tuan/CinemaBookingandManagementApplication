@@ -30,6 +30,8 @@ namespace CinemaBookingandManagementApplication
             cinema.Area = textBoxArea.Text;
             cinema.Image = pictureBoxCinema.Image;
             CinemaDao.insert(cinema);
+            this.DialogResult = DialogResult.OK; // Thành công
+            this.Close();
         }
 
         private void pictureBoxCinema_Click(object sender, EventArgs e)

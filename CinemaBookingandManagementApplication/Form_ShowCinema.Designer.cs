@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ShowCinema));
             CinemaBookingandManagementApplication.models.Cinemas cinemas1 = new CinemaBookingandManagementApplication.models.Cinemas();
             CinemaBookingandManagementApplication.models.Cinemas cinemas2 = new CinemaBookingandManagementApplication.models.Cinemas();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ShowCinema));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.buttonAddMovieSchedule = new Guna.UI2.WinForms.Guna2Button();
             this.buttonDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -40,6 +40,7 @@
             this.flowLayoutPanelCinema = new System.Windows.Forms.FlowLayoutPanel();
             this.userControl_Cinemas1 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
             this.userControl_Cinemas2 = new CinemaBookingandManagementApplication.UserControls.UserControl_Cinemas();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ShadowPanel1.SuspendLayout();
             this.flowLayoutPanelCinema.SuspendLayout();
             this.SuspendLayout();
@@ -47,7 +48,7 @@
             // guna2ShadowPanel1
             // 
             this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            //this.guna2ShadowPanel1.Controls.Add(this.buttonRefresh);
+            this.guna2ShadowPanel1.Controls.Add(this.guna2Button1);
             this.guna2ShadowPanel1.Controls.Add(this.buttonAddMovieSchedule);
             this.guna2ShadowPanel1.Controls.Add(this.buttonDelete);
             this.guna2ShadowPanel1.Controls.Add(this.textBoxSearch);
@@ -61,7 +62,7 @@
             this.guna2ShadowPanel1.Radius = 3;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowPanel1.ShadowDepth = 50;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1490, 52);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1624, 52);
             this.guna2ShadowPanel1.TabIndex = 1;
             // 
             // buttonAddMovieSchedule
@@ -129,6 +130,7 @@
             this.textBoxSearch.SelectedText = "";
             this.textBoxSearch.Size = new System.Drawing.Size(378, 32);
             this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // buttonMenu
             // 
@@ -219,26 +221,27 @@
             this.userControl_Cinemas2.Size = new System.Drawing.Size(1592, 184);
             this.userControl_Cinemas2.TabIndex = 1;
             // 
-            // buttonRefresh
+            // guna2Button1
             // 
-            //this.buttonRefresh.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            //this.buttonRefresh.BorderRadius = 5;
-            //this.buttonRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            //this.buttonRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            //this.buttonRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            //this.buttonRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            //this.buttonRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            //this.buttonRefresh.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            //this.buttonRefresh.ForeColor = System.Drawing.Color.White;
-            //this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            //this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            //this.buttonRefresh.Location = new System.Drawing.Point(1035, 10);
-            //this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            //this.buttonRefresh.Name = "buttonRefresh";
-            //this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
-            //this.buttonRefresh.TabIndex = 6;
-            //this.buttonRefresh.Text = "Refresh";
-            //this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.guna2Button1.BorderRadius = 3;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button1.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button1.Location = new System.Drawing.Point(1004, 10);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(240, 32);
+            this.guna2Button1.TabIndex = 5;
+            this.guna2Button1.Text = "List Movie Schedule";
+            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Form_ShowCinema
             // 
@@ -246,7 +249,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1490, 624);
+            this.ClientSize = new System.Drawing.Size(1490, 666);
             this.Controls.Add(this.flowLayoutPanelCinema);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -271,5 +274,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCinema;
         private UserControls.UserControl_Cinemas userControl_Cinemas1;
         private UserControls.UserControl_Cinemas userControl_Cinemas2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

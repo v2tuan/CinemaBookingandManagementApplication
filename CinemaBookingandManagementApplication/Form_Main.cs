@@ -126,7 +126,7 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonLogout_Click(object sender, EventArgs e)
         {
-         
+            this.Close();
             //Constant.idcinema = null;
            // Constant.uname = null;
            /// Constant.pass = null;

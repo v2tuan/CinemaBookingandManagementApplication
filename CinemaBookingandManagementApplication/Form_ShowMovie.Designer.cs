@@ -73,6 +73,7 @@
             this.textBoxSearch.SelectedText = "";
             this.textBoxSearch.Size = new System.Drawing.Size(378, 32);
             this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // guna2ShadowPanel1
             // 

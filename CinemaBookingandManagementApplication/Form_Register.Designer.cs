@@ -33,6 +33,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(this.components);
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.comboBoxType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.isadminradio = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.ftxt = new Guna.UI2.WinForms.Guna2TextBox();
@@ -58,7 +59,6 @@
             this.guna2CustomRadioButton3 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.guna2CustomRadioButton2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.guna2CustomRadioButton1 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
-            this.comboBoxType = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PanelControl.SuspendLayout();
@@ -97,6 +97,26 @@
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(573, 732);
             this.guna2CustomGradientPanel2.TabIndex = 12;
             // 
+            // comboBoxType
+            // 
+            this.comboBoxType.BackColor = System.Drawing.Color.White;
+            this.comboBoxType.BorderColor = System.Drawing.SystemColors.GrayText;
+            this.comboBoxType.BorderRadius = 5;
+            this.comboBoxType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxType.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.comboBoxType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxType.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
+            this.comboBoxType.ItemHeight = 35;
+            this.comboBoxType.Location = new System.Drawing.Point(69, 534);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxType.Name = "comboBoxType";
+            this.comboBoxType.Size = new System.Drawing.Size(436, 41);
+            this.comboBoxType.TabIndex = 35;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -124,6 +144,7 @@
             this.isadminradio.UncheckedState.BorderThickness = 2;
             this.isadminradio.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.isadminradio.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+       
             // 
             // ftxt
             // 
@@ -498,26 +519,6 @@
             this.guna2CustomRadioButton1.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.guna2CustomRadioButton1.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.guna2CustomRadioButton1.UseTransparentBackground = true;
-            // 
-            // comboBoxType
-            // 
-            this.comboBoxType.BackColor = System.Drawing.Color.White;
-            this.comboBoxType.BorderColor = System.Drawing.SystemColors.GrayText;
-            this.comboBoxType.BorderRadius = 5;
-            this.comboBoxType.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxType.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBoxType.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxType.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(108)))), ((int)(((byte)(189)))));
-            this.comboBoxType.ItemHeight = 35;
-            this.comboBoxType.Location = new System.Drawing.Point(69, 534);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(436, 41);
-            this.comboBoxType.TabIndex = 35;
             // 
             // Form_Register
             // 

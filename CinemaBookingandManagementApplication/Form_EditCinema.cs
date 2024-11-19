@@ -377,6 +377,8 @@ namespace CinemaBookingandManagementApplication
                 }
 
                 CinemaDao.update(currentCinema);
+                this.DialogResult = DialogResult.OK; // Thành công
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -404,6 +406,8 @@ namespace CinemaBookingandManagementApplication
         {
             CinemaDaoImpl CinemaDao = new CinemaDaoImpl();
             CinemaDao.delete(currentCinema);
+            this.DialogResult = DialogResult.OK; // Thành công
+            this.Close();
         }
     }
 }

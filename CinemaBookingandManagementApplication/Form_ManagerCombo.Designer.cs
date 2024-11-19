@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ManagerCombo));
             this.flowLayoutPanelCombo = new System.Windows.Forms.FlowLayoutPanel();
+            this.userControl_EditCombo1 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
+            this.userControl_EditCombo4 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.buttonRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonMenu = new Guna.UI2.WinForms.Guna2Button();
             this.btnAddCombo = new Guna.UI2.WinForms.Guna2Button();
-            this.userControl_EditCombo1 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
-            this.userControl_EditCombo2 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
-            this.userControl_EditCombo3 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
-            this.userControl_EditCombo4 = new CinemaBookingandManagementApplication.UserControls.UserControl_EditCombo();
             this.flowLayoutPanelCombo.SuspendLayout();
             this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,46 @@
             this.flowLayoutPanelCombo.Name = "flowLayoutPanelCombo";
             this.flowLayoutPanelCombo.Size = new System.Drawing.Size(1468, 587);
             this.flowLayoutPanelCombo.TabIndex = 10;
+            // 
+            // userControl_EditCombo1
+            // 
+            this.userControl_EditCombo1.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo1.combo = null;
+            this.userControl_EditCombo1.Location = new System.Drawing.Point(3, 2);
+            this.userControl_EditCombo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo1.Name = "userControl_EditCombo1";
+            this.userControl_EditCombo1.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo1.TabIndex = 0;
+            // 
+            // userControl_EditCombo2
+            // 
+            this.userControl_EditCombo2.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo2.combo = null;
+            this.userControl_EditCombo2.Location = new System.Drawing.Point(3, 125);
+            this.userControl_EditCombo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo2.Name = "userControl_EditCombo2";
+            this.userControl_EditCombo2.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo2.TabIndex = 1;
+            // 
+            // userControl_EditCombo3
+            // 
+            this.userControl_EditCombo3.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo3.combo = null;
+            this.userControl_EditCombo3.Location = new System.Drawing.Point(3, 248);
+            this.userControl_EditCombo3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo3.Name = "userControl_EditCombo3";
+            this.userControl_EditCombo3.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo3.TabIndex = 2;
+            // 
+            // userControl_EditCombo4
+            // 
+            this.userControl_EditCombo4.BackColor = System.Drawing.Color.White;
+            this.userControl_EditCombo4.combo = null;
+            this.userControl_EditCombo4.Location = new System.Drawing.Point(3, 371);
+            this.userControl_EditCombo4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.userControl_EditCombo4.Name = "userControl_EditCombo4";
+            this.userControl_EditCombo4.Size = new System.Drawing.Size(1465, 119);
+            this.userControl_EditCombo4.TabIndex = 3;
             // 
             // guna2ShadowPanel1
             // 
@@ -147,6 +187,7 @@
             this.textBoxSearch.SelectedText = "";
             this.textBoxSearch.Size = new System.Drawing.Size(378, 32);
             this.textBoxSearch.TabIndex = 2;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // buttonMenu
             // 
@@ -189,46 +230,6 @@
             this.btnAddCombo.Text = "Add Combo";
             this.btnAddCombo.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddCombo.Click += new System.EventHandler(this.btnAddCombo_Click);
-            // 
-            // userControl_EditCombo1
-            // 
-            this.userControl_EditCombo1.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo1.combo = null;
-            this.userControl_EditCombo1.Location = new System.Drawing.Point(3, 2);
-            this.userControl_EditCombo1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo1.Name = "userControl_EditCombo1";
-            this.userControl_EditCombo1.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo1.TabIndex = 0;
-            // 
-            // userControl_EditCombo2
-            // 
-            this.userControl_EditCombo2.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo2.combo = null;
-            this.userControl_EditCombo2.Location = new System.Drawing.Point(3, 125);
-            this.userControl_EditCombo2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo2.Name = "userControl_EditCombo2";
-            this.userControl_EditCombo2.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo2.TabIndex = 1;
-            // 
-            // userControl_EditCombo3
-            // 
-            this.userControl_EditCombo3.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo3.combo = null;
-            this.userControl_EditCombo3.Location = new System.Drawing.Point(3, 248);
-            this.userControl_EditCombo3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo3.Name = "userControl_EditCombo3";
-            this.userControl_EditCombo3.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo3.TabIndex = 2;
-            // 
-            // userControl_EditCombo4
-            // 
-            this.userControl_EditCombo4.BackColor = System.Drawing.Color.White;
-            this.userControl_EditCombo4.combo = null;
-            this.userControl_EditCombo4.Location = new System.Drawing.Point(3, 371);
-            this.userControl_EditCombo4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.userControl_EditCombo4.Name = "userControl_EditCombo4";
-            this.userControl_EditCombo4.Size = new System.Drawing.Size(1465, 119);
-            this.userControl_EditCombo4.TabIndex = 3;
             // 
             // Form_ManagerCombo
             // 
