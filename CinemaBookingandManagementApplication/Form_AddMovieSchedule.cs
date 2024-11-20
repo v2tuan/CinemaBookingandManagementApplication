@@ -80,17 +80,24 @@ namespace CinemaBookingandManagementApplication
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            MovieSchedule movieSchedule = new MovieSchedule();
-            ShowTimeDaoImpl showTimeDao = new ShowTimeDaoImpl();
-            movieSchedule.Shid = showTimeDao.IDNext();
-            DataRowView row = (DataRowView)comboBoxMovie.SelectedItem;
-            movieSchedule.Mid = row["mid"].ToString();
-            movieSchedule.Rid = comboBoxRoom.SelectedValue.ToString();
-            movieSchedule.SeatEmpty = int.Parse(textboxSeatEmpty.Text);
-            movieSchedule.Sdate = dateTimePickerRelease.Value;
-            movieSchedule.Stime = dateTimePickerShowtime.Value.TimeOfDay;
-            movieSchedule.Etime = dateTimePickerFinishTime.Value.TimeOfDay;
-            showTimeDao.AddShowtime(movieSchedule);
+            try
+            {
+                MovieSchedule movieSchedule = new MovieSchedule();
+                ShowTimeDaoImpl showTimeDao = new ShowTimeDaoImpl();
+                movieSchedule.Shid = showTimeDao.IDNext();
+                DataRowView row = (DataRowView)comboBoxMovie.SelectedItem;
+                movieSchedule.Mid = row["mid"].ToString();
+                movieSchedule.Rid = comboBoxRoom.SelectedValue.ToString();
+                movieSchedule.SeatEmpty = int.Parse(textboxSeatEmpty.Text);
+                movieSchedule.Sdate = dateTimePickerRelease.Value;
+                movieSchedule.Stime = dateTimePickerShowtime.Value.TimeOfDay;
+                movieSchedule.Etime = dateTimePickerFinishTime.Value.TimeOfDay;
+                showTimeDao.AddShowtime(movieSchedule);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void comboBoxRoom_SelectedIndexChanged(object sender, EventArgs e)

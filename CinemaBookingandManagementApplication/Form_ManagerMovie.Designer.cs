@@ -46,10 +46,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanelMovie.AutoScroll = true;
-            this.flowLayoutPanelMovie.Location = new System.Drawing.Point(18, 74);
+            this.flowLayoutPanelMovie.Location = new System.Drawing.Point(20, 92);
             this.flowLayoutPanelMovie.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flowLayoutPanelMovie.Name = "flowLayoutPanelMovie";
-            this.flowLayoutPanelMovie.Size = new System.Drawing.Size(1468, 587);
+            this.flowLayoutPanelMovie.Size = new System.Drawing.Size(1652, 734);
             this.flowLayoutPanelMovie.TabIndex = 8;
             // 
             // guna2ShadowPanel1
@@ -69,7 +69,7 @@
             this.guna2ShadowPanel1.Radius = 3;
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowPanel1.ShadowDepth = 50;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1509, 52);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1698, 65);
             this.guna2ShadowPanel1.TabIndex = 7;
             // 
             // guna2Button2
@@ -84,10 +84,10 @@
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button2.Location = new System.Drawing.Point(1147, 10);
+            this.guna2Button2.Location = new System.Drawing.Point(862, 12);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(159, 32);
+            this.guna2Button2.Size = new System.Drawing.Size(179, 40);
             this.guna2Button2.TabIndex = 5;
             this.guna2Button2.Text = "Doanh thu";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -104,10 +104,10 @@
             this.buttonRefresh.ForeColor = System.Drawing.Color.White;
             this.buttonRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonRefresh.Location = new System.Drawing.Point(602, 10);
+            this.buttonRefresh.Location = new System.Drawing.Point(1049, 12);
             this.buttonRefresh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(159, 32);
+            this.buttonRefresh.Size = new System.Drawing.Size(179, 40);
             this.buttonRefresh.TabIndex = 4;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
@@ -125,10 +125,10 @@
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(769, 10);
+            this.guna2Button1.Location = new System.Drawing.Point(676, 12);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(158, 32);
+            this.guna2Button1.Size = new System.Drawing.Size(178, 40);
             this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "Age Movie";
             this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -150,13 +150,13 @@
             this.textBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("textBoxSearch.IconLeft")));
             this.textBoxSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.textBoxSearch.Location = new System.Drawing.Point(18, 10);
-            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxSearch.Location = new System.Drawing.Point(20, 12);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.PasswordChar = '\0';
             this.textBoxSearch.PlaceholderText = "Search";
             this.textBoxSearch.SelectedText = "";
-            this.textBoxSearch.Size = new System.Drawing.Size(378, 32);
+            this.textBoxSearch.Size = new System.Drawing.Size(425, 40);
             this.textBoxSearch.TabIndex = 2;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
@@ -173,10 +173,10 @@
             this.buttonMenu.ForeColor = System.Drawing.Color.White;
             this.buttonMenu.Image = ((System.Drawing.Image)(resources.GetObject("buttonMenu.Image")));
             this.buttonMenu.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonMenu.Location = new System.Drawing.Point(558, 10);
+            this.buttonMenu.Location = new System.Drawing.Point(628, 12);
             this.buttonMenu.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.buttonMenu.Name = "buttonMenu";
-            this.buttonMenu.Size = new System.Drawing.Size(36, 32);
+            this.buttonMenu.Size = new System.Drawing.Size(40, 40);
             this.buttonMenu.TabIndex = 1;
             // 
             // btnAddMovie
@@ -193,10 +193,10 @@
             this.btnAddMovie.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMovie.Image")));
             this.btnAddMovie.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAddMovie.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAddMovie.Location = new System.Drawing.Point(404, 10);
+            this.btnAddMovie.Location = new System.Drawing.Point(454, 12);
             this.btnAddMovie.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAddMovie.Name = "btnAddMovie";
-            this.btnAddMovie.Size = new System.Drawing.Size(153, 32);
+            this.btnAddMovie.Size = new System.Drawing.Size(172, 40);
             this.btnAddMovie.TabIndex = 0;
             this.btnAddMovie.Text = "Add Movie";
             this.btnAddMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -204,10 +204,10 @@
             // 
             // Form_ManagerMovie
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1509, 669);
+            this.ClientSize = new System.Drawing.Size(1698, 836);
             this.Controls.Add(this.flowLayoutPanelMovie);
             this.Controls.Add(this.guna2ShadowPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
