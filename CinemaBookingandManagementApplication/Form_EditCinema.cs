@@ -26,7 +26,7 @@ namespace CinemaBookingandManagementApplication
         {
             textBoxCinemaName.Text = cinema.Cname;
             textBoxAddress.Text = cinema.Caddress;
-            TextBoxHotline.Text = cinema.Hotline;
+            TextBoxHotline.Text = cinema.Hotline.Trim().Replace(" ","");
             textBoxArea.Text = cinema.Area;
 
             // Hiển thị hình ảnh
@@ -367,7 +367,7 @@ namespace CinemaBookingandManagementApplication
 
                 currentCinema.Cname = textBoxCinemaName.Text;
                 currentCinema.Caddress = textBoxAddress.Text;
-                currentCinema.Hotline = TextBoxHotline.Text;
+                currentCinema.Hotline = TextBoxHotline.Text.Trim();
                 currentCinema.Area = textBoxArea.Text;
 
                 if (pictureBoxCinema.Image != null)
