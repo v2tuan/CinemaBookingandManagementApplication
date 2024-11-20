@@ -1285,21 +1285,21 @@ namespace CinemaBookingandManagementApplication.configs
         {
             DataTable combos = new DataTable();
 
-            // Assuming My_DB().getConnectionFromFile() gives a valid SQL connection.
+          
             using (SqlConnection conn = new My_DB().getConnectionFromFile())
             {
                 try
                 {
                     conn.Open();
 
-                    // Create a SQL command to call the SearchComboByName function
+                 
                     using (SqlCommand command = new SqlCommand(
                         "SELECT * FROM dbo.SearchComboByName(@comboName)", conn))
                     {
-                        // Add the combo name parameter to the command
+                     
                         command.Parameters.AddWithValue("@comboName", comboName);
 
-                        // Use SqlDataAdapter to execute the command and fill the DataTable
+                        
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
                             adapter.Fill(combos);
@@ -1308,7 +1308,7 @@ namespace CinemaBookingandManagementApplication.configs
                 }
                 catch (Exception ex)
                 {
-                    // Handle any errors that occur during database access
+                    
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
@@ -1838,12 +1838,12 @@ namespace CinemaBookingandManagementApplication.configs
         public static DataTable GetMovieScheduleDetailsByCinemaAndDate(string cid, DateTime sdate)
         {
             DataTable schedule = new DataTable();
-            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) 
             {
                 try
                 {
                     conn.Open();
-                    // Gọi thủ tục GetMovieScheduleDetailsByCinemaAndDate với tham số @cid và @sdate
+                   
                     using (SqlCommand command = new SqlCommand("EXEC GetMovieScheduleDetailsByCinemaAndDate @cid, @sdate", conn))
                     {
                         // Thêm tham số vào câu lệnh SQL
@@ -1852,48 +1852,47 @@ namespace CinemaBookingandManagementApplication.configs
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            // Điền dữ liệu vào DataTable
+                           
                             adapter.Fill(schedule);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Hiển thị lỗi nếu có
+                  
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
-            return schedule; // Trả về bảng kết quả
+            return schedule; 
         }
 
         public static DataTable GetMovieScheduleDetailsByCinema(string cid)
         {
             DataTable schedule = new DataTable();
-            using (SqlConnection conn = new My_DB().getConnectionFromFile()) // Kết nối đến cơ sở dữ liệu
+            using (SqlConnection conn = new My_DB().getConnectionFromFile()) 
             {
                 try
                 {
                     conn.Open();
-                    // Gọi thủ tục GetMovieScheduleDetailsByCinemaAndDate với tham số @cid và @sdate
+                    
                     using (SqlCommand command = new SqlCommand("EXEC GetMovieScheduleDetailsByCinema @cid", conn))
                     {
-                        // Thêm tham số vào câu lệnh SQL
+                      
                         command.Parameters.AddWithValue("@cid", cid);
 
                         using (SqlDataAdapter adapter = new SqlDataAdapter(command))
                         {
-                            // Điền dữ liệu vào DataTable
+                           
                             adapter.Fill(schedule);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    // Hiển thị lỗi nếu có
                     MessageBox.Show("An error occurred: " + ex.Message);
                 }
             }
-            return schedule; // Trả về bảng kết quả
+            return schedule;
         }
 
     }

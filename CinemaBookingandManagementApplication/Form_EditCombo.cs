@@ -27,7 +27,7 @@ namespace CinemaBookingandManagementApplication
         {
             textBoxComboName.Text = combo.ComboName.Trim();
             textBoxDescription.Text = combo.Descriptions.Trim();
-            textBoxPrice.Text = combo.ComboPrice.ToString();
+            textBoxPrice.Text = ((int)combo.ComboPrice).ToString();
             if (combo.Image != null)
             {
                 using (MemoryStream ms = new MemoryStream())
