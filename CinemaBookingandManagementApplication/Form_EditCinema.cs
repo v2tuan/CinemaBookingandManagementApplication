@@ -138,9 +138,9 @@ namespace CinemaBookingandManagementApplication
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(747, 55);
+            this.label2.Location = new System.Drawing.Point(747, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.Size = new System.Drawing.Size(78, 23);
             this.label2.TabIndex = 36;
             this.label2.Text = "Hotline";
             // 
@@ -157,7 +157,7 @@ namespace CinemaBookingandManagementApplication
             this.TextBoxHotline.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TextBoxHotline.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBoxHotline.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TextBoxHotline.Location = new System.Drawing.Point(750, 80);
+            this.TextBoxHotline.Location = new System.Drawing.Point(750, 106);
             this.TextBoxHotline.Margin = new System.Windows.Forms.Padding(4);
             this.TextBoxHotline.Name = "TextBoxHotline";
             this.TextBoxHotline.PasswordChar = '\0';
@@ -169,7 +169,7 @@ namespace CinemaBookingandManagementApplication
             // pictureBoxCinema
             // 
             this.pictureBoxCinema.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBoxCinema.Location = new System.Drawing.Point(21, 50);
+            this.pictureBoxCinema.Location = new System.Drawing.Point(21, 76);
             this.pictureBoxCinema.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxCinema.Name = "pictureBoxCinema";
             this.pictureBoxCinema.Size = new System.Drawing.Size(320, 160);
@@ -182,9 +182,9 @@ namespace CinemaBookingandManagementApplication
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(393, 134);
+            this.label7.Location = new System.Drawing.Point(393, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 19);
+            this.label7.Size = new System.Drawing.Size(57, 23);
             this.label7.TabIndex = 33;
             this.label7.Text = "Area";
             // 
@@ -201,7 +201,7 @@ namespace CinemaBookingandManagementApplication
             this.textBoxArea.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxArea.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxArea.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxArea.Location = new System.Drawing.Point(396, 158);
+            this.textBoxArea.Location = new System.Drawing.Point(396, 184);
             this.textBoxArea.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxArea.Name = "textBoxArea";
             this.textBoxArea.PasswordChar = '\0';
@@ -214,9 +214,9 @@ namespace CinemaBookingandManagementApplication
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(402, 55);
+            this.label3.Location = new System.Drawing.Point(402, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 19);
+            this.label3.Size = new System.Drawing.Size(151, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "Cinema name";
             // 
@@ -228,7 +228,7 @@ namespace CinemaBookingandManagementApplication
             this.label1.Location = new System.Drawing.Point(28, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 23);
+            this.label1.Size = new System.Drawing.Size(153, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Edit Cinema";
             // 
@@ -263,9 +263,9 @@ namespace CinemaBookingandManagementApplication
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(747, 134);
+            this.label4.Location = new System.Drawing.Point(747, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(88, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Address";
             // 
@@ -282,7 +282,7 @@ namespace CinemaBookingandManagementApplication
             this.textBoxCinemaName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxCinemaName.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCinemaName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxCinemaName.Location = new System.Drawing.Point(396, 80);
+            this.textBoxCinemaName.Location = new System.Drawing.Point(396, 106);
             this.textBoxCinemaName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxCinemaName.Name = "textBoxCinemaName";
             this.textBoxCinemaName.PasswordChar = '\0';
@@ -325,7 +325,7 @@ namespace CinemaBookingandManagementApplication
             this.textBoxAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxAddress.Location = new System.Drawing.Point(750, 158);
+            this.textBoxAddress.Location = new System.Drawing.Point(750, 184);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.PasswordChar = '\0';
@@ -348,6 +348,7 @@ namespace CinemaBookingandManagementApplication
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_EditCinema";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.guna2Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCinema)).EndInit();
             this.panelHeader.ResumeLayout(false);

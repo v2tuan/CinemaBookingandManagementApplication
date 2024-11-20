@@ -70,10 +70,10 @@
             this.panelChildForm.CustomBorderColor = System.Drawing.Color.Silver;
             this.panelChildForm.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(301, 34);
+            this.panelChildForm.Location = new System.Drawing.Point(339, 42);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1425, 848);
+            this.panelChildForm.Size = new System.Drawing.Size(1603, 1060);
             this.panelChildForm.TabIndex = 8;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
@@ -93,10 +93,10 @@
             this.guna2Panel2.Controls.Add(this.guna2Panel4);
             this.guna2Panel2.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel2.Location = new System.Drawing.Point(0, 34);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(0, 42);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(301, 848);
+            this.guna2Panel2.Size = new System.Drawing.Size(339, 1060);
             this.guna2Panel2.TabIndex = 7;
             // 
             // buttonLogout
@@ -119,13 +119,14 @@
             this.buttonLogout.HoverState.FillColor = System.Drawing.Color.White;
             this.buttonLogout.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLogout.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.buttonLogout.Image = ((System.Drawing.Image)(resources.GetObject("buttonLogout.Image")));
             this.buttonLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonLogout.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonLogout.ImageSize = new System.Drawing.Size(30, 30);
-            this.buttonLogout.Location = new System.Drawing.Point(0, 461);
-            this.buttonLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.buttonLogout.Location = new System.Drawing.Point(0, 576);
+            this.buttonLogout.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.buttonLogout.Name = "buttonLogout";
-            this.buttonLogout.Size = new System.Drawing.Size(299, 58);
+            this.buttonLogout.Size = new System.Drawing.Size(337, 72);
             this.buttonLogout.TabIndex = 17;
             this.buttonLogout.Text = "Log out";
             this.buttonLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -136,19 +137,19 @@
             // 
             this.guna2Panel5.Controls.Add(this.label4);
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 357);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 446);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(299, 104);
+            this.guna2Panel5.Size = new System.Drawing.Size(337, 130);
             this.guna2Panel5.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(82, 64);
+            this.label4.Location = new System.Drawing.Point(92, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 19);
+            this.label4.Size = new System.Drawing.Size(96, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Genegal";
             // 
@@ -175,10 +176,10 @@
             this.buttonCombo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCombo.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonCombo.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonCombo.Location = new System.Drawing.Point(0, 311);
-            this.buttonCombo.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCombo.Location = new System.Drawing.Point(0, 388);
+            this.buttonCombo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonCombo.Name = "buttonCombo";
-            this.buttonCombo.Size = new System.Drawing.Size(299, 46);
+            this.buttonCombo.Size = new System.Drawing.Size(337, 58);
             this.buttonCombo.TabIndex = 15;
             this.buttonCombo.Text = "Combo";
             this.buttonCombo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -209,10 +210,10 @@
             this.buttonManagerMovie.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonManagerMovie.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonManagerMovie.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonManagerMovie.Location = new System.Drawing.Point(0, 274);
-            this.buttonManagerMovie.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonManagerMovie.Location = new System.Drawing.Point(0, 342);
+            this.buttonManagerMovie.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonManagerMovie.Name = "buttonManagerMovie";
-            this.buttonManagerMovie.Size = new System.Drawing.Size(299, 37);
+            this.buttonManagerMovie.Size = new System.Drawing.Size(337, 46);
             this.buttonManagerMovie.TabIndex = 13;
             this.buttonManagerMovie.Text = "Movie";
             this.buttonManagerMovie.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -242,10 +243,10 @@
             this.buttonCinema.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonCinema.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonCinema.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonCinema.Location = new System.Drawing.Point(0, 237);
-            this.buttonCinema.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonCinema.Location = new System.Drawing.Point(0, 296);
+            this.buttonCinema.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCinema.Name = "buttonCinema";
-            this.buttonCinema.Size = new System.Drawing.Size(299, 37);
+            this.buttonCinema.Size = new System.Drawing.Size(337, 46);
             this.buttonCinema.TabIndex = 12;
             this.buttonCinema.Text = "Cinema";
             this.buttonCinema.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -271,13 +272,15 @@
             this.buttonfigures.ForeColor = System.Drawing.Color.Black;
             this.buttonfigures.HoverState.FillColor = System.Drawing.Color.White;
             this.buttonfigures.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonfigures.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.buttonfigures.Image = ((System.Drawing.Image)(resources.GetObject("buttonfigures.Image")));
             this.buttonfigures.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonfigures.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonfigures.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonfigures.Location = new System.Drawing.Point(0, 200);
-            this.buttonfigures.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonfigures.Location = new System.Drawing.Point(0, 250);
+            this.buttonfigures.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonfigures.Name = "buttonfigures";
-            this.buttonfigures.Size = new System.Drawing.Size(299, 37);
+            this.buttonfigures.Size = new System.Drawing.Size(337, 46);
             this.buttonfigures.TabIndex = 11;
             this.buttonfigures.Text = "Figures";
             this.buttonfigures.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -287,10 +290,10 @@
             // guna2Panel3
             // 
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 797);
+            this.guna2Panel3.Location = new System.Drawing.Point(0, 996);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(299, 51);
+            this.guna2Panel3.Size = new System.Drawing.Size(337, 64);
             this.guna2Panel3.TabIndex = 10;
             // 
             // buttonHome
@@ -301,7 +304,7 @@
             this.buttonHome.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
             this.buttonHome.CheckedState.FillColor = System.Drawing.Color.White;
             this.buttonHome.CheckedState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.buttonHome.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             this.buttonHome.CustomBorderThickness = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.buttonHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.buttonHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -313,14 +316,15 @@
             this.buttonHome.ForeColor = System.Drawing.Color.Black;
             this.buttonHome.HoverState.FillColor = System.Drawing.Color.White;
             this.buttonHome.HoverState.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonHome.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.buttonHome.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.buttonHome.Image = ((System.Drawing.Image)(resources.GetObject("buttonHome.Image")));
             this.buttonHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.buttonHome.ImageOffset = new System.Drawing.Point(80, 0);
             this.buttonHome.ImageSize = new System.Drawing.Size(25, 25);
-            this.buttonHome.Location = new System.Drawing.Point(0, 163);
-            this.buttonHome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.buttonHome.Location = new System.Drawing.Point(0, 204);
+            this.buttonHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(299, 37);
+            this.buttonHome.Size = new System.Drawing.Size(337, 46);
             this.buttonHome.TabIndex = 4;
             this.buttonHome.Text = "Home";
             this.buttonHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -337,26 +341,26 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(299, 163);
+            this.guna2Panel1.Size = new System.Drawing.Size(337, 204);
             this.guna2Panel1.TabIndex = 7;
             // 
             // guna2Panel6
             // 
             this.guna2Panel6.Controls.Add(this.label3);
             this.guna2Panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 83);
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 104);
             this.guna2Panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(299, 80);
+            this.guna2Panel6.Size = new System.Drawing.Size(337, 100);
             this.guna2Panel6.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(82, 37);
+            this.label3.Location = new System.Drawing.Point(92, 46);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 19);
+            this.label3.Size = new System.Drawing.Size(65, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Menu";
             // 
@@ -365,9 +369,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(47)))), ((int)(((byte)(39)))));
-            this.label2.Location = new System.Drawing.Point(233, 23);
+            this.label2.Location = new System.Drawing.Point(262, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 32);
+            this.label2.Size = new System.Drawing.Size(24, 38);
             this.label2.TabIndex = 2;
             this.label2.Text = ".";
             // 
@@ -375,19 +379,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 23);
+            this.label1.Location = new System.Drawing.Point(140, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 32);
+            this.label1.Size = new System.Drawing.Size(118, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Exxmon";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(44, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(50, 19);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -396,10 +400,10 @@
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Gainsboro;
             this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel4.Location = new System.Drawing.Point(299, 0);
+            this.guna2Panel4.Location = new System.Drawing.Point(337, 0);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(2, 848);
+            this.guna2Panel4.Size = new System.Drawing.Size(2, 1060);
             this.guna2Panel4.TabIndex = 14;
             // 
             // PanelControl
@@ -410,9 +414,9 @@
             this.PanelControl.Controls.Add(this.guna2ControlBox1);
             this.PanelControl.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelControl.Location = new System.Drawing.Point(0, 0);
-            this.PanelControl.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelControl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PanelControl.Name = "PanelControl";
-            this.PanelControl.Size = new System.Drawing.Size(1726, 34);
+            this.PanelControl.Size = new System.Drawing.Size(1942, 42);
             this.PanelControl.TabIndex = 6;
             this.PanelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelControl_MouseDown);
             // 
@@ -422,10 +426,10 @@
             this.guna2ControlBox3.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1567, 0);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1762, 0);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(53, 34);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(60, 42);
             this.guna2ControlBox3.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -434,10 +438,10 @@
             this.guna2ControlBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1620, 0);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1822, 0);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(53, 34);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 42);
             this.guna2ControlBox2.TabIndex = 1;
             // 
             // guna2ControlBox1
@@ -446,10 +450,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1673, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1882, 0);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(53, 34);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(60, 42);
             this.guna2ControlBox1.TabIndex = 0;
             this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
@@ -470,9 +474,9 @@
             // 
             // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1726, 882);
+            this.ClientSize = new System.Drawing.Size(1942, 1102);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.PanelControl);
